@@ -10,9 +10,10 @@ MUTANTS = {
     "withdrawn-unchecked": ('if state == "withdrawn" and any(', 'if False and any('),
     "chain-unordered-counts": ('pos.get(b, (None,))[0] == r["actor"] == pos.get(i, (None,))[0] and', 'True and'),
     "chain-order-reversed": ('pos[i][1] < pos[b][1]', 'pos[i][1] > pos[b][1]'),
-    "tolerance-wide": ("return abs(a - b) <= max(rel * max(abs(a), abs(b)), 1e-12)", "return abs(a - b) <= 0.01"),
-    "keys-unchecked": ("return a.keys() == b.keys() and all(", "return all(k in b for k in a) and all("),
-    "flag-as-number": ("        return a is b\n", "        return a == b\n"),
+    "tolerance-wide": ("abs(raw * 1_000_000 - stored) <= 1", "abs(raw * 1_000_000 - stored) <= 100"),
+    "keys-unchecked": ("stored.keys() == raw.keys() and all(", "all(k in stored for k in raw) and all("),
+    "flag-as-number": ("    return type(stored) is type(raw) and stored == raw", "    return stored == raw"),
+    "float-stored": ("return type(stored) is int and abs(", "return isinstance(stored, (int, float)) and abs("),
 }
 
 

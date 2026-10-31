@@ -115,19 +115,29 @@ def unchecked(rec: dict, rep: dict) -> list:
     return out
 
 
-def same(a, b, rel=1e-9) -> bool:
-    """Whether a closing version's result is the rerun's: the same structure and every non-number equal, numbers equal
-    up to `rel` (relative, against the larger; or 1e-12 absolute near zero). A rerun on another machine may differ in
-    the last bits of a float; a verdict never differs here, it is compared exactly by the caller and as a string."""
-    if isinstance(a, bool) or isinstance(b, bool):
-        return a is b
-    if isinstance(a, (int, float)) and isinstance(b, (int, float)):
-        return abs(a - b) <= max(rel * max(abs(a), abs(b)), 1e-12)
-    if isinstance(a, dict) and isinstance(b, dict):
-        return a.keys() == b.keys() and all(same(a[k], b[k], rel) for k in a)
-    if isinstance(a, list) and isinstance(b, list):
-        return len(a) == len(b) and all(same(x, y, rel) for x, y in zip(a, b))
-    return a == b
+def micro(v):
+    """A result as Warrant can carry it (no floats, V3 §1): every real number x becomes round(x · 10⁶)."""
+    if isinstance(v, float):
+        return round(v * 1_000_000)
+    if isinstance(v, dict):
+        return {k: micro(x) for k, x in v.items()}
+    if isinstance(v, list):
+        return [micro(x) for x in v]
+    return v
+
+
+def same(stored, raw) -> bool:
+    """Whether a closing version's stored result (`micro` of the analysis output) is the rerun's raw output: every
+    real number x of the rerun within one unit of the stored round(x · 10⁶) (a rerun on another machine may differ in a
+    float's last bits, and round may then fall to the other side of .5), everything else equal and of the same type
+    (a flag is no number), the structure the same."""
+    if isinstance(raw, float):
+        return type(stored) is int and abs(raw * 1_000_000 - stored) <= 1
+    if isinstance(raw, dict):
+        return isinstance(stored, dict) and stored.keys() == raw.keys() and all(same(stored[k], raw[k]) for k in raw)
+    if isinstance(raw, list):
+        return isinstance(stored, list) and len(stored) == len(raw) and all(same(x, y) for x, y in zip(stored, raw))
+    return type(stored) is type(raw) and stored == raw
 
 
 def lock(d: Path) -> dict:

@@ -63,23 +63,41 @@ class Unchecked(unittest.TestCase):
 
 
 class Same(unittest.TestCase):
-    R = {"verdict": "supported", "ci": [0.61, 0.83], "iota": 0.7123456789, "n": 3, "ok": True}
+    """A closing version stores micro(result) (Warrant has no floats); the decider compares it with its raw rerun."""
+    RAW = {"verdict": "supported", "ci": [0.61, 0.83], "iota": 0.7123456789, "n": 3, "ok": True}
+    STORED = TL.micro(RAW)
 
-    def test_the_last_bits_of_a_float(self):
-        self.assertTrue(TL.same(self.R, dict(self.R, iota=0.7123456789 * (1 + 1e-14), ci=[0.61 + 1e-16, 0.83])))
+    def test_the_stored_form(self):
+        self.assertEqual(self.STORED, {"verdict": "supported", "ci": [610000, 830000], "iota": 712346, "n": 3, "ok": True})
+
+    def test_the_rerun_itself(self):
+        self.assertTrue(TL.same(self.STORED, self.RAW))
+
+    def test_the_last_bits_of_a_float_across_a_half(self):
+        stored = TL.micro({"x": 0.0000025})                       # 2.5 units: round may go either way elsewhere
+        self.assertTrue(TL.same({"x": stored["x"] + 1}, {"x": 0.0000025}) or TL.same({"x": stored["x"]}, {"x": 0.0000025}))
+        self.assertTrue(TL.same(self.STORED, dict(self.RAW, iota=0.7123456789 * (1 + 1e-14))))
 
     def test_a_number_that_moved(self):
-        self.assertFalse(TL.same(self.R, dict(self.R, iota=0.7124)))
+        self.assertFalse(TL.same(self.STORED, dict(self.RAW, iota=0.7123486789)))
+
+    def test_an_integer_off_by_one(self):
+        self.assertFalse(TL.same(self.STORED, dict(self.RAW, n=4)))
 
     def test_another_verdict(self):
-        self.assertFalse(TL.same(self.R, dict(self.R, verdict="inconclusive")))
+        self.assertFalse(TL.same(self.STORED, dict(self.RAW, verdict="inconclusive")))
 
     def test_another_shape(self):
-        self.assertFalse(TL.same(self.R, dict(self.R, extra=1)))
-        self.assertFalse(TL.same(self.R, dict(self.R, ci=[0.61])))
+        self.assertFalse(TL.same(self.STORED, dict(self.RAW, extra=1)))
+        self.assertFalse(TL.same(self.STORED, dict(self.RAW, ci=[0.61])))
+        self.assertFalse(TL.same(dict(self.STORED, extra=1), self.RAW))
 
     def test_a_flag_is_not_a_number(self):
-        self.assertFalse(TL.same(self.R, dict(self.R, ok=1)))
+        self.assertFalse(TL.same(dict(self.STORED, ok=1), self.RAW))
+
+    def test_raw_floats_are_not_stored(self):
+        self.assertFalse(TL.same(self.RAW, self.RAW))
+        self.assertFalse(TL.same(dict(self.STORED, iota=712346.0), self.RAW))   # micro stores ints only
 
 
 if __name__ == "__main__":
