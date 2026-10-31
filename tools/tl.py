@@ -33,6 +33,17 @@ SCHEMAS = [
 ]
 
 
+def micro(v):
+    """A result as Warrant can carry it (no floats, V3 §1): every real number x becomes round(x · 10⁶)."""
+    if isinstance(v, float):
+        return round(v * 1_000_000)
+    if isinstance(v, dict):
+        return {k: micro(x) for k, x in v.items()}
+    if isinstance(v, list):
+        return [micro(x) for x in v]
+    return v
+
+
 def sha(b: bytes) -> str:
     return hashlib.sha256(b).hexdigest()
 
@@ -159,7 +170,7 @@ def main(cmd, *a):
         rec = records()
         closed = {}
         for h, pid in lk["predictions"].items():
-            v = res["verdicts"][h]
+            v = micro(res["verdicts"][h])
             body = {**{k: rec[pid]["body"][k] for k in ("registration", "hypothesis", "statement", "rule")},
                     "state": v["verdict"], "result": v, "data": data}
             closed[h] = put("entity", body, schema="prediction@1", lineage=pid, refs=[lk["registration"], data], guard=g)
@@ -173,7 +184,7 @@ def main(cmd, *a):
             sys.exit("results/data.json is not the data the closing versions name")
         for h, cid in cl["closing"].items():
             b = rec[cid]["body"]
-            ok = b["state"] == res["verdicts"][h]["verdict"] and b["result"] == res["verdicts"][h]
+            ok = b["state"] == res["verdicts"][h]["verdict"] and b["result"] == micro(res["verdicts"][h])
             body = {"verdict": "reproduces" if ok else "does_not_reproduce", "on": cid, "code": lk["analysis"], "env": env(), "commit": at}
             print(h, body["verdict"], warrant("attest", cid, "--body", json.dumps(body), **decider())["record"])
     elif cmd == "assess":
