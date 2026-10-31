@@ -51,10 +51,18 @@ def sha(b: bytes) -> str:
     return hashlib.sha256(b).hexdigest()
 
 
+def trust_file() -> str:
+    """The receiver's trust as the trust/3 file the CLI signs under: warrant-graph 3.0.0a2 requires `--trust` for put and
+    attest, and reads it only inside the working directory. Written for each signing call to the ignored runs/."""
+    (ROOT / "runs").mkdir(exist_ok=True)
+    (ROOT / "runs" / "trust.json").write_text(json.dumps(json.loads(RECEIVER.read_text())["trust"]))
+    return "runs/trust.json"
+
+
 def warrant(*args, actor=None, key=None) -> dict:
     cmd = [PY, "-m", "warrant", *args[:1], "--store", str(STORE)]
     if actor:
-        cmd += ["--actor", actor, "--key", key]                # the trust is the store's v3.json
+        cmd += ["--actor", actor, "--key", key, "--trust", trust_file()]
     p = subprocess.run(cmd + list(args[1:]), capture_output=True, text=True, cwd=ROOT)
     if p.returncode or not p.stdout.strip().startswith("{"):
         sys.exit(f"warrant {args[0]} refused: {p.stdout.strip()} {p.stderr.strip()}")

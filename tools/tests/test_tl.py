@@ -1,6 +1,6 @@
 """What tl.py checks that the core does not (METHOD §4): the closing guard names the registered analysis, and a
 withdrawal stands only where its author's chain puts it before the beacon. TL names another tl.py (the mutants)."""
-import importlib.util, os, unittest
+import importlib.util, json, os, subprocess, tempfile, unittest
 from pathlib import Path
 
 spec = importlib.util.spec_from_file_location("tl", os.environ.get("TL") or Path(__file__).resolve().parents[1] / "tl.py")
@@ -102,3 +102,35 @@ class Same(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Signs(unittest.TestCase):
+    """A signed call through warrant() reaches the store: decide.yml's first run (41164158460) had every attest refused,
+    `the following arguments are required: --trust`, because the helper no longer passed one."""
+
+    def setUp(self):
+        # this checkout's paths, not the module's: a mutant's tl.py lives under runs/
+        repo = Path(__file__).resolve().parents[2]
+        self.saved = TL.ROOT, TL.STORE, TL.RECEIVER, TL.PY
+        TL.PY = str(repo / ".venv" / "bin" / "python")
+        work = repo / "runs"
+        work.mkdir(exist_ok=True)
+        root = Path(tempfile.mkdtemp(dir=work))
+        subprocess.run([TL.PY, "-m", "warrant", "init", "--store", ".warrant"], cwd=root, check=True, capture_output=True)
+        self.seed = str(root / "t.seed")
+        pub = json.loads(subprocess.run([TL.PY, "-m", "warrant", "key", "--out", self.seed], cwd=root, check=True,
+                                        capture_output=True, text=True).stdout)["public"]
+        (root / ".warrant" / "v3.json").write_text(json.dumps(
+            {"warrant": "repository/3", "repository": "t", "trust": {"warrant": "trust/3", "keys": {"t": [pub]}},
+             "profile": {"warrant": "profile/3", "roles": {}}}))
+        TL.ROOT, TL.STORE, TL.RECEIVER = root, root / ".warrant", root / ".warrant" / "v3.json"
+
+    def tearDown(self):
+        TL.ROOT, TL.STORE, TL.RECEIVER, TL.PY = self.saved
+
+    def test_an_attest_is_signed_under_the_receivers_trust(self):
+        try:
+            out = TL.warrant("attest", "a" * 64, "--body", json.dumps({"verdict": "reproduces"}), actor="t", key=self.seed)
+        except SystemExit as e:
+            self.fail(f"refused: {e}")
+        self.assertRegex(out["record"], r"\A[0-9a-f]{64}\Z")

@@ -13,6 +13,7 @@ MUTANTS = {
     "tolerance-wide": ("abs(raw * 1_000_000 - stored) <= 1", "abs(raw * 1_000_000 - stored) <= 100"),
     "keys-unchecked": ("stored.keys() == raw.keys() and all(", "all(k in stored for k in raw) and all("),
     "flag-as-number": ("    return type(stored) is type(raw) and stored == raw", "    return stored == raw"),
+    "trust-dropped": ('cmd += ["--actor", actor, "--key", key, "--trust", trust_file()]', 'cmd += ["--actor", actor, "--key", key]'),
     "float-stored": ("return type(stored) is int and abs(", "return isinstance(stored, (int, float)) and abs("),
 }
 
