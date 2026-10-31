@@ -1,0 +1,28 @@
+overdamped w=1 N=8 j=0 F=1.1 F1=0.0 v=    5.071 D=    3.939 S=   62.103 W=61.975 eta=0.105    1.5s
+   v/phase=0.3169  D/phase=0.24620
+overdamped w=1 N=8 j=0 F=1.1 F1=0.6 v=    6.637 D=    6.916 S=   86.604 W=None eta=0.074    1.5s
+   v/phase=0.4148  D/phase=0.43226
+overdamped w=1 N=8 j=0 F=1.2 F1=0.0 v=    6.556 D=    2.736 S=   87.590 W=87.417 eta=0.179    1.5s
+   v/phase=0.4098  D/phase=0.17097
+overdamped w=1 N=8 j=0 F=1.2 F1=0.6 v=    7.854 D=    1.444 S=  102.508 W=None eta=0.417    1.5s
+   v/phase=0.4909  D/phase=0.09024
+overdamped w=1 N=8 j=0 F=1.3 F1=0.0 v=    7.850 D=    2.035 S=  113.612 W=113.396 eta=0.267    1.5s
+   v/phase=0.4907  D/phase=0.12720
+overdamped w=1 N=8 j=0 F=1.3 F1=0.6 v=    8.000 D=    0.012 S=  115.242 W=None eta=44.474    1.5s
+   v/phase=0.5000  D/phase=0.00078
+overdamped w=1 N=8 j=0 F=1.4 F1=0.0 v=    9.040 D=    1.843 S=  140.886 W=140.629 eta=0.315    1.5s
+   v/phase=0.5650  D/phase=0.11518
+overdamped w=1 N=8 j=0 F=1.4 F1=0.6 v=    8.119 D=    1.267 S=  135.421 W=None eta=0.384    1.5s
+   v/phase=0.5074  D/phase=0.07918
+overdamped w=1 N=8 j=0 F=1.5 F1=0.0 v=   10.160 D=    1.390 S=  169.624 W=169.327 eta=0.438    1.5s
+   v/phase=0.6350  D/phase=0.08688
+overdamped w=1 N=8 j=0 F=1.5 F1=0.6 v=    9.410 D=    4.074 S=  172.413 W=None eta=0.126    1.5s
+   v/phase=0.5881  D/phase=0.25461
+overdamped w=1 N=8 j=0 F=1.6 F1=0.0 v=   11.223 D=    1.280 S=  199.845 W=199.513 eta=0.492    1.5s
+   v/phase=0.7014  D/phase=0.07998
+overdamped w=1 N=8 j=0 F=1.6 F1=0.6 v=   10.792 D=    2.108 S=  207.480 W=None eta=0.266    1.5s
+   v/phase=0.6745  D/phase=0.13177
+overdamped w=1 N=8 j=0 F=1.7 F1=0.0 v=   12.255 D=    1.134 S=  231.852 W=231.485 eta=0.571    1.5s
+   v/phase=0.7659  D/phase=0.07087
+overdamped w=1 N=8 j=0 F=1.7 F1=0.6 v=   11.967 D=    1.692 S=  241.296 W=None eta=0.351    1.5s
+   v/phase=0.7479  D/phase=0.10577

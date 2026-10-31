@@ -1,0 +1,36 @@
+lock s=0.3 N=2 crystal F1=0.0      v=    1.907 D=    0.524 S=   27.599 W=27.55 eta=0.252    0.4s
+lock s=0.3 N=2 crystal F1=0.6      v=    1.963 D=    0.265 S=   29.482 W=None eta=0.493    0.4s
+   >> s=0.3 N=2 crystal: v/phase locked=0.4909 gain D_auto/D_lock=2.0
+lock s=0.3 N=2 loose F1=0.0        v=    1.867 D=    0.509 S=   27.016 W=26.969 eta=0.253    0.2s
+lock s=0.3 N=2 loose F1=0.6        v=    1.931 D=    0.334 S=   29.858 W=None eta=0.374    0.2s
+   >> s=0.3 N=2 loose: v/phase locked=0.4828 gain D_auto/D_lock=1.5
+lock s=0.3 N=8 crystal F1=0.0      v=    7.846 D=    1.845 S=  113.548 W=113.332 eta=0.294    1.5s
+lock s=0.3 N=8 crystal F1=0.6      v=    7.999 D=    0.018 S=  115.212 W=None eta=31.51    1.5s
+   >> s=0.3 N=8 crystal: v/phase locked=0.5000 gain D_auto/D_lock=104.7
+lock s=0.3 N=8 loose F1=0.0        v=    7.477 D=    2.360 S=  108.195 W=108.008 eta=0.219    0.7s
+lock s=0.3 N=8 loose F1=0.6        v=    7.730 D=    1.558 S=  119.414 W=None eta=0.321    0.7s
+   >> s=0.3 N=8 loose: v/phase locked=0.4832 gain D_auto/D_lock=1.5
+lock s=0.3 N=32 crystal F1=0.0     v=   31.272 D=    8.063 S=  452.578 W=451.7 eta=0.268   12.0s
+lock s=0.3 N=32 crystal F1=0.6     v=   32.001 D=    0.003 S=  458.000 W=None eta=724.788   11.8s
+   >> s=0.3 N=32 crystal: v/phase locked=0.5000 gain D_auto/D_lock=2613.7
+lock s=0.3 N=32 loose F1=0.0       v=   29.860 D=    8.807 S=  432.066 W=431.318 eta=0.234    2.4s
+lock s=0.3 N=32 loose F1=0.6       v=   30.904 D=    5.522 S=  477.366 W=None eta=0.362    2.4s
+   >> s=0.3 N=32 loose: v/phase locked=0.4829 gain D_auto/D_lock=1.6
+lock s=0.5 N=2 crystal F1=0.0      v=    1.977 D=    1.380 S=   10.300 W=10.282 eta=0.275    0.4s
+lock s=0.5 N=2 crystal F1=0.6      v=    2.014 D=    0.960 S=   11.338 W=None eta=0.373    0.4s
+   >> s=0.5 N=2 crystal: v/phase locked=0.5035 gain D_auto/D_lock=1.4
+lock s=0.5 N=2 loose F1=0.0        v=    1.960 D=    0.903 S=   10.206 W=10.19 eta=0.417    0.2s
+lock s=0.5 N=2 loose F1=0.6        v=    2.015 D=    0.874 S=   11.467 W=None eta=0.405    0.2s
+   >> s=0.5 N=2 loose: v/phase locked=0.5036 gain D_auto/D_lock=1.0
+lock s=0.5 N=8 crystal F1=0.0      v=    8.149 D=    3.855 S=   42.456 W=42.374 eta=0.406    1.6s
+lock s=0.5 N=8 crystal F1=0.6      v=    8.099 D=    2.195 S=   44.733 W=None eta=0.668    1.6s
+   >> s=0.5 N=8 crystal: v/phase locked=0.5062 gain D_auto/D_lock=1.8
+lock s=0.5 N=8 loose F1=0.0        v=    7.843 D=    4.224 S=   40.849 W=40.784 eta=0.356    0.7s
+lock s=0.5 N=8 loose F1=0.6        v=    8.034 D=    3.500 S=   45.740 W=None eta=0.403    0.7s
+   >> s=0.5 N=8 loose: v/phase locked=0.5021 gain D_auto/D_lock=1.2
+lock s=0.5 N=32 crystal F1=0.0     v=   32.517 D=   16.562 S=  169.420 W=169.089 eta=0.377   12.2s
+lock s=0.5 N=32 crystal F1=0.6     v=   32.005 D=    0.820 S=  174.760 W=None eta=7.145   12.0s
+   >> s=0.5 N=32 crystal: v/phase locked=0.5001 gain D_auto/D_lock=20.2
+lock s=0.5 N=32 loose F1=0.0       v=   31.366 D=   15.952 S=  163.362 W=163.106 eta=0.378    2.4s
+lock s=0.5 N=32 loose F1=0.6       v=   32.180 D=   12.258 S=  183.160 W=None eta=0.461    2.4s
+   >> s=0.5 N=32 loose: v/phase locked=0.5028 gain D_auto/D_lock=1.3

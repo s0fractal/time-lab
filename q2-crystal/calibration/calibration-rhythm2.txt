@@ -1,0 +1,28 @@
+rhythm w=4 N=8 j=0 F=0.8 F1=0.0    v=   21.829 D=   36.850 S=   70.004 W=69.854 eta=0.185    1.7s
+   v/phase=1.3643  D/phase=2.3031
+rhythm w=4 N=8 j=0 F=0.8 F1=1.0    v=   22.008 D=   31.922 S=   71.823 W=None eta=0.211    1.7s
+   v/phase=1.3755  D/phase=1.9951
+rhythm w=4 N=8 j=0 F=0.9 F1=0.0    v=   26.506 D=   16.491 S=   95.581 W=95.422 eta=0.446    1.7s
+   v/phase=1.6566  D/phase=1.0307
+rhythm w=4 N=8 j=0 F=0.9 F1=1.0    v=   26.709 D=   22.774 S=   97.912 W=None eta=0.32    1.7s
+   v/phase=1.6693  D/phase=1.4233
+rhythm w=4 N=8 j=0 F=1.0 F1=0.0    v=   30.499 D=   13.245 S=  122.155 W=121.997 eta=0.575    1.7s
+   v/phase=1.9062  D/phase=0.8278
+rhythm w=4 N=8 j=0 F=1.0 F1=1.0    v=   30.778 D=   13.495 S=  124.813 W=None eta=0.562    1.7s
+   v/phase=1.9236  D/phase=0.8435
+rhythm w=4 N=8 j=0 F=1.1 F1=0.0    v=   34.370 D=   11.090 S=  151.370 W=151.227 eta=0.704    1.6s
+   v/phase=2.1481  D/phase=0.6931
+rhythm w=4 N=8 j=0 F=1.1 F1=1.0    v=   34.021 D=   12.346 S=  149.598 W=None eta=0.627    1.6s
+   v/phase=2.1263  D/phase=0.7717
+rhythm w=4 N=8 j=0 F=1.2 F1=0.0    v=   37.933 D=    8.820 S=  182.211 W=182.081 eta=0.895    1.6s
+   v/phase=2.3708  D/phase=0.5512
+rhythm w=4 N=8 j=0 F=1.2 F1=1.0    v=   37.806 D=    9.053 S=  182.227 W=None eta=0.866    1.6s
+   v/phase=2.3629  D/phase=0.5658
+rhythm w=4 N=8 j=0 F=1.3 F1=0.0    v=   41.328 D=    9.044 S=  215.031 W=214.908 eta=0.878    1.6s
+   v/phase=2.5830  D/phase=0.5653
+rhythm w=4 N=8 j=0 F=1.3 F1=1.0    v=   41.288 D=    7.869 S=  215.738 W=None eta=1.004    1.6s
+   v/phase=2.5805  D/phase=0.4918
+rhythm w=4 N=8 j=0 F=1.4 F1=0.0    v=   44.645 D=    8.097 S=  250.132 W=250.013 eta=0.984    1.6s
+   v/phase=2.7903  D/phase=0.5060
+rhythm w=4 N=8 j=0 F=1.4 F1=1.0    v=   44.606 D=    9.800 S=  250.887 W=None eta=0.809    1.6s
+   v/phase=2.7879  D/phase=0.6125

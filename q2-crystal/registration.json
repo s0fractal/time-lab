@@ -1,0 +1,260 @@
+{
+ "question": "Does a soliton crystal (the archived lab's lattice, untrained, pushed by a constant torque) hold a world's rhythm, and is that hold collective: tighter with size and coupling, more robust to noise?",
+ "runner_path": "q2-crystal/run.py",
+ "analysis_path": "q2-crystal/analyze.py",
+ "seeds": "seed(name) = int(sha256('<registration id>:<beacon randomness>:<name>').hexdigest()[:12], 16) for each cell name (the noise of its trajectories) and for 'crystal' (the gyroscope W); numpy PCG64.",
+ "beacon": "drand quicknet (chain 52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971): the first round dated at or after the earliest GitHub-witnessed push (GET repos/s0fractal/time-lab/activity) that holds the commit adding q2-crystal/registration.lock.json.",
+ "design": {
+  "base": {
+   "d": 2,
+   "dt": 1.0,
+   "S": 4,
+   "gamma": 2.0,
+   "kappa": 1.0,
+   "g_lat": 1.0,
+   "g_pin": 0.5,
+   "m_pin": 2,
+   "F": 1.3,
+   "omega": 1.0
+  },
+  "F1": 0.6,
+  "trajectories": 1024,
+  "window": [
+   150,
+   600
+  ],
+  "loose": "kappa = 0 and g_lat = 0: the same pinned oscillators, uncoupled",
+  "cells": [
+   {
+    "name": "crystal-N2-s0.3-j0.0-F10.0",
+    "coupling": "crystal",
+    "N": 2,
+    "sigma": 0.3,
+    "j_scale": 0.0,
+    "F1": 0.0
+   },
+   {
+    "name": "crystal-N2-s0.3-j0.0-F10.6",
+    "coupling": "crystal",
+    "N": 2,
+    "sigma": 0.3,
+    "j_scale": 0.0,
+    "F1": 0.6
+   },
+   {
+    "name": "loose-N2-s0.3-j0.0-F10.0",
+    "coupling": "loose",
+    "N": 2,
+    "sigma": 0.3,
+    "j_scale": 0.0,
+    "F1": 0.0
+   },
+   {
+    "name": "loose-N2-s0.3-j0.0-F10.6",
+    "coupling": "loose",
+    "N": 2,
+    "sigma": 0.3,
+    "j_scale": 0.0,
+    "F1": 0.6
+   },
+   {
+    "name": "crystal-N8-s0.3-j0.0-F10.0",
+    "coupling": "crystal",
+    "N": 8,
+    "sigma": 0.3,
+    "j_scale": 0.0,
+    "F1": 0.0
+   },
+   {
+    "name": "crystal-N8-s0.3-j0.0-F10.6",
+    "coupling": "crystal",
+    "N": 8,
+    "sigma": 0.3,
+    "j_scale": 0.0,
+    "F1": 0.6
+   },
+   {
+    "name": "loose-N8-s0.3-j0.0-F10.0",
+    "coupling": "loose",
+    "N": 8,
+    "sigma": 0.3,
+    "j_scale": 0.0,
+    "F1": 0.0
+   },
+   {
+    "name": "loose-N8-s0.3-j0.0-F10.6",
+    "coupling": "loose",
+    "N": 8,
+    "sigma": 0.3,
+    "j_scale": 0.0,
+    "F1": 0.6
+   },
+   {
+    "name": "crystal-N32-s0.3-j0.0-F10.0",
+    "coupling": "crystal",
+    "N": 32,
+    "sigma": 0.3,
+    "j_scale": 0.0,
+    "F1": 0.0
+   },
+   {
+    "name": "crystal-N32-s0.3-j0.0-F10.6",
+    "coupling": "crystal",
+    "N": 32,
+    "sigma": 0.3,
+    "j_scale": 0.0,
+    "F1": 0.6
+   },
+   {
+    "name": "loose-N32-s0.3-j0.0-F10.0",
+    "coupling": "loose",
+    "N": 32,
+    "sigma": 0.3,
+    "j_scale": 0.0,
+    "F1": 0.0
+   },
+   {
+    "name": "loose-N32-s0.3-j0.0-F10.6",
+    "coupling": "loose",
+    "N": 32,
+    "sigma": 0.3,
+    "j_scale": 0.0,
+    "F1": 0.6
+   },
+   {
+    "name": "crystal-N2-s0.5-j0.0-F10.0",
+    "coupling": "crystal",
+    "N": 2,
+    "sigma": 0.5,
+    "j_scale": 0.0,
+    "F1": 0.0
+   },
+   {
+    "name": "crystal-N2-s0.5-j0.0-F10.6",
+    "coupling": "crystal",
+    "N": 2,
+    "sigma": 0.5,
+    "j_scale": 0.0,
+    "F1": 0.6
+   },
+   {
+    "name": "loose-N2-s0.5-j0.0-F10.0",
+    "coupling": "loose",
+    "N": 2,
+    "sigma": 0.5,
+    "j_scale": 0.0,
+    "F1": 0.0
+   },
+   {
+    "name": "loose-N2-s0.5-j0.0-F10.6",
+    "coupling": "loose",
+    "N": 2,
+    "sigma": 0.5,
+    "j_scale": 0.0,
+    "F1": 0.6
+   },
+   {
+    "name": "crystal-N8-s0.5-j0.0-F10.0",
+    "coupling": "crystal",
+    "N": 8,
+    "sigma": 0.5,
+    "j_scale": 0.0,
+    "F1": 0.0
+   },
+   {
+    "name": "crystal-N8-s0.5-j0.0-F10.6",
+    "coupling": "crystal",
+    "N": 8,
+    "sigma": 0.5,
+    "j_scale": 0.0,
+    "F1": 0.6
+   },
+   {
+    "name": "loose-N8-s0.5-j0.0-F10.0",
+    "coupling": "loose",
+    "N": 8,
+    "sigma": 0.5,
+    "j_scale": 0.0,
+    "F1": 0.0
+   },
+   {
+    "name": "loose-N8-s0.5-j0.0-F10.6",
+    "coupling": "loose",
+    "N": 8,
+    "sigma": 0.5,
+    "j_scale": 0.0,
+    "F1": 0.6
+   },
+   {
+    "name": "crystal-N32-s0.5-j0.0-F10.0",
+    "coupling": "crystal",
+    "N": 32,
+    "sigma": 0.5,
+    "j_scale": 0.0,
+    "F1": 0.0
+   },
+   {
+    "name": "crystal-N32-s0.5-j0.0-F10.6",
+    "coupling": "crystal",
+    "N": 32,
+    "sigma": 0.5,
+    "j_scale": 0.0,
+    "F1": 0.6
+   },
+   {
+    "name": "loose-N32-s0.5-j0.0-F10.0",
+    "coupling": "loose",
+    "N": 32,
+    "sigma": 0.5,
+    "j_scale": 0.0,
+    "F1": 0.0
+   },
+   {
+    "name": "loose-N32-s0.5-j0.0-F10.6",
+    "coupling": "loose",
+    "N": 32,
+    "sigma": 0.5,
+    "j_scale": 0.0,
+    "F1": 0.6
+   },
+   {
+    "name": "crystal-N32-s0.3-j0.1-F10.0",
+    "coupling": "crystal",
+    "N": 32,
+    "sigma": 0.3,
+    "j_scale": 0.1,
+    "F1": 0.0
+   },
+   {
+    "name": "crystal-N32-s0.3-j0.1-F10.6",
+    "coupling": "crystal",
+    "N": 32,
+    "sigma": 0.3,
+    "j_scale": 0.1,
+    "F1": 0.6
+   }
+  ]
+ },
+ "hypotheses": [
+  {
+   "hypothesis": "H1",
+   "statement": "A larger soliton crystal locks to a world's rhythm more tightly: at σ = 0.3 its lock gain at least doubles from N = 2 to N = 8 and again from N = 8 to N = 32.",
+   "rule": "G = D without the rhythm (F1 = 0) / D with it (F1 = 0.6) for one (coupling, N, σ, j); D = var(ΔJ) / (2 Δt N d) over the window [150, 600] of 1024 trajectories. Each test is log10 of a ratio of two gains, with a 95% percentile interval over 2000 resamples of every cell's trajectories, seeded from the registration id; inconclusive whenever a gain is undefined. Supported if both intervals (G(8)/G(2), G(32)/G(8)) lie above log10 2; contradicted if either lies wholly below log10 2; else inconclusive."
+  },
+  {
+   "hypothesis": "H2",
+   "statement": "The lock is collective: at N = 32 and σ = 0.3 the coupled crystal's lock gain is at least ten times that of the same pinned oscillators uncoupled (κ = g_lat = 0).",
+   "rule": "G = D without the rhythm (F1 = 0) / D with it (F1 = 0.6) for one (coupling, N, σ, j); D = var(ΔJ) / (2 Δt N d) over the window [150, 600] of 1024 trajectories. Each test is log10 of a ratio of two gains, with a 95% percentile interval over 2000 resamples of every cell's trajectories, seeded from the registration id; inconclusive whenever a gain is undefined. Supported if the interval of G(crystal)/G(loose) lies above 1 (log10 10); contradicted if it lies wholly below 1; else inconclusive."
+  },
+  {
+   "hypothesis": "H3",
+   "statement": "Size buys robustness to noise: at σ = 0.5 the lock gain of the N = 32 crystal is at least five times that of the N = 8 crystal.",
+   "rule": "G = D without the rhythm (F1 = 0) / D with it (F1 = 0.6) for one (coupling, N, σ, j); D = var(ΔJ) / (2 Δt N d) over the window [150, 600] of 1024 trajectories. Each test is log10 of a ratio of two gains, with a 95% percentile interval over 2000 resamples of every cell's trajectories, seeded from the registration id; inconclusive whenever a gain is undefined. Supported if the interval of G(32)/G(8) at σ = 0.5 lies above log10 5; contradicted if it lies wholly below log10 5; else inconclusive."
+  },
+  {
+   "hypothesis": "H4",
+   "statement": "The archived lab's gyroscope (j_scale 0.1, J = j_scale (W − Wᵀ)) weakens the lock: at N = 32 and σ = 0.3 it lowers the crystal's lock gain at least twofold. Not calibrated: a prediction made blind.",
+   "rule": "G = D without the rhythm (F1 = 0) / D with it (F1 = 0.6) for one (coupling, N, σ, j); D = var(ΔJ) / (2 Δt N d) over the window [150, 600] of 1024 trajectories. Each test is log10 of a ratio of two gains, with a 95% percentile interval over 2000 resamples of every cell's trajectories, seeded from the registration id; inconclusive whenever a gain is undefined. Supported if the interval of G(j = 0.1)/G(j = 0) lies below −log10 2; contradicted if it lies wholly above −log10 2; else inconclusive."
+  }
+ ]
+}
