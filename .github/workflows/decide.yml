@@ -1,0 +1,60 @@
+# time-lab-decider (METHOD §2, §5 step 6): for every question with closing versions (DIR/closure.lock.json), rerun the
+# registered analysis on the committed data at main and attest each closing version it has not attested yet, under
+# the key decider-key.yml made, which only this environment holds. The attests are pushed to main as one commit of
+# record lines; `tl.py assess` then runs and fails the run on anything the core does not check (METHOD §4).
+name: decide
+
+on:
+  push:
+    branches: [main]
+    paths: ["*/closure.lock.json"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: decide
+  cancel-in-progress: false
+
+jobs:
+  decide:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    environment: decider
+    timeout-minutes: 30
+    permissions:
+      contents: write # to push the decider's attests to main
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+      - name: Install the locked environment
+        run: python -m pip install --quiet uv==0.12.5 && uv sync --frozen --python "$(command -v python)"
+      - name: Rerun each registered analysis and attest what reproduces
+        env:
+          SEED: ${{ secrets.TL_DECIDER_SEED }}
+        run: |
+          if [ -z "$SEED" ]; then
+            echo "the environment decider holds no TL_DECIDER_SEED: run decider-key first" >&2
+            exit 1
+          fi
+          key="$RUNNER_TEMP/decider.seed"
+          (umask 077 && printf %s "$SEED" > "$key")
+          outcome=0
+          for lock in */closure.lock.json; do
+            [ -e "$lock" ] || continue
+            dir=$(dirname "$lock")
+            .venv/bin/python tools/tl.py verify "$dir" && TL_DECIDER_SEED="$key" .venv/bin/python tools/tl.py decide "$dir" || outcome=1
+          done
+          rm -f "$key"
+          if ! git diff --quiet -- .warrant/records.jsonl; then
+            git -c user.name=time-lab-decider -c user.email=decider@invalid commit -q -m "time-lab-decider: attests of the closing versions at $(git rev-parse --short HEAD)" -- .warrant/records.jsonl
+            git push origin HEAD:main
+          fi
+          .venv/bin/python tools/tl.py assess || outcome=1
+          exit "$outcome"
