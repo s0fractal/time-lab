@@ -1,0 +1,122 @@
+{
+ "question": "A clock's second use: how long has it been? An agent starts at a world event and at the 16th and 64th event after it says how much time has passed, by counting events (m T) or by its own crystal clock (q6-renewal's, near the TUR bound), and by both weighted by their variances. In worlds of gamma intervals (mean T = 20, shape k from 1 to 4096), what is the own clock worth for duration? The predictions are blind: they follow from the counting variance m T² / k and the diffusions q6-renewal measured for these clocks, with no duration run on calibration seeds.",
+ "runner_path": "q7-duration/run.py",
+ "analysis_path": "q7-duration/analyze.py",
+ "seeds": "seed(name) = int(sha256('<registration id>:<beacon randomness>:<name>').hexdigest()[:12], 16): a clock's crystal from its name, a world's events from 'world:<world name>' (the same events for every clock); numpy PCG64.",
+ "beacon": "drand quicknet (chain 52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971): the first round dated at or after the earliest GitHub-witnessed push (GET repos/s0fractal/time-lab/activity) that holds the commit adding q7-duration/registration.lock.json.",
+ "design": {
+  "base": {
+   "d": 2,
+   "dt": 1.0,
+   "S": 4,
+   "gamma": 0.5,
+   "kappa": 1.0,
+   "g_lat": 1.0,
+   "g_pin": 0.5,
+   "m_pin": 2,
+   "F": 1.3,
+   "sigma": 0.3
+  },
+  "T": 20.0,
+  "trajectories": 2048,
+  "start": 400.0,
+  "t_total": 3000,
+  "checkpoints": [
+   400,
+   1200,
+   3000
+  ],
+  "queries": [
+   16,
+   64
+  ],
+  "estimates": "count m T; clock (Φ(t_m) − Φ(t0)) / v*; fused w clock + (1 − w) m T with w = (T / k) / (T / k + 2 D*). The first event is at start, the rest at gamma(k, T / k) intervals, all on the sub-step grid.",
+  "clocks": [
+   {
+    "name": "N1",
+    "N": 1,
+    "v_star": 2.59498,
+    "D_star": 0.0141728,
+    "from": "q6-renewal/results/analysis.json (registration fa7bceba): v and D/v² of this clock"
+   },
+   {
+    "name": "N4",
+    "N": 4,
+    "v_star": 2.59236,
+    "D_star": 0.003449,
+    "from": "q6-renewal/results/analysis.json (registration fa7bceba): v and D/v² of this clock"
+   },
+   {
+    "name": "N16",
+    "N": 16,
+    "v_star": 2.59238,
+    "D_star": 0.0008696,
+    "from": "q6-renewal/results/analysis.json (registration fa7bceba): v and D/v² of this clock"
+   },
+   {
+    "name": "N64",
+    "N": 64,
+    "v_star": 2.59239,
+    "D_star": 0.0002185,
+    "from": "q6-renewal/results/analysis.json (registration fa7bceba): v and D/v² of this clock"
+   }
+  ],
+  "worlds": [
+   {
+    "name": "k1",
+    "k": 1
+   },
+   {
+    "name": "k4",
+    "k": 4
+   },
+   {
+    "name": "k16",
+    "k": 16
+   },
+   {
+    "name": "k64",
+    "k": 64
+   },
+   {
+    "name": "k256",
+    "k": 256
+   },
+   {
+    "name": "k1024",
+    "k": 1024
+   },
+   {
+    "name": "k4096",
+    "k": 4096
+   }
+  ]
+ },
+ "hypotheses": [
+  {
+   "hypothesis": "H1",
+   "statement": "In a world without memory the own clock is the sense of duration: at the 64th event the cheapest clock (N = 1) measures the span at least 100 times more precisely than counting (blind prediction from R = T / (2 k D*): 706).",
+   "rule": "For each clock, of its mean phase Φ = J / (N d) at the checkpoints (400, 1200, 3000), 2048 trajectories: S = the mean heat given to the bath over [t0, t2] / (σ² (t2 − t0)). For each world and query m (the m-th event after the start event at t0 = 400; s its true span): MSE(count) = mean (m T − s)², MSE(clock) = mean ((Φ(t_m) − Φ(t0)) / v* − s)², MSE(fused) = mean (w clock + (1 − w) m T − s)² with w = (T / k) / (T / k + 2 D*), v* and D* the clock's registered constants; R = MSE(count) / MSE(clock), how many times better than counting the own clock alone measures the span (the clock does not see the world, so the best weighted sum of the two gains 1 + R over counting; MSE(fused) is descriptive). Each test is log10 of a ratio, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of the trajectories, the same indices for every clock and world, seeded from the registration id; any resample in which the ratio is undefined makes the hypothesis inconclusive. Supported if the interval of log10 R(N1, k1, m = 64) lies above log10 100; contradicted if it lies wholly below; else inconclusive."
+  },
+  {
+   "hypothesis": "H2",
+   "statement": "Counting errs as the world is irregular, the clock as it diffuses: in the world of shape 256, at the 64th event, R of the clock of 1 is T / (2 k D*) within ×4/3 either way (blind prediction: 2.76; D* itself carries q6-renewal's sampling error of a few per cent).",
+   "rule": "For each clock, of its mean phase Φ = J / (N d) at the checkpoints (400, 1200, 3000), 2048 trajectories: S = the mean heat given to the bath over [t0, t2] / (σ² (t2 − t0)). For each world and query m (the m-th event after the start event at t0 = 400; s its true span): MSE(count) = mean (m T − s)², MSE(clock) = mean ((Φ(t_m) − Φ(t0)) / v* − s)², MSE(fused) = mean (w clock + (1 − w) m T − s)² with w = (T / k) / (T / k + 2 D*), v* and D* the clock's registered constants; R = MSE(count) / MSE(clock), how many times better than counting the own clock alone measures the span (the clock does not see the world, so the best weighted sum of the two gains 1 + R over counting; MSE(fused) is descriptive). Each test is log10 of a ratio, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of the trajectories, the same indices for every clock and world, seeded from the registration id; any resample in which the ratio is undefined makes the hypothesis inconclusive. Supported if the interval of log10 R(N1, k256, m = 64) − log10 [T / (2 · 256 · D*(N1))] lies within (−log10 4/3, log10 4/3); contradicted if it lies wholly outside; else inconclusive."
+  },
+  {
+   "hypothesis": "H3",
+   "statement": "The worth depends on price per regularity only: a clock 16 times dearer in a world 16 times more regular has the same R (the clock of 16 in k4096 against the clock of 1 in k256, at the 64th event) within ×1.5 either way (blind prediction: ×1.02).",
+   "rule": "For each clock, of its mean phase Φ = J / (N d) at the checkpoints (400, 1200, 3000), 2048 trajectories: S = the mean heat given to the bath over [t0, t2] / (σ² (t2 − t0)). For each world and query m (the m-th event after the start event at t0 = 400; s its true span): MSE(count) = mean (m T − s)², MSE(clock) = mean ((Φ(t_m) − Φ(t0)) / v* − s)², MSE(fused) = mean (w clock + (1 − w) m T − s)² with w = (T / k) / (T / k + 2 D*), v* and D* the clock's registered constants; R = MSE(count) / MSE(clock), how many times better than counting the own clock alone measures the span (the clock does not see the world, so the best weighted sum of the two gains 1 + R over counting; MSE(fused) is descriptive). Each test is log10 of a ratio, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of the trajectories, the same indices for every clock and world, seeded from the registration id; any resample in which the ratio is undefined makes the hypothesis inconclusive. Supported if the interval of log10 R(N16, k4096, m = 64) / R(N1, k256, m = 64) lies within (−log10 1.5, log10 1.5); contradicted if it lies wholly outside; else inconclusive."
+  },
+  {
+   "hypothesis": "H4",
+   "statement": "In a regular world counting is the clock: in the world of shape 4096, at the 64th event, counting measures the span at least twice as precisely as the cheapest clock (blind prediction: R = 0.17, counting 5.8 times better).",
+   "rule": "For each clock, of its mean phase Φ = J / (N d) at the checkpoints (400, 1200, 3000), 2048 trajectories: S = the mean heat given to the bath over [t0, t2] / (σ² (t2 − t0)). For each world and query m (the m-th event after the start event at t0 = 400; s its true span): MSE(count) = mean (m T − s)², MSE(clock) = mean ((Φ(t_m) − Φ(t0)) / v* − s)², MSE(fused) = mean (w clock + (1 − w) m T − s)² with w = (T / k) / (T / k + 2 D*), v* and D* the clock's registered constants; R = MSE(count) / MSE(clock), how many times better than counting the own clock alone measures the span (the clock does not see the world, so the best weighted sum of the two gains 1 + R over counting; MSE(fused) is descriptive). Each test is log10 of a ratio, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of the trajectories, the same indices for every clock and world, seeded from the registration id; any resample in which the ratio is undefined makes the hypothesis inconclusive. Supported if the interval of log10 R(N1, k4096, m = 64) lies below −log10 2; contradicted if it lies wholly above; else inconclusive."
+  },
+  {
+   "hypothesis": "H5",
+   "statement": "The worth does not depend on how long the span is: counting and the clock both err as the square root of the span, so in the world of shape 256 the clock of 1 has the same R at the 16th event as at the 64th, within ×1.5 either way (blind prediction: ×1).",
+   "rule": "For each clock, of its mean phase Φ = J / (N d) at the checkpoints (400, 1200, 3000), 2048 trajectories: S = the mean heat given to the bath over [t0, t2] / (σ² (t2 − t0)). For each world and query m (the m-th event after the start event at t0 = 400; s its true span): MSE(count) = mean (m T − s)², MSE(clock) = mean ((Φ(t_m) − Φ(t0)) / v* − s)², MSE(fused) = mean (w clock + (1 − w) m T − s)² with w = (T / k) / (T / k + 2 D*), v* and D* the clock's registered constants; R = MSE(count) / MSE(clock), how many times better than counting the own clock alone measures the span (the clock does not see the world, so the best weighted sum of the two gains 1 + R over counting; MSE(fused) is descriptive). Each test is log10 of a ratio, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of the trajectories, the same indices for every clock and world, seeded from the registration id; any resample in which the ratio is undefined makes the hypothesis inconclusive. Supported if the interval of log10 R(N1, k256, m = 16) / R(N1, k256, m = 64) lies within (−log10 1.5, log10 1.5); contradicted if it lies wholly outside; else inconclusive."
+  }
+ ]
+}
