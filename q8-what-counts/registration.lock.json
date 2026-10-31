@@ -1,0 +1,15 @@
+{
+ "registration": "5364e0453cbf1bc49f00ba7e847cbe9092ac04a6be97fe1f92a0e3b4389791ef",
+ "runner": "45d0769af603a6836ca1457f23c6fb2f5b5dafc32544ab2f070d8b4b94d920fb",
+ "runner_path": "q8-what-counts/run.py",
+ "analysis": "acaf42ba4f44c8cd4a298d62a7f7f06e7ce45e64990bbf2c1383d72b46369a3f",
+ "analysis_path": "q8-what-counts/analyze.py",
+ "predictions": {
+  "H1": "40239dac87dce0ded538b442262734319d13183fbd4bb5ac7123b4ed4f0eeff5",
+  "H2": "4ce85d32ed8128951b26f93b6dec7de6d6c31eb66e3e71d337f3313bbeca5086",
+  "H3": "e8be4333c38c0f984cdf5564cd9c310bbae3e36870a836005d545140d34175e9",
+  "H4": "c6022dee94823d14cf8852a750206a440d2413e735505a3760b62dee8bd4d8f4",
+  "H5": "ef0a1412d85f7cc6073d106b99290418f6dd1b12e3cf8b05f068c77fce4a6142",
+  "H6": "a6afaef6e0d3d621485474c487d75d5406ef9688e8da75890a1a7aef26d95f6c"
+ }
+}

@@ -1,0 +1,167 @@
+{
+ "question": "q1-weber found no single internal time: gemma3's count estimate rose with its long words, gemma4's fell, qwen3.8's barely moved. Its long words were longer in characters, in tokens and rarer at once. What does each model's estimate follow: the characters of the list, or its tokens (with rarity, which BPE ties to them)?",
+ "runner_path": "q8-what-counts/run.py",
+ "analysis_path": "q8-what-counts/analyze.py",
+ "seeds": "seed = int(sha256('<registration id>:<beacon randomness>:<model>:<condition>:<n>:<k>').hexdigest()[:12], 16): the list is random.Random(seed) choices from the condition's vocabulary; the model's sampling seed is seed mod 2^31.",
+ "beacon": "drand quicknet (chain 52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971): the first round dated at or after the earliest GitHub-witnessed push (GET repos/s0fractal/time-lab/activity) that holds the commit adding q8-what-counts/registration.lock.json.",
+ "design": {
+  "models": [
+   "gemma4:26b-a4b-it-q4_K_M",
+   "qwen3.8:27b-mlx",
+   "gemma3:27b"
+  ],
+  "prompt": "Here is a list of words:\n\n{list}\n\nHow many words are in the list? Do not count step by step. Reply with a single integer only.",
+  "options": {
+   "temperature": 0,
+   "num_ctx": 8192,
+   "num_predict": 16
+  },
+  "think": false,
+  "grid": [
+   91,
+   128,
+   181,
+   256,
+   362,
+   512
+  ],
+  "lists": 24,
+  "order": "models in the order above, one at a time; within a model short, one, many; n ascending, k ascending",
+  "conditions": [
+   {
+    "name": "short",
+    "vocabulary": [
+     "apple",
+     "river",
+     "stone",
+     "cloud",
+     "lamp",
+     "horse",
+     "table",
+     "green",
+     "music",
+     "paper",
+     "window",
+     "garden",
+     "silver",
+     "train",
+     "bread",
+     "candle",
+     "forest",
+     "mirror",
+     "pencil",
+     "rocket",
+     "shadow",
+     "summer",
+     "tiger",
+     "violet",
+     "winter",
+     "yellow",
+     "anchor",
+     "basket",
+     "copper",
+     "dragon"
+    ],
+    "about": "q1-weber's short words: one token in each model, 5.5 characters on average"
+   },
+   {
+    "name": "one",
+    "vocabulary": [
+     "international",
+     "communication",
+     "environmental",
+     "transportation",
+     "understanding",
+     "responsibility",
+     "administration",
+     "representative",
+     "infrastructure",
+     "entertainment",
+     "relationships",
+     "organizations",
+     "manufacturing",
+     "investigation",
+     "professional",
+     "comprehensive",
+     "approximately",
+     "implementation",
+     "characteristics",
+     "significantly",
+     "opportunities",
+     "consideration",
+     "contributions",
+     "recommendations",
+     "pharmaceutical",
+     "constitutional",
+     "independently"
+    ],
+    "about": "long common words that are one token in each model (calibration/candidates.json), 13.4 characters"
+   },
+   {
+    "name": "many",
+    "vocabulary": [
+     "antediluvian",
+     "glockenspiel",
+     "obstreperous",
+     "polysyllabic",
+     "pyrotechnics",
+     "quixotically",
+     "vituperative",
+     "grandiloquent",
+     "nudiustertian",
+     "perspicacious",
+     "pusillanimous",
+     "quodlibetical",
+     "recalcitrance",
+     "rhadamanthine",
+     "sanctimonious",
+     "ventriloquist",
+     "defenestration",
+     "isomorphically",
+     "lugubriousness",
+     "otolaryngology",
+     "sesquipedalian",
+     "tergiversation",
+     "verisimilitude",
+     "cholecystectomy",
+     "mellifluousness",
+     "phenylketonuria",
+     "plenipotentiary"
+    ],
+    "about": "rare words of the same length that are three to seven tokens in each model (calibration/candidates-many.json), 13.3 characters"
+   }
+  ]
+ },
+ "hypotheses": [
+  {
+   "hypothesis": "H1",
+   "statement": "gemma3's estimate grows with the characters of the list: at equal tokens, words 2.4 times longer in characters raise it with an elasticity above 0.15 (calibration: 0.37).",
+   "rule": "Per model and condition, tau = tokens per word and chi = characters per word are the slopes over n of the prompt's tokens (ollama's prompt_eval_count) and of the list's characters. Over n in the grid, with medians of the parsed integer answers: iota_chars = mean_n log(median one / median short) / log(chi_one / chi_short); iota_tokens = mean_n log(median many / median one) / log(tau_many / tau_one); chars-minus-tokens = their difference. A 95% interval (inverted-cdf quantiles) over 2000 resamples of the lists of every (condition, n) cell, the same resamples for all three, seeded from the registration id and the model. Inconclusive by rule: fewer than 95% of a condition's answers hold an integer; the axis held equal differs by more than 10% or the axis varied changes by less than 1.5 times; a median estimate is not positive. Supported if the interval of gemma3:27b's iota_chars lies above 0.15; contradicted if it lies wholly below; else inconclusive."
+  },
+  {
+   "hypothesis": "H2",
+   "statement": "Characters move gemma3's estimate more than its tokens do: q1-weber's 'own duration' (iota +0.71) is mostly the length of the text (calibration: iota_chars 0.37, iota_tokens 0.17).",
+   "rule": "Per model and condition, tau = tokens per word and chi = characters per word are the slopes over n of the prompt's tokens (ollama's prompt_eval_count) and of the list's characters. Over n in the grid, with medians of the parsed integer answers: iota_chars = mean_n log(median one / median short) / log(chi_one / chi_short); iota_tokens = mean_n log(median many / median one) / log(tau_many / tau_one); chars-minus-tokens = their difference. A 95% interval (inverted-cdf quantiles) over 2000 resamples of the lists of every (condition, n) cell, the same resamples for all three, seeded from the registration id and the model. Inconclusive by rule: fewer than 95% of a condition's answers hold an integer; the axis held equal differs by more than 10% or the axis varied changes by less than 1.5 times; a median estimate is not positive. Supported if the interval of gemma3:27b's chars-minus-tokens lies above 0; contradicted if it lies wholly below; else inconclusive."
+  },
+  {
+   "hypothesis": "H3",
+   "statement": "gemma4 ignores characters: at equal tokens its elasticity to characters lies within ±0.1 (calibration: −0.01).",
+   "rule": "Per model and condition, tau = tokens per word and chi = characters per word are the slopes over n of the prompt's tokens (ollama's prompt_eval_count) and of the list's characters. Over n in the grid, with medians of the parsed integer answers: iota_chars = mean_n log(median one / median short) / log(chi_one / chi_short); iota_tokens = mean_n log(median many / median one) / log(tau_many / tau_one); chars-minus-tokens = their difference. A 95% interval (inverted-cdf quantiles) over 2000 resamples of the lists of every (condition, n) cell, the same resamples for all three, seeded from the registration id and the model. Inconclusive by rule: fewer than 95% of a condition's answers hold an integer; the axis held equal differs by more than 10% or the axis varied changes by less than 1.5 times; a median estimate is not positive. Supported if the interval of gemma4:26b-a4b-it-q4_K_M's iota_chars lies within (−0.1, 0.1); contradicted if it lies wholly outside; else inconclusive."
+  },
+  {
+   "hypothesis": "H4",
+   "statement": "gemma4's fall is its tokens (or the rarity BPE ties to them): at equal characters, words 3.6 times more tokens lower its estimate with an elasticity below −0.2 (calibration: −0.36).",
+   "rule": "Per model and condition, tau = tokens per word and chi = characters per word are the slopes over n of the prompt's tokens (ollama's prompt_eval_count) and of the list's characters. Over n in the grid, with medians of the parsed integer answers: iota_chars = mean_n log(median one / median short) / log(chi_one / chi_short); iota_tokens = mean_n log(median many / median one) / log(tau_many / tau_one); chars-minus-tokens = their difference. A 95% interval (inverted-cdf quantiles) over 2000 resamples of the lists of every (condition, n) cell, the same resamples for all three, seeded from the registration id and the model. Inconclusive by rule: fewer than 95% of a condition's answers hold an integer; the axis held equal differs by more than 10% or the axis varied changes by less than 1.5 times; a median estimate is not positive. Supported if the interval of gemma4:26b-a4b-it-q4_K_M's iota_tokens lies below −0.2; contradicted if it lies wholly above; else inconclusive."
+  },
+  {
+   "hypothesis": "H5",
+   "statement": "qwen3.8's estimate falls a little with characters at equal tokens (calibration: −0.20).",
+   "rule": "Per model and condition, tau = tokens per word and chi = characters per word are the slopes over n of the prompt's tokens (ollama's prompt_eval_count) and of the list's characters. Over n in the grid, with medians of the parsed integer answers: iota_chars = mean_n log(median one / median short) / log(chi_one / chi_short); iota_tokens = mean_n log(median many / median one) / log(tau_many / tau_one); chars-minus-tokens = their difference. A 95% interval (inverted-cdf quantiles) over 2000 resamples of the lists of every (condition, n) cell, the same resamples for all three, seeded from the registration id and the model. Inconclusive by rule: fewer than 95% of a condition's answers hold an integer; the axis held equal differs by more than 10% or the axis varied changes by less than 1.5 times; a median estimate is not positive. Supported if the interval of qwen3.8:27b-mlx's iota_chars lies below 0; contradicted if it lies wholly above; else inconclusive."
+  },
+  {
+   "hypothesis": "H6",
+   "statement": "qwen3.8's estimate falls a little with tokens at equal characters (calibration: −0.15).",
+   "rule": "Per model and condition, tau = tokens per word and chi = characters per word are the slopes over n of the prompt's tokens (ollama's prompt_eval_count) and of the list's characters. Over n in the grid, with medians of the parsed integer answers: iota_chars = mean_n log(median one / median short) / log(chi_one / chi_short); iota_tokens = mean_n log(median many / median one) / log(tau_many / tau_one); chars-minus-tokens = their difference. A 95% interval (inverted-cdf quantiles) over 2000 resamples of the lists of every (condition, n) cell, the same resamples for all three, seeded from the registration id and the model. Inconclusive by rule: fewer than 95% of a condition's answers hold an integer; the axis held equal differs by more than 10% or the axis varied changes by less than 1.5 times; a median estimate is not positive. Supported if the interval of qwen3.8:27b-mlx's iota_tokens lies below 0; contradicted if it lies wholly above; else inconclusive."
+  }
+ ]
+}
