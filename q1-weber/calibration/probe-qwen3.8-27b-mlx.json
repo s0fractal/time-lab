@@ -1,0 +1,61 @@
+{
+ "model": "qwen3.8:27b-mlx",
+ "rows": [
+  {
+   "n": 10,
+   "seed": 190632093919802,
+   "answer": "10",
+   "seconds": 9.45,
+   "prompt_tokens": 53
+  },
+  {
+   "n": 10,
+   "seed": 146627884281962,
+   "answer": "10",
+   "seconds": 0.95,
+   "prompt_tokens": 53
+  },
+  {
+   "n": 40,
+   "seed": 67062546064251,
+   "answer": "50",
+   "seconds": 0.93,
+   "prompt_tokens": 83
+  },
+  {
+   "n": 40,
+   "seed": 16203639040852,
+   "answer": "50",
+   "seconds": 0.93,
+   "prompt_tokens": 84
+  },
+  {
+   "n": 160,
+   "seed": 125349903690772,
+   "answer": "300",
+   "seconds": 2.07,
+   "prompt_tokens": 204
+  },
+  {
+   "n": 160,
+   "seed": 87852819433334,
+   "answer": "300",
+   "seconds": 1.81,
+   "prompt_tokens": 204
+  },
+  {
+   "n": 400,
+   "seed": 183818135614754,
+   "answer": "600",
+   "seconds": 3.75,
+   "prompt_tokens": 444
+  },
+  {
+   "n": 400,
+   "seed": 60631744196787,
+   "answer": "638",
+   "seconds": 3.85,
+   "prompt_tokens": 443
+  }
+ ]
+}

@@ -1,0 +1,733 @@
+{
+ "model": "qwen3.8:27b-mlx",
+ "rows": [
+  {
+   "n": 8,
+   "seed": 223979050177346,
+   "answer": "9",
+   "seconds": 7.46,
+   "prompt_tokens": 51
+  },
+  {
+   "n": 8,
+   "seed": 176341231070705,
+   "answer": "8",
+   "seconds": 0.73,
+   "prompt_tokens": 51
+  },
+  {
+   "n": 8,
+   "seed": 102389142037887,
+   "answer": "9",
+   "seconds": 0.63,
+   "prompt_tokens": 51
+  },
+  {
+   "n": 8,
+   "seed": 2789123014611,
+   "answer": "8",
+   "seconds": 0.72,
+   "prompt_tokens": 51
+  },
+  {
+   "n": 8,
+   "seed": 14352314347528,
+   "answer": "8",
+   "seconds": 0.73,
+   "prompt_tokens": 51
+  },
+  {
+   "n": 8,
+   "seed": 248697343452668,
+   "answer": "8",
+   "seconds": 0.73,
+   "prompt_tokens": 51
+  },
+  {
+   "n": 8,
+   "seed": 70455584438665,
+   "answer": "8",
+   "seconds": 0.68,
+   "prompt_tokens": 51
+  },
+  {
+   "n": 8,
+   "seed": 268208326690927,
+   "answer": "8",
+   "seconds": 0.61,
+   "prompt_tokens": 52
+  },
+  {
+   "n": 11,
+   "seed": 156608697783828,
+   "answer": "11",
+   "seconds": 0.79,
+   "prompt_tokens": 54
+  },
+  {
+   "n": 11,
+   "seed": 142510399906472,
+   "answer": "11",
+   "seconds": 0.7,
+   "prompt_tokens": 54
+  },
+  {
+   "n": 11,
+   "seed": 102061009068946,
+   "answer": "10",
+   "seconds": 0.69,
+   "prompt_tokens": 54
+  },
+  {
+   "n": 11,
+   "seed": 94596129181296,
+   "answer": "11",
+   "seconds": 0.69,
+   "prompt_tokens": 54
+  },
+  {
+   "n": 11,
+   "seed": 5576856032086,
+   "answer": "12",
+   "seconds": 0.69,
+   "prompt_tokens": 54
+  },
+  {
+   "n": 11,
+   "seed": 269357911606762,
+   "answer": "11",
+   "seconds": 0.7,
+   "prompt_tokens": 54
+  },
+  {
+   "n": 11,
+   "seed": 250785319882992,
+   "answer": "11",
+   "seconds": 0.7,
+   "prompt_tokens": 54
+  },
+  {
+   "n": 11,
+   "seed": 202089146938530,
+   "answer": "11",
+   "seconds": 0.71,
+   "prompt_tokens": 54
+  },
+  {
+   "n": 16,
+   "seed": 145345903632611,
+   "answer": "16",
+   "seconds": 0.71,
+   "prompt_tokens": 59
+  },
+  {
+   "n": 16,
+   "seed": 215582690640400,
+   "answer": "16",
+   "seconds": 0.71,
+   "prompt_tokens": 60
+  },
+  {
+   "n": 16,
+   "seed": 270256879499426,
+   "answer": "16",
+   "seconds": 0.71,
+   "prompt_tokens": 60
+  },
+  {
+   "n": 16,
+   "seed": 173040777113194,
+   "answer": "16",
+   "seconds": 0.71,
+   "prompt_tokens": 59
+  },
+  {
+   "n": 16,
+   "seed": 59000088032236,
+   "answer": "18",
+   "seconds": 0.72,
+   "prompt_tokens": 59
+  },
+  {
+   "n": 16,
+   "seed": 112332763187236,
+   "answer": "18",
+   "seconds": 0.83,
+   "prompt_tokens": 60
+  },
+  {
+   "n": 16,
+   "seed": 237469320035109,
+   "answer": "18",
+   "seconds": 0.72,
+   "prompt_tokens": 60
+  },
+  {
+   "n": 16,
+   "seed": 172781309063218,
+   "answer": "16",
+   "seconds": 0.72,
+   "prompt_tokens": 59
+  },
+  {
+   "n": 23,
+   "seed": 239481973092216,
+   "answer": "24",
+   "seconds": 0.72,
+   "prompt_tokens": 66
+  },
+  {
+   "n": 23,
+   "seed": 91665630109460,
+   "answer": "24",
+   "seconds": 0.71,
+   "prompt_tokens": 66
+  },
+  {
+   "n": 23,
+   "seed": 234839489548639,
+   "answer": "24",
+   "seconds": 0.74,
+   "prompt_tokens": 67
+  },
+  {
+   "n": 23,
+   "seed": 197971636051681,
+   "answer": "25",
+   "seconds": 0.72,
+   "prompt_tokens": 67
+  },
+  {
+   "n": 23,
+   "seed": 78579249438603,
+   "answer": "28",
+   "seconds": 0.75,
+   "prompt_tokens": 67
+  },
+  {
+   "n": 23,
+   "seed": 245635010642664,
+   "answer": "25",
+   "seconds": 0.74,
+   "prompt_tokens": 66
+  },
+  {
+   "n": 23,
+   "seed": 62979072508321,
+   "answer": "28",
+   "seconds": 0.72,
+   "prompt_tokens": 66
+  },
+  {
+   "n": 23,
+   "seed": 232057729871638,
+   "answer": "30",
+   "seconds": 0.75,
+   "prompt_tokens": 67
+  },
+  {
+   "n": 32,
+   "seed": 63547451015746,
+   "answer": "40",
+   "seconds": 0.84,
+   "prompt_tokens": 75
+  },
+  {
+   "n": 32,
+   "seed": 257551818934628,
+   "answer": "30",
+   "seconds": 0.74,
+   "prompt_tokens": 75
+  },
+  {
+   "n": 32,
+   "seed": 143120764235653,
+   "answer": "40",
+   "seconds": 0.76,
+   "prompt_tokens": 75
+  },
+  {
+   "n": 32,
+   "seed": 223809603615706,
+   "answer": "36",
+   "seconds": 0.74,
+   "prompt_tokens": 75
+  },
+  {
+   "n": 32,
+   "seed": 146871217644808,
+   "answer": "40",
+   "seconds": 0.73,
+   "prompt_tokens": 75
+  },
+  {
+   "n": 32,
+   "seed": 56982497928699,
+   "answer": "40",
+   "seconds": 0.76,
+   "prompt_tokens": 75
+  },
+  {
+   "n": 32,
+   "seed": 111416945878984,
+   "answer": "36",
+   "seconds": 0.72,
+   "prompt_tokens": 75
+  },
+  {
+   "n": 32,
+   "seed": 221940182374281,
+   "answer": "40",
+   "seconds": 0.76,
+   "prompt_tokens": 75
+  },
+  {
+   "n": 45,
+   "seed": 151360645396088,
+   "answer": "50",
+   "seconds": 0.98,
+   "prompt_tokens": 89
+  },
+  {
+   "n": 45,
+   "seed": 109833632494403,
+   "answer": "50",
+   "seconds": 1.06,
+   "prompt_tokens": 88
+  },
+  {
+   "n": 45,
+   "seed": 161719063936376,
+   "answer": "50",
+   "seconds": 1.0,
+   "prompt_tokens": 88
+  },
+  {
+   "n": 45,
+   "seed": 231258557706773,
+   "answer": "50",
+   "seconds": 0.99,
+   "prompt_tokens": 88
+  },
+  {
+   "n": 45,
+   "seed": 171013251008206,
+   "answer": "60",
+   "seconds": 0.99,
+   "prompt_tokens": 88
+  },
+  {
+   "n": 45,
+   "seed": 224202841551949,
+   "answer": "50",
+   "seconds": 1.0,
+   "prompt_tokens": 89
+  },
+  {
+   "n": 45,
+   "seed": 195166801741627,
+   "answer": "50",
+   "seconds": 0.98,
+   "prompt_tokens": 88
+  },
+  {
+   "n": 45,
+   "seed": 65545109396463,
+   "answer": "50",
+   "seconds": 0.99,
+   "prompt_tokens": 88
+  },
+  {
+   "n": 64,
+   "seed": 178153568343523,
+   "answer": "100",
+   "seconds": 1.01,
+   "prompt_tokens": 107
+  },
+  {
+   "n": 64,
+   "seed": 276099858845599,
+   "answer": "88",
+   "seconds": 1.01,
+   "prompt_tokens": 107
+  },
+  {
+   "n": 64,
+   "seed": 264045021185909,
+   "answer": "100",
+   "seconds": 1.02,
+   "prompt_tokens": 108
+  },
+  {
+   "n": 64,
+   "seed": 84606345873103,
+   "answer": "100",
+   "seconds": 1.0,
+   "prompt_tokens": 107
+  },
+  {
+   "n": 64,
+   "seed": 6472153910929,
+   "answer": "78",
+   "seconds": 1.23,
+   "prompt_tokens": 108
+  },
+  {
+   "n": 64,
+   "seed": 56285156225077,
+   "answer": "100",
+   "seconds": 0.98,
+   "prompt_tokens": 107
+  },
+  {
+   "n": 64,
+   "seed": 47303088811416,
+   "answer": "100",
+   "seconds": 1.01,
+   "prompt_tokens": 107
+  },
+  {
+   "n": 64,
+   "seed": 16331035222089,
+   "answer": "100",
+   "seconds": 0.97,
+   "prompt_tokens": 107
+  },
+  {
+   "n": 91,
+   "seed": 220223209450320,
+   "answer": "100",
+   "seconds": 1.27,
+   "prompt_tokens": 135
+  },
+  {
+   "n": 91,
+   "seed": 206987666038796,
+   "answer": "120",
+   "seconds": 1.25,
+   "prompt_tokens": 134
+  },
+  {
+   "n": 91,
+   "seed": 11542669308868,
+   "answer": "120",
+   "seconds": 1.27,
+   "prompt_tokens": 134
+  },
+  {
+   "n": 91,
+   "seed": 98594582717526,
+   "answer": "100",
+   "seconds": 1.26,
+   "prompt_tokens": 134
+  },
+  {
+   "n": 91,
+   "seed": 40592641092117,
+   "answer": "120",
+   "seconds": 1.28,
+   "prompt_tokens": 134
+  },
+  {
+   "n": 91,
+   "seed": 238284807315485,
+   "answer": "100",
+   "seconds": 1.26,
+   "prompt_tokens": 134
+  },
+  {
+   "n": 91,
+   "seed": 26499442922501,
+   "answer": "100",
+   "seconds": 1.25,
+   "prompt_tokens": 134
+  },
+  {
+   "n": 91,
+   "seed": 4866633597636,
+   "answer": "100",
+   "seconds": 1.25,
+   "prompt_tokens": 134
+  },
+  {
+   "n": 128,
+   "seed": 55675022725056,
+   "answer": "250",
+   "seconds": 1.63,
+   "prompt_tokens": 171
+  },
+  {
+   "n": 128,
+   "seed": 153289563499133,
+   "answer": "250",
+   "seconds": 1.6,
+   "prompt_tokens": 171
+  },
+  {
+   "n": 128,
+   "seed": 279670679651117,
+   "answer": "200",
+   "seconds": 1.68,
+   "prompt_tokens": 171
+  },
+  {
+   "n": 128,
+   "seed": 116559284809788,
+   "answer": "150",
+   "seconds": 1.54,
+   "prompt_tokens": 172
+  },
+  {
+   "n": 128,
+   "seed": 15051020387619,
+   "answer": "200",
+   "seconds": 1.52,
+   "prompt_tokens": 171
+  },
+  {
+   "n": 128,
+   "seed": 65834855731193,
+   "answer": "250",
+   "seconds": 1.61,
+   "prompt_tokens": 171
+  },
+  {
+   "n": 128,
+   "seed": 127117139820028,
+   "answer": "200",
+   "seconds": 1.54,
+   "prompt_tokens": 171
+  },
+  {
+   "n": 128,
+   "seed": 161323289546212,
+   "answer": "200",
+   "seconds": 1.52,
+   "prompt_tokens": 171
+  },
+  {
+   "n": 181,
+   "seed": 154633599814070,
+   "answer": "300",
+   "seconds": 2.19,
+   "prompt_tokens": 224
+  },
+  {
+   "n": 181,
+   "seed": 220223726491063,
+   "answer": "300",
+   "seconds": 2.34,
+   "prompt_tokens": 224
+  },
+  {
+   "n": 181,
+   "seed": 265574889836071,
+   "answer": "300",
+   "seconds": 1.94,
+   "prompt_tokens": 224
+  },
+  {
+   "n": 181,
+   "seed": 33105797657223,
+   "answer": "300",
+   "seconds": 1.96,
+   "prompt_tokens": 224
+  },
+  {
+   "n": 181,
+   "seed": 257261339938686,
+   "answer": "300",
+   "seconds": 2.01,
+   "prompt_tokens": 224
+  },
+  {
+   "n": 181,
+   "seed": 184964979522566,
+   "answer": "300",
+   "seconds": 2.07,
+   "prompt_tokens": 224
+  },
+  {
+   "n": 181,
+   "seed": 279089068320435,
+   "answer": "300",
+   "seconds": 2.02,
+   "prompt_tokens": 224
+  },
+  {
+   "n": 181,
+   "seed": 278938328879446,
+   "answer": "300",
+   "seconds": 1.94,
+   "prompt_tokens": 224
+  },
+  {
+   "n": 256,
+   "seed": 123495352175663,
+   "answer": "350",
+   "seconds": 2.69,
+   "prompt_tokens": 300
+  },
+  {
+   "n": 256,
+   "seed": 127397581793090,
+   "answer": "400",
+   "seconds": 2.54,
+   "prompt_tokens": 299
+  },
+  {
+   "n": 256,
+   "seed": 101206062761080,
+   "answer": "300",
+   "seconds": 3.05,
+   "prompt_tokens": 300
+  },
+  {
+   "n": 256,
+   "seed": 256845292890258,
+   "answer": "400",
+   "seconds": 2.47,
+   "prompt_tokens": 299
+  },
+  {
+   "n": 256,
+   "seed": 89764302360835,
+   "answer": "400",
+   "seconds": 2.49,
+   "prompt_tokens": 299
+  },
+  {
+   "n": 256,
+   "seed": 16511008451290,
+   "answer": "400",
+   "seconds": 2.57,
+   "prompt_tokens": 299
+  },
+  {
+   "n": 256,
+   "seed": 222907683678897,
+   "answer": "400",
+   "seconds": 2.65,
+   "prompt_tokens": 300
+  },
+  {
+   "n": 256,
+   "seed": 206329396522035,
+   "answer": "400",
+   "seconds": 2.71,
+   "prompt_tokens": 300
+  },
+  {
+   "n": 362,
+   "seed": 3971919181738,
+   "answer": "600",
+   "seconds": 3.64,
+   "prompt_tokens": 405
+  },
+  {
+   "n": 362,
+   "seed": 256100308586066,
+   "answer": "600",
+   "seconds": 3.75,
+   "prompt_tokens": 405
+  },
+  {
+   "n": 362,
+   "seed": 69646453888385,
+   "answer": "600",
+   "seconds": 3.73,
+   "prompt_tokens": 405
+  },
+  {
+   "n": 362,
+   "seed": 48395804747305,
+   "answer": "600",
+   "seconds": 3.71,
+   "prompt_tokens": 405
+  },
+  {
+   "n": 362,
+   "seed": 104566248316201,
+   "answer": "600",
+   "seconds": 3.68,
+   "prompt_tokens": 405
+  },
+  {
+   "n": 362,
+   "seed": 58038586668333,
+   "answer": "500",
+   "seconds": 3.61,
+   "prompt_tokens": 405
+  },
+  {
+   "n": 362,
+   "seed": 83915361554574,
+   "answer": "600",
+   "seconds": 3.59,
+   "prompt_tokens": 405
+  },
+  {
+   "n": 362,
+   "seed": 249336489970075,
+   "answer": "638",
+   "seconds": 3.53,
+   "prompt_tokens": 405
+  },
+  {
+   "n": 512,
+   "seed": 6280944902120,
+   "answer": "1000",
+   "seconds": 4.75,
+   "prompt_tokens": 555
+  },
+  {
+   "n": 512,
+   "seed": 202512612493715,
+   "answer": "638",
+   "seconds": 4.72,
+   "prompt_tokens": 555
+  },
+  {
+   "n": 512,
+   "seed": 19162385977033,
+   "answer": "1000\n</think>\n\n1000",
+   "seconds": 4.96,
+   "prompt_tokens": 555
+  },
+  {
+   "n": 512,
+   "seed": 238471307272680,
+   "answer": "1000",
+   "seconds": 4.71,
+   "prompt_tokens": 555
+  },
+  {
+   "n": 512,
+   "seed": 46435293787262,
+   "answer": "600",
+   "seconds": 4.63,
+   "prompt_tokens": 555
+  },
+  {
+   "n": 512,
+   "seed": 2111924927480,
+   "answer": "638",
+   "seconds": 4.85,
+   "prompt_tokens": 556
+  },
+  {
+   "n": 512,
+   "seed": 141083434550079,
+   "answer": "1000",
+   "seconds": 4.62,
+   "prompt_tokens": 555
+  },
+  {
+   "n": 512,
+   "seed": 111638767460859,
+   "answer": "1000",
+   "seconds": 4.67,
+   "prompt_tokens": 555
+  }
+ ]
+}

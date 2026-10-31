@@ -1,0 +1,61 @@
+{
+ "model": "gemma3:27b",
+ "rows": [
+  {
+   "n": 10,
+   "seed": 196218957276823,
+   "answer": "9\n",
+   "seconds": 7.17,
+   "prompt_tokens": 51
+  },
+  {
+   "n": 10,
+   "seed": 103949703029537,
+   "answer": "9\n",
+   "seconds": 0.86,
+   "prompt_tokens": 51
+  },
+  {
+   "n": 40,
+   "seed": 243116134892338,
+   "answer": "43\n",
+   "seconds": 1.19,
+   "prompt_tokens": 81
+  },
+  {
+   "n": 40,
+   "seed": 232073920694516,
+   "answer": "41\n",
+   "seconds": 1.19,
+   "prompt_tokens": 81
+  },
+  {
+   "n": 160,
+   "seed": 216131372622723,
+   "answer": "100\n",
+   "seconds": 2.32,
+   "prompt_tokens": 201
+  },
+  {
+   "n": 160,
+   "seed": 218728551188699,
+   "answer": "100\n",
+   "seconds": 2.35,
+   "prompt_tokens": 201
+  },
+  {
+   "n": 400,
+   "seed": 268164931712571,
+   "answer": "160\n",
+   "seconds": 4.21,
+   "prompt_tokens": 441
+  },
+  {
+   "n": 400,
+   "seed": 270330576224911,
+   "answer": "160\n",
+   "seconds": 4.21,
+   "prompt_tokens": 441
+  }
+ ]
+}

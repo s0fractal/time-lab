@@ -1,0 +1,102 @@
+{
+ "model": "gemma3:27b",
+ "vocab": "long",
+ "rows": [
+  {
+   "n": 16,
+   "seed": 281404464689359,
+   "answer": "12\n",
+   "seconds": 6.15,
+   "prompt_tokens": 67,
+   "vocab": "long"
+  },
+  {
+   "n": 16,
+   "seed": 268992361144863,
+   "answer": "20\n",
+   "seconds": 0.93,
+   "prompt_tokens": 64,
+   "vocab": "long"
+  },
+  {
+   "n": 16,
+   "seed": 146509182897198,
+   "answer": "12\n",
+   "seconds": 1.19,
+   "prompt_tokens": 73,
+   "vocab": "long"
+  },
+  {
+   "n": 16,
+   "seed": 60840220445510,
+   "answer": "18\n",
+   "seconds": 1.2,
+   "prompt_tokens": 70,
+   "vocab": "long"
+  },
+  {
+   "n": 64,
+   "seed": 111365852452931,
+   "answer": "63\n",
+   "seconds": 2.04,
+   "prompt_tokens": 176,
+   "vocab": "long"
+  },
+  {
+   "n": 64,
+   "seed": 173550834585,
+   "answer": "63\n",
+   "seconds": 2.07,
+   "prompt_tokens": 173,
+   "vocab": "long"
+  },
+  {
+   "n": 64,
+   "seed": 175275023322432,
+   "answer": "63\n",
+   "seconds": 1.85,
+   "prompt_tokens": 158,
+   "vocab": "long"
+  },
+  {
+   "n": 64,
+   "seed": 87689081237523,
+   "answer": "63\n",
+   "seconds": 1.87,
+   "prompt_tokens": 162,
+   "vocab": "long"
+  },
+  {
+   "n": 256,
+   "seed": 263941773415920,
+   "answer": "200\n",
+   "seconds": 5.91,
+   "prompt_tokens": 550,
+   "vocab": "long"
+  },
+  {
+   "n": 256,
+   "seed": 108372261173168,
+   "answer": "200\n",
+   "seconds": 5.84,
+   "prompt_tokens": 534,
+   "vocab": "long"
+  },
+  {
+   "n": 256,
+   "seed": 44540407562934,
+   "answer": "160\n",
+   "seconds": 5.74,
+   "prompt_tokens": 539,
+   "vocab": "long"
+  },
+  {
+   "n": 256,
+   "seed": 77165094846939,
+   "answer": "200\n",
+   "seconds": 6.0,
+   "prompt_tokens": 546,
+   "vocab": "long"
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "model": "gemma4:26b-a4b-it-q4_K_M",
+ "rows": [
+  {
+   "n": 10,
+   "seed": 269070486257048,
+   "answer": "12",
+   "seconds": 12.27,
+   "prompt_tokens": 54
+  },
+  {
+   "n": 10,
+   "seed": 28583198019921,
+   "answer": "11",
+   "seconds": 0.22,
+   "prompt_tokens": 54
+  },
+  {
+   "n": 40,
+   "seed": 131767268734436,
+   "answer": "56",
+   "seconds": 0.45,
+   "prompt_tokens": 84
+  },
+  {
+   "n": 40,
+   "seed": 240274308297874,
+   "answer": "64",
+   "seconds": 0.25,
+   "prompt_tokens": 84
+  },
+  {
+   "n": 160,
+   "seed": 105699584858122,
+   "answer": "245",
+   "seconds": 0.4,
+   "prompt_tokens": 204
+  },
+  {
+   "n": 160,
+   "seed": 193086929058834,
+   "answer": "255",
+   "seconds": 0.4,
+   "prompt_tokens": 204
+  },
+  {
+   "n": 400,
+   "seed": 50967206856643,
+   "answer": "655",
+   "seconds": 0.71,
+   "prompt_tokens": 444
+  },
+  {
+   "n": 400,
+   "seed": 64779634847111,
+   "answer": "615",
+   "seconds": 0.72,
+   "prompt_tokens": 444
+  }
+ ]
+}

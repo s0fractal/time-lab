@@ -1,0 +1,142 @@
+{
+ "question": "Does a language model's estimate of how many words it has just read follow the events (the words) or its own duration (the tokens)?",
+ "runner_path": "q1-weber/run.py",
+ "analysis_path": "q1-weber/analyze.py",
+ "seeds": "seed = int(sha256('<registration id>:<beacon randomness>:<model>:<condition>:<n>:<k>').hexdigest()[:12], 16); the list draws its words with random.Random(seed); ollama's sampling seed is seed mod 2^31.",
+ "beacon": "drand quicknet (chain 52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971): the first round dated at or after the earliest GitHub-witnessed push (GET repos/s0fractal/time-lab/activity) that holds the commit adding q1-weber/registration.lock.json.",
+ "design": {
+  "models": [
+   "gemma4:26b-a4b-it-q4_K_M",
+   "qwen3.8:27b-mlx",
+   "gemma3:27b"
+  ],
+  "grid": [
+   8,
+   11,
+   16,
+   23,
+   32,
+   45,
+   64,
+   91,
+   128,
+   181,
+   256,
+   362,
+   512
+  ],
+  "lists": 24,
+  "conditions": [
+   {
+    "name": "short",
+    "vocabulary": [
+     "apple",
+     "river",
+     "stone",
+     "cloud",
+     "lamp",
+     "horse",
+     "table",
+     "green",
+     "music",
+     "paper",
+     "window",
+     "garden",
+     "silver",
+     "train",
+     "bread",
+     "candle",
+     "forest",
+     "mirror",
+     "pencil",
+     "rocket",
+     "shadow",
+     "summer",
+     "tiger",
+     "violet",
+     "winter",
+     "yellow",
+     "anchor",
+     "basket",
+     "copper",
+     "dragon"
+    ]
+   },
+   {
+    "name": "long",
+    "vocabulary": [
+     "photosynthesis",
+     "microorganism",
+     "thermodynamics",
+     "electromagnetic",
+     "counterproductive",
+     "indistinguishable",
+     "uncharacteristically",
+     "telecommunications",
+     "hippopotamus",
+     "kaleidoscope",
+     "procrastination",
+     "constellation",
+     "biodiversity",
+     "infrastructure",
+     "misunderstanding",
+     "extraordinarily",
+     "psychotherapist",
+     "archaeologist",
+     "entrepreneurship",
+     "circumnavigation",
+     "unconstitutional",
+     "bureaucratically",
+     "disproportionate",
+     "interconnectedness",
+     "crystallographer",
+     "chrysanthemum",
+     "thermoregulation",
+     "phosphorescence",
+     "incomprehensibility",
+     "otorhinolaryngology"
+    ]
+   }
+  ],
+  "prompt": "Here is a list of words:\n\n{list}\n\nHow many words are in the list? Do not count step by step. Reply with a single integer only.",
+  "options": {
+   "temperature": 0,
+   "num_ctx": 8192,
+   "num_predict": 16
+  },
+  "think": false,
+  "order": "models in the order above, one at a time; within a model short then long, n ascending, k ascending"
+ },
+ "hypotheses": [
+  {
+   "hypothesis": "H1:gemma4:26b-a4b-it-q4_K_M",
+   "statement": "When the same number of words takes more tokens, gemma4:26b-a4b-it-q4_K_M's estimate of how many words it read follows its own duration (the tokens) more than the events (the words): ι > 0.5.",
+   "rule": "T = (prompt tokens per word, long) / (short), each an OLS slope of prompt tokens on n over the grid. ι = mean over n ≥ 91 of log(median estimate long / median estimate short) / log T: 0 counts the events, 1 follows the tokens. 95% percentile interval over 2000 resamples of the lists within each (condition, n), seeded from the registration id. Inconclusive if under 95% of answers in a condition hold an integer, if T < 1.5, or if a median is not positive. Supported if the interval's lower end > 0.5; contradicted if its upper end < 0.5; else inconclusive."
+  },
+  {
+   "hypothesis": "H2:gemma4:26b-a4b-it-q4_K_M",
+   "statement": "gemma4:26b-a4b-it-q4_K_M's estimate ignores how long the words are: it counts events, |ι| < 0.25.",
+   "rule": "T = (prompt tokens per word, long) / (short), each an OLS slope of prompt tokens on n over the grid. ι = mean over n ≥ 91 of log(median estimate long / median estimate short) / log T: 0 counts the events, 1 follows the tokens. 95% percentile interval over 2000 resamples of the lists within each (condition, n), seeded from the registration id. Inconclusive if under 95% of answers in a condition hold an integer, if T < 1.5, or if a median is not positive. Supported if the interval lies inside (−0.25, 0.25); contradicted if it lies wholly outside [−0.25, 0.25]; else inconclusive."
+  },
+  {
+   "hypothesis": "H1:qwen3.8:27b-mlx",
+   "statement": "When the same number of words takes more tokens, qwen3.8:27b-mlx's estimate of how many words it read follows its own duration (the tokens) more than the events (the words): ι > 0.5.",
+   "rule": "T = (prompt tokens per word, long) / (short), each an OLS slope of prompt tokens on n over the grid. ι = mean over n ≥ 91 of log(median estimate long / median estimate short) / log T: 0 counts the events, 1 follows the tokens. 95% percentile interval over 2000 resamples of the lists within each (condition, n), seeded from the registration id. Inconclusive if under 95% of answers in a condition hold an integer, if T < 1.5, or if a median is not positive. Supported if the interval's lower end > 0.5; contradicted if its upper end < 0.5; else inconclusive."
+  },
+  {
+   "hypothesis": "H2:qwen3.8:27b-mlx",
+   "statement": "qwen3.8:27b-mlx's estimate ignores how long the words are: it counts events, |ι| < 0.25.",
+   "rule": "T = (prompt tokens per word, long) / (short), each an OLS slope of prompt tokens on n over the grid. ι = mean over n ≥ 91 of log(median estimate long / median estimate short) / log T: 0 counts the events, 1 follows the tokens. 95% percentile interval over 2000 resamples of the lists within each (condition, n), seeded from the registration id. Inconclusive if under 95% of answers in a condition hold an integer, if T < 1.5, or if a median is not positive. Supported if the interval lies inside (−0.25, 0.25); contradicted if it lies wholly outside [−0.25, 0.25]; else inconclusive."
+  },
+  {
+   "hypothesis": "H1:gemma3:27b",
+   "statement": "When the same number of words takes more tokens, gemma3:27b's estimate of how many words it read follows its own duration (the tokens) more than the events (the words): ι > 0.5.",
+   "rule": "T = (prompt tokens per word, long) / (short), each an OLS slope of prompt tokens on n over the grid. ι = mean over n ≥ 91 of log(median estimate long / median estimate short) / log T: 0 counts the events, 1 follows the tokens. 95% percentile interval over 2000 resamples of the lists within each (condition, n), seeded from the registration id. Inconclusive if under 95% of answers in a condition hold an integer, if T < 1.5, or if a median is not positive. Supported if the interval's lower end > 0.5; contradicted if its upper end < 0.5; else inconclusive."
+  },
+  {
+   "hypothesis": "H2:gemma3:27b",
+   "statement": "gemma3:27b's estimate ignores how long the words are: it counts events, |ι| < 0.25.",
+   "rule": "T = (prompt tokens per word, long) / (short), each an OLS slope of prompt tokens on n over the grid. ι = mean over n ≥ 91 of log(median estimate long / median estimate short) / log T: 0 counts the events, 1 follows the tokens. 95% percentile interval over 2000 resamples of the lists within each (condition, n), seeded from the registration id. Inconclusive if under 95% of answers in a condition hold an integer, if T < 1.5, or if a median is not positive. Supported if the interval lies inside (−0.25, 0.25); contradicted if it lies wholly outside [−0.25, 0.25]; else inconclusive."
+  }
+ ]
+}

@@ -1,0 +1,102 @@
+{
+ "model": "gemma4:26b-a4b-it-q4_K_M",
+ "vocab": "long",
+ "rows": [
+  {
+   "n": 16,
+   "seed": 222178311899310,
+   "answer": "18",
+   "seconds": 15.13,
+   "prompt_tokens": 72,
+   "vocab": "long"
+  },
+  {
+   "n": 16,
+   "seed": 45257461349563,
+   "answer": "18",
+   "seconds": 0.24,
+   "prompt_tokens": 75,
+   "vocab": "long"
+  },
+  {
+   "n": 16,
+   "seed": 105376437125834,
+   "answer": "15",
+   "seconds": 0.24,
+   "prompt_tokens": 69,
+   "vocab": "long"
+  },
+  {
+   "n": 16,
+   "seed": 34699496551141,
+   "answer": "18",
+   "seconds": 0.25,
+   "prompt_tokens": 77,
+   "vocab": "long"
+  },
+  {
+   "n": 64,
+   "seed": 133275830734614,
+   "answer": "84",
+   "seconds": 0.35,
+   "prompt_tokens": 171,
+   "vocab": "long"
+  },
+  {
+   "n": 64,
+   "seed": 164025303673101,
+   "answer": "86",
+   "seconds": 0.35,
+   "prompt_tokens": 169,
+   "vocab": "long"
+  },
+  {
+   "n": 64,
+   "seed": 120188959404644,
+   "answer": "84",
+   "seconds": 0.36,
+   "prompt_tokens": 179,
+   "vocab": "long"
+  },
+  {
+   "n": 64,
+   "seed": 10978249863548,
+   "answer": "86",
+   "seconds": 0.33,
+   "prompt_tokens": 155,
+   "vocab": "long"
+  },
+  {
+   "n": 256,
+   "seed": 254322818459170,
+   "answer": "265",
+   "seconds": 0.79,
+   "prompt_tokens": 542,
+   "vocab": "long"
+  },
+  {
+   "n": 256,
+   "seed": 265562434096172,
+   "answer": "255",
+   "seconds": 0.78,
+   "prompt_tokens": 527,
+   "vocab": "long"
+  },
+  {
+   "n": 256,
+   "seed": 261985625688021,
+   "answer": "245",
+   "seconds": 0.79,
+   "prompt_tokens": 538,
+   "vocab": "long"
+  },
+  {
+   "n": 256,
+   "seed": 156402881951522,
+   "answer": "265",
+   "seconds": 0.79,
+   "prompt_tokens": 541,
+   "vocab": "long"
+  }
+ ]
+}

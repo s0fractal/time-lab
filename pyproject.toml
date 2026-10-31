@@ -1,0 +1,8 @@
+[project]
+name = "time-lab"
+version = "0"
+requires-python = ">=3.13"
+dependencies = ["warrant-graph==3.0.0a2", "numpy==2.3.4"]
+
+[tool.uv]
+package = false

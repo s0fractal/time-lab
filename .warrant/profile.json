@@ -1,0 +1,7 @@
+{
+ "warrant": "profile/3",
+ "roles": {
+  "prediction/decider": ["time-lab-decider"],
+  "schema/author": ["claude", "codex"]
+ }
+}
