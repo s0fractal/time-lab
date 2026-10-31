@@ -36,6 +36,17 @@ SCHEMAS = [
 ]
 
 
+def micro(v):
+    """A result as Warrant can carry it (no floats, V3 §1): every real number x becomes round(x · 10⁶)."""
+    if isinstance(v, float):
+        return round(v * 1_000_000)
+    if isinstance(v, dict):
+        return {k: micro(x) for k, x in v.items()}
+    if isinstance(v, list):
+        return [micro(x) for x in v]
+    return v
+
+
 def sha(b: bytes) -> str:
     return hashlib.sha256(b).hexdigest()
 
@@ -113,17 +124,6 @@ def unchecked(rec: dict, rep: dict) -> list:
                                         for b in beacons):
             out.append(("WITHDRAWN_AFTER_BEACON", r["body"]["hypothesis"], i))
     return out
-
-
-def micro(v):
-    """A result as Warrant can carry it (no floats, V3 §1): every real number x becomes round(x · 10⁶)."""
-    if isinstance(v, float):
-        return round(v * 1_000_000)
-    if isinstance(v, dict):
-        return {k: micro(x) for k, x in v.items()}
-    if isinstance(v, list):
-        return [micro(x) for x in v]
-    return v
 
 
 def same(stored, raw) -> bool:
@@ -221,7 +221,7 @@ def main(cmd, *a):
         rec = records()
         closed = {}
         for h, pid in lk["predictions"].items():
-            v = res["verdicts"][h]
+            v = micro(res["verdicts"][h])
             body = {**{k: rec[pid]["body"][k] for k in ("registration", "hypothesis", "statement", "rule")},
                     "state": v["verdict"], "result": v, "data": data}
             closed[h] = put("entity", body, schema="prediction@1", lineage=pid, refs=[lk["registration"], data], guard=g)

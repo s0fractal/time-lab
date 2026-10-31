@@ -1,0 +1,11 @@
+{
+ "data": "e767fe6ad30cfa25b2076066bbee3b63bd290e3b67aca98f0b4a2ea7d51636f6",
+ "closing": {
+  "H1:gemma4:26b-a4b-it-q4_K_M": "4a8c729ebdce09c9208eda9efb75015e57032809f847f98d723ebba1b76548f8",
+  "H2:gemma4:26b-a4b-it-q4_K_M": "5024e287e178a991964e740b175cefd871ead0c96b47b67f78c9713ac95299c2",
+  "H1:qwen3.8:27b-mlx": "9de5241e64a4886d4ea42d9ff9d7d51fea63a0b45295e223227fcc059bbf8fc2",
+  "H2:qwen3.8:27b-mlx": "1ad17eee66cbd0dc71a76fce28446289bfc7b9b5381f59d1c914847b446f853e",
+  "H1:gemma3:27b": "5aebf7f699c001e9e613e61f36ace4cefb44460ce5efe9ed0673237d71cad478",
+  "H2:gemma3:27b": "dda3d7deabf44f99d5e7b005cb0582cb1c8a1c2b64fad1a52ff781fcfb2d7f86"
+ }
+}
