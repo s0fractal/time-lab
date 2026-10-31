@@ -269,7 +269,8 @@ def main(cmd, *a):
             r = rec.get(lid)
             if r and r.get("schema") == "prediction@1":
                 leaf = rep["versions"].get(l["leaf"], {})
-                print(f"{r['body']['hypothesis']:<28} {str(l.get('state')):<13} {l.get('reliance'):<10} "
+                q = rec.get(r["body"]["registration"], {}).get("body", {}).get("runner_path", "?").split("/")[0]
+                print(f"{q + ' ' + r['body']['hypothesis']:<40} {str(l.get('state')):<13} {l.get('reliance'):<10} "
                       f"guard {leaf.get('guard')} {leaf.get('waiting') or ''}")
         print("problems", rep.get("problems"), "rejected", len(rep.get("rejected", [])))
         found = unchecked(rec, rep)
