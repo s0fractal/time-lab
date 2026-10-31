@@ -1,0 +1,115 @@
+{
+ "question": "Is a clock worth its price only in a world with rhythm? A crystal clock (q5-bound's, near the TUR bound) anticipates the next event of a world whose intervals are gamma-distributed with mean T = 20 and shape k from 1 (Poisson: no memory) to periodic. How much does a clock 64 times dearer anticipate better, by world?",
+ "runner_path": "q6-renewal/run.py",
+ "analysis_path": "q6-renewal/analyze.py",
+ "seeds": "seed(name) = int(sha256('<registration id>:<beacon randomness>:<name>').hexdigest()[:12], 16): a clock's crystal from its name, a world's events from 'world:<world name>' (the same events for every clock); numpy PCG64.",
+ "beacon": "drand quicknet (chain 52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971): the first round dated at or after the earliest GitHub-witnessed push (GET repos/s0fractal/time-lab/activity) that holds the commit adding q6-renewal/registration.lock.json.",
+ "design": {
+  "base": {
+   "d": 2,
+   "dt": 1.0,
+   "S": 4,
+   "gamma": 0.5,
+   "kappa": 1.0,
+   "g_lat": 1.0,
+   "g_pin": 0.5,
+   "m_pin": 2,
+   "F": 1.3,
+   "sigma": 0.3
+  },
+  "T": 20.0,
+  "trajectories": 1024,
+  "checkpoints": [
+   400,
+   800,
+   1800
+  ],
+  "t_total": 1800,
+  "warm": 400,
+  "query_every": 1.0,
+  "readout": "the agent stores Φ at each event; at each query (every query_every from warm to t_total) it reads â = (Φ(now) − Φ(last event)) / v* and predicts the time to the next event as m_k(â) = E[τ − a | τ > a] at a = â for gamma(k, T / k) intervals (periodic: max(T − â, 0)); perfect reads the true a; none predicts T (1 + 1/k) / 2. Events fall on the sub-step grid, from a uniform offset in [0, T).",
+  "clocks": [
+   {
+    "name": "N1",
+    "N": 1,
+    "v_star": 2.5952
+   },
+   {
+    "name": "N4",
+    "N": 4,
+    "v_star": 2.5931
+   },
+   {
+    "name": "N16",
+    "N": 16,
+    "v_star": 2.5923
+   },
+   {
+    "name": "N64",
+    "N": 64,
+    "v_star": 2.5925
+   }
+  ],
+  "worlds": [
+   {
+    "name": "k1",
+    "k": 1
+   },
+   {
+    "name": "k4",
+    "k": 4
+   },
+   {
+    "name": "k16",
+    "k": 16
+   },
+   {
+    "name": "k64",
+    "k": 64
+   },
+   {
+    "name": "k256",
+    "k": 256
+   },
+   {
+    "name": "k1024",
+    "k": 1024
+   },
+   {
+    "name": "k4096",
+    "k": 4096
+   },
+   {
+    "name": "periodic",
+    "k": null
+   }
+  ]
+ },
+ "hypotheses": [
+  {
+   "hypothesis": "H1",
+   "statement": "An irregular world caps what precision is worth: in a world of shape 16 (interval sd T/4), the clock of 64 phases, which costs 64 times the entropy of the clock of 1, anticipates the next event less than 10% better.",
+   "rule": "For each clock, of its mean phase Φ = J / (N d) at the checkpoints (400, 800, 1800), 1024 trajectories: D = [var(Φ(t2) − Φ(t0)) − var(Φ(t1) − Φ(t0))] / (2 (t2 − t1)), v = mean(Φ(t2) − Φ(t0)) / (t2 − t0), S = the mean heat given to the bath over [t0, t2] / (σ² (t2 − t0)). For each clock and world, over every query of every trajectory: MSE = the mean squared error of the predicted time to the next event, m_k(â) with â = (Φ(now) − Φ(last event)) / v*; MSE(none) predicts the mean residual life T (1 + 1/k) / 2 (T / 2 periodic); MSE(perfect) reads the true elapsed time. Each test is log10 of a ratio, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of the trajectories, the same indices for every clock and world, seeded from the registration id; any resample in which the ratio is undefined makes the hypothesis inconclusive. Supported if the interval of log10 MSE(N1) / MSE(N64) in the world k16 lies below log10 1.1; contradicted if it lies wholly above; else inconclusive."
+  },
+  {
+   "hypothesis": "H2",
+   "statement": "A periodic world sells anticipation at the entropy price: the clock of 64 phases anticipates better than the clock of 1 by the ratio of their entropy rates, within ×1.25 either way.",
+   "rule": "For each clock, of its mean phase Φ = J / (N d) at the checkpoints (400, 800, 1800), 1024 trajectories: D = [var(Φ(t2) − Φ(t0)) − var(Φ(t1) − Φ(t0))] / (2 (t2 − t1)), v = mean(Φ(t2) − Φ(t0)) / (t2 − t0), S = the mean heat given to the bath over [t0, t2] / (σ² (t2 − t0)). For each clock and world, over every query of every trajectory: MSE = the mean squared error of the predicted time to the next event, m_k(â) with â = (Φ(now) − Φ(last event)) / v*; MSE(none) predicts the mean residual life T (1 + 1/k) / 2 (T / 2 periodic); MSE(perfect) reads the true elapsed time. Each test is log10 of a ratio, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of the trajectories, the same indices for every clock and world, seeded from the registration id; any resample in which the ratio is undefined makes the hypothesis inconclusive. Supported if the interval of log10 [MSE(N1) / MSE(N64)] − log10 [S(N64) / S(N1)] in the periodic world lies within (−log10 1.25, log10 1.25); contradicted if it lies wholly outside; else inconclusive."
+  },
+  {
+   "hypothesis": "H3",
+   "statement": "Even a regular world caps it: in a world of shape 4096 (interval sd T/64), 64 times the entropy anticipates less than four times better.",
+   "rule": "For each clock, of its mean phase Φ = J / (N d) at the checkpoints (400, 800, 1800), 1024 trajectories: D = [var(Φ(t2) − Φ(t0)) − var(Φ(t1) − Φ(t0))] / (2 (t2 − t1)), v = mean(Φ(t2) − Φ(t0)) / (t2 − t0), S = the mean heat given to the bath over [t0, t2] / (σ² (t2 − t0)). For each clock and world, over every query of every trajectory: MSE = the mean squared error of the predicted time to the next event, m_k(â) with â = (Φ(now) − Φ(last event)) / v*; MSE(none) predicts the mean residual life T (1 + 1/k) / 2 (T / 2 periodic); MSE(perfect) reads the true elapsed time. Each test is log10 of a ratio, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of the trajectories, the same indices for every clock and world, seeded from the registration id; any resample in which the ratio is undefined makes the hypothesis inconclusive. Supported if the interval of log10 MSE(N1) / MSE(N64) in the world k4096 lies below log10 4; contradicted if it lies wholly above; else inconclusive."
+  },
+  {
+   "hypothesis": "H4",
+   "statement": "On a horizon of one interval the clock of 1 anticipates better than a Brownian clock of its own long-time diffusion would, in the periodic world (the expected reason: its velocity relaxes in 1/γ = 2, so its reading of an elapsed time a errs with variance 2 (D/v²)(a − (1 − e^(−γa))/γ), not 2 (D/v²) a).",
+   "rule": "For each clock, of its mean phase Φ = J / (N d) at the checkpoints (400, 800, 1800), 1024 trajectories: D = [var(Φ(t2) − Φ(t0)) − var(Φ(t1) − Φ(t0))] / (2 (t2 − t1)), v = mean(Φ(t2) − Φ(t0)) / (t2 − t0), S = the mean heat given to the bath over [t0, t2] / (σ² (t2 − t0)). For each clock and world, over every query of every trajectory: MSE = the mean squared error of the predicted time to the next event, m_k(â) with â = (Φ(now) − Φ(last event)) / v*; MSE(none) predicts the mean residual life T (1 + 1/k) / 2 (T / 2 periodic); MSE(perfect) reads the true elapsed time. Each test is log10 of a ratio, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of the trajectories, the same indices for every clock and world, seeded from the registration id; any resample in which the ratio is undefined makes the hypothesis inconclusive. In the periodic world the time to the next event is T − a, so a Brownian clock of the clock's own D and v errs with MSE_B = 2 (D / v²) mean(a), mean(a) over the same queries. Supported if the interval of log10 MSE_B(N1) / MSE(N1) in the periodic world lies above 0; contradicted if it lies wholly below; else inconclusive."
+  },
+  {
+   "hypothesis": "H5",
+   "statement": "What precision is worth grows in proportion to the world's regularity: a clock 16 times dearer in a world 16 times more regular gets the same share of what a perfect clock anticipates there (the clock of 16 in the world of shape 4096 against the clock of 1 in the world of shape 256), within ×1.1 either way.",
+   "rule": "For each clock, of its mean phase Φ = J / (N d) at the checkpoints (400, 800, 1800), 1024 trajectories: D = [var(Φ(t2) − Φ(t0)) − var(Φ(t1) − Φ(t0))] / (2 (t2 − t1)), v = mean(Φ(t2) − Φ(t0)) / (t2 − t0), S = the mean heat given to the bath over [t0, t2] / (σ² (t2 − t0)). For each clock and world, over every query of every trajectory: MSE = the mean squared error of the predicted time to the next event, m_k(â) with â = (Φ(now) − Φ(last event)) / v*; MSE(none) predicts the mean residual life T (1 + 1/k) / 2 (T / 2 periodic); MSE(perfect) reads the true elapsed time. Each test is log10 of a ratio, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of the trajectories, the same indices for every clock and world, seeded from the registration id; any resample in which the ratio is undefined makes the hypothesis inconclusive. The share of the ceiling is C = MSE(perfect) / MSE(clock) in a world. Supported if the interval of log10 C(N16 in k4096) / C(N1 in k256) lies within (−log10 1.1, log10 1.1); contradicted if it lies wholly outside; else inconclusive."
+  }
+ ]
+}

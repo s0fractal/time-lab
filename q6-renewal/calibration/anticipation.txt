@@ -1,0 +1,36 @@
+N=1 T=20 E/interval=1500 1.3s
+    k=1     mse clock=433.9 twin=433.9 perfect=433.9 none=433.9 A=1 A_twin=1 A_perfect=1
+    k=4     mse clock=82.48 twin=82.53 perfect=82.47 none=95.2 A=1.154 A_twin=1.153 A_perfect=1.154
+    k=16    mse clock=20.94 twin=21 perfect=20.86 none=46.29 A=2.21 A_twin=2.204 A_perfect=2.219
+    k=64    mse clock=5.829 twin=5.852 perfect=5.673 none=36.4 A=6.245 A_twin=6.22 A_perfect=6.416
+    k=256   mse clock=1.684 twin=1.728 perfect=1.492 none=34.15 A=20.28 A_twin=19.77 A_perfect=22.89
+    k=1024  mse clock=0.5805 twin=0.6313 perfect=0.3866 none=33.57 A=57.83 A_twin=53.18 A_perfect=86.85
+    k=4096  mse clock=0.3131 twin=0.363 perfect=0.1033 none=33.39 A=106.6 A_twin=91.99 A_perfect=323.2
+    k=None  mse clock=0.2154 twin=0.2659 perfect=0 none=33.34 A=154.7 A_twin=125.4 A_perfect=inf
+N=4 T=20 E/interval=5994 2.2s
+    k=1     mse clock=433.9 twin=433.9 perfect=433.9 none=433.9 A=1 A_twin=1 A_perfect=1
+    k=4     mse clock=82.47 twin=82.47 perfect=82.47 none=95.2 A=1.154 A_twin=1.154 A_perfect=1.154
+    k=16    mse clock=20.87 twin=20.88 perfect=20.86 none=46.29 A=2.218 A_twin=2.217 A_perfect=2.219
+    k=64    mse clock=5.711 twin=5.721 perfect=5.673 none=36.4 A=6.373 A_twin=6.362 A_perfect=6.416
+    k=256   mse clock=1.543 twin=1.551 perfect=1.492 none=34.15 A=22.14 A_twin=22.02 A_perfect=22.89
+    k=1024  mse clock=0.4354 twin=0.447 perfect=0.3866 none=33.57 A=77.1 A_twin=75.1 A_perfect=86.85
+    k=4096  mse clock=0.155 twin=0.165 perfect=0.1033 none=33.39 A=215.5 A_twin=202.4 A_perfect=323.2
+    k=None  mse clock=0.05478 twin=0.06416 perfect=0 none=33.34 A=608.5 A_twin=519.6 A_perfect=inf
+N=16 T=20 E/interval=23979 6.9s
+    k=1     mse clock=433.9 twin=433.9 perfect=433.9 none=433.9 A=1 A_twin=1 A_perfect=1
+    k=4     mse clock=82.47 twin=82.47 perfect=82.47 none=95.2 A=1.154 A_twin=1.154 A_perfect=1.154
+    k=16    mse clock=20.87 twin=20.87 perfect=20.86 none=46.29 A=2.218 A_twin=2.218 A_perfect=2.219
+    k=64    mse clock=5.684 twin=5.679 perfect=5.673 none=36.4 A=6.404 A_twin=6.409 A_perfect=6.416
+    k=256   mse clock=1.501 twin=1.508 perfect=1.492 none=34.15 A=22.75 A_twin=22.65 A_perfect=22.89
+    k=1024  mse clock=0.3991 twin=0.4032 perfect=0.3866 none=33.57 A=84.11 A_twin=83.26 A_perfect=86.85
+    k=4096  mse clock=0.1171 twin=0.1203 perfect=0.1033 none=33.39 A=285 A_twin=277.5 A_perfect=323.2
+    k=None  mse clock=0.01425 twin=0.01838 perfect=0 none=33.34 A=2339 A_twin=1814 A_perfect=inf
+N=64 T=20 E/interval=95908 48.0s
+    k=1     mse clock=433.9 twin=433.9 perfect=433.9 none=433.9 A=1 A_twin=1 A_perfect=1
+    k=4     mse clock=82.47 twin=82.47 perfect=82.47 none=95.2 A=1.154 A_twin=1.154 A_perfect=1.154
+    k=16    mse clock=20.86 twin=20.86 perfect=20.86 none=46.29 A=2.219 A_twin=2.219 A_perfect=2.219
+    k=64    mse clock=5.677 twin=5.676 perfect=5.673 none=36.4 A=6.412 A_twin=6.413 A_perfect=6.416
+    k=256   mse clock=1.496 twin=1.496 perfect=1.492 none=34.15 A=22.83 A_twin=22.83 A_perfect=22.89
+    k=1024  mse clock=0.3903 twin=0.3901 perfect=0.3866 none=33.57 A=86.01 A_twin=86.05 A_perfect=86.85
+    k=4096  mse clock=0.1069 twin=0.1069 perfect=0.1033 none=33.39 A=312.3 A_twin=312.3 A_perfect=323.2
+    k=None  mse clock=0.00366 twin=0.004062 perfect=0 none=33.34 A=9107 A_twin=8208 A_perfect=inf
