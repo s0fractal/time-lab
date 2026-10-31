@@ -1,0 +1,6 @@
+alone g0.25                    v=5.2014 D=5.082e-03 D_time=1.879e-04 S=4809+0 eta_main=1.107 eta_total=1.107 lag=0.0000±0.0000 out=0 clip=0.0000 13.4s
+alone g0.5                     v=2.5924 D=2.586e-03 D_time=3.847e-04 S=2398+0 eta_main=1.084 eta_total=1.084 lag=0.0000±0.0000 out=0 clip=0.0000 13.4s
+alone g1.0                     v=1.2217 D=2.579e-03 D_time=1.728e-03 S=1131+0 eta_main=0.512 eta_total=0.512 lag=0.0000±0.0000 out=0 clip=0.0000 13.5s
+alone g2.0                     v=0.4885 D=1.755e-03 D_time=7.355e-03 S=452+0 eta_main=0.300 eta_total=0.300 lag=0.0000±0.0000 out=0 clip=0.0000 13.5s
+alone g0.5 F1.1                v=2.1701 D=3.489e-03 D_time=7.408e-04 S=1699+0 eta_main=0.795 eta_total=0.795 lag=0.0000±0.0000 out=0 clip=0.0000 13.5s
+alone g0.5 F1.6                v=3.1998 D=2.748e-03 D_time=2.684e-04 S=3642+0 eta_main=1.023 eta_total=1.023 lag=0.0000±0.0000 out=0 clip=0.0000 13.4s

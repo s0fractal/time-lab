@@ -1,0 +1,13 @@
+line K2.64 L16 n4 ramp50.0 k0  v=2.5921 D=2.973e-03 D_time=4.424e-04 S=2397+1201 eta_main=0.943 eta_total=0.628 lag=1963.4881±786.8288 out=0 clip=0.0000 15.3s
+line K2.64 L16 n4 ramp150.0 k0 v=2.5924 D=3.253e-03 D_time=4.840e-04 S=2398+1200 eta_main=0.862 eta_total=0.574 lag=1768.8336±787.5943 out=0 clip=0.0000 15.3s
+line K2.64 L16 n8 ramp50.0 k0  v=2.5923 D=2.984e-03 D_time=4.441e-04 S=2398+2476 eta_main=0.939 eta_total=0.462 lag=1963.1842±786.3267 out=0 clip=0.0000 15.2s
+line K2.64 L16 n8 ramp150.0 k0 v=2.5923 D=3.032e-03 D_time=4.512e-04 S=2398+2468 eta_main=0.924 eta_total=0.456 lag=1770.0124±786.9439 out=0 clip=0.0000 15.2s
+line K5.0 L16 n4 ramp50.0 k0   v=2.5924 D=3.329e-03 D_time=4.954e-04 S=2398+2078 eta_main=0.842 eta_total=0.451 lag=1959.3855±789.7402 out=0 clip=0.0000 15.3s
+line K5.0 L16 n4 ramp150.0 k0  v=2.5925 D=2.502e-03 D_time=3.723e-04 S=2398+2077 eta_main=1.120 eta_total=0.600 lag=1762.9117±786.7898 out=0 clip=0.0000 15.3s
+line K5.0 L16 n8 ramp50.0 k0   v=2.5923 D=2.996e-03 D_time=4.459e-04 S=2398+4164 eta_main=0.935 eta_total=0.342 lag=1968.0378±790.1351 out=0 clip=0.0000 15.3s
+line K5.0 L16 n8 ramp150.0 k0  v=2.5924 D=2.678e-03 D_time=3.985e-04 S=2398+4164 eta_main=1.047 eta_total=0.382 lag=1761.5123±785.5382 out=0 clip=0.0000 15.3s
+line K8.0 L16 n4 ramp50.0 k0   v=2.5924 D=2.806e-03 D_time=4.176e-04 S=2398+3296 eta_main=0.999 eta_total=0.421 lag=1967.8925±795.1501 out=0 clip=0.0000 14.8s
+line K8.0 L16 n4 ramp150.0 k0  v=2.5925 D=3.137e-03 D_time=4.667e-04 S=2398+3293 eta_main=0.893 eta_total=0.376 lag=1763.0592±795.0474 out=0 clip=0.0000 14.8s
+line K8.0 L16 n8 ramp50.0 k0   v=2.5923 D=2.436e-03 D_time=3.625e-04 S=2398+6559 eta_main=1.150 eta_total=0.308 lag=1964.9697±791.1457 out=0 clip=0.0000 14.8s
+line K8.0 L16 n8 ramp150.0 k0  v=2.5924 D=2.724e-03 D_time=4.053e-04 S=2398+6558 eta_main=1.029 eta_total=0.275 lag=1759.4878±787.2258 out=0 clip=0.0000 14.8s
+alone ramp150                  v=2.5923 D=2.745e-03 D_time=4.085e-04 S=2398+0 eta_main=1.021 eta_total=1.021 lag=0.0000±0.0000 out=0 clip=0.0000 14.4s

@@ -1,0 +1,97 @@
+{
+ "question": "q4-line found that a crystal far from the TUR bound (η ≈ 0.26) becomes a cheaper clock by reading its own past through a rotor line. Does the same line, geared to a crystal that runs near the bound (γ = 0.5, η ≈ 1), still make it cheaper, or only more precise?",
+ "runner_path": "q5-bound/run.py",
+ "analysis_path": "q5-bound/analyze.py",
+ "seeds": "seed(name) = int(sha256('<registration id>:<beacon randomness>:<name>').hexdigest()[:12], 16): the crystal's noise from the cell name, the line's from '<cell name>:line'; numpy PCG64.",
+ "beacon": "drand quicknet (chain 52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971): the first round dated at or after the earliest GitHub-witnessed push (GET repos/s0fractal/time-lab/activity) that holds the commit adding q5-bound/registration.lock.json.",
+ "design": {
+  "base": {
+   "d": 2,
+   "dt": 1.0,
+   "S": 4,
+   "gamma": 0.5,
+   "kappa": 1.0,
+   "g_lat": 1.0,
+   "g_pin": 0.5,
+   "m_pin": 2,
+   "F": 1.3,
+   "sigma": 0.3
+  },
+  "N": 32,
+  "k": 0.06,
+  "v_star": 2.5924,
+  "tau": 16.5,
+  "line": {
+   "L": 16,
+   "K": 2.0,
+   "gamma_line": 2.0,
+   "gear": 5.307
+  },
+  "Lambda": {
+   "8": 8.0659,
+   "32": 8.003,
+   "128": 7.9876,
+   "512": 7.9857
+  },
+  "feedback": "F(t) = F − k (Φ(t) − r ψ_L(t) − r Λ*), clipped to [0, 2F]; the line is q4-line's (stage i: n_s ψ_i'' = n_s K sin(ψ_{i−1} − ψ_i) − γ_line n_s ψ_i' + noise at σ², one-way pull) led by ψ_0 = Φ / r, r = 5.307 an ideal gear; Λ* the line's mean lag at k = 0 (calibration/gear.txt). ideal: F(t) = F − k (Φ(t) − Φ(t − τ) − v* τ) from a free exact buffer.",
+  "trajectories": 1024,
+  "checkpoints": [
+   400,
+   800,
+   1800
+  ],
+  "every": 50,
+  "cells": [
+   {
+    "name": "alone",
+    "reference": "alone"
+   },
+   {
+    "name": "ideal",
+    "reference": "ideal"
+   },
+   {
+    "name": "line-n8",
+    "reference": "line",
+    "n_s": 8
+   },
+   {
+    "name": "line-n32",
+    "reference": "line",
+    "n_s": 32
+   },
+   {
+    "name": "line-n128",
+    "reference": "line",
+    "n_s": 128
+   },
+   {
+    "name": "line-n512",
+    "reference": "line",
+    "n_s": 512
+   }
+  ]
+ },
+ "hypotheses": [
+  {
+   "hypothesis": "H1",
+   "statement": "Near the bound, precision is still for sale: through a line of 128-phase stages the crystal diffuses at least three times less than alone.",
+   "rule": "For each cell, of the crystal's mean phase Φ = J / (N d) at the checkpoints (400, 800, 1800), 1024 trajectories: D = [var(Φ(t2) − Φ(t0)) − var(Φ(t1) − Φ(t0))] / (2 (t2 − t1)), v = mean(Φ(t2) − Φ(t0)) / (t2 − t0), S = the mean heat given to the bath by the crystal and the line over [t0, t2] / (σ² (t2 − t0)), η = v² / (D S); the gain G = D(alone) / D(cell). Each test is log10 of a ratio of gains or of η, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of every cell's trajectories, seeded from the registration id; a resample with a non-positive D counts that side as infinitely precise, one with both non-positive is undefined, and any undefined resample makes the hypothesis inconclusive. Supported if the interval of log10 G(line-n128) lies above log10 3; contradicted if it lies wholly below log10 3; else inconclusive."
+  },
+  {
+   "hypothesis": "H2",
+   "statement": "Near the bound, efficiency is no longer for sale: with the line of 128-phase stages the crystal's precision per entropy, the line's heat counted, is less than 1.25 times that of the crystal alone (q4-line, far from the bound: ×1.76). Asked of a crystal near the bound only: assessed when the interval of η(alone) lies above 0.6 (q4-line's crystal: 0.26).",
+   "rule": "For each cell, of the crystal's mean phase Φ = J / (N d) at the checkpoints (400, 800, 1800), 1024 trajectories: D = [var(Φ(t2) − Φ(t0)) − var(Φ(t1) − Φ(t0))] / (2 (t2 − t1)), v = mean(Φ(t2) − Φ(t0)) / (t2 − t0), S = the mean heat given to the bath by the crystal and the line over [t0, t2] / (σ² (t2 − t0)), η = v² / (D S); the gain G = D(alone) / D(cell). Each test is log10 of a ratio of gains or of η, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of every cell's trajectories, seeded from the registration id; a resample with a non-positive D counts that side as infinitely precise, one with both non-positive is undefined, and any undefined resample makes the hypothesis inconclusive. Inconclusive unless the 95% interval of η(alone) over the same resamples lies above 0.6. Then supported if the interval of log10 η(line-n128) / η(alone) lies below log10 1.25; contradicted if it lies wholly above log10 1.25; else inconclusive."
+  },
+  {
+   "hypothesis": "H3",
+   "statement": "A light line that sharpened the wasteful crystal (q4-line: 8-phase stages, ×4.5) makes the crystal near the bound worse than alone.",
+   "rule": "For each cell, of the crystal's mean phase Φ = J / (N d) at the checkpoints (400, 800, 1800), 1024 trajectories: D = [var(Φ(t2) − Φ(t0)) − var(Φ(t1) − Φ(t0))] / (2 (t2 − t1)), v = mean(Φ(t2) − Φ(t0)) / (t2 − t0), S = the mean heat given to the bath by the crystal and the line over [t0, t2] / (σ² (t2 − t0)), η = v² / (D S); the gain G = D(alone) / D(cell). Each test is log10 of a ratio of gains or of η, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of every cell's trajectories, seeded from the registration id; a resample with a non-positive D counts that side as infinitely precise, one with both non-positive is undefined, and any undefined resample makes the hypothesis inconclusive. Supported if the interval of log10 G(line-n8) lies below 0; contradicted if it lies wholly above 0; else inconclusive."
+  },
+  {
+   "hypothesis": "H4",
+   "statement": "Near the bound, a heavy line costs more than it gives: with 512-phase stages the crystal is at most two thirds as efficient a clock as alone.",
+   "rule": "For each cell, of the crystal's mean phase Φ = J / (N d) at the checkpoints (400, 800, 1800), 1024 trajectories: D = [var(Φ(t2) − Φ(t0)) − var(Φ(t1) − Φ(t0))] / (2 (t2 − t1)), v = mean(Φ(t2) − Φ(t0)) / (t2 − t0), S = the mean heat given to the bath by the crystal and the line over [t0, t2] / (σ² (t2 − t0)), η = v² / (D S); the gain G = D(alone) / D(cell). Each test is log10 of a ratio of gains or of η, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of every cell's trajectories, seeded from the registration id; a resample with a non-positive D counts that side as infinitely precise, one with both non-positive is undefined, and any undefined resample makes the hypothesis inconclusive. Supported if the interval of log10 η(line-n512) / η(alone) lies below −log10 1.5; contradicted if it lies wholly above −log10 1.5; else inconclusive."
+  }
+ ]
+}

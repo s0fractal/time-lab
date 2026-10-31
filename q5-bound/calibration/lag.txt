@@ -1,0 +1,5 @@
+line n2 k0                     v=2.5921 D=3.322e-03 D_time=4.945e-04 S=2397+578 eta_main=0.843 eta_total=0.680 lag=2061.4416±785.9520 out=0 clip=0.0000 13.9s
+line n4 k0                     v=2.5923 D=3.093e-03 D_time=4.603e-04 S=2398+1201 eta_main=0.906 eta_total=0.604 lag=2065.1435±785.3779 out=0 clip=0.0000 13.9s
+line n8 k0                     v=2.5923 D=2.579e-03 D_time=3.837e-04 S=2398+2470 eta_main=1.087 eta_total=0.535 lag=2059.6579±784.0863 out=0 clip=0.0000 14.2s
+line n16 k0                    v=2.5925 D=2.885e-03 D_time=4.293e-04 S=2398+5048 eta_main=0.972 eta_total=0.313 lag=2058.6233±786.2438 out=0 clip=0.0000 13.9s
+line n32 k0                    v=2.5924 D=2.306e-03 D_time=3.432e-04 S=2398+10305 eta_main=1.215 eta_total=0.229 lag=2054.6467±787.0326 out=0 clip=0.0000 13.9s

@@ -1,0 +1,4 @@
+gear line n8 k0                v=2.5926 D=2.783e-03 D_time=4.141e-04 S=2398+686 eta_main=1.007 eta_total=0.783 lag=8.0659±0.2368 out=0 clip=0.0000 13.4s
+gear line n32 k0               v=2.5925 D=2.275e-03 D_time=3.385e-04 S=2398+2681 eta_main=1.232 eta_total=0.582 lag=8.0030±0.1281 out=0 clip=0.0000 13.4s
+gear line n128 k0              v=2.5920 D=3.351e-03 D_time=4.988e-04 S=2397+10658 eta_main=0.836 eta_total=0.154 lag=7.9876±0.0810 out=0 clip=0.0000 13.4s
+gear line n512 k0              v=2.5923 D=2.838e-03 D_time=4.223e-04 S=2398+42577 eta_main=0.988 eta_total=0.053 lag=7.9857±0.0639 out=0 clip=0.0000 13.7s

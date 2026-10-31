@@ -1,0 +1,20 @@
+gear line n8 k0.02             v=2.5924 D=3.343e-03 D_time=4.974e-04 S=2398+686 eta_main=0.838 eta_total=0.652 lag=8.0617±0.2287 out=0 clip=0.0000 15.4s
+gear line n8 k0.04             v=2.5922 D=4.733e-03 D_time=7.045e-04 S=2400+686 eta_main=0.592 eta_total=0.460 lag=8.0705±0.2332 out=0 clip=0.0029 15.5s
+gear line n8 k0.06             v=2.5921 D=4.797e-03 D_time=7.139e-04 S=2403+686 eta_main=0.583 eta_total=0.453 lag=8.0593±0.2421 out=0 clip=0.0047 15.5s
+gear line n8 k0.09             v=2.5909 D=5.968e-03 D_time=8.891e-04 S=2410+688 eta_main=0.467 eta_total=0.363 lag=8.0640±0.2676 out=0 clip=0.0058 15.6s
+gear line n32 k0.02            v=2.5921 D=1.663e-03 D_time=2.475e-04 S=2398+2680 eta_main=1.685 eta_total=0.796 lag=8.0060±0.1215 out=0 clip=0.0000 15.5s
+gear line n32 k0.04            v=2.5921 D=1.108e-03 D_time=1.649e-04 S=2398+2681 eta_main=2.529 eta_total=1.194 lag=8.0014±0.1239 out=0 clip=0.0029 15.8s
+gear line n32 k0.06            v=2.5920 D=1.414e-03 D_time=2.105e-04 S=2398+2681 eta_main=1.981 eta_total=0.935 lag=8.0033±0.1241 out=0 clip=0.0046 15.5s
+gear line n32 k0.09            v=2.5914 D=1.245e-03 D_time=1.854e-04 S=2400+2683 eta_main=2.247 eta_total=1.061 lag=8.0050±0.1345 out=0 clip=0.0057 15.4s
+gear line n128 k0.02           v=2.5921 D=9.924e-04 D_time=1.477e-04 S=2397+10659 eta_main=2.824 eta_total=0.519 lag=7.9891±0.0704 out=0 clip=0.0000 15.5s
+gear line n128 k0.04           v=2.5920 D=7.707e-04 D_time=1.147e-04 S=2397+10658 eta_main=3.636 eta_total=0.668 lag=7.9879±0.0701 out=0 clip=0.0029 15.5s
+gear line n128 k0.06           v=2.5919 D=4.287e-04 D_time=6.382e-05 S=2397+10659 eta_main=6.536 eta_total=1.200 lag=7.9885±0.0691 out=0 clip=0.0046 17.0s
+gear line n128 k0.09           v=2.5919 D=4.970e-04 D_time=7.397e-05 S=2398+10661 eta_main=5.637 eta_total=1.035 lag=7.9875±0.0742 out=0 clip=0.0058 17.1s
+gear line n512 k0.02           v=2.5922 D=9.757e-04 D_time=1.452e-04 S=2398+42579 eta_main=2.873 eta_total=0.153 lag=7.9857±0.0528 out=0 clip=0.0000 16.9s
+gear line n512 k0.04           v=2.5925 D=4.016e-04 D_time=5.975e-05 S=2398+42587 eta_main=6.980 eta_total=0.372 lag=7.9861±0.0487 out=0 clip=0.0029 17.0s
+gear line n512 k0.06           v=2.5924 D=3.592e-04 D_time=5.346e-05 S=2398+42583 eta_main=7.801 eta_total=0.416 lag=7.9854±0.0457 out=0 clip=0.0046 17.0s
+gear line n512 k0.09           v=2.5925 D=2.303e-04 D_time=3.426e-05 S=2398+42591 eta_main=12.171 eta_total=0.649 lag=7.9868±0.0457 out=0 clip=0.0058 17.0s
+ideal tau16.5 k0.02            v=2.5924 D=1.006e-03 D_time=1.497e-04 S=2398+0 eta_main=2.787 eta_total=2.787 lag=0.0000±0.0000 out=0 clip=0.0000 16.6s
+ideal tau16.5 k0.04            v=2.5924 D=5.329e-04 D_time=7.929e-05 S=2398+0 eta_main=5.260 eta_total=5.260 lag=0.0000±0.0000 out=0 clip=0.0000 16.8s
+ideal tau16.5 k0.06            v=2.5924 D=3.748e-04 D_time=5.576e-05 S=2398+0 eta_main=7.479 eta_total=7.479 lag=0.0000±0.0000 out=0 clip=0.0000 16.7s
+ideal tau16.5 k0.09            v=2.5925 D=1.838e-04 D_time=2.735e-05 S=2398+0 eta_main=15.250 eta_total=15.250 lag=0.0000±0.0000 out=0 clip=0.0000 16.7s
