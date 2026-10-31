@@ -5,19 +5,22 @@
     tl.py beacon DIR              the GitHub-witnessed push of the registration, the first drand round after it, as an attest
     tl.py close DIR               run the registered analysis; file each prediction's closing version
     tl.py decide DIR              as time-lab-decider: rerun the analysis and attest each closing version
-    tl.py assess                  each prediction's state, reliance and guard
+    tl.py verify DIR              the runner, the analysis and the data are the bytes the records name
+    tl.py assess                  each prediction's state, reliance and guard, and what the core cannot check (METHOD §4)
 
-Signers' seeds are read from outside the repository: claude's from $TL_CLAUDE_SEED, the decider's from
-$TL_DECIDER_SEED (default ~/.config/time-lab/time-lab-decider.seed)."""
+The receiver is .warrant/v3.json. Signers' seeds are read from outside the repository: claude's from $TL_CLAUDE_SEED,
+the decider's from $TL_DECIDER_SEED. The decider's key is made and held by GitHub Actions (.github/workflows/
+decider-key.yml) and `decide` runs there (decide.yml): no operator holds it."""
 import hashlib, json, os, platform, re, subprocess, sys, urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-STORE, TRUST, PROFILE = ROOT / ".warrant", ROOT / ".warrant/trust.json", ROOT / ".warrant/profile.json"
+STORE, RECEIVER = ROOT / ".warrant", ROOT / ".warrant/v3.json"
 PY = str(ROOT / ".venv/bin/python")
 DRAND = "https://api.drand.sh/52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971"
 REPO = "s0fractal/time-lab"
 DECIDED = ("supported", "contradicted", "inconclusive")
+DECIDER = "time-lab-decider"
 GUARD = {"quorum": 1, "roles": ["prediction/decider"], "match": {"verdict": "reproduces"}, "requires": []}
 
 SCHEMAS = [
@@ -51,7 +54,7 @@ def sha(b: bytes) -> str:
 def warrant(*args, actor=None, key=None) -> dict:
     cmd = [PY, "-m", "warrant", *args[:1], "--store", str(STORE)]
     if actor:
-        cmd += ["--actor", actor, "--key", key, "--trust", str(TRUST)]
+        cmd += ["--actor", actor, "--key", key]                # the trust is the store's v3.json
     p = subprocess.run(cmd + list(args[1:]), capture_output=True, text=True, cwd=ROOT)
     if p.returncode or not p.stdout.strip().startswith("{"):
         sys.exit(f"warrant {args[0]} refused: {p.stdout.strip()} {p.stderr.strip()}")
@@ -63,8 +66,7 @@ def claude():
 
 
 def decider():
-    return {"actor": "time-lab-decider",
-            "key": os.environ.get("TL_DECIDER_SEED", str(Path.home() / ".config/time-lab/time-lab-decider.seed"))}
+    return {"actor": DECIDER, "key": os.environ["TL_DECIDER_SEED"]}
 
 
 def put(kind, body, schema=None, lineage=None, refs=(), guard=None, signer=None) -> str:
@@ -80,13 +82,62 @@ def blob(path: Path) -> str:
 def report() -> dict:
     from warrant import engine as E
     from warrant.store import Store
-    return E.assess(Store(str(STORE)).snapshot(), json.loads(TRUST.read_text()), json.loads(PROFILE.read_text()), None)
+    doc = json.loads(RECEIVER.read_text())
+    return E.assess(Store(str(STORE)).snapshot(), doc["trust"], doc["profile"], None)
 
 
 def records() -> dict:
     from warrant import records as R
     rs = (json.loads(line)["record"] for line in (STORE / "records.jsonl").read_text().splitlines())
     return {R.rid(r): r for r in rs}
+
+
+def chain_position(rec: dict) -> dict:
+    """{id: (actor, n)}: each record's place in its actor's chain, by `prev` (hash-linked, unlike `at`)."""
+    nxt = {r["prev"]: i for i, r in rec.items() if r.get("prev")}
+    pos = {}
+    for i, r in rec.items():
+        if not r.get("prev"):
+            n, cur = 0, i
+            while cur is not None and cur not in pos:
+                pos[cur] = (r["actor"], n)
+                n, cur = n + 1, nxt.get(cur)
+    return pos
+
+
+def unchecked(rec: dict, rep: dict) -> list:
+    """What the core does not check for a prediction (METHOD §4): a closing version whose guard does not name the
+    registered analysis (N1: CODE_NOT_REGISTERED), and a withdrawal of a registration that has a beacon attest, unless
+    the author's own chain puts the withdrawal before that attest (WITHDRAWN_AFTER_BEACON): a pair the chain does not
+    order does not meet the rule (primitives PATTERNS, "Order is witnessed, not claimed")."""
+    pos, out = chain_position(rec), []
+    beacons = [i for i, r in rec.items() if r["kind"] == "attest" and r["body"].get("verdict") == "witnessed"]
+    for i, r in rec.items():
+        if r.get("schema") != "prediction@1" or r["kind"] != "entity":
+            continue
+        reg = rec.get(r["body"]["registration"], {}).get("body", {})
+        state = r["body"]["state"]
+        if state in DECIDED and (r.get("guard") or {}).get("match", {}).get("code") != reg.get("analysis"):
+            out.append(("CODE_NOT_REGISTERED", r["body"]["hypothesis"], i))
+        before = lambda b: pos.get(b, (None,))[0] == r["actor"] == pos.get(i, (None,))[0] and pos[i][1] < pos[b][1]
+        if state == "withdrawn" and any(rec[b]["body"].get("target") == r["body"]["registration"] and not before(b)
+                                        for b in beacons):
+            out.append(("WITHDRAWN_AFTER_BEACON", r["body"]["hypothesis"], i))
+    return out
+
+
+def same(stored, raw) -> bool:
+    """Whether a closing version's stored result (`micro` of the analysis output) is the rerun's raw output: every
+    real number x of the rerun within one unit of the stored round(x · 10⁶) (a rerun on another machine may differ in a
+    float's last bits, and round may then fall to the other side of .5), everything else equal and of the same type
+    (a flag is no number), the structure the same."""
+    if isinstance(raw, float):
+        return type(stored) is int and abs(raw * 1_000_000 - stored) <= 1
+    if isinstance(raw, dict):
+        return isinstance(stored, dict) and stored.keys() == raw.keys() and all(same(stored[k], raw[k]) for k in raw)
+    if isinstance(raw, list):
+        return isinstance(stored, list) and len(stored) == len(raw) and all(same(x, y) for x, y in zip(stored, raw))
+    return type(stored) is type(raw) and stored == raw
 
 
 def lock(d: Path) -> dict:
@@ -176,15 +227,29 @@ def main(cmd, *a):
             closed[h] = put("entity", body, schema="prediction@1", lineage=pid, refs=[lk["registration"], data], guard=g)
         (d / "closure.lock.json").write_text(json.dumps({"data": data, "closing": closed}, indent=1) + "\n")
         print(json.dumps(closed, indent=1))
+    elif cmd == "verify":
+        d = ROOT / a[0]
+        lk = lock(d)
+        bad = [p for p, want in ((lk["runner_path"], lk["runner"]), (lk["analysis_path"], lk["analysis"]))
+               if sha((ROOT / p).read_bytes()) != want]
+        if (d / "closure.lock.json").exists():
+            cl = json.loads((d / "closure.lock.json").read_text())
+            bad += [] if sha((d / "results" / "data.json").read_bytes()) == cl["data"] else [f"{a[0]}/results/data.json"]
+        print("\n".join(f"DIFFERS {p}" for p in bad) or "ok: the runner, the analysis and the data are the registered bytes")
+        sys.exit(1 if bad else 0)
     elif cmd == "decide":
         d = ROOT / a[0]
         lk, res = lock(d), analysis(ROOT / a[0], lock(ROOT / a[0]))
         cl, rec, at = json.loads((d / "closure.lock.json").read_text()), records(), head()
         if sha((d / "results" / "data.json").read_bytes()) != cl["data"]:
             sys.exit("results/data.json is not the data the closing versions name")
+        done = {r["body"].get("target") for r in rec.values() if r["kind"] == "attest" and r["actor"] == DECIDER}
         for h, cid in cl["closing"].items():
+            if cid in done:
+                print(h, "attested already")
+                continue
             b = rec[cid]["body"]
-            ok = b["state"] == res["verdicts"][h]["verdict"] and b["result"] == micro(res["verdicts"][h])
+            ok = b["state"] == res["verdicts"][h]["verdict"] and same(b["result"], res["verdicts"][h])
             body = {"verdict": "reproduces" if ok else "does_not_reproduce", "on": cid, "code": lk["analysis"], "env": env(), "commit": at}
             print(h, body["verdict"], warrant("attest", cid, "--body", json.dumps(body), **decider())["record"])
     elif cmd == "assess":
@@ -197,6 +262,10 @@ def main(cmd, *a):
                 print(f"{r['body']['hypothesis']:<28} {str(l.get('state')):<13} {l.get('reliance'):<10} "
                       f"guard {leaf.get('guard')} {leaf.get('waiting') or ''}")
         print("problems", rep.get("problems"), "rejected", len(rep.get("rejected", [])))
+        found = unchecked(rec, rep)
+        for code, h, i in found:
+            print(code, h, i[:12])
+        sys.exit(1 if found else 0)
     else:
         sys.exit(__doc__)
 

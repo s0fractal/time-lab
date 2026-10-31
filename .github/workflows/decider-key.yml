@@ -1,0 +1,52 @@
+# time-lab-decider's key (METHOD §2): made once on a GitHub runner and kept as the secret TL_DECIDER_SEED of the
+# environment `decider`, which only main may deploy to. The seed never leaves GitHub: no operator holds it, so the
+# decider's attest is a run of decide.yml, not anyone's signature. This run prints only its public key, which goes into
+# .warrant/v3.json's trust under time-lab-decider by a reviewed pull request. Making the secret takes TL_SECRETS_TOKEN
+# (a token of the owner's, of this repository, allowed to write environment secrets), needed once and deleted after.
+# The pattern is minds' witness-key.yml.
+name: decider-key
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  key:
+    runs-on: ubuntu-24.04
+    environment: decider
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.13"
+      - name: Install the locked environment
+        run: python -m pip install --quiet uv==0.12.5 && uv sync --frozen --python "$(command -v python)"
+      - name: Make the key once; print its public key
+        env:
+          SEED: ${{ secrets.TL_DECIDER_SEED }}
+          GH_TOKEN: ${{ secrets.TL_SECRETS_TOKEN }}
+        run: |
+          if [ -z "$SEED" ]; then
+            if [ -z "$GH_TOKEN" ]; then
+              echo "the environment decider holds neither TL_DECIDER_SEED nor TL_SECRETS_TOKEN" >&2
+              exit 1
+            fi
+            # no key for an environment other branches could deploy to: their workflows would read it
+            custom=$(gh api "repos/$GITHUB_REPOSITORY/environments/decider" --jq '.deployment_branch_policy.custom_branch_policies')
+            branches=$(gh api "repos/$GITHUB_REPOSITORY/environments/decider/deployment-branch-policies" \
+              --jq '[.branch_policies[] | [.name, .type]]' | tr -d ' \n')
+            if [ "$custom" != "true" ] || [ "$branches" != '[["main","branch"]]' ]; then
+              echo "refused: the environment decider must be deployable from main alone (custom $custom, $branches)" >&2
+              exit 1
+            fi
+            SEED=$(.venv/bin/python -c "import os; print(os.urandom(32).hex())")
+            echo "::add-mask::$SEED"
+            printf %s "$SEED" | gh secret set TL_DECIDER_SEED --env decider --repo "$GITHUB_REPOSITORY"
+            echo "made TL_DECIDER_SEED in the environment decider; TL_SECRETS_TOKEN may be deleted now"
+          fi
+          printf %s "$SEED" | .venv/bin/python -c "import sys; from warrant.keys import Key; print('time-lab-decider public key', Key.from_seed_hex(sys.stdin.read().strip()).public)"

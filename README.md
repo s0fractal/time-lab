@@ -19,3 +19,9 @@
 ```bash
 .venv/bin/python -m unittest q1-weber/tests/test_analyze.py && .venv/bin/python -I q1-weber/tests/mutants.py
 ```
+
+Перевірки самого `tl.py` (те, чого ядро Warrant не перевіряє, METHOD §4):
+
+```bash
+.venv/bin/python -m unittest tools/tests/test_tl.py && .venv/bin/python -I tools/tests/mutants.py
+```
