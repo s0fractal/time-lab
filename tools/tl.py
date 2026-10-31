@@ -186,7 +186,7 @@ def main(cmd, *a):
         if (d / "registration.lock.json").exists():
             sys.exit("already registered: a change is a new version of the registration (METHOD §5)")
         runner, ana = blob(ROOT / reg["runner_path"]), blob(ROOT / reg["analysis_path"])
-        body = {"state": "registered", "question": reg["question"], "design": reg["design"], "runner": runner,
+        body = {"state": "registered", "question": reg["question"], "design": micro(reg["design"]), "runner": runner,
                 "runner_path": reg["runner_path"], "analysis": ana, "analysis_path": reg["analysis_path"],
                 "seeds": reg["seeds"], "beacon": reg["beacon"]}
         rid = put("entity", body, schema="registration@1", refs=[runner, ana])

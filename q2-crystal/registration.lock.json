@@ -1,0 +1,13 @@
+{
+ "registration": "6d33597372b2ceb4fac06d3334641c2094e9917f5490029f0c84d4a34fac6f3b",
+ "runner": "eb522783ba81dafd461215a5a124c211e538bd59ee5185b7ffa20937166bfda8",
+ "runner_path": "q2-crystal/run.py",
+ "analysis": "786d98e7494687946aaa837b221f19783c208fa0e1a8cfc4eed64383cf97f768",
+ "analysis_path": "q2-crystal/analyze.py",
+ "predictions": {
+  "H1": "f758d4d37dc4eab34f74ba3b571d254ace794bf8f1f8a79981d0c5786c3b0a43",
+  "H2": "199d5eb243d943fbffcc78718663bc41cfef2df179fbf4ae64d23dbba2937ebc",
+  "H3": "fddaa54644e51c88713bc552263a174254b6de97d2fe5852ea639db68aefe3be",
+  "H4": "9291a9717975a813f3f418d6e3f38e956fe1a5864757189d9b939267b8930551"
+ }
+}
