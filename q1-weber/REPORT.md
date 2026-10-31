@@ -6,9 +6,14 @@
 
 ## Стан записів
 
-Закривальні версії шести `prediction@1` подано (`closure.lock.json`). Кожна чекає attest від `time-lab-decider` з `code = 1167aec7…`. Ключ decider тримає GitHub Actions ([s0fractal/time-lab#1](https://github.com/s0fractal/time-lab/pull/1)), і до його attest вердикти лишаються **PENDING**. `tl.py assess` зараз показує кожну лінію як `open`: доки leaf чекає свого guard, ефективною лишається відкрита версія (V3 §3).
+Усі шість вердиктів **ефективні** (`guard MET`, reliance `ELIGIBLE`):
 
-## Вердикти (як їх подано, до attest)
+- `time-lab-decider` перезапустив зареєстрований аналіз на раннері GitHub ubuntu. Прогін [41164300680](https://github.com/s0fractal/time-lab/actions/runs/41164300680) на main `dcfe77f`.
+- Кожна з шести закривальних версій відтворилася (`reproduces`). Attest закомічено в `d0c91f1`.
+- Ключ decider тримає лише environment `decider`, розгортати яке можна тільки з main (time-lab#1, #2).
+- Перший запуск (41164158460) не підписав нічого: `tl.py` після #1 не передавав `--trust`. Виправлення й регресійний тест — у `dcfe77f`.
+
+## Вердикти
 
 ι = log(медіана оцінок для довгих слів / медіана для коротких) / log T, усереднено по n ≥ 91. 95% інтервал — 2000 повторних вибірок списків.
 
