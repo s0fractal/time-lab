@@ -53,7 +53,9 @@ def sha(b: bytes) -> str:
 
 def trust_file() -> str:
     """The receiver's trust as the trust/3 file the CLI signs under: warrant-graph 3.0.0a2 requires `--trust` for put and
-    attest, and reads it only inside the working directory. Written for each signing call to the ignored runs/."""
+    attest, and reads it only inside the working directory. Written for each signing call to the ignored runs/.
+    warrant master reads the store's v3.json itself since warrant#236 (unreleased after 3.0.0a2): drop this when the pin
+    moves past 3.0.0a2."""
     (ROOT / "runs").mkdir(exist_ok=True)
     (ROOT / "runs" / "trust.json").write_text(json.dumps(json.loads(RECEIVER.read_text())["trust"]))
     return "runs/trust.json"
