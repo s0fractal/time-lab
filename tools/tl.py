@@ -115,6 +115,21 @@ def unchecked(rec: dict, rep: dict) -> list:
     return out
 
 
+def same(a, b, rel=1e-9) -> bool:
+    """Whether a closing version's result is the rerun's: the same structure and every non-number equal, numbers equal
+    up to `rel` (relative, against the larger; or 1e-12 absolute near zero). A rerun on another machine may differ in
+    the last bits of a float; a verdict never differs here, it is compared exactly by the caller and as a string."""
+    if isinstance(a, bool) or isinstance(b, bool):
+        return a is b
+    if isinstance(a, (int, float)) and isinstance(b, (int, float)):
+        return abs(a - b) <= max(rel * max(abs(a), abs(b)), 1e-12)
+    if isinstance(a, dict) and isinstance(b, dict):
+        return a.keys() == b.keys() and all(same(a[k], b[k], rel) for k in a)
+    if isinstance(a, list) and isinstance(b, list):
+        return len(a) == len(b) and all(same(x, y, rel) for x, y in zip(a, b))
+    return a == b
+
+
 def lock(d: Path) -> dict:
     return json.loads((d / "registration.lock.json").read_text())
 
@@ -224,7 +239,7 @@ def main(cmd, *a):
                 print(h, "attested already")
                 continue
             b = rec[cid]["body"]
-            ok = b["state"] == res["verdicts"][h]["verdict"] and b["result"] == res["verdicts"][h]
+            ok = b["state"] == res["verdicts"][h]["verdict"] and same(b["result"], res["verdicts"][h])
             body = {"verdict": "reproduces" if ok else "does_not_reproduce", "on": cid, "code": lk["analysis"], "env": env(), "commit": at}
             print(h, body["verdict"], warrant("attest", cid, "--body", json.dumps(body), **decider())["record"])
     elif cmd == "assess":

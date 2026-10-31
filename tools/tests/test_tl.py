@@ -62,5 +62,25 @@ class Unchecked(unittest.TestCase):
         self.assertEqual(codes(store(REG, OPEN, withdrawn("p1"))), [])
 
 
+class Same(unittest.TestCase):
+    R = {"verdict": "supported", "ci": [0.61, 0.83], "iota": 0.7123456789, "n": 3, "ok": True}
+
+    def test_the_last_bits_of_a_float(self):
+        self.assertTrue(TL.same(self.R, dict(self.R, iota=0.7123456789 * (1 + 1e-14), ci=[0.61 + 1e-16, 0.83])))
+
+    def test_a_number_that_moved(self):
+        self.assertFalse(TL.same(self.R, dict(self.R, iota=0.7124)))
+
+    def test_another_verdict(self):
+        self.assertFalse(TL.same(self.R, dict(self.R, verdict="inconclusive")))
+
+    def test_another_shape(self):
+        self.assertFalse(TL.same(self.R, dict(self.R, extra=1)))
+        self.assertFalse(TL.same(self.R, dict(self.R, ci=[0.61])))
+
+    def test_a_flag_is_not_a_number(self):
+        self.assertFalse(TL.same(self.R, dict(self.R, ok=1)))
+
+
 if __name__ == "__main__":
     unittest.main()
