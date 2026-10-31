@@ -1,0 +1,15 @@
+{
+ "registration": "cb1d35b513ce1ea29ff5d62a6be44fb0cb8f74fbe9362ec4d41f6b1b430286b3",
+ "runner": "b305053e219dc453b677ede525a8eb9c871ee5f10429ada01491fef066ef7af9",
+ "runner_path": "q1-weber/run.py",
+ "analysis": "1167aec7351bfefa9083bc8a153d02990c2bb888bf9fa8442473f2bb16b5f98a",
+ "analysis_path": "q1-weber/analyze.py",
+ "predictions": {
+  "H1:gemma4:26b-a4b-it-q4_K_M": "a0f60bf266d9133ceb29c96feb3ce0eede3cc423da0ba05285a9a731b3172171",
+  "H2:gemma4:26b-a4b-it-q4_K_M": "43dfa21c3e442510102fa18f1a07549e36eced88a0ccfd49834aa263c4cf4ee9",
+  "H1:qwen3.8:27b-mlx": "a78c81766c21dd945f23c15a89a2003fb7822158b031a881ac0cb551cde0c9e8",
+  "H2:qwen3.8:27b-mlx": "487dbad2b933d3f72cdeacb739894d2a4c92dad68a3bafb10a670a462b694ec7",
+  "H1:gemma3:27b": "e5acfc2bdefd98911b629d420813142d8f546371fc0559a083973617497e0229",
+  "H2:gemma3:27b": "04b984368944ae1d12384ae7ef52cd9252f6418456fc92ac3d38c6f775d24a06"
+ }
+}
