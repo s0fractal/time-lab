@@ -1,0 +1,17 @@
+{
+ "attest": "4772eb794608bbf996819ae0104dbfe35adb7897a5fdef11c6aee9f55a1a81b1",
+ "verdict": "witnessed",
+ "witness": {
+  "source": "GET repos/s0fractal/time-lab/activity",
+  "push": "4717d11360c7c7e232fc78d75d9dba1b069f35b3",
+  "timestamp": "2026-10-31T14:42:41Z",
+  "holds": "4717d11360c7c7e232fc78d75d9dba1b069f35b3"
+ },
+ "beacon": {
+  "chain": "52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971",
+  "round": 33551466,
+  "time": 1793457762,
+  "randomness": "f006a8c1bec2140f32d01c889e258128ddff85231494c6d916926b8b62ab0c42",
+  "signature": "8a21fe966603e10cb4c3e520ef55ac9cf339eef409c8db4d6f2b305d0d2229b42f3c82bac16eab020d9b94dd255b6eca"
+ }
+}
