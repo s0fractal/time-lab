@@ -1,0 +1,2 @@
+memory N8 k0.32 M4pi                     v=0.4872 D_phase=6.088e-03 D_time=2.565e-02 var={300: 3.4194, 1000: 11.9431} S=461.1+113.6 clip=0.0000 16.0s | memory v=0.4906 D_time=3.276e-02 lock=0.981
+memory N128 k0.32 M4.5pi                 v=0.4869 D_phase=1.414e-03 D_time=5.967e-03 var={300: 0.7535, 1000: 2.7336} S=459.7+1809.1 clip=0.0000 156.4s | memory v=0.4883 D_time=2.331e-03 lock=0.607

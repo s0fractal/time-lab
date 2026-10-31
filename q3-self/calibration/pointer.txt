@@ -1,0 +1,7 @@
+/Users/s0fractal/Projects/time-lab/.venv/lib/python3.13/site-packages/numpy/lib/_function_base_impl.py:3065: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/Users/s0fractal/Projects/time-lab/.venv/lib/python3.13/site-packages/numpy/lib/_function_base_impl.py:3066: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[None, :]
+memory brownian D0.0 k1.28 tau8          v=0.4936 D_phase=1.552e-05 D_time=6.371e-05 var={300: 0.0254, 1000: 0.0472} S=421.2+0.0 clip=0.0000 13.3s | memory v=0.4881 D_time=0.000e+00 lock=nan
+memory brownian D0.000476 k1.28 tau8     v=0.4934 D_phase=4.031e-04 D_time=1.656e-03 var={300: 0.1954, 1000: 0.7598} S=423.6+0.0 clip=0.0000 13.3s | memory v=0.4881 D_time=1.907e-03 lock=0.911
+memory brownian D0.0079 k1.28 tau8       v=0.4921 D_phase=5.658e-03 D_time=2.337e-02 var={300: 3.9854, 1000: 11.9067} S=459.1+0.0 clip=0.0063 13.4s | memory v=0.4880 D_time=3.076e-02 lock=0.982

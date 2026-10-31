@@ -1,0 +1,12 @@
+memory N8 k1.28 M1pi                     v=0.4799 D_phase=7.247e-03 D_time=3.147e-02 var={300: 5.6282, 1000: 15.7744} S=575.6+113.5 clip=0.0458 17.4s | memory v=0.4902 D_time=3.440e-02 lock=0.926
+memory N8 k0.64 M2pi                     v=0.4861 D_phase=7.012e-03 D_time=2.968e-02 var={300: 4.1418, 1000: 13.9591} S=477.5+113.6 clip=0.0001 17.3s | memory v=0.4907 D_time=3.818e-02 lock=0.977
+memory N32 k1.28 M1pi                    v=0.4826 D_phase=1.938e-03 D_time=8.318e-03 var={300: 1.5799, 1000: 4.2928} S=582.6+452.5 clip=0.0308 31.3s | memory v=0.4886 D_time=7.243e-03 lock=0.809
+memory N32 k0.64 M2pi                    v=0.4876 D_phase=1.802e-03 D_time=7.579e-03 var={300: 1.0537, 1000: 3.577} S=464.8+452.5 clip=0.0000 31.4s | memory v=0.4885 D_time=9.516e-03 lock=0.951
+memory N128 k1.28 M1pi                   v=0.4832 D_phase=1.076e-03 D_time=4.607e-03 var={300: 0.7356, 1000: 2.2416} S=587.6+1808.8 clip=0.0257 184.7s | memory v=0.4882 D_time=1.727e-03 lock=0.583
+memory N128 k0.64 M2pi                   v=0.4881 D_phase=5.235e-04 D_time=2.198e-03 var={300: 0.35, 1000: 1.083} S=460.7+1808.8 clip=0.0000 185.0s | memory v=0.4882 D_time=2.519e-03 lock=0.839
+ideal k1.28 M1pi                         v=0.4783 D_phase=3.056e-04 D_time=1.336e-03 var={300: 0.8541, 1000: 1.2819} S=594.1+0.0 clip=0.0309 14.9s
+ideal k0.64 M2pi                         v=0.4918 D_phase=6.090e-05 D_time=2.518e-04 var={300: 0.1414, 1000: 0.2266} S=465.1+0.0 clip=0.0000 14.8s
+ideal k0.32 M4pi                         v=0.4882 D_phase=3.525e-05 D_time=1.479e-04 var={300: 0.1209, 1000: 0.1703} S=454.3+0.0 clip=0.0000 16.2s
+ideal k0.32 M1pi                         v=0.4854 D_phase=4.691e-04 D_time=1.992e-03 var={300: 0.2793, 1000: 0.9361} S=448.6+0.0 clip=0.0000 16.2s
+memory N128 k0.32 M4pi                   v=0.4885 D_phase=5.028e-04 D_time=2.107e-03 var={300: 0.3721, 1000: 1.0759} S=455.3+1808.5 clip=0.0000 183.1s | memory v=0.4881 D_time=2.428e-03 lock=0.867
+memory N32 k0.32 M4pi                    v=0.4885 D_phase=2.051e-03 D_time=8.595e-03 var={300: 0.9159, 1000: 3.7869} S=456.8+452.6 clip=0.0000 31.5s | memory v=0.4887 D_time=1.044e-02 lock=0.960

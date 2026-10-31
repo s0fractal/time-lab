@@ -1,0 +1,120 @@
+{
+ "question": "Can the soliton crystal (q2-crystal's, untrained, driven) hold its own rhythm by reading its own past phase and correcting its torque, and where does that precision come from: from the memory's span, or from whatever keeps the memory's time?",
+ "runner_path": "q3-self/run.py",
+ "analysis_path": "q3-self/analyze.py",
+ "seeds": "seed(name) = int(sha256('<registration id>:<beacon randomness>:<name>').hexdigest()[:12], 16): the main crystal's noise from the cell name, the memory crystal's from '<cell name>:memory'; numpy PCG64.",
+ "beacon": "drand quicknet (chain 52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971): the first round dated at or after the earliest GitHub-witnessed push (GET repos/s0fractal/time-lab/activity) that holds the commit adding q3-self/registration.lock.json.",
+ "design": {
+  "base": {
+   "d": 2,
+   "dt": 1.0,
+   "S": 4,
+   "gamma": 2.0,
+   "kappa": 1.0,
+   "g_lat": 1.0,
+   "g_pin": 0.5,
+   "m_pin": 2,
+   "F": 1.3,
+   "sigma": 0.3
+  },
+  "N": 32,
+  "k": 0.32,
+  "v_star": 0.4885,
+  "v_mem": {
+   "8": 0.4909,
+   "32": 0.4885,
+   "128": 0.4881
+  },
+  "span_ticks": {
+   "short": 1,
+   "long": 4,
+   "offtick": 4.5
+  },
+  "feedback": "F(t) = F − k (Φ(t) − Φ(past) − v* τ), clipped to [0, 2F]; ideal: past = t − τ, τ = n π / v*; memory: past = when the memory crystal (N_mem nodes, autonomous, same physics) stood n π of its own mean phase behind now, τ = n π / v_mem",
+  "trajectories": 1024,
+  "checkpoints": [
+   400,
+   800,
+   1800
+  ],
+  "every": 50,
+  "cells": [
+   {
+    "name": "alone",
+    "reference": "alone"
+   },
+   {
+    "name": "ideal-short",
+    "reference": "ideal",
+    "span": "short"
+   },
+   {
+    "name": "ideal-long",
+    "reference": "ideal",
+    "span": "long"
+   },
+   {
+    "name": "memory-N8-long",
+    "reference": "memory",
+    "span": "long",
+    "N_mem": 8
+   },
+   {
+    "name": "memory-N32-long",
+    "reference": "memory",
+    "span": "long",
+    "N_mem": 32
+   },
+   {
+    "name": "memory-N128-long",
+    "reference": "memory",
+    "span": "long",
+    "N_mem": 128
+   },
+   {
+    "name": "memory-N32-short",
+    "reference": "memory",
+    "span": "short",
+    "N_mem": 32
+   },
+   {
+    "name": "memory-N128-offtick",
+    "reference": "memory",
+    "span": "offtick",
+    "N_mem": 128
+   }
+  ]
+ },
+ "hypotheses": [
+  {
+   "hypothesis": "H1",
+   "statement": "A perfect delay line lets the crystal hold its own rhythm: reading its own phase four ticks ago (k = 0.32), the N = 32 crystal diffuses at least ten times less than alone.",
+   "rule": "D = [var(Φ(t2) − Φ(t0)) − var(Φ(t1) − Φ(t0))] / (2 (t2 − t1)) of the main crystal's mean phase Φ = J / (N d) at the checkpoints (400, 800, 1800), 1024 trajectories per cell; the gain of a cell is G = D(alone) / D(cell). Each test is log10 of a gain or of a ratio of two gains, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of every cell's trajectories, seeded from the registration id; a resample with a non-positive D counts that side as infinitely precise, one with both non-positive is undefined, and any undefined resample makes the hypothesis inconclusive. Supported if the interval of log10 G(ideal-long) lies above 1 (log10 10); contradicted if it lies wholly below 1; else inconclusive."
+  },
+  {
+   "hypothesis": "H2",
+   "statement": "With a perfect delay line a longer memory holds the rhythm tighter: reading four ticks back gains at least twice as much as reading one tick back.",
+   "rule": "D = [var(Φ(t2) − Φ(t0)) − var(Φ(t1) − Φ(t0))] / (2 (t2 − t1)) of the main crystal's mean phase Φ = J / (N d) at the checkpoints (400, 800, 1800), 1024 trajectories per cell; the gain of a cell is G = D(alone) / D(cell). Each test is log10 of a gain or of a ratio of two gains, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of every cell's trajectories, seeded from the registration id; a resample with a non-positive D counts that side as infinitely precise, one with both non-positive is undefined, and any undefined resample makes the hypothesis inconclusive. Supported if the interval of log10 G(ideal-long) / G(ideal-short) lies above log10 2; contradicted if it lies wholly below log10 2; else inconclusive."
+  },
+  {
+   "hypothesis": "H3",
+   "statement": "When a crystal keeps the memory's time, the precision is the memory's: reading four ticks back through an N_mem = 128 memory gains at least five times more than through an N_mem = 8 memory.",
+   "rule": "D = [var(Φ(t2) − Φ(t0)) − var(Φ(t1) − Φ(t0))] / (2 (t2 − t1)) of the main crystal's mean phase Φ = J / (N d) at the checkpoints (400, 800, 1800), 1024 trajectories per cell; the gain of a cell is G = D(alone) / D(cell). Each test is log10 of a gain or of a ratio of two gains, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of every cell's trajectories, seeded from the registration id; a resample with a non-positive D counts that side as infinitely precise, one with both non-positive is undefined, and any undefined resample makes the hypothesis inconclusive. Supported if the interval of log10 G(memory-N128-long) / G(memory-N8-long) lies above log10 5; contradicted if it lies wholly below log10 5; else inconclusive."
+  },
+  {
+   "hypothesis": "H4",
+   "statement": "A memory as precise as the crystal itself (N_mem = 32, four ticks) buys it less than twofold: at most what averaging two equal clocks gives.",
+   "rule": "D = [var(Φ(t2) − Φ(t0)) − var(Φ(t1) − Φ(t0))] / (2 (t2 − t1)) of the main crystal's mean phase Φ = J / (N d) at the checkpoints (400, 800, 1800), 1024 trajectories per cell; the gain of a cell is G = D(alone) / D(cell). Each test is log10 of a gain or of a ratio of two gains, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of every cell's trajectories, seeded from the registration id; a resample with a non-positive D counts that side as infinitely precise, one with both non-positive is undefined, and any undefined resample makes the hypothesis inconclusive. Supported if the interval of log10 G(memory-N32-long) lies below log10 2; contradicted if it lies wholly above log10 2; else inconclusive."
+  },
+  {
+   "hypothesis": "H5",
+   "statement": "With a crystal memory the span no longer matters: four ticks and one tick of an N_mem = 32 memory give gains within a factor of two of each other. The one-tick cell was not calibrated at the registered k = 0.32 (at k = 1.28 it gave G = 1.37): a prediction made blind.",
+   "rule": "D = [var(Φ(t2) − Φ(t0)) − var(Φ(t1) − Φ(t0))] / (2 (t2 − t1)) of the main crystal's mean phase Φ = J / (N d) at the checkpoints (400, 800, 1800), 1024 trajectories per cell; the gain of a cell is G = D(alone) / D(cell). Each test is log10 of a gain or of a ratio of two gains, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of every cell's trajectories, seeded from the registration id; a resample with a non-positive D counts that side as infinitely precise, one with both non-positive is undefined, and any undefined resample makes the hypothesis inconclusive. Supported if the interval of log10 G(memory-N32-long) / G(memory-N32-short) lies inside (−log10 2, log10 2); contradicted if it lies wholly above log10 2 or wholly below −log10 2; else inconclusive."
+  },
+  {
+   "hypothesis": "H6",
+   "statement": "A crystal memory lends its precision in whole ticks: reading the N_mem = 128 memory 4.5 ticks back gains at most half of what reading it 4 ticks back gains.",
+   "rule": "D = [var(Φ(t2) − Φ(t0)) − var(Φ(t1) − Φ(t0))] / (2 (t2 − t1)) of the main crystal's mean phase Φ = J / (N d) at the checkpoints (400, 800, 1800), 1024 trajectories per cell; the gain of a cell is G = D(alone) / D(cell). Each test is log10 of a gain or of a ratio of two gains, with a 95% interval (inverted-cdf quantiles) over 2000 resamples of every cell's trajectories, seeded from the registration id; a resample with a non-positive D counts that side as infinitely precise, one with both non-positive is undefined, and any undefined resample makes the hypothesis inconclusive. Supported if the interval of log10 G(memory-N128-long) / G(memory-N128-offtick) lies above log10 2; contradicted if it lies wholly below log10 2; else inconclusive."
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+memory N8 k0.64 tau8                     v=0.4856 D_phase=6.103e-03 D_time=2.588e-02 var={300: 4.126, 1000: 12.6698} S=438.1+113.6 clip=0.0000 17.5s | memory v=0.4905 D_time=3.355e-02 lock=0.895
+memory N8 k1.28 tau8                     v=0.4863 D_phase=7.352e-03 D_time=3.109e-02 var={300: 4.3607, 1000: 14.6541} S=451.6+113.5 clip=0.0147 17.5s | memory v=0.4900 D_time=3.373e-02 lock=0.939
+memory N32 k0.64 tau8                    v=0.4877 D_phase=2.538e-03 D_time=1.067e-02 var={300: 1.5073, 1000: 5.0602} S=427.3+452.6 clip=0.0000 30.5s | memory v=0.4886 D_time=8.886e-03 lock=0.765
+memory N32 k1.28 tau8                    v=0.4893 D_phase=2.307e-03 D_time=9.637e-03 var={300: 1.4554, 1000: 4.6853} S=424.0+452.6 clip=0.0031 30.4s | memory v=0.4886 D_time=8.515e-03 lock=0.860
+memory N128 k0.64 tau8                   v=0.4888 D_phase=1.201e-03 D_time=5.026e-03 var={300: 0.6238, 1000: 2.3052} S=420.7+1809.1 clip=0.0000 181.2s | memory v=0.4883 D_time=2.312e-03 lock=0.633
+memory N128 k1.28 tau8                   v=0.4894 D_phase=1.195e-03 D_time=4.991e-03 var={300: 0.7521, 1000: 2.4257} S=410.6+1808.7 clip=0.0008 180.8s | memory v=0.4882 D_time=1.998e-03 lock=0.519
+memory N128 k1.28 tau8 T2300             v=0.4895 D_phase=1.057e-03 D_time=4.409e-03 var={1000: 2.6352, 2000: 4.7483} S=411.5+1808.8 clip=0.0008 300.1s | memory v=0.4882 D_time=1.874e-03 lock=0.598
