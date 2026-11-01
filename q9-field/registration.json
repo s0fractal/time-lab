@@ -1,0 +1,112 @@
+{
+ "question": "The field of a pacemaker in a crystal of clocks: q5-bound's rotors on periodic lattices of one, two and three dimensions, nearest neighbours coupled, one site driven faster by δ = 0.5. Does its pull fall as 1/r^(D−1), the law of gravity and electrostatics, and only while the crystal ticks? How precisely does a distant site hold the pacemaker's time, and does the ticking itself heat the shared time? Calibrated predictions: the registered design and analysis ran in full on calibration seeds (calibration/full-analysis.json).",
+ "runner_path": "q9-field/run.py",
+ "analysis_path": "q9-field/analyze.py",
+ "seeds": "seed(cell) = int(sha256('<registration id>:<beacon randomness>:<cell name>').hexdigest()[:12], 16); numpy PCG64; one stream per cell for its 32 trajectories.",
+ "beacon": "drand quicknet (chain 52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971): the first round dated at or after the earliest GitHub-witnessed push (GET repos/s0fractal/time-lab/activity) that holds the commit adding q9-field/registration.lock.json.",
+ "design": {
+  "base": {
+   "dt": 1.0,
+   "S": 4,
+   "gamma": 0.5,
+   "g_lat": 1.0,
+   "g_pin": 0.5,
+   "m_pin": 2,
+   "F": 1.3,
+   "sigma": 0.3
+  },
+  "delta": 0.5,
+  "trajectories": 32,
+  "warm": 200,
+  "t_total": 4200,
+  "cells": [
+   {
+    "name": "run-D1",
+    "D": 1,
+    "L": 64,
+    "params": {}
+   },
+   {
+    "name": "run-D2",
+    "D": 2,
+    "L": 32,
+    "params": {}
+   },
+   {
+    "name": "run-D3",
+    "D": 3,
+    "L": 24,
+    "params": {}
+   },
+   {
+    "name": "rest-D1",
+    "D": 1,
+    "L": 64,
+    "params": {
+     "F": 0.0
+    }
+   },
+   {
+    "name": "rest-D2",
+    "D": 2,
+    "L": 32,
+    "params": {
+     "F": 0.0
+    }
+   },
+   {
+    "name": "rest-D3",
+    "D": 3,
+    "L": 24,
+    "params": {
+     "F": 0.0
+    }
+   },
+   {
+    "name": "run-D1-g2",
+    "D": 1,
+    "L": 64,
+    "params": {
+     "g_lat": 2.0
+    }
+   }
+  ]
+ },
+ "hypotheses": [
+  {
+   "hypothesis": "H1",
+   "statement": "In a ticking three-dimensional crystal a pacemaker pulls like a point charge: the torque each bond passes outward, between r = 2 and r = L/4, is δ times the lattice Coulomb field (1/r² in the continuum), with no free constant, within ×1.15 (calibration 0.97).",
+   "rule": "field slope of run-D3 (L = 24, F = 1.3) = Σ w E p / Σ w p² over the bond orbits whose endpoints both lie at 2 < r ≤ L/4, E the measured time-averaged torque the bond passes outward, p = δ (G(x) − G(x + e)) with G the lattice Green's function of the L^D torus (−∇² G = δ₀ − 1/L^D), w the orbit's multiplicity. Supported if the interval lies within (1/1.15, 1.15); contradicted if it lies wholly outside; else inconclusive. Each statistic is computed from the trajectory means of the cell's orbit values (q9-field/analyze.py); its 95% interval comes from 2000 resamples of the cell's 32 trajectories (inverted-cdf quantiles), seeded from the registration id and the cell's name, and the test is on log(statistic). Inconclusive by rule: a slip in a cell used (some bond's X_x − X_(x+e) ranged over 1.5π or more in time in any trajectory) or a statistic undefined in a resample."
+  },
+  {
+   "hypothesis": "H2",
+   "statement": "In two dimensions the same pull is the lattice field of a line charge (1/r in the continuum), within ×1.15 (calibration 0.99).",
+   "rule": "field slope of run-D2 (L = 32, F = 1.3) = Σ w E p / Σ w p² over the bond orbits whose endpoints both lie at 2 < r ≤ L/4, E the measured time-averaged torque the bond passes outward, p = δ (G(x) − G(x + e)) with G the lattice Green's function of the L^D torus (−∇² G = δ₀ − 1/L^D), w the orbit's multiplicity. Supported if the interval lies within (1/1.15, 1.15); contradicted if it lies wholly outside; else inconclusive. Each statistic is computed from the trajectory means of the cell's orbit values (q9-field/analyze.py); its 95% interval comes from 2000 resamples of the cell's 32 trajectories (inverted-cdf quantiles), seeded from the registration id and the cell's name, and the test is on log(statistic). Inconclusive by rule: a slip in a cell used (some bond's X_x − X_(x+e) ranged over 1.5π or more in time in any trajectory) or a statistic undefined in a resample."
+  },
+  {
+   "hypothesis": "H3",
+   "statement": "At rest (F = 0) the same crystal screens the pull: of the torque the pacemaker puts in, the share that leaves the cube of half-width 1 is the linear prediction for wells of stiffness m² g_pin (screening length √(g / m² g_pin) ≈ 0.71 site), within ×1.25 (calibration 1.01).",
+   "rule": "screening of rest-D3 (L = 24, F = 0) = [flux(1) / flux(0)] / [lin(1) / lin(0)], flux(R) = −Σ w ⟨c⟩ over the site orbits in the cube max|x_d| ≤ R (the torque leaving it), lin(R) = δ (1 − μ² Σ_cube G^μ) with (−∇² + μ²) G^μ = δ₀, μ² = m² g_pin / g = 2. Supported if the interval lies within (1/1.25, 1.25); contradicted if it lies wholly outside; else inconclusive. Each statistic is computed from the trajectory means of the cell's orbit values (q9-field/analyze.py); its 95% interval comes from 2000 resamples of the cell's 32 trajectories (inverted-cdf quantiles), seeded from the registration id and the cell's name, and the test is on log(statistic). Inconclusive by rule: a slip in a cell used (some bond's X_x − X_(x+e) ranged over 1.5π or more in time in any trajectory) or a statistic undefined in a resample."
+  },
+  {
+   "hypothesis": "H4",
+   "statement": "In three dimensions a distant site holds the pacemaker's time almost as precisely as its neighbour: the variance of X_i − X_0 at (L/4, 0, 0) is less than 1.6 times that at (1, 0, 0) (linear theory 1.43; calibration 1.29).",
+   "rule": "time ratio of run-D3 = var at the orbit (6, 0, 0) / var at (1, 0, 0), var the variance in time of X_i − X_0. Supported if the interval lies below 1.6; contradicted if it lies wholly above; else inconclusive. Each statistic is computed from the trajectory means of the cell's orbit values (q9-field/analyze.py); its 95% interval comes from 2000 resamples of the cell's 32 trajectories (inverted-cdf quantiles), seeded from the registration id and the cell's name, and the test is on log(statistic). Inconclusive by rule: a slip in a cell used (some bond's X_x − X_(x+e) ranged over 1.5π or more in time in any trajectory) or a statistic undefined in a resample."
+  },
+  {
+   "hypothesis": "H5",
+   "statement": "On a chain the borrowed time degrades with distance as linear theory says: var(L/4) / var(1) is the ratio of 2 (G(0) − G(x)), 12.2, within ×1.25 (calibration 0.93 of it).",
+   "rule": "time ratio of run-D1 (L = 64, F = 1.3) = var at 16 / var at 1, over (G(0) − G(16)) / (G(0) − G(1)) of the 64-site ring. Supported if the interval lies within (1/1.25, 1.25); contradicted if it lies wholly outside; else inconclusive. Each statistic is computed from the trajectory means of the cell's orbit values (q9-field/analyze.py); its 95% interval comes from 2000 resamples of the cell's 32 trajectories (inverted-cdf quantiles), seeded from the registration id and the cell's name, and the test is on log(statistic). Inconclusive by rule: a slip in a cell used (some bond's X_x − X_(x+e) ranged over 1.5π or more in time in any trajectory) or a statistic undefined in a resample."
+  },
+  {
+   "hypothesis": "H6",
+   "statement": "Ticking heats the shared time: in the running three-dimensional crystal the modes near half the pin's frequency carry at least 1.5 times the energy per mode of the slow modes (equipartition: 1; calibration 2.07).",
+   "rule": "heating of run-D3 = mean energy g λ_k Var(X_k) / L^D of the modes in the λ bins (width 1/4, by centre) with g λ within 15% of (m v / 2)², v the cell's mean speed, over that of the bins 0 ≤ λ < 2, each bin weighted by its mode count. Supported if the interval lies above 1.5; contradicted if it lies wholly below; else inconclusive. Each statistic is computed from the trajectory means of the cell's orbit values (q9-field/analyze.py); its 95% interval comes from 2000 resamples of the cell's 32 trajectories (inverted-cdf quantiles), seeded from the registration id and the cell's name, and the test is on log(statistic). Inconclusive by rule: a slip in a cell used (some bond's X_x − X_(x+e) ranged over 1.5π or more in time in any trajectory) or a statistic undefined in a resample."
+  },
+  {
+   "hypothesis": "H7",
+   "statement": "The heating is a resonance with the pin: a chain's modes reach half the pin's frequency only when its coupling doubles (g = 2), and then its top band (3 ≤ λ < 4) heats over its slow modes at least 1.3 times more than at g = 1 (calibration 1.66).",
+   "rule": "heating gain = [band(3 ≤ λ < 4) / band(0 ≤ λ < 2)] of run-D1-g2 (L = 64, g = 2) over the same of run-D1 (g = 1), bands as in H6; each cell resampled with its own seed. Supported if the interval lies above 1.3; contradicted if it lies wholly below; else inconclusive. Each statistic is computed from the trajectory means of the cell's orbit values (q9-field/analyze.py); its 95% interval comes from 2000 resamples of the cell's 32 trajectories (inverted-cdf quantiles), seeded from the registration id and the cell's name, and the test is on log(statistic). Inconclusive by rule: a slip in a cell used (some bond's X_x − X_(x+e) ranged over 1.5π or more in time in any trajectory) or a statistic undefined in a resample."
+  }
+ ]
+}
