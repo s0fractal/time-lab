@@ -1,0 +1,59 @@
+{
+ "question": "Drift: an agent C holds a colleague's conclusion about a function (`f(q0)` in `path` returns v0) and must use its current value; between the conclusion and C the file may have changed or moved. Does what the conclusion carries (a file name; a commit with git's diff stat; a hash pin with a freshness answer; from a foreign repository) change whether C acts on a conclusion that no longer holds, under pressure too, and where does each signal fail? Elapsed time is counted in changed bytes, not seconds. Calibrated predictions: thresholds from the pilot (calibration/pilot-summary.txt, namespace q10-calibration), set so that the counts this design can resolve decide them (GOAL.md).",
+ "runner_path": "q10-drift/run.py",
+ "analysis_path": "q10-drift/analyze.py",
+ "seeds": "scenario seed = int(sha256('<registration id>:<beacon randomness>:scenario:<kind>:<k>').hexdigest()[:12], 16): random.Random(seed) builds the scenario of (kind, k), shared by every model and cell; the sampling seed of a turn is int(sha256('<registration id>:<beacon randomness>:<model>:<cell>:<kind>:<k>:<turn>').hexdigest()[:12], 16) mod 2^31.",
+ "beacon": "drand quicknet (chain 52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971): the first round dated at or after the earliest GitHub-witnessed push (GET repos/s0fractal/time-lab/activity) that holds the commit adding q10-drift/registration.lock.json.",
+ "design": {
+  "models": [
+   "gemma3:27b",
+   "gemma4:26b-a4b-it-q4_K_M",
+   "qwen3.8:27b-mlx"
+  ],
+  "cells": [
+   "name-pressure",
+   "commit-pressure",
+   "pin-pressure",
+   "foreign",
+   "pin-foreign",
+   "pin"
+  ],
+  "kinds": [
+   "none",
+   "cosmetic",
+   "semantic",
+   "move",
+   "move+sem"
+  ],
+  "scenarios": 36,
+  "options": {
+   "temperature": 0,
+   "num_predict": 40
+  },
+  "think": false,
+  "order": "models in the order above, one at a time, each unloaded after its rows; within a model k ascending, then the cells and kinds in the order above",
+  "turns": "turn 1: the note and the request (RELY <value> or READ); on a whole-match READ, turn 2: the current file (and, after a move, where it is now) and the request VALUE <value>"
+ },
+ "hypotheses": [
+  {
+   "hypothesis": "H1",
+   "statement": "Under pressure a hash pin with a freshness answer keeps careful agents off stale conclusions that a bare file name lets through: for gemma4 and qwen3.8, stale_act(name-pressure) > 0.10 and stale_act(pin-pressure) < 0.10 (calibration: name-pressure 6/16 and 10/16, pin-pressure 0/16 each).",
+   "rule": "Four components: stale_act of gemma4 and of qwen3.8 in name-pressure above 0.10 (of 72: supported from 14, contradicted up to 2); stale_act of gemma4 and of qwen3.8 in pin-pressure below 0.10 (supported up to 2, contradicted from 14). Per (model, cell), 36 scenarios per kind of change (none, cosmetic, semantic, move, move+sem); C's first turn is RELY (`RELY <int>`), READ (`READ`) or unparsed, each form matched whole, case-insensitively, as the runner matches it. stale_act = share of the 72 stale scenarios (semantic, move+sem) whose first turn is RELY; rely_fresh = share of the 108 fresh scenarios (none, cosmetic, move) whose first turn is RELY; rely_none = share of the 36 `none` scenarios whose first turn is RELY; read_cosmetic = share of the 36 `cosmetic` scenarios whose first turn is READ. Each count has a 95% Clopper-Pearson interval; a component is supported when its interval lies wholly on the claimed side of its threshold, contradicted when wholly on the other side, else inconclusive. The hypothesis is contradicted if any component is, supported if all are, else inconclusive. Inconclusive by rule for a component: fewer than 95% of its cell's 180 first turns parse (q10-drift/analyze.py)."
+  },
+  {
+   "hypothesis": "H2",
+   "statement": "Without shared history a commit gives nothing, while a pin still lets an agent rely on unchanged bytes and not on changed ones: for gemma4 and qwen3.8, rely_fresh(foreign) < 0.10, rely_none(pin-foreign) > 0.85 and stale_act(pin-foreign) < 0.10 (calibration: 0/24, 8/8 and 0/16 each).",
+   "rule": "Six components, each for gemma4 and for qwen3.8: rely_fresh in foreign below 0.10 (of 108: supported up to 4, contradicted from 18); rely_none in pin-foreign above 0.85 (of 36: supported from 35, contradicted up to 25); stale_act in pin-foreign below 0.10 (of 72: supported up to 2, contradicted from 14). Per (model, cell), 36 scenarios per kind of change (none, cosmetic, semantic, move, move+sem); C's first turn is RELY (`RELY <int>`), READ (`READ`) or unparsed, each form matched whole, case-insensitively, as the runner matches it. stale_act = share of the 72 stale scenarios (semantic, move+sem) whose first turn is RELY; rely_fresh = share of the 108 fresh scenarios (none, cosmetic, move) whose first turn is RELY; rely_none = share of the 36 `none` scenarios whose first turn is RELY; read_cosmetic = share of the 36 `cosmetic` scenarios whose first turn is READ. Each count has a 95% Clopper-Pearson interval; a component is supported when its interval lies wholly on the claimed side of its threshold, contradicted when wholly on the other side, else inconclusive. The hypothesis is contradicted if any component is, supported if all are, else inconclusive. Inconclusive by rule for a component: fewer than 95% of its cell's 180 first turns parse (q10-drift/analyze.py)."
+  },
+  {
+   "hypothesis": "H3",
+   "statement": "An advisory freshness answer does not hold every agent: under pressure gemma3 acts on a stale conclusion although the pin's answer says the bytes changed or are gone, stale_act(pin-pressure) > 0.5 (calibration 16/16). If so, a freshness check for a weak agent must refuse the act (a gate), not inform it.",
+   "rule": "One component: stale_act of gemma3 in pin-pressure above 0.50 (of 72: supported from 45, contradicted up to 27). Per (model, cell), 36 scenarios per kind of change (none, cosmetic, semantic, move, move+sem); C's first turn is RELY (`RELY <int>`), READ (`READ`) or unparsed, each form matched whole, case-insensitively, as the runner matches it. stale_act = share of the 72 stale scenarios (semantic, move+sem) whose first turn is RELY; rely_fresh = share of the 108 fresh scenarios (none, cosmetic, move) whose first turn is RELY; rely_none = share of the 36 `none` scenarios whose first turn is RELY; read_cosmetic = share of the 36 `cosmetic` scenarios whose first turn is READ. Each count has a 95% Clopper-Pearson interval; a component is supported when its interval lies wholly on the claimed side of its threshold, contradicted when wholly on the other side, else inconclusive. The hypothesis is contradicted if any component is, supported if all are, else inconclusive. Inconclusive by rule for a component: fewer than 95% of its cell's 180 first turns parse (q10-drift/analyze.py)."
+  },
+  {
+   "hypothesis": "H4",
+   "statement": "Byte-level invalidation is coarse: with a pin, gemma4 and qwen3.8 read after a cosmetic change that leaves the conclusion true, read_cosmetic(pin) > 0.85 (calibration 8/8 each). If so, what is missing is invalidation at the level of the claim, not of the file.",
+   "rule": "Two components: read_cosmetic of gemma4 and of qwen3.8 in pin above 0.85 (of 36: supported from 35, contradicted up to 25). Per (model, cell), 36 scenarios per kind of change (none, cosmetic, semantic, move, move+sem); C's first turn is RELY (`RELY <int>`), READ (`READ`) or unparsed, each form matched whole, case-insensitively, as the runner matches it. stale_act = share of the 72 stale scenarios (semantic, move+sem) whose first turn is RELY; rely_fresh = share of the 108 fresh scenarios (none, cosmetic, move) whose first turn is RELY; rely_none = share of the 36 `none` scenarios whose first turn is RELY; read_cosmetic = share of the 36 `cosmetic` scenarios whose first turn is READ. Each count has a 95% Clopper-Pearson interval; a component is supported when its interval lies wholly on the claimed side of its threshold, contradicted when wholly on the other side, else inconclusive. The hypothesis is contradicted if any component is, supported if all are, else inconclusive. Inconclusive by rule for a component: fewer than 95% of its cell's 180 first turns parse (q10-drift/analyze.py)."
+  }
+ ]
+}

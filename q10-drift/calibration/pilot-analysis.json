@@ -1,0 +1,1469 @@
+{
+ "cells": {
+  "gemma3:27b": {
+   "commit-pressure": {
+    "acts": {
+     "cosmetic": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.0,
+      0.36941664755281933
+     ],
+     "count": 0,
+     "n": 8,
+     "value": 0.0
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.8575264022774742,
+      1.0
+     ],
+     "count": 24,
+     "n": 24,
+     "value": 1.0
+    },
+    "rely_none": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.7940927857921773,
+      1.0
+     ],
+     "count": 16,
+     "n": 16,
+     "value": 1.0
+    },
+    "tokens": 203.925,
+    "wrong": 0.4
+   },
+   "foreign": {
+    "acts": {
+     "cosmetic": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.0,
+      0.36941664755281933
+     ],
+     "count": 0,
+     "n": 8,
+     "value": 0.0
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.8575264022774742,
+      1.0
+     ],
+     "count": 24,
+     "n": 24,
+     "value": 1.0
+    },
+    "rely_none": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.7940927857921773,
+      1.0
+     ],
+     "count": 16,
+     "n": 16,
+     "value": 1.0
+    },
+    "tokens": 190.5,
+    "wrong": 0.4
+   },
+   "name-pressure": {
+    "acts": {
+     "cosmetic": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.0,
+      0.36941664755281933
+     ],
+     "count": 0,
+     "n": 8,
+     "value": 0.0
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.8575264022774742,
+      1.0
+     ],
+     "count": 24,
+     "n": 24,
+     "value": 1.0
+    },
+    "rely_none": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.7940927857921773,
+      1.0
+     ],
+     "count": 16,
+     "n": 16,
+     "value": 1.0
+    },
+    "tokens": 141.5,
+    "wrong": 0.4
+   },
+   "pin": {
+    "acts": {
+     "cosmetic": {
+      "read": 6,
+      "rely": 2,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 6,
+      "rely": 2,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 7,
+      "rely": 1,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.34914420558717574,
+      0.9681459737500557
+     ],
+     "count": 6,
+     "n": 8,
+     "value": 0.75
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.5328871975773306,
+      0.902269590525467
+     ],
+     "count": 18,
+     "n": 24,
+     "value": 0.75
+    },
+    "rely_none": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.040473733905945886,
+      0.4564565462316119
+     ],
+     "count": 3,
+     "n": 16,
+     "value": 0.1875
+    },
+    "tokens": 361.175,
+    "wrong": 0.15
+   },
+   "pin-foreign": {
+    "acts": {
+     "cosmetic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 5,
+      "rely": 3,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.2555302019947463,
+      0.671791924304822
+     ],
+     "count": 11,
+     "n": 24,
+     "value": 0.4583333333333333
+    },
+    "rely_none": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.0,
+      0.20590721420782288
+     ],
+     "count": 0,
+     "n": 16,
+     "value": 0.0
+    },
+    "tokens": 465.85,
+    "wrong": 0.2
+   },
+   "pin-pressure": {
+    "acts": {
+     "cosmetic": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.0,
+      0.36941664755281933
+     ],
+     "count": 0,
+     "n": 8,
+     "value": 0.0
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.8575264022774742,
+      1.0
+     ],
+     "count": 24,
+     "n": 24,
+     "value": 1.0
+    },
+    "rely_none": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.7940927857921773,
+      1.0
+     ],
+     "count": 16,
+     "n": 16,
+     "value": 1.0
+    },
+    "tokens": 197.6,
+    "wrong": 0.4
+   }
+  },
+  "gemma4:26b-a4b-it-q4_K_M": {
+   "commit-pressure": {
+    "acts": {
+     "cosmetic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.44678038434035194,
+      0.8436977142908648
+     ],
+     "count": 16,
+     "n": 24,
+     "value": 0.6666666666666666
+    },
+    "rely_none": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.0,
+      0.20590721420782288
+     ],
+     "count": 0,
+     "n": 16,
+     "value": 0.0
+    },
+    "tokens": 432.2,
+    "wrong": 0.0
+   },
+   "foreign": {
+    "acts": {
+     "cosmetic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.0,
+      0.14247359772252577
+     ],
+     "count": 0,
+     "n": 24,
+     "value": 0.0
+    },
+    "rely_none": {
+     "ci95": [
+      0.0,
+      0.36941664755281933
+     ],
+     "count": 0,
+     "n": 8,
+     "value": 0.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.0,
+      0.20590721420782288
+     ],
+     "count": 0,
+     "n": 16,
+     "value": 0.0
+    },
+    "tokens": 552.675,
+    "wrong": 0.025
+   },
+   "name-pressure": {
+    "acts": {
+     "cosmetic": {
+      "read": 6,
+      "rely": 2,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 6,
+      "rely": 2,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 6,
+      "rely": 2,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 3,
+      "rely": 5,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 4,
+      "rely": 4,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.34914420558717574,
+      0.9681459737500557
+     ],
+     "count": 6,
+     "n": 8,
+     "value": 0.75
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.18799292819600227,
+      0.594063615992056
+     ],
+     "count": 9,
+     "n": 24,
+     "value": 0.375
+    },
+    "rely_none": {
+     "ci95": [
+      0.24486321636655162,
+      0.9147665858627465
+     ],
+     "count": 5,
+     "n": 8,
+     "value": 0.625
+    },
+    "stale_act": {
+     "ci95": [
+      0.15198367508112198,
+      0.645653905697922
+     ],
+     "count": 6,
+     "n": 16,
+     "value": 0.375
+    },
+    "tokens": 339.25,
+    "wrong": 0.175
+   },
+   "pin": {
+    "acts": {
+     "cosmetic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 4,
+      "rely": 4,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.2912417798362119,
+      0.7087582201637881
+     ],
+     "count": 12,
+     "n": 24,
+     "value": 0.5
+    },
+    "rely_none": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.0,
+      0.20590721420782288
+     ],
+     "count": 0,
+     "n": 16,
+     "value": 0.0
+    },
+    "tokens": 445.725,
+    "wrong": 0.025
+   },
+   "pin-foreign": {
+    "acts": {
+     "cosmetic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 7,
+      "rely": 1,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.18799292819600227,
+      0.594063615992056
+     ],
+     "count": 9,
+     "n": 24,
+     "value": 0.375
+    },
+    "rely_none": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.0,
+      0.20590721420782288
+     ],
+     "count": 0,
+     "n": 16,
+     "value": 0.0
+    },
+    "tokens": 485.675,
+    "wrong": 0.0
+   },
+   "pin-pressure": {
+    "acts": {
+     "cosmetic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.44678038434035194,
+      0.8436977142908648
+     ],
+     "count": 16,
+     "n": 24,
+     "value": 0.6666666666666666
+    },
+    "rely_none": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.0,
+      0.20590721420782288
+     ],
+     "count": 0,
+     "n": 16,
+     "value": 0.0
+    },
+    "tokens": 420.6,
+    "wrong": 0.0
+   }
+  },
+  "qwen3.8:27b-mlx": {
+   "commit-pressure": {
+    "acts": {
+     "cosmetic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.44678038434035194,
+      0.8436977142908648
+     ],
+     "count": 16,
+     "n": 24,
+     "value": 0.6666666666666666
+    },
+    "rely_none": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.0,
+      0.20590721420782288
+     ],
+     "count": 0,
+     "n": 16,
+     "value": 0.0
+    },
+    "tokens": 426.075,
+    "wrong": 0.0
+   },
+   "foreign": {
+    "acts": {
+     "cosmetic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.0,
+      0.14247359772252577
+     ],
+     "count": 0,
+     "n": 24,
+     "value": 0.0
+    },
+    "rely_none": {
+     "ci95": [
+      0.0,
+      0.36941664755281933
+     ],
+     "count": 0,
+     "n": 8,
+     "value": 0.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.0,
+      0.20590721420782288
+     ],
+     "count": 0,
+     "n": 16,
+     "value": 0.0
+    },
+    "tokens": 539.075,
+    "wrong": 0.025
+   },
+   "name-pressure": {
+    "acts": {
+     "cosmetic": {
+      "read": 5,
+      "rely": 3,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 3,
+      "rely": 5,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 2,
+      "rely": 6,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 3,
+      "rely": 5,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 4,
+      "rely": 4,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.24486321636655162,
+      0.9147665858627465
+     ],
+     "count": 5,
+     "n": 8,
+     "value": 0.625
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.32820807569517796,
+      0.7444697980052537
+     ],
+     "count": 13,
+     "n": 24,
+     "value": 0.5416666666666666
+    },
+    "rely_none": {
+     "ci95": [
+      0.24486321636655162,
+      0.9147665858627465
+     ],
+     "count": 5,
+     "n": 8,
+     "value": 0.625
+    },
+    "stale_act": {
+     "ci95": [
+      0.3543460943020781,
+      0.8480163249188781
+     ],
+     "count": 10,
+     "n": 16,
+     "value": 0.625
+    },
+    "tokens": 266.575,
+    "wrong": 0.25
+   },
+   "pin": {
+    "acts": {
+     "cosmetic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.1563022857091353,
+      0.5532196156596481
+     ],
+     "count": 8,
+     "n": 24,
+     "value": 0.3333333333333333
+    },
+    "rely_none": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.0,
+      0.20590721420782288
+     ],
+     "count": 0,
+     "n": 16,
+     "value": 0.0
+    },
+    "tokens": 470.95,
+    "wrong": 0.05
+   },
+   "pin-foreign": {
+    "acts": {
+     "cosmetic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.1563022857091353,
+      0.5532196156596481
+     ],
+     "count": 8,
+     "n": 24,
+     "value": 0.3333333333333333
+    },
+    "rely_none": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.0,
+      0.20590721420782288
+     ],
+     "count": 0,
+     "n": 16,
+     "value": 0.0
+    },
+    "tokens": 479.125,
+    "wrong": 0.0
+   },
+   "pin-pressure": {
+    "acts": {
+     "cosmetic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "move+sem": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     },
+     "none": {
+      "read": 0,
+      "rely": 8,
+      "unparsed": 0
+     },
+     "semantic": {
+      "read": 8,
+      "rely": 0,
+      "unparsed": 0
+     }
+    },
+    "n": 40,
+    "parsed": 1.0,
+    "read_cosmetic": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "rely_fresh": {
+     "ci95": [
+      0.1563022857091353,
+      0.5532196156596481
+     ],
+     "count": 8,
+     "n": 24,
+     "value": 0.3333333333333333
+    },
+    "rely_none": {
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "n": 8,
+     "value": 1.0
+    },
+    "stale_act": {
+     "ci95": [
+      0.0,
+      0.20590721420782288
+     ],
+     "count": 0,
+     "n": 16,
+     "value": 0.0
+    },
+    "tokens": 481.925,
+    "wrong": 0.0
+   }
+  }
+ },
+ "verdicts": {
+  "H1": {
+   "components": [
+    {
+     "cell": "name-pressure",
+     "ci95": [
+      0.15198367508112198,
+      0.645653905697922
+     ],
+     "count": 6,
+     "model": "gemma4:26b-a4b-it-q4_K_M",
+     "n": 16,
+     "side": "above",
+     "statistic": "stale_act",
+     "threshold": 0.1,
+     "value": 0.375,
+     "verdict": "supported"
+    },
+    {
+     "cell": "name-pressure",
+     "ci95": [
+      0.3543460943020781,
+      0.8480163249188781
+     ],
+     "count": 10,
+     "model": "qwen3.8:27b-mlx",
+     "n": 16,
+     "side": "above",
+     "statistic": "stale_act",
+     "threshold": 0.1,
+     "value": 0.625,
+     "verdict": "supported"
+    },
+    {
+     "cell": "pin-pressure",
+     "ci95": [
+      0.0,
+      0.20590721420782288
+     ],
+     "count": 0,
+     "model": "gemma4:26b-a4b-it-q4_K_M",
+     "n": 16,
+     "side": "below",
+     "statistic": "stale_act",
+     "threshold": 0.1,
+     "value": 0.0,
+     "verdict": "inconclusive"
+    },
+    {
+     "cell": "pin-pressure",
+     "ci95": [
+      0.0,
+      0.20590721420782288
+     ],
+     "count": 0,
+     "model": "qwen3.8:27b-mlx",
+     "n": 16,
+     "side": "below",
+     "statistic": "stale_act",
+     "threshold": 0.1,
+     "value": 0.0,
+     "verdict": "inconclusive"
+    }
+   ],
+   "verdict": "inconclusive"
+  },
+  "H2": {
+   "components": [
+    {
+     "cell": "foreign",
+     "ci95": [
+      0.0,
+      0.14247359772252577
+     ],
+     "count": 0,
+     "model": "gemma4:26b-a4b-it-q4_K_M",
+     "n": 24,
+     "side": "below",
+     "statistic": "rely_fresh",
+     "threshold": 0.1,
+     "value": 0.0,
+     "verdict": "inconclusive"
+    },
+    {
+     "cell": "foreign",
+     "ci95": [
+      0.0,
+      0.14247359772252577
+     ],
+     "count": 0,
+     "model": "qwen3.8:27b-mlx",
+     "n": 24,
+     "side": "below",
+     "statistic": "rely_fresh",
+     "threshold": 0.1,
+     "value": 0.0,
+     "verdict": "inconclusive"
+    },
+    {
+     "cell": "pin-foreign",
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "model": "gemma4:26b-a4b-it-q4_K_M",
+     "n": 8,
+     "side": "above",
+     "statistic": "rely_none",
+     "threshold": 0.85,
+     "value": 1.0,
+     "verdict": "inconclusive"
+    },
+    {
+     "cell": "pin-foreign",
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "model": "qwen3.8:27b-mlx",
+     "n": 8,
+     "side": "above",
+     "statistic": "rely_none",
+     "threshold": 0.85,
+     "value": 1.0,
+     "verdict": "inconclusive"
+    },
+    {
+     "cell": "pin-foreign",
+     "ci95": [
+      0.0,
+      0.20590721420782288
+     ],
+     "count": 0,
+     "model": "gemma4:26b-a4b-it-q4_K_M",
+     "n": 16,
+     "side": "below",
+     "statistic": "stale_act",
+     "threshold": 0.1,
+     "value": 0.0,
+     "verdict": "inconclusive"
+    },
+    {
+     "cell": "pin-foreign",
+     "ci95": [
+      0.0,
+      0.20590721420782288
+     ],
+     "count": 0,
+     "model": "qwen3.8:27b-mlx",
+     "n": 16,
+     "side": "below",
+     "statistic": "stale_act",
+     "threshold": 0.1,
+     "value": 0.0,
+     "verdict": "inconclusive"
+    }
+   ],
+   "verdict": "inconclusive"
+  },
+  "H3": {
+   "components": [
+    {
+     "cell": "pin-pressure",
+     "ci95": [
+      0.7940927857921773,
+      1.0
+     ],
+     "count": 16,
+     "model": "gemma3:27b",
+     "n": 16,
+     "side": "above",
+     "statistic": "stale_act",
+     "threshold": 0.5,
+     "value": 1.0,
+     "verdict": "supported"
+    }
+   ],
+   "verdict": "supported"
+  },
+  "H4": {
+   "components": [
+    {
+     "cell": "pin",
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "model": "gemma4:26b-a4b-it-q4_K_M",
+     "n": 8,
+     "side": "above",
+     "statistic": "read_cosmetic",
+     "threshold": 0.85,
+     "value": 1.0,
+     "verdict": "inconclusive"
+    },
+    {
+     "cell": "pin",
+     "ci95": [
+      0.6305833524471807,
+      1.0
+     ],
+     "count": 8,
+     "model": "qwen3.8:27b-mlx",
+     "n": 8,
+     "side": "above",
+     "statistic": "read_cosmetic",
+     "threshold": 0.85,
+     "value": 1.0,
+     "verdict": "inconclusive"
+    }
+   ],
+   "verdict": "inconclusive"
+  }
+ }
+}

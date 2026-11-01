@@ -1,0 +1,13 @@
+{
+ "registration": "d905d71bb0dc2fc676e6d446cb8f9ed036c4af23215ba6b325f0193be2e7bd50",
+ "runner": "e0380214296d15164c5fd5ca4395bb3860e8bb9845deea027331cf673d007784",
+ "runner_path": "q10-drift/run.py",
+ "analysis": "74caf000d73e5777352eccd1c967a6a0e9aab5449295d3f634b0aa47acb52b82",
+ "analysis_path": "q10-drift/analyze.py",
+ "predictions": {
+  "H1": "3c6131a8274a1aa488a29ad08febb918a6e7d61dc2bb5608b15869145ca7b6a0",
+  "H2": "e12f5df6a3281970b852776871a5d76474536731ab99a90777483fc3e8b79063",
+  "H3": "cd0ad25723fb3beb28bfe83d12733da1a9eabc89fa8e74bb59b9832aca691cd1",
+  "H4": "d1805520d48ad17693925bca71360e3f68ece8e01e21d466db33ae7b1ff0acfd"
+ }
+}
