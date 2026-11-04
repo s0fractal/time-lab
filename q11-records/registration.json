@@ -1,0 +1,64 @@
+{
+ "runner_path": "q11-records/run.py",
+ "analysis_path": "q11-records/analyze.py",
+ "design": {
+  "models": [
+   "gemma3:27b",
+   "gemma4:26b-a4b-it-q4_K_M",
+   "qwen3.8:27b-mlx"
+  ],
+  "arms": [
+   "records",
+   "prose",
+   "log",
+   "none"
+  ],
+  "budget": 6000,
+  "bm25": {
+   "k1": 1.5,
+   "b": 0.75
+  },
+  "options": {
+   "temperature": 0,
+   "num_predict": 256,
+   "num_ctx": 8192
+  },
+  "think": false,
+  "warrant_A": "6d6bb700",
+  "warrant_H": "4167ce773136422142525ada1a45f54ac36fcfe5",
+  "bank_sha256": "ae6c2eb44e6ec4040514b81b053923e2dac888855d5bbc086e23368cf31d6806",
+  "corpus_sha256": "5f943288cef2a852f75af3e20a8e89f2597340992585a3edfa88d179d192c368",
+  "order": "models in the order above, one at a time, each unloaded after its rows; within a model the bank's order, then the arms in the order above",
+  "bank_source": "bank/validate.py over warrant at A and H; an agent that saw only the code of both commits wrote the items (GOAL.md)"
+ },
+ "question": "G13 of warrant: does a fresh model recover more of a repository from its records than from its prose, where what they speak of changed? Questions on warrant whose answers are fixed from the code at commits A and H and from no arm, split into facts that differ between A and H (changed) and facts that do not (unchanged). Arms: the records read through the engine, README and docs, git log, each the same budget by the same retrieval; a control with no text. The prediction H1-H3 is obligation ae647907's, kept as written although the calibration points against it (GOAL.md).",
+ "seeds": "the options' order of a question is random.Random(int(sha256('<registration id>:<beacon randomness>:order:<question id>').hexdigest()[:12], 16)).shuffle, the same in every arm and model; the sampling seed of a trial is int(sha256('<registration id>:<beacon randomness>:<model>:<arm>:<question id>').hexdigest()[:12], 16) mod 2^31.",
+ "beacon": "drand quicknet (chain 52db9ba70e0cc0f6eaf7803dd07447a1f5477735fd3f661792ba94600c84e971): the first round dated at or after the earliest GitHub-witnessed push (GET repos/s0fractal/time-lab/activity) that holds the commit adding q11-records/registration.lock.json.",
+ "hypotheses": [
+  {
+   "hypothesis": "H1",
+   "statement": "Where what they speak of changed, a fresh model recovers more from the records than from prose and from git log (obligation ae647907; calibration points against it: -0.49 and -0.47).",
+   "rule": "Two components on the changed questions: mean correct share, records minus prose and records minus log, the mean over models per question, 95% percentile bootstrap over questions. Each is supported when lo > 0, contradicted when hi < 0.15, else inconclusive. Contradicted if any component is, supported if all are. A component is inconclusive by rule when fewer than 95% of a compared arm's answers parse in some model."
+  },
+  {
+   "hypothesis": "H2",
+   "statement": "Where it did not change, the records are not ahead (obligation ae647907: ahead on changed referents only; calibration +0.02 and -0.04).",
+   "rule": "Two components on the unchanged questions: records minus prose and minus log, as in H1. Each is supported when hi < 0.15, contradicted when lo > 0.15, else inconclusive; inconclusive by rule also when neither compared arm's correct share has lo > 0.10, and by the parse gate of H1."
+  },
+  {
+   "hypothesis": "H3",
+   "statement": "The records' lead is larger on changed questions than on unchanged ones (obligation ae647907, stated as a difference; calibration -0.51 and -0.42).",
+   "rule": "Two components: the lead of H1 minus the lead of H2 against prose and against log, each class resampled alone. Each is supported when lo > 0, contradicted when hi < 0.15, else inconclusive, with the parse gate of H1."
+  },
+  {
+   "hypothesis": "H4",
+   "statement": "Mechanism: on changed questions prose and git log give the old answer more often than the records do (calibration -0.04 and +0.02).",
+   "rule": "Two components on the changed questions: the share of models giving the bank's old answer, prose minus records and log minus records. Each is supported when lo > 0, contradicted when hi < 0.15, else inconclusive, with the parse gate of H1."
+  },
+  {
+   "hypothesis": "H5",
+   "statement": "Control: with no text the options do not give the answer away, the correct share stays under 0.40 (chance 0.25; calibration 0.44 and 0.40).",
+   "rule": "Two components, changed and unchanged: the control's correct share. Each is supported when hi < 0.40, contradicted when lo > 0.40, else inconclusive; inconclusive by rule when fewer than 95% of the control's answers parse in some model. H5 gates no other hypothesis."
+  }
+ ]
+}

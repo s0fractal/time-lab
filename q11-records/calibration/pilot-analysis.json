@@ -1,0 +1,372 @@
+{
+ "arms": {
+  "gemma3:27b": {
+   "log": {
+    "changed": {
+     "correct": 10,
+     "n": 15,
+     "not_settled": 2,
+     "old": 3,
+     "tokens": 1953.4,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 4,
+     "n": 15,
+     "not_settled": 8,
+     "old": 0,
+     "tokens": 1907.3333333333333,
+     "unparsed": 0
+    }
+   },
+   "none": {
+    "changed": {
+     "correct": 5,
+     "n": 15,
+     "not_settled": 0,
+     "old": 2,
+     "tokens": 143.13333333333333,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 6,
+     "n": 15,
+     "not_settled": 0,
+     "old": 0,
+     "tokens": 143.33333333333334,
+     "unparsed": 0
+    }
+   },
+   "prose": {
+    "changed": {
+     "correct": 12,
+     "n": 15,
+     "not_settled": 2,
+     "old": 1,
+     "tokens": 1810.4666666666667,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 4,
+     "n": 15,
+     "not_settled": 8,
+     "old": 0,
+     "tokens": 1795.2,
+     "unparsed": 0
+    }
+   },
+   "records": {
+    "changed": {
+     "correct": 3,
+     "n": 15,
+     "not_settled": 9,
+     "old": 2,
+     "tokens": 2107.133333333333,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 5,
+     "n": 15,
+     "not_settled": 8,
+     "old": 0,
+     "tokens": 2128.0,
+     "unparsed": 0
+    }
+   }
+  },
+  "gemma4:26b-a4b-it-q4_K_M": {
+   "log": {
+    "changed": {
+     "correct": 10,
+     "n": 15,
+     "not_settled": 4,
+     "old": 1,
+     "tokens": 1955.4,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 4,
+     "n": 15,
+     "not_settled": 11,
+     "old": 0,
+     "tokens": 1911.0,
+     "unparsed": 0
+    }
+   },
+   "none": {
+    "changed": {
+     "correct": 6,
+     "n": 15,
+     "not_settled": 0,
+     "old": 3,
+     "tokens": 145.13333333333333,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 5,
+     "n": 15,
+     "not_settled": 0,
+     "old": 0,
+     "tokens": 145.33333333333334,
+     "unparsed": 0
+    }
+   },
+   "prose": {
+    "changed": {
+     "correct": 10,
+     "n": 15,
+     "not_settled": 5,
+     "old": 0,
+     "tokens": 1813.0666666666666,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 3,
+     "n": 15,
+     "not_settled": 12,
+     "old": 0,
+     "tokens": 1800.0666666666666,
+     "unparsed": 0
+    }
+   },
+   "records": {
+    "changed": {
+     "correct": 3,
+     "n": 15,
+     "not_settled": 10,
+     "old": 1,
+     "tokens": 2134.0666666666666,
+     "unparsed": 1
+    },
+    "unchanged": {
+     "correct": 3,
+     "n": 15,
+     "not_settled": 12,
+     "old": 0,
+     "tokens": 2140.0666666666666,
+     "unparsed": 0
+    }
+   }
+  },
+  "qwen3.8:27b-mlx": {
+   "log": {
+    "changed": {
+     "correct": 12,
+     "n": 15,
+     "not_settled": 2,
+     "old": 1,
+     "tokens": 1896.0666666666666,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 6,
+     "n": 15,
+     "not_settled": 9,
+     "old": 0,
+     "tokens": 1848.1333333333334,
+     "unparsed": 0
+    }
+   },
+   "none": {
+    "changed": {
+     "correct": 9,
+     "n": 15,
+     "not_settled": 0,
+     "old": 3,
+     "tokens": 146.46666666666667,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 7,
+     "n": 15,
+     "not_settled": 0,
+     "old": 0,
+     "tokens": 145.46666666666667,
+     "unparsed": 0
+    }
+   },
+   "prose": {
+    "changed": {
+     "correct": 11,
+     "n": 15,
+     "not_settled": 3,
+     "old": 1,
+     "tokens": 1776.4,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 4,
+     "n": 15,
+     "not_settled": 10,
+     "old": 0,
+     "tokens": 1747.8,
+     "unparsed": 0
+    }
+   },
+   "records": {
+    "changed": {
+     "correct": 5,
+     "n": 15,
+     "not_settled": 9,
+     "old": 1,
+     "tokens": 2053.866666666667,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 4,
+     "n": 15,
+     "not_settled": 11,
+     "old": 0,
+     "tokens": 2072.9333333333334,
+     "unparsed": 0
+    }
+   }
+  }
+ },
+ "verdicts": {
+  "H1": {
+   "components": [
+    {
+     "ci95": [
+      -0.7333333333333333,
+      -0.24444444444444444
+     ],
+     "class": "changed",
+     "kind": "ahead",
+     "other": "prose",
+     "value": -0.4888888888888889,
+     "verdict": "contradicted"
+    },
+    {
+     "ci95": [
+      -0.711111111111111,
+      -0.17777777777777776
+     ],
+     "class": "changed",
+     "kind": "ahead",
+     "other": "log",
+     "value": -0.4666666666666667,
+     "verdict": "contradicted"
+    }
+   ],
+   "verdict": "contradicted"
+  },
+  "H2": {
+   "components": [
+    {
+     "above_floor": {
+      "prose": false,
+      "records": false
+     },
+     "ci95": [
+      -0.2,
+      0.26666666666666666
+     ],
+     "class": "unchanged",
+     "kind": "within",
+     "other": "prose",
+     "reason": "neither arm is above the floor",
+     "value": 0.022222222222222223,
+     "verdict": "inconclusive"
+    },
+    {
+     "above_floor": {
+      "log": true,
+      "records": false
+     },
+     "ci95": [
+      -0.26666666666666666,
+      0.17777777777777778
+     ],
+     "class": "unchanged",
+     "kind": "within",
+     "other": "log",
+     "value": -0.04444444444444444,
+     "verdict": "inconclusive"
+    }
+   ],
+   "verdict": "inconclusive"
+  },
+  "H3": {
+   "components": [
+    {
+     "ci95": [
+      -0.8444444444444446,
+      -0.17777777777777778
+     ],
+     "class": null,
+     "kind": "interaction",
+     "other": "prose",
+     "value": -0.5111111111111111,
+     "verdict": "contradicted"
+    },
+    {
+     "ci95": [
+      -0.7555555555555555,
+      -0.06666666666666667
+     ],
+     "class": null,
+     "kind": "interaction",
+     "other": "log",
+     "value": -0.4222222222222222,
+     "verdict": "contradicted"
+    }
+   ],
+   "verdict": "contradicted"
+  },
+  "H4": {
+   "components": [
+    {
+     "ci95": [
+      -0.2,
+      0.06666666666666667
+     ],
+     "class": "changed",
+     "kind": "fewer_old",
+     "other": "prose",
+     "value": -0.044444444444444446,
+     "verdict": "contradicted"
+    },
+    {
+     "ci95": [
+      -0.11111111111111113,
+      0.13333333333333333
+     ],
+     "class": "changed",
+     "kind": "fewer_old",
+     "other": "log",
+     "value": 0.022222222222222213,
+     "verdict": "contradicted"
+    }
+   ],
+   "verdict": "contradicted"
+  },
+  "H5": {
+   "components": [
+    {
+     "ci95": [
+      0.26666666666666666,
+      0.6222222222222221
+     ],
+     "class": "changed",
+     "kind": "no_leak",
+     "other": "none",
+     "value": 0.4444444444444444,
+     "verdict": "inconclusive"
+    },
+    {
+     "ci95": [
+      0.2,
+      0.6222222222222222
+     ],
+     "class": "unchanged",
+     "kind": "no_leak",
+     "other": "none",
+     "value": 0.4,
+     "verdict": "inconclusive"
+    }
+   ],
+   "verdict": "inconclusive"
+  }
+ }
+}

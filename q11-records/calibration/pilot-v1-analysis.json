@@ -1,0 +1,379 @@
+{
+ "arms": {
+  "gemma3:27b": {
+   "log": {
+    "changed": {
+     "correct": 10,
+     "n": 15,
+     "not_settled": 2,
+     "old": 3,
+     "tokens": 1953.4,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 4,
+     "n": 15,
+     "not_settled": 8,
+     "old": 0,
+     "tokens": 1907.3333333333333,
+     "unparsed": 0
+    }
+   },
+   "none": {
+    "changed": {
+     "correct": 5,
+     "n": 15,
+     "not_settled": 0,
+     "old": 2,
+     "tokens": 143.13333333333333,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 6,
+     "n": 15,
+     "not_settled": 0,
+     "old": 0,
+     "tokens": 143.33333333333334,
+     "unparsed": 0
+    }
+   },
+   "prose": {
+    "changed": {
+     "correct": 12,
+     "n": 15,
+     "not_settled": 2,
+     "old": 1,
+     "tokens": 1810.4666666666667,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 4,
+     "n": 15,
+     "not_settled": 8,
+     "old": 0,
+     "tokens": 1795.2,
+     "unparsed": 0
+    }
+   },
+   "records": {
+    "changed": {
+     "correct": 3,
+     "n": 15,
+     "not_settled": 9,
+     "old": 1,
+     "tokens": 2029.9333333333334,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 4,
+     "n": 15,
+     "not_settled": 10,
+     "old": 0,
+     "tokens": 2050.6,
+     "unparsed": 0
+    }
+   }
+  },
+  "gemma4:26b-a4b-it-q4_K_M": {
+   "log": {
+    "changed": {
+     "correct": 10,
+     "n": 15,
+     "not_settled": 4,
+     "old": 1,
+     "tokens": 1955.4,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 4,
+     "n": 15,
+     "not_settled": 8,
+     "old": 0,
+     "tokens": 1911.0,
+     "unparsed": 3
+    }
+   },
+   "none": {
+    "changed": {
+     "correct": 6,
+     "n": 15,
+     "not_settled": 0,
+     "old": 3,
+     "tokens": 145.13333333333333,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 5,
+     "n": 15,
+     "not_settled": 0,
+     "old": 0,
+     "tokens": 145.33333333333334,
+     "unparsed": 0
+    }
+   },
+   "prose": {
+    "changed": {
+     "correct": 10,
+     "n": 15,
+     "not_settled": 4,
+     "old": 0,
+     "tokens": 1813.0666666666666,
+     "unparsed": 1
+    },
+    "unchanged": {
+     "correct": 3,
+     "n": 15,
+     "not_settled": 7,
+     "old": 0,
+     "tokens": 1800.0666666666666,
+     "unparsed": 5
+    }
+   },
+   "records": {
+    "changed": {
+     "correct": 3,
+     "n": 15,
+     "not_settled": 8,
+     "old": 1,
+     "tokens": 2033.6666666666667,
+     "unparsed": 3
+    },
+    "unchanged": {
+     "correct": 2,
+     "n": 15,
+     "not_settled": 10,
+     "old": 0,
+     "tokens": 2055.4666666666667,
+     "unparsed": 3
+    }
+   }
+  },
+  "qwen3.8:27b-mlx": {
+   "log": {
+    "changed": {
+     "correct": 12,
+     "n": 15,
+     "not_settled": 2,
+     "old": 1,
+     "tokens": 1896.0666666666666,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 6,
+     "n": 15,
+     "not_settled": 9,
+     "old": 0,
+     "tokens": 1848.1333333333334,
+     "unparsed": 0
+    }
+   },
+   "none": {
+    "changed": {
+     "correct": 9,
+     "n": 15,
+     "not_settled": 0,
+     "old": 3,
+     "tokens": 146.46666666666667,
+     "unparsed": 0
+    },
+    "unchanged": {
+     "correct": 6,
+     "n": 15,
+     "not_settled": 0,
+     "old": 0,
+     "tokens": 145.46666666666667,
+     "unparsed": 0
+    }
+   },
+   "prose": {
+    "changed": {
+     "correct": 11,
+     "n": 15,
+     "not_settled": 2,
+     "old": 1,
+     "tokens": 1769.7333333333333,
+     "unparsed": 1
+    },
+    "unchanged": {
+     "correct": 4,
+     "n": 15,
+     "not_settled": 10,
+     "old": 0,
+     "tokens": 1747.8,
+     "unparsed": 0
+    }
+   },
+   "records": {
+    "changed": {
+     "correct": 7,
+     "n": 15,
+     "not_settled": 6,
+     "old": 1,
+     "tokens": 1978.8666666666666,
+     "unparsed": 1
+    },
+    "unchanged": {
+     "correct": 5,
+     "n": 15,
+     "not_settled": 9,
+     "old": 0,
+     "tokens": 1983.0666666666666,
+     "unparsed": 1
+    }
+   }
+  }
+ },
+ "verdicts": {
+  "H1": {
+   "components": [
+    {
+     "ci95": [
+      -0.6888888888888889,
+      -0.2
+     ],
+     "class": "changed",
+     "kind": "ahead",
+     "other": "prose",
+     "reason": "gate: parsed 0.800 < 0.95",
+     "value": -0.4444444444444445,
+     "verdict": "inconclusive"
+    },
+    {
+     "ci95": [
+      -0.6888888888888889,
+      -0.13333333333333333
+     ],
+     "class": "changed",
+     "kind": "ahead",
+     "other": "log",
+     "reason": "gate: parsed 0.800 < 0.95",
+     "value": -0.4222222222222222,
+     "verdict": "inconclusive"
+    }
+   ],
+   "verdict": "inconclusive"
+  },
+  "H2": {
+   "components": [
+    {
+     "beats_control": {
+      "prose": false,
+      "records": false
+     },
+     "ci95": [
+      -0.22222222222222224,
+      0.24444444444444444
+     ],
+     "class": "unchanged",
+     "kind": "within",
+     "other": "prose",
+     "reason": "gate: parsed 0.800 < 0.95",
+     "value": -3.7007434154171884e-18,
+     "verdict": "inconclusive"
+    },
+    {
+     "beats_control": {
+      "log": false,
+      "records": false
+     },
+     "ci95": [
+      -0.2888888888888889,
+      0.17777777777777776
+     ],
+     "class": "unchanged",
+     "kind": "within",
+     "other": "log",
+     "reason": "gate: parsed 0.800 < 0.95",
+     "value": -0.06666666666666667,
+     "verdict": "inconclusive"
+    }
+   ],
+   "verdict": "inconclusive"
+  },
+  "H3": {
+   "components": [
+    {
+     "ci95": [
+      -0.7999999999999999,
+      -0.1111111111111111
+     ],
+     "class": null,
+     "kind": "interaction",
+     "other": "prose",
+     "reason": "gate: parsed 0.800 < 0.95",
+     "value": -0.4444444444444445,
+     "verdict": "inconclusive"
+    },
+    {
+     "ci95": [
+      -0.711111111111111,
+      2.7755575615628914e-17
+     ],
+     "class": null,
+     "kind": "interaction",
+     "other": "log",
+     "reason": "gate: parsed 0.800 < 0.95",
+     "value": -0.35555555555555557,
+     "verdict": "inconclusive"
+    }
+   ],
+   "verdict": "inconclusive"
+  },
+  "H4": {
+   "components": [
+    {
+     "ci95": [
+      -0.13333333333333333,
+      0.06666666666666667
+     ],
+     "class": "changed",
+     "kind": "fewer_old",
+     "other": "prose",
+     "reason": "gate: parsed 0.800 < 0.95",
+     "value": -0.02222222222222222,
+     "verdict": "inconclusive"
+    },
+    {
+     "ci95": [
+      -0.04444444444444444,
+      0.13333333333333333
+     ],
+     "class": "changed",
+     "kind": "fewer_old",
+     "other": "log",
+     "reason": "gate: parsed 0.800 < 0.95",
+     "value": 0.04444444444444444,
+     "verdict": "inconclusive"
+    }
+   ],
+   "verdict": "inconclusive"
+  },
+  "H5": {
+   "components": [
+    {
+     "ci95": [
+      0.26666666666666666,
+      0.6222222222222221
+     ],
+     "class": "changed",
+     "kind": "no_leak",
+     "other": "none",
+     "value": 0.4444444444444444,
+     "verdict": "inconclusive"
+    },
+    {
+     "ci95": [
+      0.17777777777777776,
+      0.6
+     ],
+     "class": "unchanged",
+     "kind": "no_leak",
+     "other": "none",
+     "value": 0.3777777777777778,
+     "verdict": "inconclusive"
+    }
+   ],
+   "verdict": "inconclusive"
+  }
+ }
+}

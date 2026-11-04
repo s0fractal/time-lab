@@ -1,0 +1,7197 @@
+{
+ "registration": "q11-calibration",
+ "beacon": null,
+ "randomness": "q11-calibration",
+ "env": {
+  "ollama": "0.40.13",
+  "python": "3.13.15",
+  "machine": "arm64"
+ },
+ "models": {
+  "gemma3:27b": {
+   "digest": "a418f5838eaf7fe2cfe0a3046c8384b68ba43a4435542c942f9db00a5f342203",
+   "rows": [
+    {
+     "arm": "log",
+     "q": "c012",
+     "order": [
+      "`frozen`, listing members no successor may change",
+      "None: those five members are the whole schema body",
+      "`defaults`, giving a value for each missing member",
+      "`pinned`, naming an object member of a lineage's root"
+     ],
+     "chunks": [
+      "32e399879b1b64f3",
+      "3dcf00f07f9d2465",
+      "087f39d75f90d050",
+      "a7e35f14e432c187",
+      "af80516081c8b629",
+      "8febf8c148db6a26",
+      "03faf914e7f48f50"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1977
+    },
+    {
+     "arm": "none",
+     "q": "c012",
+     "order": [
+      "`frozen`, listing members no successor may change",
+      "None: those five members are the whole schema body",
+      "`defaults`, giving a value for each missing member",
+      "`pinned`, naming an object member of a lineage's root"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 150
+    },
+    {
+     "arm": "prose",
+     "q": "c012",
+     "order": [
+      "`frozen`, listing members no successor may change",
+      "None: those five members are the whole schema body",
+      "`defaults`, giving a value for each missing member",
+      "`pinned`, naming an object member of a lineage's root"
+     ],
+     "chunks": [
+      "docs/V3.md:18",
+      "docs/V3.md:19",
+      "docs/V3.md:30",
+      "README.md:10",
+      "docs/V3.md:17",
+      "docs/V3.md:52",
+      "docs/V3.md:14",
+      "docs/AGENT.md:12"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1817
+    },
+    {
+     "arm": "records",
+     "q": "c012",
+     "order": [
+      "`frozen`, listing members no successor may change",
+      "None: those five members are the whole schema body",
+      "`defaults`, giving a value for each missing member",
+      "`pinned`, naming an object member of a lineage's root"
+     ],
+     "chunks": [
+      "360a77d78b1f58bd",
+      "713622f5b636eec4",
+      "ebe4e8981d4ddd1f",
+      "a51ae698ecc6707a",
+      "a232e6f033ae2c01",
+      "80d2a700dc77e906",
+      "3667ea649ca19e80",
+      "daa5bfa315cb5f1f",
+      "33840305c9ae5d45",
+      "5b68c5af6cdd117f"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2086
+    },
+    {
+     "arm": "log",
+     "q": "c013",
+     "order": [
+      "It keeps it in the lineage, with reliance CHALLENGED",
+      "It drops the version as INVALID, under `problems`",
+      "Nothing: it compares no guard with its root",
+      "It widens the guard to match that object"
+     ],
+     "chunks": [
+      "32e399879b1b64f3",
+      "5ca1a7c16d274406",
+      "e056e25265d44b78",
+      "47e71f5c145c9ca0",
+      "3da5482655edb333",
+      "ad557baf7203186d",
+      "ac80aeebfba09176",
+      "7870c518ea686c48",
+      "a8a7df50e396184b"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1923
+    },
+    {
+     "arm": "none",
+     "q": "c013",
+     "order": [
+      "It keeps it in the lineage, with reliance CHALLENGED",
+      "It drops the version as INVALID, under `problems`",
+      "Nothing: it compares no guard with its root",
+      "It widens the guard to match that object"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 155
+    },
+    {
+     "arm": "prose",
+     "q": "c013",
+     "order": [
+      "It keeps it in the lineage, with reliance CHALLENGED",
+      "It drops the version as INVALID, under `problems`",
+      "Nothing: it compares no guard with its root",
+      "It widens the guard to match that object"
+     ],
+     "chunks": [
+      "README.md:11",
+      "docs/V3.md:18",
+      "docs/V3.md:32",
+      "docs/V3.md:31",
+      "docs/V3.md:13",
+      "docs/V3.md:52",
+      "docs/V3.md:44",
+      "docs/V3.md:26"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1734
+    },
+    {
+     "arm": "records",
+     "q": "c013",
+     "order": [
+      "It keeps it in the lineage, with reliance CHALLENGED",
+      "It drops the version as INVALID, under `problems`",
+      "Nothing: it compares no guard with its root",
+      "It widens the guard to match that object"
+     ],
+     "chunks": [
+      "360a77d78b1f58bd",
+      "a51ae698ecc6707a",
+      "fdafdadad8363c34",
+      "37aa53dae631244f",
+      "32c93d4ffde03fae",
+      "1a42155eb60f2657",
+      "e0ef90262658ac39",
+      "09ecc86da5de5c6e"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1967
+    },
+    {
+     "arm": "log",
+     "q": "c014",
+     "order": [
+      "Only entities: attests naming it are checked as usual",
+      "No record: it is checked as any counted schema is",
+      "Only attests: any other kind naming it is INVALID",
+      "Every record naming it, whatever the record's kind"
+     ],
+     "chunks": [
+      "43d0d9bbc4718153",
+      "59484e5c9f60c4c8",
+      "1297f593dd26ce52",
+      "1e308b74fa1f94ac",
+      "19fdf95f4e7ac886",
+      "f2a95e5439e2611d"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1888
+    },
+    {
+     "arm": "none",
+     "q": "c014",
+     "order": [
+      "Only entities: attests naming it are checked as usual",
+      "No record: it is checked as any counted schema is",
+      "Only attests: any other kind naming it is INVALID",
+      "Every record naming it, whatever the record's kind"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 151
+    },
+    {
+     "arm": "prose",
+     "q": "c014",
+     "order": [
+      "Only entities: attests naming it are checked as usual",
+      "No record: it is checked as any counted schema is",
+      "Only attests: any other kind naming it is INVALID",
+      "Every record naming it, whatever the record's kind"
+     ],
+     "chunks": [
+      "docs/V3.md:19",
+      "docs/V3.md:20",
+      "docs/V3.md:52",
+      "docs/V3.md:14",
+      "docs/V3.md:41",
+      "docs/V3.md:31",
+      "docs/V3.md:13",
+      "docs/V3.md:16",
+      "docs/V3.md:3"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1807
+    },
+    {
+     "arm": "records",
+     "q": "c014",
+     "order": [
+      "Only entities: attests naming it are checked as usual",
+      "No record: it is checked as any counted schema is",
+      "Only attests: any other kind naming it is INVALID",
+      "Every record naming it, whatever the record's kind"
+     ],
+     "chunks": [
+      "5024956e94511a84",
+      "80d2a700dc77e906",
+      "ebe4e8981d4ddd1f",
+      "014ec61b45d5c796",
+      "07e63a97d6c73da8",
+      "a0423da0da20a782",
+      "248a7d23c49cce96",
+      "8dc3f747049cc53c",
+      "a11b1f113905bc16",
+      "97b547fe6045909d",
+      "10c0cfbbe851bfa1"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2022
+    },
+    {
+     "arm": "log",
+     "q": "c015",
+     "order": [
+      "A least fixpoint over all versions, with no recursion",
+      "Depth first with recursion, marking versions in progress",
+      "Whole assessments repeated until two passes agree",
+      "A topological sort that refuses the store on any cycle"
+     ],
+     "chunks": [
+      "43d0d9bbc4718153",
+      "1f4fa296c08d65d0",
+      "60bd575e3ad3ba1b",
+      "d95cebf7f40861ce",
+      "fc4dec90dcf12b9b"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1874
+    },
+    {
+     "arm": "none",
+     "q": "c015",
+     "order": [
+      "A least fixpoint over all versions, with no recursion",
+      "Depth first with recursion, marking versions in progress",
+      "Whole assessments repeated until two passes agree",
+      "A topological sort that refuses the store on any cycle"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 143
+    },
+    {
+     "arm": "prose",
+     "q": "c015",
+     "order": [
+      "A least fixpoint over all versions, with no recursion",
+      "Depth first with recursion, marking versions in progress",
+      "Whole assessments repeated until two passes agree",
+      "A topological sort that refuses the store on any cycle"
+     ],
+     "chunks": [
+      "docs/V3.md:32",
+      "docs/V3.md:38",
+      "docs/V3.md:19",
+      "docs/V3.md:26",
+      "README.md:11",
+      "docs/HOME.md:8",
+      "docs/V3.md:35"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1698
+    },
+    {
+     "arm": "records",
+     "q": "c015",
+     "order": [
+      "A least fixpoint over all versions, with no recursion",
+      "Depth first with recursion, marking versions in progress",
+      "Whole assessments repeated until two passes agree",
+      "A topological sort that refuses the store on any cycle"
+     ],
+     "chunks": [
+      "37aa53dae631244f",
+      "80d2a700dc77e906",
+      "8dc3f747049cc53c",
+      "5adf6ff108b4b0ae",
+      "5312ae34472b6f88",
+      "37013687a618cebd",
+      "d08d4d7c023139f3",
+      "09ecc86da5de5c6e"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 2026
+    },
+    {
+     "arm": "log",
+     "q": "c018",
+     "order": [
+      "Refused: the store must lie in the repository",
+      "Followed for reads, refused for writes",
+      "Replaced by a real directory before going on",
+      "Followed: the tool reads and writes what it leads to"
+     ],
+     "chunks": [
+      "49014d505379367b",
+      "f4275a585e1e8878",
+      "5ef3b87bc9eb784d",
+      "2ae845034f15b049",
+      "ce7bf8bde7d7d9ae",
+      "98daf19a72f8a308",
+      "ae63427ec820f5c8"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1967
+    },
+    {
+     "arm": "none",
+     "q": "c018",
+     "order": [
+      "Refused: the store must lie in the repository",
+      "Followed for reads, refused for writes",
+      "Replaced by a real directory before going on",
+      "Followed: the tool reads and writes what it leads to"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 150
+    },
+    {
+     "arm": "prose",
+     "q": "c018",
+     "order": [
+      "Refused: the store must lie in the repository",
+      "Followed for reads, refused for writes",
+      "Replaced by a real directory before going on",
+      "Followed: the tool reads and writes what it leads to"
+     ],
+     "chunks": [
+      "README.md:13",
+      "docs/V3.md:52",
+      "docs/HOME.md:8",
+      "docs/V3.md:68",
+      "README.md:7",
+      "docs/AGENT.md:5",
+      "docs/REPOSITORY.md:34",
+      "docs/V3.md:56",
+      "docs/HISTORY.md:15",
+      "docs/V3.md:36"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1797
+    },
+    {
+     "arm": "records",
+     "q": "c018",
+     "order": [
+      "Refused: the store must lie in the repository",
+      "Followed for reads, refused for writes",
+      "Replaced by a real directory before going on",
+      "Followed: the tool reads and writes what it leads to"
+     ],
+     "chunks": [
+      "9c037641ba93183d",
+      "fd6dc8fcc4bb376a",
+      "e0e795a0faabbb29",
+      "294095ce60001466",
+      "a7bc70c767417e16",
+      "d42acd02c2e34335",
+      "7b525464eb6b8add"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2282
+    },
+    {
+     "arm": "log",
+     "q": "c022",
+     "order": [
+      "`warrant_graph`",
+      "`tools`",
+      "`warrant`",
+      "`warrant_agent`"
+     ],
+     "chunks": [
+      "3da5482655edb333",
+      "94df7b9fc5df3fab",
+      "5564173884c5a895",
+      "1d9a32a699af823d",
+      "0ff23d393e1d443d",
+      "91b000b517d9097c",
+      "b74ce0d365eb962a"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1928
+    },
+    {
+     "arm": "none",
+     "q": "c022",
+     "order": [
+      "`warrant_graph`",
+      "`tools`",
+      "`warrant`",
+      "`warrant_agent`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 124
+    },
+    {
+     "arm": "prose",
+     "q": "c022",
+     "order": [
+      "`warrant_graph`",
+      "`tools`",
+      "`warrant`",
+      "`warrant_agent`"
+     ],
+     "chunks": [
+      "docs/AGENT.md:11",
+      "docs/REPOSITORY.md:3",
+      "docs/REPOSITORY.md:30",
+      "docs/HISTORY.md:6",
+      "docs/HOME.md:6",
+      "docs/HOME.md:21",
+      "docs/REPOSITORY.md:1",
+      "README.md:2",
+      "docs/V3.md:55",
+      "docs/V3.md:45"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1811
+    },
+    {
+     "arm": "records",
+     "q": "c022",
+     "order": [
+      "`warrant_graph`",
+      "`tools`",
+      "`warrant`",
+      "`warrant_agent`"
+     ],
+     "chunks": [
+      "2e646f8efbfef31b",
+      "a0d6f8880d30a31c",
+      "66fe3905f8d53c67",
+      "da1681d50bd871e3",
+      "3667ea649ca19e80",
+      "a24d65937c151c1c",
+      "207fc790810d2d87",
+      "85a3c0ab4e60b1bc",
+      "9ca0d6769a43bb8f"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 2120
+    },
+    {
+     "arm": "log",
+     "q": "c028",
+     "order": [
+      "Yes: it reports that schema as REJECTED and exits 1",
+      "No: that is a proposal, not a problem of the store",
+      "Yes: it reports SCHEMA_PENDING and exits 1",
+      "No: it backs the schema itself and then goes on"
+     ],
+     "chunks": [
+      "43d0d9bbc4718153",
+      "763f6047926bb24d",
+      "0613145036c384dc",
+      "54444b848f26eb04",
+      "39b22554f04c83bf",
+      "52d57bea51a528cc"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1992
+    },
+    {
+     "arm": "none",
+     "q": "c028",
+     "order": [
+      "Yes: it reports that schema as REJECTED and exits 1",
+      "No: that is a proposal, not a problem of the store",
+      "Yes: it reports SCHEMA_PENDING and exits 1",
+      "No: it backs the schema itself and then goes on"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 156
+    },
+    {
+     "arm": "prose",
+     "q": "c028",
+     "order": [
+      "Yes: it reports that schema as REJECTED and exits 1",
+      "No: that is a proposal, not a problem of the store",
+      "Yes: it reports SCHEMA_PENDING and exits 1",
+      "No: it backs the schema itself and then goes on"
+     ],
+     "chunks": [
+      "docs/V3.md:20",
+      "docs/V3.md:67",
+      "docs/V3.md:19",
+      "docs/V3.md:57",
+      "docs/V3.md:60",
+      "docs/V3.md:52",
+      "docs/HOME.md:23",
+      "docs/V3.md:3"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1785
+    },
+    {
+     "arm": "records",
+     "q": "c028",
+     "order": [
+      "Yes: it reports that schema as REJECTED and exits 1",
+      "No: that is a proposal, not a problem of the store",
+      "Yes: it reports SCHEMA_PENDING and exits 1",
+      "No: it backs the schema itself and then goes on"
+     ],
+     "chunks": [
+      "854e5d00ae3e0e13",
+      "07e63a97d6c73da8",
+      "057051fb9b4f92f1",
+      "e35aa8f23d965f9c",
+      "6faf7345863f15e2",
+      "d6ba31878930bbbc",
+      "248a7d23c49cce96",
+      "09ecc86da5de5c6e",
+      "fdee97fbd1bce70f",
+      "360a77d78b1f58bd",
+      "ca1ee00df2ecfa85"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 2034
+    },
+    {
+     "arm": "log",
+     "q": "c037",
+     "order": [
+      "`roadmap/acceptor`, else it refuses with ROLE",
+      "None: it has no forgiveness command",
+      "`schema/author`, else it refuses with ROLE",
+      "`roadmap/owner`, else it refuses with ROLE"
+     ],
+     "chunks": [
+      "12b32f7d0be17e22",
+      "3dcf00f07f9d2465",
+      "dcad621a2ae35bf6",
+      "5ef3b87bc9eb784d",
+      "b37288be7f82f55f",
+      "b37328b29ea22275",
+      "d464af3fd9aaf3ea"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 2040
+    },
+    {
+     "arm": "none",
+     "q": "c037",
+     "order": [
+      "`roadmap/acceptor`, else it refuses with ROLE",
+      "None: it has no forgiveness command",
+      "`schema/author`, else it refuses with ROLE",
+      "`roadmap/owner`, else it refuses with ROLE"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 143
+    },
+    {
+     "arm": "prose",
+     "q": "c037",
+     "order": [
+      "`roadmap/acceptor`, else it refuses with ROLE",
+      "None: it has no forgiveness command",
+      "`schema/author`, else it refuses with ROLE",
+      "`roadmap/owner`, else it refuses with ROLE"
+     ],
+     "chunks": [
+      "docs/REPOSITORY.md:20",
+      "docs/V3.md:14",
+      "docs/AGENT.md:18",
+      "docs/V3.md:30",
+      "docs/V3.md:49",
+      "docs/V3.md:19",
+      "docs/REPOSITORY.md:26",
+      "docs/AGENT.md:12",
+      "docs/HOME.md:10",
+      "docs/AGENT.md:14",
+      "docs/REPOSITORY.md:19"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1794
+    },
+    {
+     "arm": "records",
+     "q": "c037",
+     "order": [
+      "`roadmap/acceptor`, else it refuses with ROLE",
+      "None: it has no forgiveness command",
+      "`schema/author`, else it refuses with ROLE",
+      "`roadmap/owner`, else it refuses with ROLE"
+     ],
+     "chunks": [
+      "47783e204e55fff2",
+      "057051fb9b4f92f1",
+      "3e5d731f340c99c5",
+      "cfc847cad12870c1",
+      "d126cd26e6a78ba8",
+      "0bbcee4c08e4ec54",
+      "d324a9b4ead45c35",
+      "ebe4e8981d4ddd1f",
+      "3b301a02af7aac23",
+      "4461a89b44699063"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 2020
+    },
+    {
+     "arm": "log",
+     "q": "c057",
+     "order": [
+      "list, search, graph, export, import",
+      "stores, actor, open, challenges, rests",
+      "stores, lineages, goals, claims, blobs",
+      "None: no read spans several stores"
+     ],
+     "chunks": [
+      "bbdae7c943a52439",
+      "94df7b9fc5df3fab",
+      "3da5482655edb333",
+      "d2f938f12d8ff848",
+      "a2510453c20ed6d2",
+      "1d9a32a699af823d",
+      "d2d5e2240ff75a4e"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1851
+    },
+    {
+     "arm": "none",
+     "q": "c057",
+     "order": [
+      "list, search, graph, export, import",
+      "stores, actor, open, challenges, rests",
+      "stores, lineages, goals, claims, blobs",
+      "None: no read spans several stores"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 136
+    },
+    {
+     "arm": "prose",
+     "q": "c057",
+     "order": [
+      "list, search, graph, export, import",
+      "stores, actor, open, challenges, rests",
+      "stores, lineages, goals, claims, blobs",
+      "None: no read spans several stores"
+     ],
+     "chunks": [
+      "docs/HOME.md:15",
+      "docs/AGENT.md:11",
+      "docs/V3.md:65",
+      "docs/REPOSITORY.md:3",
+      "docs/V3.md:64",
+      "docs/HOME.md:23",
+      "docs/AGENT.md:5",
+      "docs/TRADEMARK.md:3"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1774
+    },
+    {
+     "arm": "records",
+     "q": "c057",
+     "order": [
+      "list, search, graph, export, import",
+      "stores, actor, open, challenges, rests",
+      "stores, lineages, goals, claims, blobs",
+      "None: no read spans several stores"
+     ],
+     "chunks": [
+      "d42acd02c2e34335",
+      "3667ea649ca19e80",
+      "6e2b72401c6d699d",
+      "85a3c0ab4e60b1bc",
+      "7c922241aa2be321",
+      "038c5bf56139eb60",
+      "fdee97fbd1bce70f",
+      "09e2dffff5720692",
+      "730b8292668473e3",
+      "10c0cfbbe851bfa1"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2151
+    },
+    {
+     "arm": "log",
+     "q": "c060",
+     "order": [
+      "Every repository the operator registered",
+      "The one store in `~/.warrant`",
+      "Nothing: `--config` is required, a usage error",
+      "The Git checkout around the current directory"
+     ],
+     "chunks": [
+      "d2f938f12d8ff848",
+      "f4275a585e1e8878",
+      "22ce646e8b2b2ef4",
+      "6f1f6024807e09d1",
+      "bbdae7c943a52439",
+      "49014d505379367b",
+      "0be74d7b8e8551ee"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1947
+    },
+    {
+     "arm": "none",
+     "q": "c060",
+     "order": [
+      "Every repository the operator registered",
+      "The one store in `~/.warrant`",
+      "Nothing: `--config` is required, a usage error",
+      "The Git checkout around the current directory"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 141
+    },
+    {
+     "arm": "prose",
+     "q": "c060",
+     "order": [
+      "Every repository the operator registered",
+      "The one store in `~/.warrant`",
+      "Nothing: `--config` is required, a usage error",
+      "The Git checkout around the current directory"
+     ],
+     "chunks": [
+      "docs/HOME.md:8",
+      "docs/AGENT.md:9",
+      "docs/HOME.md:2",
+      "docs/HOME.md:11",
+      "docs/AGENT.md:6",
+      "README.md:8",
+      "docs/V3.md:55",
+      "docs/REPOSITORY.md:3",
+      "docs/AGENT.md:5",
+      "docs/HOME.md:14",
+      "docs/AGENT.md:7"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1810
+    },
+    {
+     "arm": "records",
+     "q": "c060",
+     "order": [
+      "Every repository the operator registered",
+      "The one store in `~/.warrant`",
+      "Nothing: `--config` is required, a usage error",
+      "The Git checkout around the current directory"
+     ],
+     "chunks": [
+      "3f75f99210741a0f",
+      "207fc790810d2d87",
+      "1c3f12bcf1a91ba1",
+      "fed0c6f9f2584532",
+      "9c037641ba93183d",
+      "d3c6bad82d1dcb46",
+      "730b8292668473e3",
+      "de740b1cbeab2f03",
+      "fdee97fbd1bce70f",
+      "fda119e0bd9bdcc1"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2209
+    },
+    {
+     "arm": "log",
+     "q": "c062",
+     "order": [
+      "It applies the engine's body and lineage rules to the record alone",
+      "It files the record and rolls it back on a problem",
+      "It asks the workspace's reviewer to read the record",
+      "It assesses the store with the record added, under a throwaway key"
+     ],
+     "chunks": [
+      "3da5482655edb333",
+      "1c5b4faef842538a",
+      "9c199fe797445459",
+      "1f4fa296c08d65d0",
+      "bbdae7c943a52439",
+      "8c5333e386a8b475",
+      "9282e437bfd15196"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1911
+    },
+    {
+     "arm": "none",
+     "q": "c062",
+     "order": [
+      "It applies the engine's body and lineage rules to the record alone",
+      "It files the record and rolls it back on a problem",
+      "It asks the workspace's reviewer to read the record",
+      "It assesses the store with the record added, under a throwaway key"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 157
+    },
+    {
+     "arm": "prose",
+     "q": "c062",
+     "order": [
+      "It applies the engine's body and lineage rules to the record alone",
+      "It files the record and rolls it back on a problem",
+      "It asks the workspace's reviewer to read the record",
+      "It assesses the store with the record added, under a throwaway key"
+     ],
+     "chunks": [
+      "docs/V3.md:52",
+      "docs/AGENT.md:5",
+      "docs/V3.md:57",
+      "docs/HOME.md:6",
+      "docs/AGENT.md:12",
+      "docs/AGENT.md:11",
+      "docs/HOME.md:22"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1791
+    },
+    {
+     "arm": "records",
+     "q": "c062",
+     "order": [
+      "It applies the engine's body and lineage rules to the record alone",
+      "It files the record and rolls it back on a problem",
+      "It asks the workspace's reviewer to read the record",
+      "It assesses the store with the record added, under a throwaway key"
+     ],
+     "chunks": [
+      "f75f966344ac0fde",
+      "a11b1f113905bc16",
+      "edfb3c82e2f35329",
+      "057051fb9b4f92f1",
+      "d3c6bad82d1dcb46",
+      "1c3f12bcf1a91ba1",
+      "248a7d23c49cce96",
+      "8dc3f747049cc53c",
+      "33840305c9ae5d45"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 2027
+    },
+    {
+     "arm": "log",
+     "q": "c081",
+     "order": [
+      "Nothing: it writes no such file",
+      "An empty list, to be filled in by hand",
+      "This checkout's repository as the one entry",
+      "One entry per repository the operator registered"
+     ],
+     "chunks": [
+      "d2f938f12d8ff848",
+      "0ff23d393e1d443d",
+      "bd4693ce646b5aba",
+      "82f5ff77dc03d9fc",
+      "39e6ee59253bab02",
+      "41a9820af8b14c73"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1800
+    },
+    {
+     "arm": "none",
+     "q": "c081",
+     "order": [
+      "Nothing: it writes no such file",
+      "An empty list, to be filled in by hand",
+      "This checkout's repository as the one entry",
+      "One entry per repository the operator registered"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 143
+    },
+    {
+     "arm": "prose",
+     "q": "c081",
+     "order": [
+      "Nothing: it writes no such file",
+      "An empty list, to be filled in by hand",
+      "This checkout's repository as the one entry",
+      "One entry per repository the operator registered"
+     ],
+     "chunks": [
+      "docs/REPOSITORY.md:32",
+      "docs/REPOSITORY.md:36",
+      "docs/V3.md:68",
+      "docs/HOME.md:8",
+      "docs/AGENT.md:9",
+      "docs/HOME.md:11",
+      "docs/REPOSITORY.md:31"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1731
+    },
+    {
+     "arm": "records",
+     "q": "c081",
+     "order": [
+      "Nothing: it writes no such file",
+      "An empty list, to be filled in by hand",
+      "This checkout's repository as the one entry",
+      "One entry per repository the operator registered"
+     ],
+     "chunks": [
+      "1025eeedd2b9a8b5",
+      "c05fb08b73614190",
+      "02f479e2865928f8",
+      "ea580a2a88af01a7",
+      "d42acd02c2e34335",
+      "2003860acd38b83b",
+      "85a3c0ab4e60b1bc",
+      "d6ba31878930bbbc"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2140
+    },
+    {
+     "arm": "log",
+     "q": "c082",
+     "order": [
+      "Codex and Gemini CLI",
+      "Claude Code only",
+      "Codex and Claude Code",
+      "Codex only"
+     ],
+     "chunks": [
+      "1e308b74fa1f94ac",
+      "78ada10e1d816bef",
+      "6b1868eead5b312a",
+      "62d34b009e1eccff",
+      "e81f72e3b1b4d8d3",
+      "077f06c300fa0dfa",
+      "f55582203f8aa6e1",
+      "8449a8e1c75832b7",
+      "b9ec55d68e5ec87b"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1932
+    },
+    {
+     "arm": "none",
+     "q": "c082",
+     "order": [
+      "Codex and Gemini CLI",
+      "Claude Code only",
+      "Codex and Claude Code",
+      "Codex only"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 116
+    },
+    {
+     "arm": "prose",
+     "q": "c082",
+     "order": [
+      "Codex and Gemini CLI",
+      "Claude Code only",
+      "Codex and Claude Code",
+      "Codex only"
+     ],
+     "chunks": [
+      "docs/REPOSITORY.md:32",
+      "docs/REPOSITORY.md:20",
+      "docs/REPOSITORY.md:36",
+      "docs/HISTORY.md:18",
+      "docs/HOME.md:21",
+      "docs/HOME.md:12",
+      "docs/V3.md:21",
+      "README.md:6",
+      "docs/AGENT.md:7",
+      "docs/HOME.md:9"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1972
+    },
+    {
+     "arm": "records",
+     "q": "c082",
+     "order": [
+      "Codex and Gemini CLI",
+      "Claude Code only",
+      "Codex and Claude Code",
+      "Codex only"
+     ],
+     "chunks": [
+      "66e125a6fa323706",
+      "85a3c0ab4e60b1bc",
+      "c13adc2ae854416a",
+      "01f832c94058325b",
+      "d6127c0fd71dffa5",
+      "b661e5499191c654",
+      "024e641392d30acb",
+      "6aa9689cbdc97ef4",
+      "1dfedf691e802c52",
+      "4abd7aec6d8909df"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2147
+    },
+    {
+     "arm": "log",
+     "q": "c084",
+     "order": [
+      "3.0.0a5",
+      "2.0.0a1",
+      "3.0.0",
+      "3.0.0.dev0"
+     ],
+     "chunks": [
+      "6d29105550a2cf05",
+      "140d2bde8177c3ee",
+      "c4d0854062702272",
+      "fd5e46662299862c",
+      "0b520d94fe4c41a2",
+      "fd9b8c81791362e3",
+      "1740fd75b8c62758",
+      "dfe0892739d3de3b",
+      "ca9ffc8ae0f5612f",
+      "6fbea138b018d5c9"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2214
+    },
+    {
+     "arm": "none",
+     "q": "c084",
+     "order": [
+      "3.0.0a5",
+      "2.0.0a1",
+      "3.0.0",
+      "3.0.0.dev0"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 137
+    },
+    {
+     "arm": "prose",
+     "q": "c084",
+     "order": [
+      "3.0.0a5",
+      "2.0.0a1",
+      "3.0.0",
+      "3.0.0.dev0"
+     ],
+     "chunks": [
+      "README.md:13",
+      "README.md:6",
+      "docs/HISTORY.md:5",
+      "README.md:5",
+      "docs/HISTORY.md:1",
+      "docs/HISTORY.md:2",
+      "docs/V3.md:1",
+      "docs/REPOSITORY.md:26",
+      "docs/TRADEMARK.md:4",
+      "docs/REPOSITORY.md:36",
+      "docs/HISTORY.md:13",
+      "docs/REPOSITORY.md:1",
+      "docs/HOME.md:21",
+      "docs/V3.md:5"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2067
+    },
+    {
+     "arm": "records",
+     "q": "c084",
+     "order": [
+      "3.0.0a5",
+      "2.0.0a1",
+      "3.0.0",
+      "3.0.0.dev0"
+     ],
+     "chunks": [
+      "c05fb08b73614190",
+      "41f781e0387c26af",
+      "007f05152a7a287c",
+      "85a3c0ab4e60b1bc",
+      "3b301a02af7aac23",
+      "c0a9e4c3dc9dd276",
+      "97f31a1f93e9d226",
+      "d5489db66b2c143b",
+      "6fb507a08f5487b0"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2329
+    },
+    {
+     "arm": "log",
+     "q": "c086",
+     "order": [
+      "Moves the seed to the operator's home directory",
+      "The project has no such registry",
+      "Accepts it, and marks that repository read only",
+      "Refuses it: no seed may lie in a registered repository"
+     ],
+     "chunks": [
+      "d2f938f12d8ff848",
+      "3b4b117c6b6ab04e",
+      "18aada2aa6fb8dab",
+      "97156b6e4b4705bd",
+      "98daf19a72f8a308",
+      "f4275a585e1e8878",
+      "c4d0854062702272",
+      "13629c676c542277"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 2057
+    },
+    {
+     "arm": "none",
+     "q": "c086",
+     "order": [
+      "Moves the seed to the operator's home directory",
+      "The project has no such registry",
+      "Accepts it, and marks that repository read only",
+      "Refuses it: no seed may lie in a registered repository"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 145
+    },
+    {
+     "arm": "prose",
+     "q": "c086",
+     "order": [
+      "Moves the seed to the operator's home directory",
+      "The project has no such registry",
+      "Accepts it, and marks that repository read only",
+      "Refuses it: no seed may lie in a registered repository"
+     ],
+     "chunks": [
+      "docs/AGENT.md:8",
+      "docs/HOME.md:8",
+      "docs/HOME.md:6",
+      "docs/AGENT.md:9",
+      "docs/HOME.md:23",
+      "docs/AGENT.md:5",
+      "docs/HOME.md:10",
+      "docs/HOME.md:2",
+      "docs/HOME.md:20",
+      "docs/HOME.md:21",
+      "docs/HOME.md:1",
+      "docs/HOME.md:0"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1769
+    },
+    {
+     "arm": "records",
+     "q": "c086",
+     "order": [
+      "Moves the seed to the operator's home directory",
+      "The project has no such registry",
+      "Accepts it, and marks that repository read only",
+      "Refuses it: no seed may lie in a registered repository"
+     ],
+     "chunks": [
+      "3f75f99210741a0f",
+      "9c037641ba93183d",
+      "1c3f12bcf1a91ba1",
+      "64119e5aeec5041e",
+      "01f832c94058325b",
+      "ae647907f58e83ea",
+      "dda3ad65a1ea8c47"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2047
+    },
+    {
+     "arm": "log",
+     "q": "u005",
+     "order": [
+      "Leaves them out and counts them under `later`",
+      "Lists each of them under `rejected`",
+      "Reads them and marks each of them as backdated",
+      "Refuses the store with RESOURCE_LIMIT"
+     ],
+     "chunks": [
+      "d60f662ed8ec4906",
+      "4d9e79865ce6b8c3",
+      "9100743bf90dac58",
+      "ea2ca1936a77012d",
+      "f8d7d83cd8a96c0e",
+      "4d56fbf79a2ff34e",
+      "f6ba9a8e91e73ca0",
+      "7ec36ad33aadec6c",
+      "3e5ed5f3eeab6ea4"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2083
+    },
+    {
+     "arm": "none",
+     "q": "u005",
+     "order": [
+      "Leaves them out and counts them under `later`",
+      "Lists each of them under `rejected`",
+      "Reads them and marks each of them as backdated",
+      "Refuses the store with RESOURCE_LIMIT"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 144
+    },
+    {
+     "arm": "prose",
+     "q": "u005",
+     "order": [
+      "Leaves them out and counts them under `later`",
+      "Lists each of them under `rejected`",
+      "Reads them and marks each of them as backdated",
+      "Refuses the store with RESOURCE_LIMIT"
+     ],
+     "chunks": [
+      "docs/HOME.md:17",
+      "docs/V3.md:65",
+      "docs/V3.md:38",
+      "docs/V3.md:57",
+      "docs/AGENT.md:20",
+      "docs/V3.md:43",
+      "docs/V3.md:46",
+      "docs/REPOSITORY.md:8"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1771
+    },
+    {
+     "arm": "records",
+     "q": "u005",
+     "order": [
+      "Leaves them out and counts them under `later`",
+      "Lists each of them under `rejected`",
+      "Reads them and marks each of them as backdated",
+      "Refuses the store with RESOURCE_LIMIT"
+     ],
+     "chunks": [
+      "5312ae34472b6f88",
+      "024e641392d30acb",
+      "dda3ad65a1ea8c47",
+      "6faf7345863f15e2",
+      "01a5a490e22ad064",
+      "09e2dffff5720692",
+      "32c93d4ffde03fae",
+      "4527bd693c9c6b27"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2060
+    },
+    {
+     "arm": "log",
+     "q": "u015",
+     "order": [
+      "A traceback on stderr, exit 1",
+      "`ERROR ...` on stdout, exit 0",
+      "`REFUSED ...` on stderr, exit 2",
+      "A JSON `error` on stdout, exit 1"
+     ],
+     "chunks": [
+      "52d57bea51a528cc",
+      "b9ec55d68e5ec87b",
+      "928c38aabfe74cd7",
+      "62d34b009e1eccff",
+      "b0ac369b9c2d3a6c",
+      "3c5c471af05410ff",
+      "763f6047926bb24d"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1890
+    },
+    {
+     "arm": "none",
+     "q": "u015",
+     "order": [
+      "A traceback on stderr, exit 1",
+      "`ERROR ...` on stdout, exit 0",
+      "`REFUSED ...` on stderr, exit 2",
+      "A JSON `error` on stdout, exit 1"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 142
+    },
+    {
+     "arm": "prose",
+     "q": "u015",
+     "order": [
+      "A traceback on stderr, exit 1",
+      "`ERROR ...` on stdout, exit 0",
+      "`REFUSED ...` on stderr, exit 2",
+      "A JSON `error` on stdout, exit 1"
+     ],
+     "chunks": [
+      "docs/V3.md:52",
+      "docs/HISTORY.md:13",
+      "README.md:6",
+      "docs/HOME.md:8",
+      "docs/V3.md:1",
+      "docs/V3.md:47",
+      "docs/HISTORY.md:7",
+      "docs/HISTORY.md:12",
+      "docs/TRADEMARK.md:1"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2021
+    },
+    {
+     "arm": "records",
+     "q": "u015",
+     "order": [
+      "A traceback on stderr, exit 1",
+      "`ERROR ...` on stdout, exit 0",
+      "`REFUSED ...` on stderr, exit 2",
+      "A JSON `error` on stdout, exit 1"
+     ],
+     "chunks": [
+      "30154b8b64e1f0ef",
+      "14c6509a16adeb65",
+      "0850cc08885abf8a",
+      "d6127c0fd71dffa5",
+      "b7609da14d676f1e",
+      "2e646f8efbfef31b",
+      "17ee89e9af6745cc"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 2246
+    },
+    {
+     "arm": "log",
+     "q": "u016",
+     "order": [
+      "`warrant rm ID`",
+      "`warrant put --kind retract --target ID`",
+      "None: no subcommand removes a record",
+      "`warrant fmt --drop ID`"
+     ],
+     "chunks": [
+      "6c8fa0283d1b508f",
+      "fc4dec90dcf12b9b",
+      "0613145036c384dc",
+      "43d0d9bbc4718153",
+      "4f53cb51a31e64bb",
+      "a2eeb8d0e24c1f68"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1930
+    },
+    {
+     "arm": "none",
+     "q": "u016",
+     "order": [
+      "`warrant rm ID`",
+      "`warrant put --kind retract --target ID`",
+      "None: no subcommand removes a record",
+      "`warrant fmt --drop ID`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 137
+    },
+    {
+     "arm": "prose",
+     "q": "u016",
+     "order": [
+      "`warrant rm ID`",
+      "`warrant put --kind retract --target ID`",
+      "None: no subcommand removes a record",
+      "`warrant fmt --drop ID`"
+     ],
+     "chunks": [
+      "docs/HOME.md:21",
+      "docs/HOME.md:20",
+      "docs/AGENT.md:15",
+      "docs/V3.md:13",
+      "docs/AGENT.md:11",
+      "docs/HOME.md:8",
+      "docs/V3.md:41",
+      "docs/V3.md:7",
+      "docs/V3.md:64",
+      "docs/V3.md:6",
+      "docs/HOME.md:24"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1924
+    },
+    {
+     "arm": "records",
+     "q": "u016",
+     "order": [
+      "`warrant rm ID`",
+      "`warrant put --kind retract --target ID`",
+      "None: no subcommand removes a record",
+      "`warrant fmt --drop ID`"
+     ],
+     "chunks": [
+      "1c3f12bcf1a91ba1",
+      "d126cd26e6a78ba8",
+      "8dc3f747049cc53c",
+      "85a3c0ab4e60b1bc",
+      "1f6d8296ce7d2ab5",
+      "2e646f8efbfef31b",
+      "bfa34c63c9f2c9c6",
+      "33840305c9ae5d45"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2043
+    },
+    {
+     "arm": "log",
+     "q": "u032",
+     "order": [
+      "`codex/verdicts/`",
+      "`warrant/verdicts/`",
+      "`verdicts/`",
+      "No prefix is demanded"
+     ],
+     "chunks": [
+      "2ef0abfe7e43300b",
+      "a850e57a2322c36a",
+      "d6fe668d596ab6f9",
+      "abb38e30fbae9926",
+      "214a34b78557bed8",
+      "011b0c41d84e6ef8",
+      "78ada10e1d816bef"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1942
+    },
+    {
+     "arm": "none",
+     "q": "u032",
+     "order": [
+      "`codex/verdicts/`",
+      "`warrant/verdicts/`",
+      "`verdicts/`",
+      "No prefix is demanded"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 134
+    },
+    {
+     "arm": "prose",
+     "q": "u032",
+     "order": [
+      "`codex/verdicts/`",
+      "`warrant/verdicts/`",
+      "`verdicts/`",
+      "No prefix is demanded"
+     ],
+     "chunks": [
+      "docs/REPOSITORY.md:30",
+      "docs/V3.md:57",
+      "docs/REPOSITORY.md:10",
+      "docs/V3.md:56",
+      "docs/V3.md:14",
+      "README.md:1",
+      "docs/REPOSITORY.md:35",
+      "docs/REPOSITORY.md:31",
+      "docs/V3.md:32",
+      "docs/HOME.md:26"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1759
+    },
+    {
+     "arm": "records",
+     "q": "u032",
+     "order": [
+      "`codex/verdicts/`",
+      "`warrant/verdicts/`",
+      "`verdicts/`",
+      "No prefix is demanded"
+     ],
+     "chunks": [
+      "8997a7f9e989244c",
+      "f8c440417db2b2c3",
+      "dda3ad65a1ea8c47",
+      "1dfedf691e802c52",
+      "37013687a618cebd",
+      "0bbcee4c08e4ec54",
+      "85a3c0ab4e60b1bc",
+      "17cfa802ad197655"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 2043
+    },
+    {
+     "arm": "log",
+     "q": "u036",
+     "order": [
+      "Prints a warning and exits 0",
+      "Retires each failing claim, then goes on",
+      "Refuses with CHECK and accepts nothing",
+      "Accepts what holds and reports the rest"
+     ],
+     "chunks": [
+      "d328df79368676f8",
+      "e81f72e3b1b4d8d3",
+      "6e2cc610cb5a91f5",
+      "0613145036c384dc",
+      "f8d7d83cd8a96c0e",
+      "ca9ffc8ae0f5612f"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1828
+    },
+    {
+     "arm": "none",
+     "q": "u036",
+     "order": [
+      "Prints a warning and exits 0",
+      "Retires each failing claim, then goes on",
+      "Refuses with CHECK and accepts nothing",
+      "Accepts what holds and reports the rest"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 138
+    },
+    {
+     "arm": "prose",
+     "q": "u036",
+     "order": [
+      "Prints a warning and exits 0",
+      "Retires each failing claim, then goes on",
+      "Refuses with CHECK and accepts nothing",
+      "Accepts what holds and reports the rest"
+     ],
+     "chunks": [
+      "docs/V3.md:60",
+      "docs/REPOSITORY.md:13",
+      "docs/REPOSITORY.md:35",
+      "docs/V3.md:38",
+      "docs/V3.md:68"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1709
+    },
+    {
+     "arm": "records",
+     "q": "u036",
+     "order": [
+      "Prints a warning and exits 0",
+      "Retires each failing claim, then goes on",
+      "Refuses with CHECK and accepts nothing",
+      "Accepts what holds and reports the rest"
+     ],
+     "chunks": [
+      "0abf07d7944f7697",
+      "024e641392d30acb",
+      "dda3ad65a1ea8c47",
+      "78eb222323c3cfc6",
+      "2e646f8efbfef31b",
+      "672c42dbae2ebd04",
+      "7c922241aa2be321",
+      "e9311fd3c42a89aa"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2081
+    },
+    {
+     "arm": "log",
+     "q": "u047",
+     "order": [
+      "`IDENTITY`",
+      "`SIGNER`",
+      "No code: the reader rejects it later",
+      "`SEED`"
+     ],
+     "chunks": [
+      "d2f938f12d8ff848",
+      "3da5482655edb333",
+      "5ef3b87bc9eb784d",
+      "1d9a32a699af823d",
+      "f4275a585e1e8878",
+      "6d6bb7001d1659ce"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1883
+    },
+    {
+     "arm": "none",
+     "q": "u047",
+     "order": [
+      "`IDENTITY`",
+      "`SIGNER`",
+      "No code: the reader rejects it later",
+      "`SEED`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 140
+    },
+    {
+     "arm": "prose",
+     "q": "u047",
+     "order": [
+      "`IDENTITY`",
+      "`SIGNER`",
+      "No code: the reader rejects it later",
+      "`SEED`"
+     ],
+     "chunks": [
+      "docs/HOME.md:6",
+      "docs/AGENT.md:8",
+      "docs/V3.md:33",
+      "docs/AGENT.md:9",
+      "docs/REPOSITORY.md:13",
+      "docs/REPOSITORY.md:15",
+      "docs/V3.md:26",
+      "docs/V3.md:56",
+      "docs/HOME.md:11",
+      "docs/HOME.md:10",
+      "docs/REPOSITORY.md:33",
+      "docs/HOME.md:3"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1720
+    },
+    {
+     "arm": "records",
+     "q": "u047",
+     "order": [
+      "`IDENTITY`",
+      "`SIGNER`",
+      "No code: the reader rejects it later",
+      "`SEED`"
+     ],
+     "chunks": [
+      "64119e5aeec5041e",
+      "95d70dd0a924c6bd",
+      "9af9834f5f405a8a",
+      "a847cde751082a75",
+      "01f832c94058325b",
+      "a24d65937c151c1c",
+      "a7bc70c767417e16",
+      "98368902970d4707"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 2274
+    },
+    {
+     "arm": "log",
+     "q": "u049",
+     "order": [
+      "`UNKNOWN_WORKSPACE`",
+      "`NOT_PERMITTED`",
+      "`NO_SIGNER`",
+      "`SIGNER_NOT_TRUSTED`"
+     ],
+     "chunks": [
+      "3da5482655edb333",
+      "1c5b4faef842538a",
+      "a7e35f14e432c187",
+      "d2f938f12d8ff848",
+      "f4275a585e1e8878"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1866
+    },
+    {
+     "arm": "none",
+     "q": "u049",
+     "order": [
+      "`UNKNOWN_WORKSPACE`",
+      "`NOT_PERMITTED`",
+      "`NO_SIGNER`",
+      "`SIGNER_NOT_TRUSTED`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 135
+    },
+    {
+     "arm": "prose",
+     "q": "u049",
+     "order": [
+      "`UNKNOWN_WORKSPACE`",
+      "`NOT_PERMITTED`",
+      "`NO_SIGNER`",
+      "`SIGNER_NOT_TRUSTED`"
+     ],
+     "chunks": [
+      "docs/V3.md:52",
+      "docs/AGENT.md:12",
+      "docs/AGENT.md:5",
+      "docs/V3.md:51",
+      "docs/HOME.md:6",
+      "docs/AGENT.md:11",
+      "docs/HOME.md:21",
+      "docs/HOME.md:23",
+      "docs/AGENT.md:9"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1788
+    },
+    {
+     "arm": "records",
+     "q": "u049",
+     "order": [
+      "`UNKNOWN_WORKSPACE`",
+      "`NOT_PERMITTED`",
+      "`NO_SIGNER`",
+      "`SIGNER_NOT_TRUSTED`"
+     ],
+     "chunks": [
+      "bf56382a19fb9db8",
+      "95d70dd0a924c6bd",
+      "057051fb9b4f92f1",
+      "80d2a700dc77e906",
+      "f75f966344ac0fde",
+      "85a3c0ab4e60b1bc",
+      "94e13ae28c105642",
+      "5c6c60cb2c52f864",
+      "8e13dd4a6d28f2d0",
+      "9451f5b342bf02d0"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 2076
+    },
+    {
+     "arm": "log",
+     "q": "u051",
+     "order": [
+      "`actor`, an actor the trust binds a key to",
+      "`key`, a path to the signer's seed file",
+      "None: the signer is the operator's configuration",
+      "`signer`, a name from the workspace's list of signers"
+     ],
+     "chunks": [
+      "d2f938f12d8ff848",
+      "1c5b4faef842538a",
+      "f4275a585e1e8878",
+      "a7e35f14e432c187",
+      "3da5482655edb333"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1883
+    },
+    {
+     "arm": "none",
+     "q": "u051",
+     "order": [
+      "`actor`, an actor the trust binds a key to",
+      "`key`, a path to the signer's seed file",
+      "None: the signer is the operator's configuration",
+      "`signer`, a name from the workspace's list of signers"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 152
+    },
+    {
+     "arm": "prose",
+     "q": "u051",
+     "order": [
+      "`actor`, an actor the trust binds a key to",
+      "`key`, a path to the signer's seed file",
+      "None: the signer is the operator's configuration",
+      "`signer`, a name from the workspace's list of signers"
+     ],
+     "chunks": [
+      "docs/HOME.md:6",
+      "docs/AGENT.md:5",
+      "docs/AGENT.md:9",
+      "docs/AGENT.md:8",
+      "docs/AGENT.md:7",
+      "docs/AGENT.md:4",
+      "docs/AGENT.md:6",
+      "docs/HOME.md:11",
+      "docs/AGENT.md:11",
+      "docs/V3.md:51",
+      "docs/HOME.md:10",
+      "docs/AGENT.md:3",
+      "docs/HOME.md:21",
+      "docs/HOME.md:3"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1853
+    },
+    {
+     "arm": "records",
+     "q": "u051",
+     "order": [
+      "`actor`, an actor the trust binds a key to",
+      "`key`, a path to the signer's seed file",
+      "None: the signer is the operator's configuration",
+      "`signer`, a name from the workspace's list of signers"
+     ],
+     "chunks": [
+      "5c6c60cb2c52f864",
+      "95d70dd0a924c6bd",
+      "524a31d57f600ed6",
+      "3f75f99210741a0f",
+      "1c3f12bcf1a91ba1",
+      "9c037641ba93183d",
+      "f6a0d36a56ce486d",
+      "9451f5b342bf02d0",
+      "33840305c9ae5d45"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 2201
+    },
+    {
+     "arm": "log",
+     "q": "u052",
+     "order": [
+      "`prepare` with kind `retract` and a target",
+      "`commit` with an empty record",
+      "`handoff` with op `delete`",
+      "None: no operation removes a record"
+     ],
+     "chunks": [
+      "3da5482655edb333",
+      "f870e60785a2c692",
+      "d67b0c8c193ce799",
+      "1c5b4faef842538a",
+      "fdb771e8b977d188"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1816
+    },
+    {
+     "arm": "none",
+     "q": "u052",
+     "order": [
+      "`prepare` with kind `retract` and a target",
+      "`commit` with an empty record",
+      "`handoff` with op `delete`",
+      "None: no operation removes a record"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 137
+    },
+    {
+     "arm": "prose",
+     "q": "u052",
+     "order": [
+      "`prepare` with kind `retract` and a target",
+      "`commit` with an empty record",
+      "`handoff` with op `delete`",
+      "None: no operation removes a record"
+     ],
+     "chunks": [
+      "docs/AGENT.md:11",
+      "docs/V3.md:52",
+      "docs/V3.md:51",
+      "docs/AGENT.md:12",
+      "docs/AGENT.md:5",
+      "docs/AGENT.md:1",
+      "docs/AGENT.md:20",
+      "docs/HOME.md:21",
+      "docs/V3.md:10"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1800
+    },
+    {
+     "arm": "records",
+     "q": "u052",
+     "order": [
+      "`prepare` with kind `retract` and a target",
+      "`commit` with an empty record",
+      "`handoff` with op `delete`",
+      "None: no operation removes a record"
+     ],
+     "chunks": [
+      "f75f966344ac0fde",
+      "1c3f12bcf1a91ba1",
+      "057051fb9b4f92f1",
+      "d126cd26e6a78ba8",
+      "a455e71f726c89d5",
+      "248a7d23c49cce96",
+      "4620983dbec2da7c",
+      "c218309f34009e31"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 2022
+    },
+    {
+     "arm": "log",
+     "q": "u056",
+     "order": [
+      "`INIT_KEY_NOT_PINNED`",
+      "`INIT_SEED_SHAPE`",
+      "`INIT_TRUST_SHAPE`",
+      "`INIT_ACTOR_NOT_PINNED`"
+     ],
+     "chunks": [
+      "1c5b4faef842538a",
+      "3da5482655edb333",
+      "22ce646e8b2b2ef4",
+      "d2f938f12d8ff848",
+      "f4275a585e1e8878",
+      "1b045eeb7755d8d5"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1932
+    },
+    {
+     "arm": "none",
+     "q": "u056",
+     "order": [
+      "`INIT_KEY_NOT_PINNED`",
+      "`INIT_SEED_SHAPE`",
+      "`INIT_TRUST_SHAPE`",
+      "`INIT_ACTOR_NOT_PINNED`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 160
+    },
+    {
+     "arm": "prose",
+     "q": "u056",
+     "order": [
+      "`INIT_KEY_NOT_PINNED`",
+      "`INIT_SEED_SHAPE`",
+      "`INIT_TRUST_SHAPE`",
+      "`INIT_ACTOR_NOT_PINNED`"
+     ],
+     "chunks": [
+      "docs/HOME.md:6",
+      "docs/AGENT.md:8",
+      "docs/AGENT.md:5",
+      "docs/V3.md:26",
+      "docs/AGENT.md:9",
+      "docs/AGENT.md:6",
+      "docs/AGENT.md:7",
+      "docs/HOME.md:11",
+      "docs/V3.md:60",
+      "docs/REPOSITORY.md:15",
+      "README.md:0"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1798
+    },
+    {
+     "arm": "records",
+     "q": "u056",
+     "order": [
+      "`INIT_KEY_NOT_PINNED`",
+      "`INIT_SEED_SHAPE`",
+      "`INIT_TRUST_SHAPE`",
+      "`INIT_ACTOR_NOT_PINNED`"
+     ],
+     "chunks": [
+      "64119e5aeec5041e",
+      "a847cde751082a75",
+      "057051fb9b4f92f1",
+      "95d70dd0a924c6bd",
+      "4527bd693c9c6b27",
+      "9c037641ba93183d",
+      "2871702cdf9d7239",
+      "7325f6854489d153",
+      "20ca72f93268b2cd"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 2160
+    },
+    {
+     "arm": "log",
+     "q": "u063",
+     "order": [
+      "Stashes the changes and restores them after installing",
+      "Commits the changes, then installs from that commit",
+      "Installs the working tree as it stands, with a warning",
+      "Refuses: it installs from HEAD, never the working tree"
+     ],
+     "chunks": [
+      "25c53fee74298a73",
+      "6f2aeaf9a9a9cada",
+      "43b96aba9de98217",
+      "f75c73d63833fef1",
+      "1a0d9a0a4917e778",
+      "d148a16de2e9d915",
+      "41a9820af8b14c73"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1855
+    },
+    {
+     "arm": "none",
+     "q": "u063",
+     "order": [
+      "Stashes the changes and restores them after installing",
+      "Commits the changes, then installs from that commit",
+      "Installs the working tree as it stands, with a warning",
+      "Refuses: it installs from HEAD, never the working tree"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 153
+    },
+    {
+     "arm": "prose",
+     "q": "u063",
+     "order": [
+      "Stashes the changes and restores them after installing",
+      "Commits the changes, then installs from that commit",
+      "Installs the working tree as it stands, with a warning",
+      "Refuses: it installs from HEAD, never the working tree"
+     ],
+     "chunks": [
+      "docs/V3.md:57",
+      "docs/REPOSITORY.md:32",
+      "docs/V3.md:68",
+      "docs/HOME.md:18",
+      "docs/V3.md:38",
+      "docs/REPOSITORY.md:31",
+      "docs/REPOSITORY.md:6",
+      "README.md:17"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1712
+    },
+    {
+     "arm": "records",
+     "q": "u063",
+     "order": [
+      "Stashes the changes and restores them after installing",
+      "Commits the changes, then installs from that commit",
+      "Installs the working tree as it stands, with a warning",
+      "Refuses: it installs from HEAD, never the working tree"
+     ],
+     "chunks": [
+      "df55759d2d5831e7",
+      "dda3ad65a1ea8c47",
+      "fdafdadad8363c34",
+      "294095ce60001466",
+      "f8c440417db2b2c3",
+      "6faf7345863f15e2",
+      "fa0ca9b75891dd4c",
+      "17ee89e9af6745cc"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2091
+    },
+    {
+     "arm": "log",
+     "q": "u064",
+     "order": [
+      "A signed `accept` with the reason in a note",
+      "A pending note that is resolved at session end",
+      "A signed `reject` quoting the harness's reason",
+      "Nothing: it files only executed calls"
+     ],
+     "chunks": [
+      "e81f72e3b1b4d8d3",
+      "6c8fa0283d1b508f",
+      "78eea1d2ff104619",
+      "3a1e97156b590187",
+      "0fc553e29d76c75d",
+      "a8a7df50e396184b"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1786
+    },
+    {
+     "arm": "none",
+     "q": "u064",
+     "order": [
+      "A signed `accept` with the reason in a note",
+      "A pending note that is resolved at session end",
+      "A signed `reject` quoting the harness's reason",
+      "Nothing: it files only executed calls"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 143
+    },
+    {
+     "arm": "prose",
+     "q": "u064",
+     "order": [
+      "A signed `accept` with the reason in a note",
+      "A pending note that is resolved at session end",
+      "A signed `reject` quoting the harness's reason",
+      "Nothing: it files only executed calls"
+     ],
+     "chunks": [
+      "docs/V3.md:68",
+      "docs/V3.md:19",
+      "docs/V3.md:60",
+      "docs/V3.md:33",
+      "docs/V3.md:32",
+      "docs/AGENT.md:2",
+      "docs/V3.md:59",
+      "README.md:11",
+      "docs/HOME.md:21",
+      "docs/HOME.md:3"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1698
+    },
+    {
+     "arm": "records",
+     "q": "u064",
+     "order": [
+      "A signed `accept` with the reason in a note",
+      "A pending note that is resolved at session end",
+      "A signed `reject` quoting the harness's reason",
+      "Nothing: it files only executed calls"
+     ],
+     "chunks": [
+      "0abf07d7944f7697",
+      "fdafdadad8363c34",
+      "c589d17da0f3d235",
+      "f77da51dbe3b8af3",
+      "583d6f508840c6b8"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2134
+    },
+    {
+     "arm": "log",
+     "q": "u071",
+     "order": [
+      "256 nodes, then `complete` is false",
+      "No limit: a walk always completes",
+      "10000 nodes, then `complete` is false",
+      "2000 nodes, then `complete` is false"
+     ],
+     "chunks": [
+      "1edd28274df39320",
+      "848d103efda349bd",
+      "946b39a8751a0c40",
+      "3da5482655edb333",
+      "6f6269f58ba57c69"
+     ],
+     "answer": "`ANSWER E`",
+     "tokens": 1871
+    },
+    {
+     "arm": "none",
+     "q": "u071",
+     "order": [
+      "256 nodes, then `complete` is false",
+      "No limit: a walk always completes",
+      "10000 nodes, then `complete` is false",
+      "2000 nodes, then `complete` is false"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 155
+    },
+    {
+     "arm": "prose",
+     "q": "u071",
+     "order": [
+      "256 nodes, then `complete` is false",
+      "No limit: a walk always completes",
+      "10000 nodes, then `complete` is false",
+      "2000 nodes, then `complete` is false"
+     ],
+     "chunks": [
+      "docs/HOME.md:18",
+      "docs/V3.md:52",
+      "docs/AGENT.md:5",
+      "docs/V3.md:44",
+      "docs/V3.md:65",
+      "docs/V3.md:49",
+      "docs/REPOSITORY.md:27"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1753
+    },
+    {
+     "arm": "records",
+     "q": "u071",
+     "order": [
+      "256 nodes, then `complete` is false",
+      "No limit: a walk always completes",
+      "10000 nodes, then `complete` is false",
+      "2000 nodes, then `complete` is false"
+     ],
+     "chunks": [
+      "66fe3905f8d53c67",
+      "da1681d50bd871e3",
+      "2e646f8efbfef31b",
+      "3667ea649ca19e80",
+      "a0d6f8880d30a31c",
+      "cfc847cad12870c1",
+      "038c5bf56139eb60",
+      "248a7d23c49cce96"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2047
+    },
+    {
+     "arm": "log",
+     "q": "u072",
+     "order": [
+      "Installs it with pip, then starts serving",
+      "Prints the requirement on stderr and exits 2",
+      "Serves a plain JSON socket in its place",
+      "Prints the requirement on stdout and exits 0"
+     ],
+     "chunks": [
+      "1a0d9a0a4917e778",
+      "97ec37e339ed2113",
+      "22ce646e8b2b2ef4",
+      "52d57bea51a528cc",
+      "e404cdc0fc3697a4",
+      "62d34b009e1eccff",
+      "80d65621e49e22b8",
+      "f1be7207a292da0a"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1992
+    },
+    {
+     "arm": "none",
+     "q": "u072",
+     "order": [
+      "Installs it with pip, then starts serving",
+      "Prints the requirement on stderr and exits 2",
+      "Serves a plain JSON socket in its place",
+      "Prints the requirement on stdout and exits 0"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 145
+    },
+    {
+     "arm": "prose",
+     "q": "u072",
+     "order": [
+      "Installs it with pip, then starts serving",
+      "Prints the requirement on stderr and exits 2",
+      "Serves a plain JSON socket in its place",
+      "Prints the requirement on stdout and exits 0"
+     ],
+     "chunks": [
+      "README.md:6",
+      "README.md:5",
+      "docs/HOME.md:6",
+      "docs/AGENT.md:9",
+      "docs/REPOSITORY.md:32",
+      "docs/REPOSITORY.md:36",
+      "docs/AGENT.md:19",
+      "docs/V3.md:26",
+      "docs/HOME.md:14",
+      "docs/HOME.md:9"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1821
+    },
+    {
+     "arm": "records",
+     "q": "u072",
+     "order": [
+      "Installs it with pip, then starts serving",
+      "Prints the requirement on stderr and exits 2",
+      "Serves a plain JSON socket in its place",
+      "Prints the requirement on stdout and exits 0"
+     ],
+     "chunks": [
+      "1a0356dce37debd3",
+      "057051fb9b4f92f1",
+      "4527bd693c9c6b27",
+      "14c6509a16adeb65",
+      "cfc847cad12870c1",
+      "57cc657ba6936e44",
+      "f1c35a39b4f29dda",
+      "41820c3aef3f2e58"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2176
+    },
+    {
+     "arm": "log",
+     "q": "u082",
+     "order": [
+      "`tools/engine.py`",
+      "`warrant_agent/engine.py`",
+      "`warrant/engine.py`",
+      "`warrant/core.py`"
+     ],
+     "chunks": [
+      "6386c8cb41447763",
+      "5c7d7896e14ec27e",
+      "5564173884c5a895",
+      "343962074c07ce07",
+      "a850e57a2322c36a",
+      "4ce6f92968c2688e",
+      "0be74d7b8e8551ee"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2053
+    },
+    {
+     "arm": "none",
+     "q": "u082",
+     "order": [
+      "`tools/engine.py`",
+      "`warrant_agent/engine.py`",
+      "`warrant/engine.py`",
+      "`warrant/core.py`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 135
+    },
+    {
+     "arm": "prose",
+     "q": "u082",
+     "order": [
+      "`tools/engine.py`",
+      "`warrant_agent/engine.py`",
+      "`warrant/engine.py`",
+      "`warrant/core.py`"
+     ],
+     "chunks": [
+      "docs/REPOSITORY.md:3",
+      "docs/HISTORY.md:6",
+      "docs/REPOSITORY.md:9",
+      "docs/REPOSITORY.md:13",
+      "README.md:20",
+      "docs/REPOSITORY.md:22",
+      "docs/REPOSITORY.md:30",
+      "docs/HOME.md:21",
+      "README.md:0"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1801
+    },
+    {
+     "arm": "records",
+     "q": "u082",
+     "order": [
+      "`tools/engine.py`",
+      "`warrant_agent/engine.py`",
+      "`warrant/engine.py`",
+      "`warrant/core.py`"
+     ],
+     "chunks": [
+      "85a3c0ab4e60b1bc",
+      "f4729a41b788ea9e",
+      "ccc4e8145ed2f78c",
+      "ea6300ecf5d5f41a",
+      "024e641392d30acb",
+      "af395a08752d2513"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2266
+    }
+   ]
+  },
+  "gemma4:26b-a4b-it-q4_K_M": {
+   "digest": "5571076f3d70050487b26b341705799e0ab29b808164f90d20d4cf84f699d251",
+   "rows": [
+    {
+     "arm": "log",
+     "q": "c012",
+     "order": [
+      "`frozen`, listing members no successor may change",
+      "None: those five members are the whole schema body",
+      "`defaults`, giving a value for each missing member",
+      "`pinned`, naming an object member of a lineage's root"
+     ],
+     "chunks": [
+      "32e399879b1b64f3",
+      "3dcf00f07f9d2465",
+      "087f39d75f90d050",
+      "a7e35f14e432c187",
+      "af80516081c8b629",
+      "8febf8c148db6a26",
+      "03faf914e7f48f50"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1979
+    },
+    {
+     "arm": "none",
+     "q": "c012",
+     "order": [
+      "`frozen`, listing members no successor may change",
+      "None: those five members are the whole schema body",
+      "`defaults`, giving a value for each missing member",
+      "`pinned`, naming an object member of a lineage's root"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 152
+    },
+    {
+     "arm": "prose",
+     "q": "c012",
+     "order": [
+      "`frozen`, listing members no successor may change",
+      "None: those five members are the whole schema body",
+      "`defaults`, giving a value for each missing member",
+      "`pinned`, naming an object member of a lineage's root"
+     ],
+     "chunks": [
+      "docs/V3.md:18",
+      "docs/V3.md:19",
+      "docs/V3.md:30",
+      "README.md:10",
+      "docs/V3.md:17",
+      "docs/V3.md:52",
+      "docs/V3.md:14",
+      "docs/AGENT.md:12"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1819
+    },
+    {
+     "arm": "records",
+     "q": "c012",
+     "order": [
+      "`frozen`, listing members no successor may change",
+      "None: those five members are the whole schema body",
+      "`defaults`, giving a value for each missing member",
+      "`pinned`, naming an object member of a lineage's root"
+     ],
+     "chunks": [
+      "360a77d78b1f58bd",
+      "713622f5b636eec4",
+      "ebe4e8981d4ddd1f",
+      "a51ae698ecc6707a",
+      "a232e6f033ae2c01",
+      "80d2a700dc77e906",
+      "3667ea649ca19e80",
+      "daa5bfa315cb5f1f",
+      "33840305c9ae5d45",
+      "5b68c5af6cdd117f"
+     ],
+     "answer": "The provided passages do not contain information regarding any optional members a schema body can carry beyond the five mentioned (name, fields, states, closed, and successors). The passages discuss schema bodies in the context of being refused unless they meet certain criteria (V3-13-11) and mention pinned members (N1), but they do not list the complete set of possible members or any other optional members.\n\nANSWER E",
+     "tokens": 2172
+    },
+    {
+     "arm": "log",
+     "q": "c013",
+     "order": [
+      "It keeps it in the lineage, with reliance CHALLENGED",
+      "It drops the version as INVALID, under `problems`",
+      "Nothing: it compares no guard with its root",
+      "It widens the guard to match that object"
+     ],
+     "chunks": [
+      "32e399879b1b64f3",
+      "5ca1a7c16d274406",
+      "e056e25265d44b78",
+      "47e71f5c145c9ca0",
+      "3da5482655edb333",
+      "ad557baf7203186d",
+      "ac80aeebfba09176",
+      "7870c518ea686c48",
+      "a8a7df50e396184b"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1925
+    },
+    {
+     "arm": "none",
+     "q": "c013",
+     "order": [
+      "It keeps it in the lineage, with reliance CHALLENGED",
+      "It drops the version as INVALID, under `problems`",
+      "Nothing: it compares no guard with its root",
+      "It widens the guard to match that object"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 157
+    },
+    {
+     "arm": "prose",
+     "q": "c013",
+     "order": [
+      "It keeps it in the lineage, with reliance CHALLENGED",
+      "It drops the version as INVALID, under `problems`",
+      "Nothing: it compares no guard with its root",
+      "It widens the guard to match that object"
+     ],
+     "chunks": [
+      "README.md:11",
+      "docs/V3.md:18",
+      "docs/V3.md:32",
+      "docs/V3.md:31",
+      "docs/V3.md:13",
+      "docs/V3.md:52",
+      "docs/V3.md:44",
+      "docs/V3.md:26"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1736
+    },
+    {
+     "arm": "records",
+     "q": "c013",
+     "order": [
+      "It keeps it in the lineage, with reliance CHALLENGED",
+      "It drops the version as INVALID, under `problems`",
+      "Nothing: it compares no guard with its root",
+      "It widens the guard to match that object"
+     ],
+     "chunks": [
+      "360a77d78b1f58bd",
+      "a51ae698ecc6707a",
+      "fdafdadad8363c34",
+      "37aa53dae631244f",
+      "32c93d4ffde03fae",
+      "1a42155eb60f2657",
+      "e0ef90262658ac39",
+      "09ecc86da5de5c6e"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1969
+    },
+    {
+     "arm": "log",
+     "q": "c014",
+     "order": [
+      "Only entities: attests naming it are checked as usual",
+      "No record: it is checked as any counted schema is",
+      "Only attests: any other kind naming it is INVALID",
+      "Every record naming it, whatever the record's kind"
+     ],
+     "chunks": [
+      "43d0d9bbc4718153",
+      "59484e5c9f60c4c8",
+      "1297f593dd26ce52",
+      "1e308b74fa1f94ac",
+      "19fdf95f4e7ac886",
+      "f2a95e5439e2611d"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1890
+    },
+    {
+     "arm": "none",
+     "q": "c014",
+     "order": [
+      "Only entities: attests naming it are checked as usual",
+      "No record: it is checked as any counted schema is",
+      "Only attests: any other kind naming it is INVALID",
+      "Every record naming it, whatever the record's kind"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 153
+    },
+    {
+     "arm": "prose",
+     "q": "c014",
+     "order": [
+      "Only entities: attests naming it are checked as usual",
+      "No record: it is checked as any counted schema is",
+      "Only attests: any other kind naming it is INVALID",
+      "Every record naming it, whatever the record's kind"
+     ],
+     "chunks": [
+      "docs/V3.md:19",
+      "docs/V3.md:20",
+      "docs/V3.md:52",
+      "docs/V3.md:14",
+      "docs/V3.md:41",
+      "docs/V3.md:31",
+      "docs/V3.md:13",
+      "docs/V3.md:16",
+      "docs/V3.md:3"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1809
+    },
+    {
+     "arm": "records",
+     "q": "c014",
+     "order": [
+      "Only entities: attests naming it are checked as usual",
+      "No record: it is checked as any counted schema is",
+      "Only attests: any other kind naming it is INVALID",
+      "Every record naming it, whatever the record's kind"
+     ],
+     "chunks": [
+      "5024956e94511a84",
+      "80d2a700dc77e906",
+      "ebe4e8981d4ddd1f",
+      "014ec61b45d5c796",
+      "07e63a97d6c73da8",
+      "a0423da0da20a782",
+      "248a7d23c49cce96",
+      "8dc3f747049cc53c",
+      "a11b1f113905bc16",
+      "97b547fe6045909d",
+      "10c0cfbbe851bfa1"
+     ],
+     "answer": "e.g.\n\nWait, I must re-read the passages carefully.\nThe passages provided do not contain any mention of a \"reserved schema migration@1\" or any rule regarding records skipping the engine's body check specifically for such a migration.\n\nLooking at the provided text:\n- `claim@1 (V3-4-2)`: Two counted schema lineages naming the same `name` are `SCHEMA_CONFLICT`.\n- `obligation@1 (Codex PS-03)`: Verification for pilot dependency schema.\n- `claim@1 (V3-13-11)`: A schema record is refused unless its body is a schema body, etc.\n- `claim@1 (V3-4-4)`: An attest without a schema... the body check drops (`INVALID`).\n- `claim@1 (V3-4-5)`: A schema whose body is not a schema body is `SCHEMA_NOT_COUNTED`.\n- `obligation@1 (differential assess)`: Compares reports as bytes; any difference is a declared migration.\n- `claim@1 (V3-13-15)`: `commit` decides...\n- `obligation@1",
+     "tokens": 2277
+    },
+    {
+     "arm": "log",
+     "q": "c015",
+     "order": [
+      "A least fixpoint over all versions, with no recursion",
+      "Depth first with recursion, marking versions in progress",
+      "Whole assessments repeated until two passes agree",
+      "A topological sort that refuses the store on any cycle"
+     ],
+     "chunks": [
+      "43d0d9bbc4718153",
+      "1f4fa296c08d65d0",
+      "60bd575e3ad3ba1b",
+      "d95cebf7f40861ce",
+      "fc4dec90dcf12b9b"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1876
+    },
+    {
+     "arm": "none",
+     "q": "c015",
+     "order": [
+      "A least fixpoint over all versions, with no recursion",
+      "Depth first with recursion, marking versions in progress",
+      "Whole assessments repeated until two passes agree",
+      "A topological sort that refuses the store on any cycle"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 145
+    },
+    {
+     "arm": "prose",
+     "q": "c015",
+     "order": [
+      "A least fixpoint over all versions, with no recursion",
+      "Depth first with recursion, marking versions in progress",
+      "Whole assessments repeated until two passes agree",
+      "A topological sort that refuses the store on any cycle"
+     ],
+     "chunks": [
+      "docs/V3.md:32",
+      "docs/V3.md:38",
+      "docs/V3.md:19",
+      "docs/V3.md:26",
+      "README.md:11",
+      "docs/HOME.md:8",
+      "docs/V3.md:35"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1700
+    },
+    {
+     "arm": "records",
+     "q": "c015",
+     "order": [
+      "A least fixpoint over all versions, with no recursion",
+      "Depth first with recursion, marking versions in progress",
+      "Whole assessments repeated until two passes agree",
+      "A topological sort that refuses the store on any cycle"
+     ],
+     "chunks": [
+      "37aa53dae631244f",
+      "80d2a700dc77e906",
+      "8dc3f747049cc53c",
+      "5adf6ff108b4b0ae",
+      "5312ae34472b6f88",
+      "37013687a618cebd",
+      "d08d4d7c023139f3",
+      "09ecc86da5de5c6e"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 2028
+    },
+    {
+     "arm": "log",
+     "q": "c018",
+     "order": [
+      "Refused: the store must lie in the repository",
+      "Followed for reads, refused for writes",
+      "Replaced by a real directory before going on",
+      "Followed: the tool reads and writes what it leads to"
+     ],
+     "chunks": [
+      "49014d505379367b",
+      "f4275a585e1e8878",
+      "5ef3b87bc9eb784d",
+      "2ae845034f15b049",
+      "ce7bf8bde7d7d9ae",
+      "98daf19a72f8a308",
+      "ae63427ec820f5c8"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1969
+    },
+    {
+     "arm": "none",
+     "q": "c018",
+     "order": [
+      "Refused: the store must lie in the repository",
+      "Followed for reads, refused for writes",
+      "Replaced by a real directory before going on",
+      "Followed: the tool reads and writes what it leads to"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 152
+    },
+    {
+     "arm": "prose",
+     "q": "c018",
+     "order": [
+      "Refused: the store must lie in the repository",
+      "Followed for reads, refused for writes",
+      "Replaced by a real directory before going on",
+      "Followed: the tool reads and writes what it leads to"
+     ],
+     "chunks": [
+      "README.md:13",
+      "docs/V3.md:52",
+      "docs/HOME.md:8",
+      "docs/V3.md:68",
+      "README.md:7",
+      "docs/AGENT.md:5",
+      "docs/REPOSITORY.md:34",
+      "docs/V3.md:56",
+      "docs/HISTORY.md:15",
+      "docs/V3.md:36"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1799
+    },
+    {
+     "arm": "records",
+     "q": "c018",
+     "order": [
+      "Refused: the store must lie in the repository",
+      "Followed for reads, refused for writes",
+      "Replaced by a real directory before going on",
+      "Followed: the tool reads and writes what it leads to"
+     ],
+     "chunks": [
+      "9c037641ba93183d",
+      "fd6dc8fcc4bb376a",
+      "e0e795a0faabbb29",
+      "294095ce60001466",
+      "a7bc70c767417e16",
+      "d42acd02c2e34335",
+      "7b525464eb6b8add"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2284
+    },
+    {
+     "arm": "log",
+     "q": "c022",
+     "order": [
+      "`warrant_graph`",
+      "`tools`",
+      "`warrant`",
+      "`warrant_agent`"
+     ],
+     "chunks": [
+      "3da5482655edb333",
+      "94df7b9fc5df3fab",
+      "5564173884c5a895",
+      "1d9a32a699af823d",
+      "0ff23d393e1d443d",
+      "91b000b517d9097c",
+      "b74ce0d365eb962a"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1930
+    },
+    {
+     "arm": "none",
+     "q": "c022",
+     "order": [
+      "`warrant_graph`",
+      "`tools`",
+      "`warrant`",
+      "`warrant_agent`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 126
+    },
+    {
+     "arm": "prose",
+     "q": "c022",
+     "order": [
+      "`warrant_graph`",
+      "`tools`",
+      "`warrant`",
+      "`warrant_agent`"
+     ],
+     "chunks": [
+      "docs/AGENT.md:11",
+      "docs/REPOSITORY.md:3",
+      "docs/REPOSITORY.md:30",
+      "docs/HISTORY.md:6",
+      "docs/HOME.md:6",
+      "docs/HOME.md:21",
+      "docs/REPOSITORY.md:1",
+      "README.md:2",
+      "docs/V3.md:55",
+      "docs/V3.md:45"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1813
+    },
+    {
+     "arm": "records",
+     "q": "c022",
+     "order": [
+      "`warrant_graph`",
+      "`tools`",
+      "`warrant`",
+      "`warrant_agent`"
+     ],
+     "chunks": [
+      "2e646f8efbfef31b",
+      "a0d6f8880d30a31c",
+      "66fe3905f8d53c67",
+      "da1681d50bd871e3",
+      "3667ea649ca19e80",
+      "a24d65937c151c1c",
+      "207fc790810d2d87",
+      "85a3c0ab4e60b1bc",
+      "9ca0d6769a43bb8f"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 2122
+    },
+    {
+     "arm": "log",
+     "q": "c028",
+     "order": [
+      "Yes: it reports that schema as REJECTED and exits 1",
+      "No: that is a proposal, not a problem of the store",
+      "Yes: it reports SCHEMA_PENDING and exits 1",
+      "No: it backs the schema itself and then goes on"
+     ],
+     "chunks": [
+      "43d0d9bbc4718153",
+      "763f6047926bb24d",
+      "0613145036c384dc",
+      "54444b848f26eb04",
+      "39b22554f04c83bf",
+      "52d57bea51a528cc"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1994
+    },
+    {
+     "arm": "none",
+     "q": "c028",
+     "order": [
+      "Yes: it reports that schema as REJECTED and exits 1",
+      "No: that is a proposal, not a problem of the store",
+      "Yes: it reports SCHEMA_PENDING and exits 1",
+      "No: it backs the schema itself and then goes on"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 158
+    },
+    {
+     "arm": "prose",
+     "q": "c028",
+     "order": [
+      "Yes: it reports that schema as REJECTED and exits 1",
+      "No: that is a proposal, not a problem of the store",
+      "Yes: it reports SCHEMA_PENDING and exits 1",
+      "No: it backs the schema itself and then goes on"
+     ],
+     "chunks": [
+      "docs/V3.md:20",
+      "docs/V3.md:67",
+      "docs/V3.md:19",
+      "docs/V3.md:57",
+      "docs/V3.md:60",
+      "docs/V3.md:52",
+      "docs/HOME.md:23",
+      "docs/V3.md:3"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1787
+    },
+    {
+     "arm": "records",
+     "q": "c028",
+     "order": [
+      "Yes: it reports that schema as REJECTED and exits 1",
+      "No: that is a proposal, not a problem of the store",
+      "Yes: it reports SCHEMA_PENDING and exits 1",
+      "No: it backs the schema itself and then goes on"
+     ],
+     "chunks": [
+      "854e5d00ae3e0e13",
+      "07e63a97d6c73da8",
+      "057051fb9b4f92f1",
+      "e35aa8f23d965f9c",
+      "6faf7345863f15e2",
+      "d6ba31878930bbbc",
+      "248a7d23c49cce96",
+      "09ecc86da5de5c6e",
+      "fdee97fbd1bce70f",
+      "360a77d78b1f58bd",
+      "ca1ee00df2ecfa85"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 2036
+    },
+    {
+     "arm": "log",
+     "q": "c037",
+     "order": [
+      "`roadmap/acceptor`, else it refuses with ROLE",
+      "None: it has no forgiveness command",
+      "`schema/author`, else it refuses with ROLE",
+      "`roadmap/owner`, else it refuses with ROLE"
+     ],
+     "chunks": [
+      "12b32f7d0be17e22",
+      "3dcf00f07f9d2465",
+      "dcad621a2ae35bf6",
+      "5ef3b87bc9eb784d",
+      "b37288be7f82f55f",
+      "b37328b29ea22275",
+      "d464af3fd9aaf3ea"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 2042
+    },
+    {
+     "arm": "none",
+     "q": "c037",
+     "order": [
+      "`roadmap/acceptor`, else it refuses with ROLE",
+      "None: it has no forgiveness command",
+      "`schema/author`, else it refuses with ROLE",
+      "`roadmap/owner`, else it refuses with ROLE"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 145
+    },
+    {
+     "arm": "prose",
+     "q": "c037",
+     "order": [
+      "`roadmap/acceptor`, else it refuses with ROLE",
+      "None: it has no forgiveness command",
+      "`schema/author`, else it refuses with ROLE",
+      "`roadmap/owner`, else it refuses with ROLE"
+     ],
+     "chunks": [
+      "docs/REPOSITORY.md:20",
+      "docs/V3.md:14",
+      "docs/AGENT.md:18",
+      "docs/V3.md:30",
+      "docs/V3.md:49",
+      "docs/V3.md:19",
+      "docs/REPOSITORY.md:26",
+      "docs/AGENT.md:12",
+      "docs/HOME.md:10",
+      "docs/AGENT.md:14",
+      "docs/REPOSITORY.md:19"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1796
+    },
+    {
+     "arm": "records",
+     "q": "c037",
+     "order": [
+      "`roadmap/acceptor`, else it refuses with ROLE",
+      "None: it has no forgiveness command",
+      "`schema/author`, else it refuses with ROLE",
+      "`roadmap/owner`, else it refuses with ROLE"
+     ],
+     "chunks": [
+      "47783e204e55fff2",
+      "057051fb9b4f92f1",
+      "3e5d731f340c99c5",
+      "cfc847cad12870c1",
+      "d126cd26e6a78ba8",
+      "0bbcee4c08e4ec54",
+      "d324a9b4ead45c35",
+      "ebe4e8981d4ddd1f",
+      "3b301a02af7aac23",
+      "4461a89b44699063"
+     ],
+     "answer": "e. the passages do not settle it",
+     "tokens": 2028
+    },
+    {
+     "arm": "log",
+     "q": "c057",
+     "order": [
+      "list, search, graph, export, import",
+      "stores, actor, open, challenges, rests",
+      "stores, lineages, goals, claims, blobs",
+      "None: no read spans several stores"
+     ],
+     "chunks": [
+      "bbdae7c943a52439",
+      "94df7b9fc5df3fab",
+      "3da5482655edb333",
+      "d2f938f12d8ff848",
+      "a2510453c20ed6d2",
+      "1d9a32a699af823d",
+      "d2d5e2240ff75a4e"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1853
+    },
+    {
+     "arm": "none",
+     "q": "c057",
+     "order": [
+      "list, search, graph, export, import",
+      "stores, actor, open, challenges, rests",
+      "stores, lineages, goals, claims, blobs",
+      "None: no read spans several stores"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 138
+    },
+    {
+     "arm": "prose",
+     "q": "c057",
+     "order": [
+      "list, search, graph, export, import",
+      "stores, actor, open, challenges, rests",
+      "stores, lineages, goals, claims, blobs",
+      "None: no read spans several stores"
+     ],
+     "chunks": [
+      "docs/HOME.md:15",
+      "docs/AGENT.md:11",
+      "docs/V3.md:65",
+      "docs/REPOSITORY.md:3",
+      "docs/V3.md:64",
+      "docs/HOME.md:23",
+      "docs/AGENT.md:5",
+      "docs/TRADEMARK.md:3"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1776
+    },
+    {
+     "arm": "records",
+     "q": "c057",
+     "order": [
+      "list, search, graph, export, import",
+      "stores, actor, open, challenges, rests",
+      "stores, lineages, goals, claims, blobs",
+      "None: no read spans several stores"
+     ],
+     "chunks": [
+      "d42acd02c2e34335",
+      "3667ea649ca19e80",
+      "6e2b72401c6d699d",
+      "85a3c0ab4e60b1bc",
+      "7c922241aa2be321",
+      "038c5bf56139eb60",
+      "fdee97fbd1bce70f",
+      "09e2dffff5720692",
+      "730b8292668473e3",
+      "10c0cfbbe851bfa1"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2153
+    },
+    {
+     "arm": "log",
+     "q": "c060",
+     "order": [
+      "Every repository the operator registered",
+      "The one store in `~/.warrant`",
+      "Nothing: `--config` is required, a usage error",
+      "The Git checkout around the current directory"
+     ],
+     "chunks": [
+      "d2f938f12d8ff848",
+      "f4275a585e1e8878",
+      "22ce646e8b2b2ef4",
+      "6f1f6024807e09d1",
+      "bbdae7c943a52439",
+      "49014d505379367b",
+      "0be74d7b8e8551ee"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1949
+    },
+    {
+     "arm": "none",
+     "q": "c060",
+     "order": [
+      "Every repository the operator registered",
+      "The one store in `~/.warrant`",
+      "Nothing: `--config` is required, a usage error",
+      "The Git checkout around the current directory"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 143
+    },
+    {
+     "arm": "prose",
+     "q": "c060",
+     "order": [
+      "Every repository the operator registered",
+      "The one store in `~/.warrant`",
+      "Nothing: `--config` is required, a usage error",
+      "The Git checkout around the current directory"
+     ],
+     "chunks": [
+      "docs/HOME.md:8",
+      "docs/AGENT.md:9",
+      "docs/HOME.md:2",
+      "docs/HOME.md:11",
+      "docs/AGENT.md:6",
+      "README.md:8",
+      "docs/V3.md:55",
+      "docs/REPOSITORY.md:3",
+      "docs/AGENT.md:5",
+      "docs/HOME.md:14",
+      "docs/AGENT.md:7"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1812
+    },
+    {
+     "arm": "records",
+     "q": "c060",
+     "order": [
+      "Every repository the operator registered",
+      "The one store in `~/.warrant`",
+      "Nothing: `--config` is required, a usage error",
+      "The Git checkout around the current directory"
+     ],
+     "chunks": [
+      "3f75f99210741a0f",
+      "207fc790810d2d87",
+      "1c3f12bcf1a91ba1",
+      "fed0c6f9f2584532",
+      "9c037641ba93183d",
+      "d3c6bad82d1dcb46",
+      "730b8292668473e3",
+      "de740b1cbeab2f03",
+      "fdee97fbd1bce70f",
+      "fda119e0bd9bdcc1"
+     ],
+     "answer": "e.g.\n\nANSWER E",
+     "tokens": 2216
+    },
+    {
+     "arm": "log",
+     "q": "c062",
+     "order": [
+      "It applies the engine's body and lineage rules to the record alone",
+      "It files the record and rolls it back on a problem",
+      "It asks the workspace's reviewer to read the record",
+      "It assesses the store with the record added, under a throwaway key"
+     ],
+     "chunks": [
+      "3da5482655edb333",
+      "1c5b4faef842538a",
+      "9c199fe797445459",
+      "1f4fa296c08d65d0",
+      "bbdae7c943a52439",
+      "8c5333e386a8b475",
+      "9282e437bfd15196"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1913
+    },
+    {
+     "arm": "none",
+     "q": "c062",
+     "order": [
+      "It applies the engine's body and lineage rules to the record alone",
+      "It files the record and rolls it back on a problem",
+      "It asks the workspace's reviewer to read the record",
+      "It assesses the store with the record added, under a throwaway key"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 159
+    },
+    {
+     "arm": "prose",
+     "q": "c062",
+     "order": [
+      "It applies the engine's body and lineage rules to the record alone",
+      "It files the record and rolls it back on a problem",
+      "It asks the workspace's reviewer to read the record",
+      "It assesses the store with the record added, under a throwaway key"
+     ],
+     "chunks": [
+      "docs/V3.md:52",
+      "docs/AGENT.md:5",
+      "docs/V3.md:57",
+      "docs/HOME.md:6",
+      "docs/AGENT.md:12",
+      "docs/AGENT.md:11",
+      "docs/HOME.md:22"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1793
+    },
+    {
+     "arm": "records",
+     "q": "c062",
+     "order": [
+      "It applies the engine's body and lineage rules to the record alone",
+      "It files the record and rolls it back on a problem",
+      "It asks the workspace's reviewer to read the record",
+      "It assesses the store with the record added, under a throwaway key"
+     ],
+     "chunks": [
+      "f75f966344ac0fde",
+      "a11b1f113905bc16",
+      "edfb3c82e2f35329",
+      "057051fb9b4f92f1",
+      "d3c6bad82d1dcb46",
+      "1c3f12bcf1a91ba1",
+      "248a7d23c49cce96",
+      "8dc3f747049cc53c",
+      "33840305c9ae5d45"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2029
+    },
+    {
+     "arm": "log",
+     "q": "c081",
+     "order": [
+      "Nothing: it writes no such file",
+      "An empty list, to be filled in by hand",
+      "This checkout's repository as the one entry",
+      "One entry per repository the operator registered"
+     ],
+     "chunks": [
+      "d2f938f12d8ff848",
+      "0ff23d393e1d443d",
+      "bd4693ce646b5aba",
+      "82f5ff77dc03d9fc",
+      "39e6ee59253bab02",
+      "41a9820af8b14c73"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1802
+    },
+    {
+     "arm": "none",
+     "q": "c081",
+     "order": [
+      "Nothing: it writes no such file",
+      "An empty list, to be filled in by hand",
+      "This checkout's repository as the one entry",
+      "One entry per repository the operator registered"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 145
+    },
+    {
+     "arm": "prose",
+     "q": "c081",
+     "order": [
+      "Nothing: it writes no such file",
+      "An empty list, to be filled in by hand",
+      "This checkout's repository as the one entry",
+      "One entry per repository the operator registered"
+     ],
+     "chunks": [
+      "docs/REPOSITORY.md:32",
+      "docs/REPOSITORY.md:36",
+      "docs/V3.md:68",
+      "docs/HOME.md:8",
+      "docs/AGENT.md:9",
+      "docs/HOME.md:11",
+      "docs/REPOSITORY.md:31"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1733
+    },
+    {
+     "arm": "records",
+     "q": "c081",
+     "order": [
+      "Nothing: it writes no such file",
+      "An empty list, to be filled in by hand",
+      "This checkout's repository as the one entry",
+      "One entry per repository the operator registered"
+     ],
+     "chunks": [
+      "1025eeedd2b9a8b5",
+      "c05fb08b73614190",
+      "02f479e2865928f8",
+      "ea580a2a88af01a7",
+      "d42acd02c2e34335",
+      "2003860acd38b83b",
+      "85a3c0ab4e60b1bc",
+      "d6ba31878930bbbc"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2142
+    },
+    {
+     "arm": "log",
+     "q": "c082",
+     "order": [
+      "Codex and Gemini CLI",
+      "Claude Code only",
+      "Codex and Claude Code",
+      "Codex only"
+     ],
+     "chunks": [
+      "1e308b74fa1f94ac",
+      "78ada10e1d816bef",
+      "6b1868eead5b312a",
+      "62d34b009e1eccff",
+      "e81f72e3b1b4d8d3",
+      "077f06c300fa0dfa",
+      "f55582203f8aa6e1",
+      "8449a8e1c75832b7",
+      "b9ec55d68e5ec87b"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1934
+    },
+    {
+     "arm": "none",
+     "q": "c082",
+     "order": [
+      "Codex and Gemini CLI",
+      "Claude Code only",
+      "Codex and Claude Code",
+      "Codex only"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 118
+    },
+    {
+     "arm": "prose",
+     "q": "c082",
+     "order": [
+      "Codex and Gemini CLI",
+      "Claude Code only",
+      "Codex and Claude Code",
+      "Codex only"
+     ],
+     "chunks": [
+      "docs/REPOSITORY.md:32",
+      "docs/REPOSITORY.md:20",
+      "docs/REPOSITORY.md:36",
+      "docs/HISTORY.md:18",
+      "docs/HOME.md:21",
+      "docs/HOME.md:12",
+      "docs/V3.md:21",
+      "README.md:6",
+      "docs/AGENT.md:7",
+      "docs/HOME.md:9"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1974
+    },
+    {
+     "arm": "records",
+     "q": "c082",
+     "order": [
+      "Codex and Gemini CLI",
+      "Claude Code only",
+      "Codex and Claude Code",
+      "Codex only"
+     ],
+     "chunks": [
+      "66e125a6fa323706",
+      "85a3c0ab4e60b1bc",
+      "c13adc2ae854416a",
+      "01f832c94058325b",
+      "d6127c0fd71dffa5",
+      "b661e5499191c654",
+      "024e641392d30acb",
+      "6aa9689cbdc97ef4",
+      "1dfedf691e802c52",
+      "4abd7aec6d8909df"
+     ],
+     "answer": "e.g. The provided passages do not contain information about which agent hosts the warrant-review plugin ships a manifest for.\n\nANSWER E",
+     "tokens": 2175
+    },
+    {
+     "arm": "log",
+     "q": "c084",
+     "order": [
+      "3.0.0a5",
+      "2.0.0a1",
+      "3.0.0",
+      "3.0.0.dev0"
+     ],
+     "chunks": [
+      "6d29105550a2cf05",
+      "140d2bde8177c3ee",
+      "c4d0854062702272",
+      "fd5e46662299862c",
+      "0b520d94fe4c41a2",
+      "fd9b8c81791362e3",
+      "1740fd75b8c62758",
+      "dfe0892739d3de3b",
+      "ca9ffc8ae0f5612f",
+      "6fbea138b018d5c9"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2216
+    },
+    {
+     "arm": "none",
+     "q": "c084",
+     "order": [
+      "3.0.0a5",
+      "2.0.0a1",
+      "3.0.0",
+      "3.0.0.dev0"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 139
+    },
+    {
+     "arm": "prose",
+     "q": "c084",
+     "order": [
+      "3.0.0a5",
+      "2.0.0a1",
+      "3.0.0",
+      "3.0.0.dev0"
+     ],
+     "chunks": [
+      "README.md:13",
+      "README.md:6",
+      "docs/HISTORY.md:5",
+      "README.md:5",
+      "docs/HISTORY.md:1",
+      "docs/HISTORY.md:2",
+      "docs/V3.md:1",
+      "docs/REPOSITORY.md:26",
+      "docs/TRADEMARK.md:4",
+      "docs/REPOSITORY.md:36",
+      "docs/HISTORY.md:13",
+      "docs/REPOSITORY.md:1",
+      "docs/HOME.md:21",
+      "docs/V3.md:5"
+     ],
+     "answer": "e. the passages do not settle it\n\nANSWER E",
+     "tokens": 2078
+    },
+    {
+     "arm": "records",
+     "q": "c084",
+     "order": [
+      "3.0.0a5",
+      "2.0.0a1",
+      "3.0.0",
+      "3.0.0.dev0"
+     ],
+     "chunks": [
+      "c05fb08b73614190",
+      "41f781e0387c26af",
+      "007f05152a7a287c",
+      "85a3c0ab4e60b1bc",
+      "3b301a02af7aac23",
+      "c0a9e4c3dc9dd276",
+      "97f31a1f93e9d226",
+      "d5489db66b2c143b",
+      "6fb507a08f5487b0"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2331
+    },
+    {
+     "arm": "log",
+     "q": "c086",
+     "order": [
+      "Moves the seed to the operator's home directory",
+      "The project has no such registry",
+      "Accepts it, and marks that repository read only",
+      "Refuses it: no seed may lie in a registered repository"
+     ],
+     "chunks": [
+      "d2f938f12d8ff848",
+      "3b4b117c6b6ab04e",
+      "18aada2aa6fb8dab",
+      "97156b6e4b4705bd",
+      "98daf19a72f8a308",
+      "f4275a585e1e8878",
+      "c4d0854062702272",
+      "13629c676c542277"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 2059
+    },
+    {
+     "arm": "none",
+     "q": "c086",
+     "order": [
+      "Moves the seed to the operator's home directory",
+      "The project has no such registry",
+      "Accepts it, and marks that repository read only",
+      "Refuses it: no seed may lie in a registered repository"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 147
+    },
+    {
+     "arm": "prose",
+     "q": "c086",
+     "order": [
+      "Moves the seed to the operator's home directory",
+      "The project has no such registry",
+      "Accepts it, and marks that repository read only",
+      "Refuses it: no seed may lie in a registered repository"
+     ],
+     "chunks": [
+      "docs/AGENT.md:8",
+      "docs/HOME.md:8",
+      "docs/HOME.md:6",
+      "docs/AGENT.md:9",
+      "docs/HOME.md:23",
+      "docs/AGENT.md:5",
+      "docs/HOME.md:10",
+      "docs/HOME.md:2",
+      "docs/HOME.md:20",
+      "docs/HOME.md:21",
+      "docs/HOME.md:1",
+      "docs/HOME.md:0"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1771
+    },
+    {
+     "arm": "records",
+     "q": "c086",
+     "order": [
+      "Moves the seed to the operator's home directory",
+      "The project has no such registry",
+      "Accepts it, and marks that repository read only",
+      "Refuses it: no seed may lie in a registered repository"
+     ],
+     "chunks": [
+      "3f75f99210741a0f",
+      "9c037641ba93183d",
+      "1c3f12bcf1a91ba1",
+      "64119e5aeec5041e",
+      "01f832c94058325b",
+      "ae647907f58e83ea",
+      "dda3ad65a1ea8c47"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2049
+    },
+    {
+     "arm": "log",
+     "q": "u005",
+     "order": [
+      "Leaves them out and counts them under `later`",
+      "Lists each of them under `rejected`",
+      "Reads them and marks each of them as backdated",
+      "Refuses the store with RESOURCE_LIMIT"
+     ],
+     "chunks": [
+      "d60f662ed8ec4906",
+      "4d9e79865ce6b8c3",
+      "9100743bf90dac58",
+      "ea2ca1936a77012d",
+      "f8d7d83cd8a96c0e",
+      "4d56fbf79a2ff34e",
+      "f6ba9a8e91e73ca0",
+      "7ec36ad33aadec6c",
+      "3e5ed5f3eeab6ea4"
+     ],
+     "answer": "e. the passages do not settle it\n\nANSWER E",
+     "tokens": 2094
+    },
+    {
+     "arm": "none",
+     "q": "u005",
+     "order": [
+      "Leaves them out and counts them under `later`",
+      "Lists each of them under `rejected`",
+      "Reads them and marks each of them as backdated",
+      "Refuses the store with RESOURCE_LIMIT"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 146
+    },
+    {
+     "arm": "prose",
+     "q": "u005",
+     "order": [
+      "Leaves them out and counts them under `later`",
+      "Lists each of them under `rejected`",
+      "Reads them and marks each of them as backdated",
+      "Refuses the store with RESOURCE_LIMIT"
+     ],
+     "chunks": [
+      "docs/HOME.md:17",
+      "docs/V3.md:65",
+      "docs/V3.md:38",
+      "docs/V3.md:57",
+      "docs/AGENT.md:20",
+      "docs/V3.md:43",
+      "docs/V3.md:46",
+      "docs/REPOSITORY.md:8"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1773
+    },
+    {
+     "arm": "records",
+     "q": "u005",
+     "order": [
+      "Leaves them out and counts them under `later`",
+      "Lists each of them under `rejected`",
+      "Reads them and marks each of them as backdated",
+      "Refuses the store with RESOURCE_LIMIT"
+     ],
+     "chunks": [
+      "5312ae34472b6f88",
+      "024e641392d30acb",
+      "dda3ad65a1ea8c47",
+      "6faf7345863f15e2",
+      "01a5a490e22ad064",
+      "09e2dffff5720692",
+      "32c93d4ffde03fae",
+      "4527bd693c9c6b27"
+     ],
+     "answer": "e. the passages do not settle it\n\nANSWER E",
+     "tokens": 2071
+    },
+    {
+     "arm": "log",
+     "q": "u015",
+     "order": [
+      "A traceback on stderr, exit 1",
+      "`ERROR ...` on stdout, exit 0",
+      "`REFUSED ...` on stderr, exit 2",
+      "A JSON `error` on stdout, exit 1"
+     ],
+     "chunks": [
+      "52d57bea51a528cc",
+      "b9ec55d68e5ec87b",
+      "928c38aabfe74cd7",
+      "62d34b009e1eccff",
+      "b0ac369b9c2d3a6c",
+      "3c5c471af05410ff",
+      "763f6047926bb24d"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1892
+    },
+    {
+     "arm": "none",
+     "q": "u015",
+     "order": [
+      "A traceback on stderr, exit 1",
+      "`ERROR ...` on stdout, exit 0",
+      "`REFUSED ...` on stderr, exit 2",
+      "A JSON `error` on stdout, exit 1"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 144
+    },
+    {
+     "arm": "prose",
+     "q": "u015",
+     "order": [
+      "A traceback on stderr, exit 1",
+      "`ERROR ...` on stdout, exit 0",
+      "`REFUSED ...` on stderr, exit 2",
+      "A JSON `error` on stdout, exit 1"
+     ],
+     "chunks": [
+      "docs/V3.md:52",
+      "docs/HISTORY.md:13",
+      "README.md:6",
+      "docs/HOME.md:8",
+      "docs/V3.md:1",
+      "docs/V3.md:47",
+      "docs/HISTORY.md:7",
+      "docs/HISTORY.md:12",
+      "docs/TRADEMARK.md:1"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2023
+    },
+    {
+     "arm": "records",
+     "q": "u015",
+     "order": [
+      "A traceback on stderr, exit 1",
+      "`ERROR ...` on stdout, exit 0",
+      "`REFUSED ...` on stderr, exit 2",
+      "A JSON `error` on stdout, exit 1"
+     ],
+     "chunks": [
+      "30154b8b64e1f0ef",
+      "14c6509a16adeb65",
+      "0850cc08885abf8a",
+      "d6127c0fd71dffa5",
+      "b7609da14d676f1e",
+      "2e646f8efbfef31b",
+      "17ee89e9af6745cc"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2248
+    },
+    {
+     "arm": "log",
+     "q": "u016",
+     "order": [
+      "`warrant rm ID`",
+      "`warrant put --kind retract --target ID`",
+      "None: no subcommand removes a record",
+      "`warrant fmt --drop ID`"
+     ],
+     "chunks": [
+      "6c8fa0283d1b508f",
+      "fc4dec90dcf12b9b",
+      "0613145036c384dc",
+      "43d0d9bbc4718153",
+      "4f53cb51a31e64bb",
+      "a2eeb8d0e24c1f68"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1932
+    },
+    {
+     "arm": "none",
+     "q": "u016",
+     "order": [
+      "`warrant rm ID`",
+      "`warrant put --kind retract --target ID`",
+      "None: no subcommand removes a record",
+      "`warrant fmt --drop ID`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 139
+    },
+    {
+     "arm": "prose",
+     "q": "u016",
+     "order": [
+      "`warrant rm ID`",
+      "`warrant put --kind retract --target ID`",
+      "None: no subcommand removes a record",
+      "`warrant fmt --drop ID`"
+     ],
+     "chunks": [
+      "docs/HOME.md:21",
+      "docs/HOME.md:20",
+      "docs/AGENT.md:15",
+      "docs/V3.md:13",
+      "docs/AGENT.md:11",
+      "docs/HOME.md:8",
+      "docs/V3.md:41",
+      "docs/V3.md:7",
+      "docs/V3.md:64",
+      "docs/V3.md:6",
+      "docs/HOME.md:24"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1926
+    },
+    {
+     "arm": "records",
+     "q": "u016",
+     "order": [
+      "`warrant rm ID`",
+      "`warrant put --kind retract --target ID`",
+      "None: no subcommand removes a record",
+      "`warrant fmt --drop ID`"
+     ],
+     "chunks": [
+      "1c3f12bcf1a91ba1",
+      "d126cd26e6a78ba8",
+      "8dc3f747049cc53c",
+      "85a3c0ab4e60b1bc",
+      "1f6d8296ce7d2ab5",
+      "2e646f8efbfef31b",
+      "bfa34c63c9f2c9c6",
+      "33840305c9ae5d45"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2045
+    },
+    {
+     "arm": "log",
+     "q": "u032",
+     "order": [
+      "`codex/verdicts/`",
+      "`warrant/verdicts/`",
+      "`verdicts/`",
+      "No prefix is demanded"
+     ],
+     "chunks": [
+      "2ef0abfe7e43300b",
+      "a850e57a2322c36a",
+      "d6fe668d596ab6f9",
+      "abb38e30fbae9926",
+      "214a34b78557bed8",
+      "011b0c41d84e6ef8",
+      "78ada10e1d816bef"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1944
+    },
+    {
+     "arm": "none",
+     "q": "u032",
+     "order": [
+      "`codex/verdicts/`",
+      "`warrant/verdicts/`",
+      "`verdicts/`",
+      "No prefix is demanded"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 136
+    },
+    {
+     "arm": "prose",
+     "q": "u032",
+     "order": [
+      "`codex/verdicts/`",
+      "`warrant/verdicts/`",
+      "`verdicts/`",
+      "No prefix is demanded"
+     ],
+     "chunks": [
+      "docs/REPOSITORY.md:30",
+      "docs/V3.md:57",
+      "docs/REPOSITORY.md:10",
+      "docs/V3.md:56",
+      "docs/V3.md:14",
+      "README.md:1",
+      "docs/REPOSITORY.md:35",
+      "docs/REPOSITORY.md:31",
+      "docs/V3.md:32",
+      "docs/HOME.md:26"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1761
+    },
+    {
+     "arm": "records",
+     "q": "u032",
+     "order": [
+      "`codex/verdicts/`",
+      "`warrant/verdicts/`",
+      "`verdicts/`",
+      "No prefix is demanded"
+     ],
+     "chunks": [
+      "8997a7f9e989244c",
+      "f8c440417db2b2c3",
+      "dda3ad65a1ea8c47",
+      "1dfedf691e802c52",
+      "37013687a618cebd",
+      "0bbcee4c08e4ec54",
+      "85a3c0ab4e60b1bc",
+      "17cfa802ad197655"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 2045
+    },
+    {
+     "arm": "log",
+     "q": "u036",
+     "order": [
+      "Prints a warning and exits 0",
+      "Retires each failing claim, then goes on",
+      "Refuses with CHECK and accepts nothing",
+      "Accepts what holds and reports the rest"
+     ],
+     "chunks": [
+      "d328df79368676f8",
+      "e81f72e3b1b4d8d3",
+      "6e2cc610cb5a91f5",
+      "0613145036c384dc",
+      "f8d7d83cd8a96c0e",
+      "ca9ffc8ae0f5612f"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1830
+    },
+    {
+     "arm": "none",
+     "q": "u036",
+     "order": [
+      "Prints a warning and exits 0",
+      "Retires each failing claim, then goes on",
+      "Refuses with CHECK and accepts nothing",
+      "Accepts what holds and reports the rest"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 140
+    },
+    {
+     "arm": "prose",
+     "q": "u036",
+     "order": [
+      "Prints a warning and exits 0",
+      "Retires each failing claim, then goes on",
+      "Refuses with CHECK and accepts nothing",
+      "Accepts what holds and reports the rest"
+     ],
+     "chunks": [
+      "docs/V3.md:60",
+      "docs/REPOSITORY.md:13",
+      "docs/REPOSITORY.md:35",
+      "docs/V3.md:38",
+      "docs/V3.md:68"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1711
+    },
+    {
+     "arm": "records",
+     "q": "u036",
+     "order": [
+      "Prints a warning and exits 0",
+      "Retires each failing claim, then goes on",
+      "Refuses with CHECK and accepts nothing",
+      "Accepts what holds and reports the rest"
+     ],
+     "chunks": [
+      "0abf07d7944f7697",
+      "024e641392d30acb",
+      "dda3ad65a1ea8c47",
+      "78eb222323c3cfc6",
+      "2e646f8efbfef31b",
+      "672c42dbae2ebd04",
+      "7c922241aa2be321",
+      "e9311fd3c42a89aa"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2083
+    },
+    {
+     "arm": "log",
+     "q": "u047",
+     "order": [
+      "`IDENTITY`",
+      "`SIGNER`",
+      "No code: the reader rejects it later",
+      "`SEED`"
+     ],
+     "chunks": [
+      "d2f938f12d8ff848",
+      "3da5482655edb333",
+      "5ef3b87bc9eb784d",
+      "1d9a32a699af823d",
+      "f4275a585e1e8878",
+      "6d6bb7001d1659ce"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1885
+    },
+    {
+     "arm": "none",
+     "q": "u047",
+     "order": [
+      "`IDENTITY`",
+      "`SIGNER`",
+      "No code: the reader rejects it later",
+      "`SEED`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 142
+    },
+    {
+     "arm": "prose",
+     "q": "u047",
+     "order": [
+      "`IDENTITY`",
+      "`SIGNER`",
+      "No code: the reader rejects it later",
+      "`SEED`"
+     ],
+     "chunks": [
+      "docs/HOME.md:6",
+      "docs/AGENT.md:8",
+      "docs/V3.md:33",
+      "docs/AGENT.md:9",
+      "docs/REPOSITORY.md:13",
+      "docs/REPOSITORY.md:15",
+      "docs/V3.md:26",
+      "docs/V3.md:56",
+      "docs/HOME.md:11",
+      "docs/HOME.md:10",
+      "docs/REPOSITORY.md:33",
+      "docs/HOME.md:3"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1722
+    },
+    {
+     "arm": "records",
+     "q": "u047",
+     "order": [
+      "`IDENTITY`",
+      "`SIGNER`",
+      "No code: the reader rejects it later",
+      "`SEED`"
+     ],
+     "chunks": [
+      "64119e5aeec5041e",
+      "95d70dd0a924c6bd",
+      "9af9834f5f405a8a",
+      "a847cde751082a75",
+      "01f832c94058325b",
+      "a24d65937c151c1c",
+      "a7bc70c767417e16",
+      "98368902970d4707"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2276
+    },
+    {
+     "arm": "log",
+     "q": "u049",
+     "order": [
+      "`UNKNOWN_WORKSPACE`",
+      "`NOT_PERMITTED`",
+      "`NO_SIGNER`",
+      "`SIGNER_NOT_TRUSTED`"
+     ],
+     "chunks": [
+      "3da5482655edb333",
+      "1c5b4faef842538a",
+      "a7e35f14e432c187",
+      "d2f938f12d8ff848",
+      "f4275a585e1e8878"
+     ],
+     "answer": "e. the passages do not settle it\n\nANSWER E",
+     "tokens": 1877
+    },
+    {
+     "arm": "none",
+     "q": "u049",
+     "order": [
+      "`UNKNOWN_WORKSPACE`",
+      "`NOT_PERMITTED`",
+      "`NO_SIGNER`",
+      "`SIGNER_NOT_TRUSTED`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 137
+    },
+    {
+     "arm": "prose",
+     "q": "u049",
+     "order": [
+      "`UNKNOWN_WORKSPACE`",
+      "`NOT_PERMITTED`",
+      "`NO_SIGNER`",
+      "`SIGNER_NOT_TRUSTED`"
+     ],
+     "chunks": [
+      "docs/V3.md:52",
+      "docs/AGENT.md:12",
+      "docs/AGENT.md:5",
+      "docs/V3.md:51",
+      "docs/HOME.md:6",
+      "docs/AGENT.md:11",
+      "docs/HOME.md:21",
+      "docs/HOME.md:23",
+      "docs/AGENT.md:9"
+     ],
+     "answer": "e. the passages do not settle it\n\nANSWER E",
+     "tokens": 1799
+    },
+    {
+     "arm": "records",
+     "q": "u049",
+     "order": [
+      "`UNKNOWN_WORKSPACE`",
+      "`NOT_PERMITTED`",
+      "`NO_SIGNER`",
+      "`SIGNER_NOT_TRUSTED`"
+     ],
+     "chunks": [
+      "bf56382a19fb9db8",
+      "95d70dd0a924c6bd",
+      "057051fb9b4f92f1",
+      "80d2a700dc77e906",
+      "f75f966344ac0fde",
+      "85a3c0ab4e60b1bc",
+      "94e13ae28c105642",
+      "5c6c60cb2c52f864",
+      "8e13dd4a6d28f2d0",
+      "9451f5b342bf02d0"
+     ],
+     "answer": "The provided passages do not contain information regarding what refusal the `prepare` operation gives specifically in a workspace with no signer. While `NO_SIGNER` is listed as a refusal code in `SPEC-10.7-1`, and `commit` refuses a seed whose key the workspace's trust does not bind to the signer (`SIGNER_NOT_TRUSTED`) in `V3-13-4`, there is no mention of the `prepare` operation's behavior in a workspace with no signer.\n\nANSWER E",
+     "tokens": 2186
+    },
+    {
+     "arm": "log",
+     "q": "u051",
+     "order": [
+      "`actor`, an actor the trust binds a key to",
+      "`key`, a path to the signer's seed file",
+      "None: the signer is the operator's configuration",
+      "`signer`, a name from the workspace's list of signers"
+     ],
+     "chunks": [
+      "d2f938f12d8ff848",
+      "1c5b4faef842538a",
+      "f4275a585e1e8878",
+      "a7e35f14e432c187",
+      "3da5482655edb333"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1885
+    },
+    {
+     "arm": "none",
+     "q": "u051",
+     "order": [
+      "`actor`, an actor the trust binds a key to",
+      "`key`, a path to the signer's seed file",
+      "None: the signer is the operator's configuration",
+      "`signer`, a name from the workspace's list of signers"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 154
+    },
+    {
+     "arm": "prose",
+     "q": "u051",
+     "order": [
+      "`actor`, an actor the trust binds a key to",
+      "`key`, a path to the signer's seed file",
+      "None: the signer is the operator's configuration",
+      "`signer`, a name from the workspace's list of signers"
+     ],
+     "chunks": [
+      "docs/HOME.md:6",
+      "docs/AGENT.md:5",
+      "docs/AGENT.md:9",
+      "docs/AGENT.md:8",
+      "docs/AGENT.md:7",
+      "docs/AGENT.md:4",
+      "docs/AGENT.md:6",
+      "docs/HOME.md:11",
+      "docs/AGENT.md:11",
+      "docs/V3.md:51",
+      "docs/HOME.md:10",
+      "docs/AGENT.md:3",
+      "docs/HOME.md:21",
+      "docs/HOME.md:3"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1855
+    },
+    {
+     "arm": "records",
+     "q": "u051",
+     "order": [
+      "`actor`, an actor the trust binds a key to",
+      "`key`, a path to the signer's seed file",
+      "None: the signer is the operator's configuration",
+      "`signer`, a name from the workspace's list of signers"
+     ],
+     "chunks": [
+      "5c6c60cb2c52f864",
+      "95d70dd0a924c6bd",
+      "524a31d57f600ed6",
+      "3f75f99210741a0f",
+      "1c3f12bcf1a91ba1",
+      "9c037641ba93183d",
+      "f6a0d36a56ce486d",
+      "9451f5b342bf02d0",
+      "33840305c9ae5d45"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 2203
+    },
+    {
+     "arm": "log",
+     "q": "u052",
+     "order": [
+      "`prepare` with kind `retract` and a target",
+      "`commit` with an empty record",
+      "`handoff` with op `delete`",
+      "None: no operation removes a record"
+     ],
+     "chunks": [
+      "3da5482655edb333",
+      "f870e60785a2c692",
+      "d67b0c8c193ce799",
+      "1c5b4faef842538a",
+      "fdb771e8b977d188"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1818
+    },
+    {
+     "arm": "none",
+     "q": "u052",
+     "order": [
+      "`prepare` with kind `retract` and a target",
+      "`commit` with an empty record",
+      "`handoff` with op `delete`",
+      "None: no operation removes a record"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 139
+    },
+    {
+     "arm": "prose",
+     "q": "u052",
+     "order": [
+      "`prepare` with kind `retract` and a target",
+      "`commit` with an empty record",
+      "`handoff` with op `delete`",
+      "None: no operation removes a record"
+     ],
+     "chunks": [
+      "docs/AGENT.md:11",
+      "docs/V3.md:52",
+      "docs/V3.md:51",
+      "docs/AGENT.md:12",
+      "docs/AGENT.md:5",
+      "docs/AGENT.md:1",
+      "docs/AGENT.md:20",
+      "docs/HOME.md:21",
+      "docs/V3.md:10"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1802
+    },
+    {
+     "arm": "records",
+     "q": "u052",
+     "order": [
+      "`prepare` with kind `retract` and a target",
+      "`commit` with an empty record",
+      "`handoff` with op `delete`",
+      "None: no operation removes a record"
+     ],
+     "chunks": [
+      "f75f966344ac0fde",
+      "1c3f12bcf1a91ba1",
+      "057051fb9b4f92f1",
+      "d126cd26e6a78ba8",
+      "a455e71f726c89d5",
+      "248a7d23c49cce96",
+      "4620983dbec2da7c",
+      "c218309f34009e31"
+     ],
+     "answer": "e.g.\n\nANSWER E",
+     "tokens": 2029
+    },
+    {
+     "arm": "log",
+     "q": "u056",
+     "order": [
+      "`INIT_KEY_NOT_PINNED`",
+      "`INIT_SEED_SHAPE`",
+      "`INIT_TRUST_SHAPE`",
+      "`INIT_ACTOR_NOT_PINNED`"
+     ],
+     "chunks": [
+      "1c5b4faef842538a",
+      "3da5482655edb333",
+      "22ce646e8b2b2ef4",
+      "d2f938f12d8ff848",
+      "f4275a585e1e8878",
+      "1b045eeb7755d8d5"
+     ],
+     "answer": "e. the passages do not settle it\n\nANSWER E",
+     "tokens": 1943
+    },
+    {
+     "arm": "none",
+     "q": "u056",
+     "order": [
+      "`INIT_KEY_NOT_PINNED`",
+      "`INIT_SEED_SHAPE`",
+      "`INIT_TRUST_SHAPE`",
+      "`INIT_ACTOR_NOT_PINNED`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 162
+    },
+    {
+     "arm": "prose",
+     "q": "u056",
+     "order": [
+      "`INIT_KEY_NOT_PINNED`",
+      "`INIT_SEED_SHAPE`",
+      "`INIT_TRUST_SHAPE`",
+      "`INIT_ACTOR_NOT_PINNED`"
+     ],
+     "chunks": [
+      "docs/HOME.md:6",
+      "docs/AGENT.md:8",
+      "docs/AGENT.md:5",
+      "docs/V3.md:26",
+      "docs/AGENT.md:9",
+      "docs/AGENT.md:6",
+      "docs/AGENT.md:7",
+      "docs/HOME.md:11",
+      "docs/V3.md:60",
+      "docs/REPOSITORY.md:15",
+      "README.md:0"
+     ],
+     "answer": "E. the passages do not settle it",
+     "tokens": 1806
+    },
+    {
+     "arm": "records",
+     "q": "u056",
+     "order": [
+      "`INIT_KEY_NOT_PINNED`",
+      "`INIT_SEED_SHAPE`",
+      "`INIT_TRUST_SHAPE`",
+      "`INIT_ACTOR_NOT_PINNED`"
+     ],
+     "chunks": [
+      "64119e5aeec5041e",
+      "a847cde751082a75",
+      "057051fb9b4f92f1",
+      "95d70dd0a924c6bd",
+      "4527bd693c9c6b27",
+      "9c037641ba93183d",
+      "2871702cdf9d7239",
+      "7325f6854489d153",
+      "20ca72f93268b2cd"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 2162
+    },
+    {
+     "arm": "log",
+     "q": "u063",
+     "order": [
+      "Stashes the changes and restores them after installing",
+      "Commits the changes, then installs from that commit",
+      "Installs the working tree as it stands, with a warning",
+      "Refuses: it installs from HEAD, never the working tree"
+     ],
+     "chunks": [
+      "25c53fee74298a73",
+      "6f2aeaf9a9a9cada",
+      "43b96aba9de98217",
+      "f75c73d63833fef1",
+      "1a0d9a0a4917e778",
+      "d148a16de2e9d915",
+      "41a9820af8b14c73"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1857
+    },
+    {
+     "arm": "none",
+     "q": "u063",
+     "order": [
+      "Stashes the changes and restores them after installing",
+      "Commits the changes, then installs from that commit",
+      "Installs the working tree as it stands, with a warning",
+      "Refuses: it installs from HEAD, never the working tree"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 155
+    },
+    {
+     "arm": "prose",
+     "q": "u063",
+     "order": [
+      "Stashes the changes and restores them after installing",
+      "Commits the changes, then installs from that commit",
+      "Installs the working tree as it stands, with a warning",
+      "Refuses: it installs from HEAD, never the working tree"
+     ],
+     "chunks": [
+      "docs/V3.md:57",
+      "docs/REPOSITORY.md:32",
+      "docs/V3.md:68",
+      "docs/HOME.md:18",
+      "docs/V3.md:38",
+      "docs/REPOSITORY.md:31",
+      "docs/REPOSITORY.md:6",
+      "README.md:17"
+     ],
+     "answer": "e. The passages do not settle it.\n\nANSWER E",
+     "tokens": 1724
+    },
+    {
+     "arm": "records",
+     "q": "u063",
+     "order": [
+      "Stashes the changes and restores them after installing",
+      "Commits the changes, then installs from that commit",
+      "Installs the working tree as it stands, with a warning",
+      "Refuses: it installs from HEAD, never the working tree"
+     ],
+     "chunks": [
+      "df55759d2d5831e7",
+      "dda3ad65a1ea8c47",
+      "fdafdadad8363c34",
+      "294095ce60001466",
+      "f8c440417db2b2c3",
+      "6faf7345863f15e2",
+      "fa0ca9b75891dd4c",
+      "17ee89e9af6745cc"
+     ],
+     "answer": "e. the passages do not settle it\n\nANSWER E",
+     "tokens": 2102
+    },
+    {
+     "arm": "log",
+     "q": "u064",
+     "order": [
+      "A signed `accept` with the reason in a note",
+      "A pending note that is resolved at session end",
+      "A signed `reject` quoting the harness's reason",
+      "Nothing: it files only executed calls"
+     ],
+     "chunks": [
+      "e81f72e3b1b4d8d3",
+      "6c8fa0283d1b508f",
+      "78eea1d2ff104619",
+      "3a1e97156b590187",
+      "0fc553e29d76c75d",
+      "a8a7df50e396184b"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1788
+    },
+    {
+     "arm": "none",
+     "q": "u064",
+     "order": [
+      "A signed `accept` with the reason in a note",
+      "A pending note that is resolved at session end",
+      "A signed `reject` quoting the harness's reason",
+      "Nothing: it files only executed calls"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 145
+    },
+    {
+     "arm": "prose",
+     "q": "u064",
+     "order": [
+      "A signed `accept` with the reason in a note",
+      "A pending note that is resolved at session end",
+      "A signed `reject` quoting the harness's reason",
+      "Nothing: it files only executed calls"
+     ],
+     "chunks": [
+      "docs/V3.md:68",
+      "docs/V3.md:19",
+      "docs/V3.md:60",
+      "docs/V3.md:33",
+      "docs/V3.md:32",
+      "docs/AGENT.md:2",
+      "docs/V3.md:59",
+      "README.md:11",
+      "docs/HOME.md:21",
+      "docs/HOME.md:3"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1700
+    },
+    {
+     "arm": "records",
+     "q": "u064",
+     "order": [
+      "A signed `accept` with the reason in a note",
+      "A pending note that is resolved at session end",
+      "A signed `reject` quoting the harness's reason",
+      "Nothing: it files only executed calls"
+     ],
+     "chunks": [
+      "0abf07d7944f7697",
+      "fdafdadad8363c34",
+      "c589d17da0f3d235",
+      "f77da51dbe3b8af3",
+      "583d6f508840c6b8"
+     ],
+     "answer": "the passages do not settle it\n\nANSWER E",
+     "tokens": 2143
+    },
+    {
+     "arm": "log",
+     "q": "u071",
+     "order": [
+      "256 nodes, then `complete` is false",
+      "No limit: a walk always completes",
+      "10000 nodes, then `complete` is false",
+      "2000 nodes, then `complete` is false"
+     ],
+     "chunks": [
+      "1edd28274df39320",
+      "848d103efda349bd",
+      "946b39a8751a0c40",
+      "3da5482655edb333",
+      "6f6269f58ba57c69"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1871
+    },
+    {
+     "arm": "none",
+     "q": "u071",
+     "order": [
+      "256 nodes, then `complete` is false",
+      "No limit: a walk always completes",
+      "10000 nodes, then `complete` is false",
+      "2000 nodes, then `complete` is false"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 157
+    },
+    {
+     "arm": "prose",
+     "q": "u071",
+     "order": [
+      "256 nodes, then `complete` is false",
+      "No limit: a walk always completes",
+      "10000 nodes, then `complete` is false",
+      "2000 nodes, then `complete` is false"
+     ],
+     "chunks": [
+      "docs/HOME.md:18",
+      "docs/V3.md:52",
+      "docs/AGENT.md:5",
+      "docs/V3.md:44",
+      "docs/V3.md:65",
+      "docs/V3.md:49",
+      "docs/REPOSITORY.md:27"
+     ],
+     "answer": "e. the passages do not settle it\n\nANSWER E",
+     "tokens": 1764
+    },
+    {
+     "arm": "records",
+     "q": "u071",
+     "order": [
+      "256 nodes, then `complete` is false",
+      "No limit: a walk always completes",
+      "10000 nodes, then `complete` is false",
+      "2000 nodes, then `complete` is false"
+     ],
+     "chunks": [
+      "66fe3905f8d53c67",
+      "da1681d50bd871e3",
+      "2e646f8efbfef31b",
+      "3667ea649ca19e80",
+      "a0d6f8880d30a31c",
+      "cfc847cad12870c1",
+      "038c5bf56139eb60",
+      "248a7d23c49cce96"
+     ],
+     "answer": "e. the passages do not settle it\n\nANSWER E",
+     "tokens": 2058
+    },
+    {
+     "arm": "log",
+     "q": "u072",
+     "order": [
+      "Installs it with pip, then starts serving",
+      "Prints the requirement on stderr and exits 2",
+      "Serves a plain JSON socket in its place",
+      "Prints the requirement on stdout and exits 0"
+     ],
+     "chunks": [
+      "1a0d9a0a4917e778",
+      "97ec37e339ed2113",
+      "22ce646e8b2b2ef4",
+      "52d57bea51a528cc",
+      "e404cdc0fc3697a4",
+      "62d34b009e1eccff",
+      "80d65621e49e22b8",
+      "f1be7207a292da0a"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1994
+    },
+    {
+     "arm": "none",
+     "q": "u072",
+     "order": [
+      "Installs it with pip, then starts serving",
+      "Prints the requirement on stderr and exits 2",
+      "Serves a plain JSON socket in its place",
+      "Prints the requirement on stdout and exits 0"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 147
+    },
+    {
+     "arm": "prose",
+     "q": "u072",
+     "order": [
+      "Installs it with pip, then starts serving",
+      "Prints the requirement on stderr and exits 2",
+      "Serves a plain JSON socket in its place",
+      "Prints the requirement on stdout and exits 0"
+     ],
+     "chunks": [
+      "README.md:6",
+      "README.md:5",
+      "docs/HOME.md:6",
+      "docs/AGENT.md:9",
+      "docs/REPOSITORY.md:32",
+      "docs/REPOSITORY.md:36",
+      "docs/AGENT.md:19",
+      "docs/V3.md:26",
+      "docs/HOME.md:14",
+      "docs/HOME.md:9"
+     ],
+     "answer": "e. the passages do not settle it\n\nANSWER E",
+     "tokens": 1832
+    },
+    {
+     "arm": "records",
+     "q": "u072",
+     "order": [
+      "Installs it with pip, then starts serving",
+      "Prints the requirement on stderr and exits 2",
+      "Serves a plain JSON socket in its place",
+      "Prints the requirement on stdout and exits 0"
+     ],
+     "chunks": [
+      "1a0356dce37debd3",
+      "057051fb9b4f92f1",
+      "4527bd693c9c6b27",
+      "14c6509a16adeb65",
+      "cfc847cad12870c1",
+      "57cc657ba6936e44",
+      "f1c35a39b4f29dda",
+      "41820c3aef3f2e58"
+     ],
+     "answer": "the passages do not settle it",
+     "tokens": 2182
+    },
+    {
+     "arm": "log",
+     "q": "u082",
+     "order": [
+      "`tools/engine.py`",
+      "`warrant_agent/engine.py`",
+      "`warrant/engine.py`",
+      "`warrant/core.py`"
+     ],
+     "chunks": [
+      "6386c8cb41447763",
+      "5c7d7896e14ec27e",
+      "5564173884c5a895",
+      "343962074c07ce07",
+      "a850e57a2322c36a",
+      "4ce6f92968c2688e",
+      "0be74d7b8e8551ee"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2055
+    },
+    {
+     "arm": "none",
+     "q": "u082",
+     "order": [
+      "`tools/engine.py`",
+      "`warrant_agent/engine.py`",
+      "`warrant/engine.py`",
+      "`warrant/core.py`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 137
+    },
+    {
+     "arm": "prose",
+     "q": "u082",
+     "order": [
+      "`tools/engine.py`",
+      "`warrant_agent/engine.py`",
+      "`warrant/engine.py`",
+      "`warrant/core.py`"
+     ],
+     "chunks": [
+      "docs/REPOSITORY.md:3",
+      "docs/HISTORY.md:6",
+      "docs/REPOSITORY.md:9",
+      "docs/REPOSITORY.md:13",
+      "README.md:20",
+      "docs/REPOSITORY.md:22",
+      "docs/REPOSITORY.md:30",
+      "docs/HOME.md:21",
+      "README.md:0"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1803
+    },
+    {
+     "arm": "records",
+     "q": "u082",
+     "order": [
+      "`tools/engine.py`",
+      "`warrant_agent/engine.py`",
+      "`warrant/engine.py`",
+      "`warrant/core.py`"
+     ],
+     "chunks": [
+      "85a3c0ab4e60b1bc",
+      "f4729a41b788ea9e",
+      "ccc4e8145ed2f78c",
+      "ea6300ecf5d5f41a",
+      "024e641392d30acb",
+      "af395a08752d2513"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2268
+    }
+   ]
+  },
+  "qwen3.8:27b-mlx": {
+   "digest": "5642e97495e1a088883805981563dcdc4a040c2f53388b7a41d1f24d3622cf7e",
+   "rows": [
+    {
+     "arm": "log",
+     "q": "c012",
+     "order": [
+      "`frozen`, listing members no successor may change",
+      "None: those five members are the whole schema body",
+      "`defaults`, giving a value for each missing member",
+      "`pinned`, naming an object member of a lineage's root"
+     ],
+     "chunks": [
+      "32e399879b1b64f3",
+      "3dcf00f07f9d2465",
+      "087f39d75f90d050",
+      "a7e35f14e432c187",
+      "af80516081c8b629",
+      "8febf8c148db6a26",
+      "03faf914e7f48f50"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1915
+    },
+    {
+     "arm": "none",
+     "q": "c012",
+     "order": [
+      "`frozen`, listing members no successor may change",
+      "None: those five members are the whole schema body",
+      "`defaults`, giving a value for each missing member",
+      "`pinned`, naming an object member of a lineage's root"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 155
+    },
+    {
+     "arm": "prose",
+     "q": "c012",
+     "order": [
+      "`frozen`, listing members no successor may change",
+      "None: those five members are the whole schema body",
+      "`defaults`, giving a value for each missing member",
+      "`pinned`, naming an object member of a lineage's root"
+     ],
+     "chunks": [
+      "docs/V3.md:18",
+      "docs/V3.md:19",
+      "docs/V3.md:30",
+      "README.md:10",
+      "docs/V3.md:17",
+      "docs/V3.md:52",
+      "docs/V3.md:14",
+      "docs/AGENT.md:12"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1781
+    },
+    {
+     "arm": "records",
+     "q": "c012",
+     "order": [
+      "`frozen`, listing members no successor may change",
+      "None: those five members are the whole schema body",
+      "`defaults`, giving a value for each missing member",
+      "`pinned`, naming an object member of a lineage's root"
+     ],
+     "chunks": [
+      "360a77d78b1f58bd",
+      "713622f5b636eec4",
+      "ebe4e8981d4ddd1f",
+      "a51ae698ecc6707a",
+      "a232e6f033ae2c01",
+      "80d2a700dc77e906",
+      "3667ea649ca19e80",
+      "daa5bfa315cb5f1f",
+      "33840305c9ae5d45",
+      "5b68c5af6cdd117f"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2037
+    },
+    {
+     "arm": "log",
+     "q": "c013",
+     "order": [
+      "It keeps it in the lineage, with reliance CHALLENGED",
+      "It drops the version as INVALID, under `problems`",
+      "Nothing: it compares no guard with its root",
+      "It widens the guard to match that object"
+     ],
+     "chunks": [
+      "32e399879b1b64f3",
+      "5ca1a7c16d274406",
+      "e056e25265d44b78",
+      "47e71f5c145c9ca0",
+      "3da5482655edb333",
+      "ad557baf7203186d",
+      "ac80aeebfba09176",
+      "7870c518ea686c48",
+      "a8a7df50e396184b"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1867
+    },
+    {
+     "arm": "none",
+     "q": "c013",
+     "order": [
+      "It keeps it in the lineage, with reliance CHALLENGED",
+      "It drops the version as INVALID, under `problems`",
+      "Nothing: it compares no guard with its root",
+      "It widens the guard to match that object"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 157
+    },
+    {
+     "arm": "prose",
+     "q": "c013",
+     "order": [
+      "It keeps it in the lineage, with reliance CHALLENGED",
+      "It drops the version as INVALID, under `problems`",
+      "Nothing: it compares no guard with its root",
+      "It widens the guard to match that object"
+     ],
+     "chunks": [
+      "README.md:11",
+      "docs/V3.md:18",
+      "docs/V3.md:32",
+      "docs/V3.md:31",
+      "docs/V3.md:13",
+      "docs/V3.md:52",
+      "docs/V3.md:44",
+      "docs/V3.md:26"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1714
+    },
+    {
+     "arm": "records",
+     "q": "c013",
+     "order": [
+      "It keeps it in the lineage, with reliance CHALLENGED",
+      "It drops the version as INVALID, under `problems`",
+      "Nothing: it compares no guard with its root",
+      "It widens the guard to match that object"
+     ],
+     "chunks": [
+      "360a77d78b1f58bd",
+      "a51ae698ecc6707a",
+      "fdafdadad8363c34",
+      "37aa53dae631244f",
+      "32c93d4ffde03fae",
+      "1a42155eb60f2657",
+      "e0ef90262658ac39",
+      "09ecc86da5de5c6e"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1935
+    },
+    {
+     "arm": "log",
+     "q": "c014",
+     "order": [
+      "Only entities: attests naming it are checked as usual",
+      "No record: it is checked as any counted schema is",
+      "Only attests: any other kind naming it is INVALID",
+      "Every record naming it, whatever the record's kind"
+     ],
+     "chunks": [
+      "43d0d9bbc4718153",
+      "59484e5c9f60c4c8",
+      "1297f593dd26ce52",
+      "1e308b74fa1f94ac",
+      "19fdf95f4e7ac886",
+      "f2a95e5439e2611d"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1862
+    },
+    {
+     "arm": "none",
+     "q": "c014",
+     "order": [
+      "Only entities: attests naming it are checked as usual",
+      "No record: it is checked as any counted schema is",
+      "Only attests: any other kind naming it is INVALID",
+      "Every record naming it, whatever the record's kind"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 153
+    },
+    {
+     "arm": "prose",
+     "q": "c014",
+     "order": [
+      "Only entities: attests naming it are checked as usual",
+      "No record: it is checked as any counted schema is",
+      "Only attests: any other kind naming it is INVALID",
+      "Every record naming it, whatever the record's kind"
+     ],
+     "chunks": [
+      "docs/V3.md:19",
+      "docs/V3.md:20",
+      "docs/V3.md:52",
+      "docs/V3.md:14",
+      "docs/V3.md:41",
+      "docs/V3.md:31",
+      "docs/V3.md:13",
+      "docs/V3.md:16",
+      "docs/V3.md:3"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1774
+    },
+    {
+     "arm": "records",
+     "q": "c014",
+     "order": [
+      "Only entities: attests naming it are checked as usual",
+      "No record: it is checked as any counted schema is",
+      "Only attests: any other kind naming it is INVALID",
+      "Every record naming it, whatever the record's kind"
+     ],
+     "chunks": [
+      "5024956e94511a84",
+      "80d2a700dc77e906",
+      "ebe4e8981d4ddd1f",
+      "014ec61b45d5c796",
+      "07e63a97d6c73da8",
+      "a0423da0da20a782",
+      "248a7d23c49cce96",
+      "8dc3f747049cc53c",
+      "a11b1f113905bc16",
+      "97b547fe6045909d",
+      "10c0cfbbe851bfa1"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1977
+    },
+    {
+     "arm": "log",
+     "q": "c015",
+     "order": [
+      "A least fixpoint over all versions, with no recursion",
+      "Depth first with recursion, marking versions in progress",
+      "Whole assessments repeated until two passes agree",
+      "A topological sort that refuses the store on any cycle"
+     ],
+     "chunks": [
+      "43d0d9bbc4718153",
+      "1f4fa296c08d65d0",
+      "60bd575e3ad3ba1b",
+      "d95cebf7f40861ce",
+      "fc4dec90dcf12b9b"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1841
+    },
+    {
+     "arm": "none",
+     "q": "c015",
+     "order": [
+      "A least fixpoint over all versions, with no recursion",
+      "Depth first with recursion, marking versions in progress",
+      "Whole assessments repeated until two passes agree",
+      "A topological sort that refuses the store on any cycle"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 149
+    },
+    {
+     "arm": "prose",
+     "q": "c015",
+     "order": [
+      "A least fixpoint over all versions, with no recursion",
+      "Depth first with recursion, marking versions in progress",
+      "Whole assessments repeated until two passes agree",
+      "A topological sort that refuses the store on any cycle"
+     ],
+     "chunks": [
+      "docs/V3.md:32",
+      "docs/V3.md:38",
+      "docs/V3.md:19",
+      "docs/V3.md:26",
+      "README.md:11",
+      "docs/HOME.md:8",
+      "docs/V3.md:35"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1688
+    },
+    {
+     "arm": "records",
+     "q": "c015",
+     "order": [
+      "A least fixpoint over all versions, with no recursion",
+      "Depth first with recursion, marking versions in progress",
+      "Whole assessments repeated until two passes agree",
+      "A topological sort that refuses the store on any cycle"
+     ],
+     "chunks": [
+      "37aa53dae631244f",
+      "80d2a700dc77e906",
+      "8dc3f747049cc53c",
+      "5adf6ff108b4b0ae",
+      "5312ae34472b6f88",
+      "37013687a618cebd",
+      "d08d4d7c023139f3",
+      "09ecc86da5de5c6e"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1999
+    },
+    {
+     "arm": "log",
+     "q": "c018",
+     "order": [
+      "Refused: the store must lie in the repository",
+      "Followed for reads, refused for writes",
+      "Replaced by a real directory before going on",
+      "Followed: the tool reads and writes what it leads to"
+     ],
+     "chunks": [
+      "49014d505379367b",
+      "f4275a585e1e8878",
+      "5ef3b87bc9eb784d",
+      "2ae845034f15b049",
+      "ce7bf8bde7d7d9ae",
+      "98daf19a72f8a308",
+      "ae63427ec820f5c8"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1895
+    },
+    {
+     "arm": "none",
+     "q": "c018",
+     "order": [
+      "Refused: the store must lie in the repository",
+      "Followed for reads, refused for writes",
+      "Replaced by a real directory before going on",
+      "Followed: the tool reads and writes what it leads to"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 154
+    },
+    {
+     "arm": "prose",
+     "q": "c018",
+     "order": [
+      "Refused: the store must lie in the repository",
+      "Followed for reads, refused for writes",
+      "Replaced by a real directory before going on",
+      "Followed: the tool reads and writes what it leads to"
+     ],
+     "chunks": [
+      "README.md:13",
+      "docs/V3.md:52",
+      "docs/HOME.md:8",
+      "docs/V3.md:68",
+      "README.md:7",
+      "docs/AGENT.md:5",
+      "docs/REPOSITORY.md:34",
+      "docs/V3.md:56",
+      "docs/HISTORY.md:15",
+      "docs/V3.md:36"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1761
+    },
+    {
+     "arm": "records",
+     "q": "c018",
+     "order": [
+      "Refused: the store must lie in the repository",
+      "Followed for reads, refused for writes",
+      "Replaced by a real directory before going on",
+      "Followed: the tool reads and writes what it leads to"
+     ],
+     "chunks": [
+      "9c037641ba93183d",
+      "fd6dc8fcc4bb376a",
+      "e0e795a0faabbb29",
+      "294095ce60001466",
+      "a7bc70c767417e16",
+      "d42acd02c2e34335",
+      "7b525464eb6b8add"
+     ],
+     "answer": "The provided passages discuss `init` behavior regarding symlinks (SPEC-10.8-8 states `init` writes no path through a symlink and refuses configurations with symlinks in workspace state) and challenges regarding `pilot_review_store` and `graph` tools (challenges P2, F7, F8). However, none of the passages explicitly describe the behavior of a \"review loop tool\" when opening a repository where the `.warrant` directory itself is a symlink pointing outside the repository. The challenges mention specific vulnerabilities in `pilot_review_store` and `graph` caching, but do not provide a definitive rule for the general case of a `.warrant` symlink for a review loop tool. Therefore, the passages do not settle the question.\n\nANSWER E",
+     "tokens": 2294
+    },
+    {
+     "arm": "log",
+     "q": "c022",
+     "order": [
+      "`warrant_graph`",
+      "`tools`",
+      "`warrant`",
+      "`warrant_agent`"
+     ],
+     "chunks": [
+      "3da5482655edb333",
+      "94df7b9fc5df3fab",
+      "5564173884c5a895",
+      "1d9a32a699af823d",
+      "0ff23d393e1d443d",
+      "91b000b517d9097c",
+      "b74ce0d365eb962a"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1859
+    },
+    {
+     "arm": "none",
+     "q": "c022",
+     "order": [
+      "`warrant_graph`",
+      "`tools`",
+      "`warrant`",
+      "`warrant_agent`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 125
+    },
+    {
+     "arm": "prose",
+     "q": "c022",
+     "order": [
+      "`warrant_graph`",
+      "`tools`",
+      "`warrant`",
+      "`warrant_agent`"
+     ],
+     "chunks": [
+      "docs/AGENT.md:11",
+      "docs/REPOSITORY.md:3",
+      "docs/REPOSITORY.md:30",
+      "docs/HISTORY.md:6",
+      "docs/HOME.md:6",
+      "docs/HOME.md:21",
+      "docs/REPOSITORY.md:1",
+      "README.md:2",
+      "docs/V3.md:55",
+      "docs/V3.md:45"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1772
+    },
+    {
+     "arm": "records",
+     "q": "c022",
+     "order": [
+      "`warrant_graph`",
+      "`tools`",
+      "`warrant`",
+      "`warrant_agent`"
+     ],
+     "chunks": [
+      "2e646f8efbfef31b",
+      "a0d6f8880d30a31c",
+      "66fe3905f8d53c67",
+      "da1681d50bd871e3",
+      "3667ea649ca19e80",
+      "a24d65937c151c1c",
+      "207fc790810d2d87",
+      "85a3c0ab4e60b1bc",
+      "9ca0d6769a43bb8f"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 2043
+    },
+    {
+     "arm": "log",
+     "q": "c028",
+     "order": [
+      "Yes: it reports that schema as REJECTED and exits 1",
+      "No: that is a proposal, not a problem of the store",
+      "Yes: it reports SCHEMA_PENDING and exits 1",
+      "No: it backs the schema itself and then goes on"
+     ],
+     "chunks": [
+      "43d0d9bbc4718153",
+      "763f6047926bb24d",
+      "0613145036c384dc",
+      "54444b848f26eb04",
+      "39b22554f04c83bf",
+      "52d57bea51a528cc"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1956
+    },
+    {
+     "arm": "none",
+     "q": "c028",
+     "order": [
+      "Yes: it reports that schema as REJECTED and exits 1",
+      "No: that is a proposal, not a problem of the store",
+      "Yes: it reports SCHEMA_PENDING and exits 1",
+      "No: it backs the schema itself and then goes on"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 158
+    },
+    {
+     "arm": "prose",
+     "q": "c028",
+     "order": [
+      "Yes: it reports that schema as REJECTED and exits 1",
+      "No: that is a proposal, not a problem of the store",
+      "Yes: it reports SCHEMA_PENDING and exits 1",
+      "No: it backs the schema itself and then goes on"
+     ],
+     "chunks": [
+      "docs/V3.md:20",
+      "docs/V3.md:67",
+      "docs/V3.md:19",
+      "docs/V3.md:57",
+      "docs/V3.md:60",
+      "docs/V3.md:52",
+      "docs/HOME.md:23",
+      "docs/V3.md:3"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1728
+    },
+    {
+     "arm": "records",
+     "q": "c028",
+     "order": [
+      "Yes: it reports that schema as REJECTED and exits 1",
+      "No: that is a proposal, not a problem of the store",
+      "Yes: it reports SCHEMA_PENDING and exits 1",
+      "No: it backs the schema itself and then goes on"
+     ],
+     "chunks": [
+      "854e5d00ae3e0e13",
+      "07e63a97d6c73da8",
+      "057051fb9b4f92f1",
+      "e35aa8f23d965f9c",
+      "6faf7345863f15e2",
+      "d6ba31878930bbbc",
+      "248a7d23c49cce96",
+      "09ecc86da5de5c6e",
+      "fdee97fbd1bce70f",
+      "360a77d78b1f58bd",
+      "ca1ee00df2ecfa85"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 2002
+    },
+    {
+     "arm": "log",
+     "q": "c037",
+     "order": [
+      "`roadmap/acceptor`, else it refuses with ROLE",
+      "None: it has no forgiveness command",
+      "`schema/author`, else it refuses with ROLE",
+      "`roadmap/owner`, else it refuses with ROLE"
+     ],
+     "chunks": [
+      "12b32f7d0be17e22",
+      "3dcf00f07f9d2465",
+      "dcad621a2ae35bf6",
+      "5ef3b87bc9eb784d",
+      "b37288be7f82f55f",
+      "b37328b29ea22275",
+      "d464af3fd9aaf3ea"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1975
+    },
+    {
+     "arm": "none",
+     "q": "c037",
+     "order": [
+      "`roadmap/acceptor`, else it refuses with ROLE",
+      "None: it has no forgiveness command",
+      "`schema/author`, else it refuses with ROLE",
+      "`roadmap/owner`, else it refuses with ROLE"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 148
+    },
+    {
+     "arm": "prose",
+     "q": "c037",
+     "order": [
+      "`roadmap/acceptor`, else it refuses with ROLE",
+      "None: it has no forgiveness command",
+      "`schema/author`, else it refuses with ROLE",
+      "`roadmap/owner`, else it refuses with ROLE"
+     ],
+     "chunks": [
+      "docs/REPOSITORY.md:20",
+      "docs/V3.md:14",
+      "docs/AGENT.md:18",
+      "docs/V3.md:30",
+      "docs/V3.md:49",
+      "docs/V3.md:19",
+      "docs/REPOSITORY.md:26",
+      "docs/AGENT.md:12",
+      "docs/HOME.md:10",
+      "docs/AGENT.md:14",
+      "docs/REPOSITORY.md:19"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1762
+    },
+    {
+     "arm": "records",
+     "q": "c037",
+     "order": [
+      "`roadmap/acceptor`, else it refuses with ROLE",
+      "None: it has no forgiveness command",
+      "`schema/author`, else it refuses with ROLE",
+      "`roadmap/owner`, else it refuses with ROLE"
+     ],
+     "chunks": [
+      "47783e204e55fff2",
+      "057051fb9b4f92f1",
+      "3e5d731f340c99c5",
+      "cfc847cad12870c1",
+      "d126cd26e6a78ba8",
+      "0bbcee4c08e4ec54",
+      "d324a9b4ead45c35",
+      "ebe4e8981d4ddd1f",
+      "3b301a02af7aac23",
+      "4461a89b44699063"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2015
+    },
+    {
+     "arm": "log",
+     "q": "c057",
+     "order": [
+      "list, search, graph, export, import",
+      "stores, actor, open, challenges, rests",
+      "stores, lineages, goals, claims, blobs",
+      "None: no read spans several stores"
+     ],
+     "chunks": [
+      "bbdae7c943a52439",
+      "94df7b9fc5df3fab",
+      "3da5482655edb333",
+      "d2f938f12d8ff848",
+      "a2510453c20ed6d2",
+      "1d9a32a699af823d",
+      "d2d5e2240ff75a4e"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1802
+    },
+    {
+     "arm": "none",
+     "q": "c057",
+     "order": [
+      "list, search, graph, export, import",
+      "stores, actor, open, challenges, rests",
+      "stores, lineages, goals, claims, blobs",
+      "None: no read spans several stores"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 141
+    },
+    {
+     "arm": "prose",
+     "q": "c057",
+     "order": [
+      "list, search, graph, export, import",
+      "stores, actor, open, challenges, rests",
+      "stores, lineages, goals, claims, blobs",
+      "None: no read spans several stores"
+     ],
+     "chunks": [
+      "docs/HOME.md:15",
+      "docs/AGENT.md:11",
+      "docs/V3.md:65",
+      "docs/REPOSITORY.md:3",
+      "docs/V3.md:64",
+      "docs/HOME.md:23",
+      "docs/AGENT.md:5",
+      "docs/TRADEMARK.md:3"
+     ],
+     "answer": "ANSWER B",
+     "tokens": 1735
+    },
+    {
+     "arm": "records",
+     "q": "c057",
+     "order": [
+      "list, search, graph, export, import",
+      "stores, actor, open, challenges, rests",
+      "stores, lineages, goals, claims, blobs",
+      "None: no read spans several stores"
+     ],
+     "chunks": [
+      "d42acd02c2e34335",
+      "3667ea649ca19e80",
+      "6e2b72401c6d699d",
+      "85a3c0ab4e60b1bc",
+      "7c922241aa2be321",
+      "038c5bf56139eb60",
+      "fdee97fbd1bce70f",
+      "09e2dffff5720692",
+      "730b8292668473e3",
+      "10c0cfbbe851bfa1"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2125
+    },
+    {
+     "arm": "log",
+     "q": "c060",
+     "order": [
+      "Every repository the operator registered",
+      "The one store in `~/.warrant`",
+      "Nothing: `--config` is required, a usage error",
+      "The Git checkout around the current directory"
+     ],
+     "chunks": [
+      "d2f938f12d8ff848",
+      "f4275a585e1e8878",
+      "22ce646e8b2b2ef4",
+      "6f1f6024807e09d1",
+      "bbdae7c943a52439",
+      "49014d505379367b",
+      "0be74d7b8e8551ee"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1874
+    },
+    {
+     "arm": "none",
+     "q": "c060",
+     "order": [
+      "Every repository the operator registered",
+      "The one store in `~/.warrant`",
+      "Nothing: `--config` is required, a usage error",
+      "The Git checkout around the current directory"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 144
+    },
+    {
+     "arm": "prose",
+     "q": "c060",
+     "order": [
+      "Every repository the operator registered",
+      "The one store in `~/.warrant`",
+      "Nothing: `--config` is required, a usage error",
+      "The Git checkout around the current directory"
+     ],
+     "chunks": [
+      "docs/HOME.md:8",
+      "docs/AGENT.md:9",
+      "docs/HOME.md:2",
+      "docs/HOME.md:11",
+      "docs/AGENT.md:6",
+      "README.md:8",
+      "docs/V3.md:55",
+      "docs/REPOSITORY.md:3",
+      "docs/AGENT.md:5",
+      "docs/HOME.md:14",
+      "docs/AGENT.md:7"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1737
+    },
+    {
+     "arm": "records",
+     "q": "c060",
+     "order": [
+      "Every repository the operator registered",
+      "The one store in `~/.warrant`",
+      "Nothing: `--config` is required, a usage error",
+      "The Git checkout around the current directory"
+     ],
+     "chunks": [
+      "3f75f99210741a0f",
+      "207fc790810d2d87",
+      "1c3f12bcf1a91ba1",
+      "fed0c6f9f2584532",
+      "9c037641ba93183d",
+      "d3c6bad82d1dcb46",
+      "730b8292668473e3",
+      "de740b1cbeab2f03",
+      "fdee97fbd1bce70f",
+      "fda119e0bd9bdcc1"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2081
+    },
+    {
+     "arm": "log",
+     "q": "c062",
+     "order": [
+      "It applies the engine's body and lineage rules to the record alone",
+      "It files the record and rolls it back on a problem",
+      "It asks the workspace's reviewer to read the record",
+      "It assesses the store with the record added, under a throwaway key"
+     ],
+     "chunks": [
+      "3da5482655edb333",
+      "1c5b4faef842538a",
+      "9c199fe797445459",
+      "1f4fa296c08d65d0",
+      "bbdae7c943a52439",
+      "8c5333e386a8b475",
+      "9282e437bfd15196"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1846
+    },
+    {
+     "arm": "none",
+     "q": "c062",
+     "order": [
+      "It applies the engine's body and lineage rules to the record alone",
+      "It files the record and rolls it back on a problem",
+      "It asks the workspace's reviewer to read the record",
+      "It assesses the store with the record added, under a throwaway key"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 159
+    },
+    {
+     "arm": "prose",
+     "q": "c062",
+     "order": [
+      "It applies the engine's body and lineage rules to the record alone",
+      "It files the record and rolls it back on a problem",
+      "It asks the workspace's reviewer to read the record",
+      "It assesses the store with the record added, under a throwaway key"
+     ],
+     "chunks": [
+      "docs/V3.md:52",
+      "docs/AGENT.md:5",
+      "docs/V3.md:57",
+      "docs/HOME.md:6",
+      "docs/AGENT.md:12",
+      "docs/AGENT.md:11",
+      "docs/HOME.md:22"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1743
+    },
+    {
+     "arm": "records",
+     "q": "c062",
+     "order": [
+      "It applies the engine's body and lineage rules to the record alone",
+      "It files the record and rolls it back on a problem",
+      "It asks the workspace's reviewer to read the record",
+      "It assesses the store with the record added, under a throwaway key"
+     ],
+     "chunks": [
+      "f75f966344ac0fde",
+      "a11b1f113905bc16",
+      "edfb3c82e2f35329",
+      "057051fb9b4f92f1",
+      "d3c6bad82d1dcb46",
+      "1c3f12bcf1a91ba1",
+      "248a7d23c49cce96",
+      "8dc3f747049cc53c",
+      "33840305c9ae5d45"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1965
+    },
+    {
+     "arm": "log",
+     "q": "c081",
+     "order": [
+      "Nothing: it writes no such file",
+      "An empty list, to be filled in by hand",
+      "This checkout's repository as the one entry",
+      "One entry per repository the operator registered"
+     ],
+     "chunks": [
+      "d2f938f12d8ff848",
+      "0ff23d393e1d443d",
+      "bd4693ce646b5aba",
+      "82f5ff77dc03d9fc",
+      "39e6ee59253bab02",
+      "41a9820af8b14c73"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1735
+    },
+    {
+     "arm": "none",
+     "q": "c081",
+     "order": [
+      "Nothing: it writes no such file",
+      "An empty list, to be filled in by hand",
+      "This checkout's repository as the one entry",
+      "One entry per repository the operator registered"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 144
+    },
+    {
+     "arm": "prose",
+     "q": "c081",
+     "order": [
+      "Nothing: it writes no such file",
+      "An empty list, to be filled in by hand",
+      "This checkout's repository as the one entry",
+      "One entry per repository the operator registered"
+     ],
+     "chunks": [
+      "docs/REPOSITORY.md:32",
+      "docs/REPOSITORY.md:36",
+      "docs/V3.md:68",
+      "docs/HOME.md:8",
+      "docs/AGENT.md:9",
+      "docs/HOME.md:11",
+      "docs/REPOSITORY.md:31"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1678
+    },
+    {
+     "arm": "records",
+     "q": "c081",
+     "order": [
+      "Nothing: it writes no such file",
+      "An empty list, to be filled in by hand",
+      "This checkout's repository as the one entry",
+      "One entry per repository the operator registered"
+     ],
+     "chunks": [
+      "1025eeedd2b9a8b5",
+      "c05fb08b73614190",
+      "02f479e2865928f8",
+      "ea580a2a88af01a7",
+      "d42acd02c2e34335",
+      "2003860acd38b83b",
+      "85a3c0ab4e60b1bc",
+      "d6ba31878930bbbc"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2074
+    },
+    {
+     "arm": "log",
+     "q": "c082",
+     "order": [
+      "Codex and Gemini CLI",
+      "Claude Code only",
+      "Codex and Claude Code",
+      "Codex only"
+     ],
+     "chunks": [
+      "1e308b74fa1f94ac",
+      "78ada10e1d816bef",
+      "6b1868eead5b312a",
+      "62d34b009e1eccff",
+      "e81f72e3b1b4d8d3",
+      "077f06c300fa0dfa",
+      "f55582203f8aa6e1",
+      "8449a8e1c75832b7",
+      "b9ec55d68e5ec87b"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1881
+    },
+    {
+     "arm": "none",
+     "q": "c082",
+     "order": [
+      "Codex and Gemini CLI",
+      "Claude Code only",
+      "Codex and Claude Code",
+      "Codex only"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 122
+    },
+    {
+     "arm": "prose",
+     "q": "c082",
+     "order": [
+      "Codex and Gemini CLI",
+      "Claude Code only",
+      "Codex and Claude Code",
+      "Codex only"
+     ],
+     "chunks": [
+      "docs/REPOSITORY.md:32",
+      "docs/REPOSITORY.md:20",
+      "docs/REPOSITORY.md:36",
+      "docs/HISTORY.md:18",
+      "docs/HOME.md:21",
+      "docs/HOME.md:12",
+      "docs/V3.md:21",
+      "README.md:6",
+      "docs/AGENT.md:7",
+      "docs/HOME.md:9"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1909
+    },
+    {
+     "arm": "records",
+     "q": "c082",
+     "order": [
+      "Codex and Gemini CLI",
+      "Claude Code only",
+      "Codex and Claude Code",
+      "Codex only"
+     ],
+     "chunks": [
+      "66e125a6fa323706",
+      "85a3c0ab4e60b1bc",
+      "c13adc2ae854416a",
+      "01f832c94058325b",
+      "d6127c0fd71dffa5",
+      "b661e5499191c654",
+      "024e641392d30acb",
+      "6aa9689cbdc97ef4",
+      "1dfedf691e802c52",
+      "4abd7aec6d8909df"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2059
+    },
+    {
+     "arm": "log",
+     "q": "c084",
+     "order": [
+      "3.0.0a5",
+      "2.0.0a1",
+      "3.0.0",
+      "3.0.0.dev0"
+     ],
+     "chunks": [
+      "6d29105550a2cf05",
+      "140d2bde8177c3ee",
+      "c4d0854062702272",
+      "fd5e46662299862c",
+      "0b520d94fe4c41a2",
+      "fd9b8c81791362e3",
+      "1740fd75b8c62758",
+      "dfe0892739d3de3b",
+      "ca9ffc8ae0f5612f",
+      "6fbea138b018d5c9"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2151
+    },
+    {
+     "arm": "none",
+     "q": "c084",
+     "order": [
+      "3.0.0a5",
+      "2.0.0a1",
+      "3.0.0",
+      "3.0.0.dev0"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 140
+    },
+    {
+     "arm": "prose",
+     "q": "c084",
+     "order": [
+      "3.0.0a5",
+      "2.0.0a1",
+      "3.0.0",
+      "3.0.0.dev0"
+     ],
+     "chunks": [
+      "README.md:13",
+      "README.md:6",
+      "docs/HISTORY.md:5",
+      "README.md:5",
+      "docs/HISTORY.md:1",
+      "docs/HISTORY.md:2",
+      "docs/V3.md:1",
+      "docs/REPOSITORY.md:26",
+      "docs/TRADEMARK.md:4",
+      "docs/REPOSITORY.md:36",
+      "docs/HISTORY.md:13",
+      "docs/REPOSITORY.md:1",
+      "docs/HOME.md:21",
+      "docs/V3.md:5"
+     ],
+     "answer": "The passages state that the current status is \"3.0.0a5 (alpha)\" and that `warrant-graph` 2.0.0a1 is Warrant 2. However, the passages do not explicitly state the value of the `__version__` variable in the `warrant` package's source code. While it is highly likely to be 3.0.0a5 given the context, the text does not provide the specific code snippet or declaration for `__version__`. Therefore, the passages do not settle it definitively.\n\nANSWER E",
+     "tokens": 2143
+    },
+    {
+     "arm": "records",
+     "q": "c084",
+     "order": [
+      "3.0.0a5",
+      "2.0.0a1",
+      "3.0.0",
+      "3.0.0.dev0"
+     ],
+     "chunks": [
+      "c05fb08b73614190",
+      "41f781e0387c26af",
+      "007f05152a7a287c",
+      "85a3c0ab4e60b1bc",
+      "3b301a02af7aac23",
+      "c0a9e4c3dc9dd276",
+      "97f31a1f93e9d226",
+      "d5489db66b2c143b",
+      "6fb507a08f5487b0"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2279
+    },
+    {
+     "arm": "log",
+     "q": "c086",
+     "order": [
+      "Moves the seed to the operator's home directory",
+      "The project has no such registry",
+      "Accepts it, and marks that repository read only",
+      "Refuses it: no seed may lie in a registered repository"
+     ],
+     "chunks": [
+      "d2f938f12d8ff848",
+      "3b4b117c6b6ab04e",
+      "18aada2aa6fb8dab",
+      "97156b6e4b4705bd",
+      "98daf19a72f8a308",
+      "f4275a585e1e8878",
+      "c4d0854062702272",
+      "13629c676c542277"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1982
+    },
+    {
+     "arm": "none",
+     "q": "c086",
+     "order": [
+      "Moves the seed to the operator's home directory",
+      "The project has no such registry",
+      "Accepts it, and marks that repository read only",
+      "Refuses it: no seed may lie in a registered repository"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 148
+    },
+    {
+     "arm": "prose",
+     "q": "c086",
+     "order": [
+      "Moves the seed to the operator's home directory",
+      "The project has no such registry",
+      "Accepts it, and marks that repository read only",
+      "Refuses it: no seed may lie in a registered repository"
+     ],
+     "chunks": [
+      "docs/AGENT.md:8",
+      "docs/HOME.md:8",
+      "docs/HOME.md:6",
+      "docs/AGENT.md:9",
+      "docs/HOME.md:23",
+      "docs/AGENT.md:5",
+      "docs/HOME.md:10",
+      "docs/HOME.md:2",
+      "docs/HOME.md:20",
+      "docs/HOME.md:21",
+      "docs/HOME.md:1",
+      "docs/HOME.md:0"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1721
+    },
+    {
+     "arm": "records",
+     "q": "c086",
+     "order": [
+      "Moves the seed to the operator's home directory",
+      "The project has no such registry",
+      "Accepts it, and marks that repository read only",
+      "Refuses it: no seed may lie in a registered repository"
+     ],
+     "chunks": [
+      "3f75f99210741a0f",
+      "9c037641ba93183d",
+      "1c3f12bcf1a91ba1",
+      "64119e5aeec5041e",
+      "01f832c94058325b",
+      "ae647907f58e83ea",
+      "dda3ad65a1ea8c47"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1923
+    },
+    {
+     "arm": "log",
+     "q": "u005",
+     "order": [
+      "Leaves them out and counts them under `later`",
+      "Lists each of them under `rejected`",
+      "Reads them and marks each of them as backdated",
+      "Refuses the store with RESOURCE_LIMIT"
+     ],
+     "chunks": [
+      "d60f662ed8ec4906",
+      "4d9e79865ce6b8c3",
+      "9100743bf90dac58",
+      "ea2ca1936a77012d",
+      "f8d7d83cd8a96c0e",
+      "4d56fbf79a2ff34e",
+      "f6ba9a8e91e73ca0",
+      "7ec36ad33aadec6c",
+      "3e5ed5f3eeab6ea4"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2049
+    },
+    {
+     "arm": "none",
+     "q": "u005",
+     "order": [
+      "Leaves them out and counts them under `later`",
+      "Lists each of them under `rejected`",
+      "Reads them and marks each of them as backdated",
+      "Refuses the store with RESOURCE_LIMIT"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 146
+    },
+    {
+     "arm": "prose",
+     "q": "u005",
+     "order": [
+      "Leaves them out and counts them under `later`",
+      "Lists each of them under `rejected`",
+      "Reads them and marks each of them as backdated",
+      "Refuses the store with RESOURCE_LIMIT"
+     ],
+     "chunks": [
+      "docs/HOME.md:17",
+      "docs/V3.md:65",
+      "docs/V3.md:38",
+      "docs/V3.md:57",
+      "docs/AGENT.md:20",
+      "docs/V3.md:43",
+      "docs/V3.md:46",
+      "docs/REPOSITORY.md:8"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1728
+    },
+    {
+     "arm": "records",
+     "q": "u005",
+     "order": [
+      "Leaves them out and counts them under `later`",
+      "Lists each of them under `rejected`",
+      "Reads them and marks each of them as backdated",
+      "Refuses the store with RESOURCE_LIMIT"
+     ],
+     "chunks": [
+      "5312ae34472b6f88",
+      "024e641392d30acb",
+      "dda3ad65a1ea8c47",
+      "6faf7345863f15e2",
+      "01a5a490e22ad064",
+      "09e2dffff5720692",
+      "32c93d4ffde03fae",
+      "4527bd693c9c6b27"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2036
+    },
+    {
+     "arm": "log",
+     "q": "u015",
+     "order": [
+      "A traceback on stderr, exit 1",
+      "`ERROR ...` on stdout, exit 0",
+      "`REFUSED ...` on stderr, exit 2",
+      "A JSON `error` on stdout, exit 1"
+     ],
+     "chunks": [
+      "52d57bea51a528cc",
+      "b9ec55d68e5ec87b",
+      "928c38aabfe74cd7",
+      "62d34b009e1eccff",
+      "b0ac369b9c2d3a6c",
+      "3c5c471af05410ff",
+      "763f6047926bb24d"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1824
+    },
+    {
+     "arm": "none",
+     "q": "u015",
+     "order": [
+      "A traceback on stderr, exit 1",
+      "`ERROR ...` on stdout, exit 0",
+      "`REFUSED ...` on stderr, exit 2",
+      "A JSON `error` on stdout, exit 1"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 146
+    },
+    {
+     "arm": "prose",
+     "q": "u015",
+     "order": [
+      "A traceback on stderr, exit 1",
+      "`ERROR ...` on stdout, exit 0",
+      "`REFUSED ...` on stderr, exit 2",
+      "A JSON `error` on stdout, exit 1"
+     ],
+     "chunks": [
+      "docs/V3.md:52",
+      "docs/HISTORY.md:13",
+      "README.md:6",
+      "docs/HOME.md:8",
+      "docs/V3.md:1",
+      "docs/V3.md:47",
+      "docs/HISTORY.md:7",
+      "docs/HISTORY.md:12",
+      "docs/TRADEMARK.md:1"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1994
+    },
+    {
+     "arm": "records",
+     "q": "u015",
+     "order": [
+      "A traceback on stderr, exit 1",
+      "`ERROR ...` on stdout, exit 0",
+      "`REFUSED ...` on stderr, exit 2",
+      "A JSON `error` on stdout, exit 1"
+     ],
+     "chunks": [
+      "30154b8b64e1f0ef",
+      "14c6509a16adeb65",
+      "0850cc08885abf8a",
+      "d6127c0fd71dffa5",
+      "b7609da14d676f1e",
+      "2e646f8efbfef31b",
+      "17ee89e9af6745cc"
+     ],
+     "answer": "The provided passages discuss the structure of results and refusals in the context of the Warrant system. Specifically, claim `SPEC-10.1-6` states that \"Every operation answers a result object... or a typed refusal `{error, message, details?}`\". Claim `SPEC-10.1-7` mentions that \"Through MCP a typed refusal is a tool error whose text is the refusal's JSON\". However, these claims are marked as `state: retired` and refer to \"Warrant 2\", noting that \"Warrant 3 replaced the engine it is about; docs/V3.md's claims are the current ones\". The passages do not provide information on how the current `warrant` command (Warrant 3) reports a refused operation to the user via the command line interface (stdout/stderr/exit codes). The other passages discuss specific test cases for relative interpreter paths, dry-run install behavior, and receiver file confinement, none of which describe the general output format for a refused operation in the current system. Therefore, the passages do not settle the question.\n\nANSWER E",
+     "tokens": 2292
+    },
+    {
+     "arm": "log",
+     "q": "u016",
+     "order": [
+      "`warrant rm ID`",
+      "`warrant put --kind retract --target ID`",
+      "None: no subcommand removes a record",
+      "`warrant fmt --drop ID`"
+     ],
+     "chunks": [
+      "6c8fa0283d1b508f",
+      "fc4dec90dcf12b9b",
+      "0613145036c384dc",
+      "43d0d9bbc4718153",
+      "4f53cb51a31e64bb",
+      "a2eeb8d0e24c1f68"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1906
+    },
+    {
+     "arm": "none",
+     "q": "u016",
+     "order": [
+      "`warrant rm ID`",
+      "`warrant put --kind retract --target ID`",
+      "None: no subcommand removes a record",
+      "`warrant fmt --drop ID`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 143
+    },
+    {
+     "arm": "prose",
+     "q": "u016",
+     "order": [
+      "`warrant rm ID`",
+      "`warrant put --kind retract --target ID`",
+      "None: no subcommand removes a record",
+      "`warrant fmt --drop ID`"
+     ],
+     "chunks": [
+      "docs/HOME.md:21",
+      "docs/HOME.md:20",
+      "docs/AGENT.md:15",
+      "docs/V3.md:13",
+      "docs/AGENT.md:11",
+      "docs/HOME.md:8",
+      "docs/V3.md:41",
+      "docs/V3.md:7",
+      "docs/V3.md:64",
+      "docs/V3.md:6",
+      "docs/HOME.md:24"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1912
+    },
+    {
+     "arm": "records",
+     "q": "u016",
+     "order": [
+      "`warrant rm ID`",
+      "`warrant put --kind retract --target ID`",
+      "None: no subcommand removes a record",
+      "`warrant fmt --drop ID`"
+     ],
+     "chunks": [
+      "1c3f12bcf1a91ba1",
+      "d126cd26e6a78ba8",
+      "8dc3f747049cc53c",
+      "85a3c0ab4e60b1bc",
+      "1f6d8296ce7d2ab5",
+      "2e646f8efbfef31b",
+      "bfa34c63c9f2c9c6",
+      "33840305c9ae5d45"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1986
+    },
+    {
+     "arm": "log",
+     "q": "u032",
+     "order": [
+      "`codex/verdicts/`",
+      "`warrant/verdicts/`",
+      "`verdicts/`",
+      "No prefix is demanded"
+     ],
+     "chunks": [
+      "2ef0abfe7e43300b",
+      "a850e57a2322c36a",
+      "d6fe668d596ab6f9",
+      "abb38e30fbae9926",
+      "214a34b78557bed8",
+      "011b0c41d84e6ef8",
+      "78ada10e1d816bef"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 1893
+    },
+    {
+     "arm": "none",
+     "q": "u032",
+     "order": [
+      "`codex/verdicts/`",
+      "`warrant/verdicts/`",
+      "`verdicts/`",
+      "No prefix is demanded"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 142
+    },
+    {
+     "arm": "prose",
+     "q": "u032",
+     "order": [
+      "`codex/verdicts/`",
+      "`warrant/verdicts/`",
+      "`verdicts/`",
+      "No prefix is demanded"
+     ],
+     "chunks": [
+      "docs/REPOSITORY.md:30",
+      "docs/V3.md:57",
+      "docs/REPOSITORY.md:10",
+      "docs/V3.md:56",
+      "docs/V3.md:14",
+      "README.md:1",
+      "docs/REPOSITORY.md:35",
+      "docs/REPOSITORY.md:31",
+      "docs/V3.md:32",
+      "docs/HOME.md:26"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1702
+    },
+    {
+     "arm": "records",
+     "q": "u032",
+     "order": [
+      "`codex/verdicts/`",
+      "`warrant/verdicts/`",
+      "`verdicts/`",
+      "No prefix is demanded"
+     ],
+     "chunks": [
+      "8997a7f9e989244c",
+      "f8c440417db2b2c3",
+      "dda3ad65a1ea8c47",
+      "1dfedf691e802c52",
+      "37013687a618cebd",
+      "0bbcee4c08e4ec54",
+      "85a3c0ab4e60b1bc",
+      "17cfa802ad197655"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 2018
+    },
+    {
+     "arm": "log",
+     "q": "u036",
+     "order": [
+      "Prints a warning and exits 0",
+      "Retires each failing claim, then goes on",
+      "Refuses with CHECK and accepts nothing",
+      "Accepts what holds and reports the rest"
+     ],
+     "chunks": [
+      "d328df79368676f8",
+      "e81f72e3b1b4d8d3",
+      "6e2cc610cb5a91f5",
+      "0613145036c384dc",
+      "f8d7d83cd8a96c0e",
+      "ca9ffc8ae0f5612f"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1793
+    },
+    {
+     "arm": "none",
+     "q": "u036",
+     "order": [
+      "Prints a warning and exits 0",
+      "Retires each failing claim, then goes on",
+      "Refuses with CHECK and accepts nothing",
+      "Accepts what holds and reports the rest"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 144
+    },
+    {
+     "arm": "prose",
+     "q": "u036",
+     "order": [
+      "Prints a warning and exits 0",
+      "Retires each failing claim, then goes on",
+      "Refuses with CHECK and accepts nothing",
+      "Accepts what holds and reports the rest"
+     ],
+     "chunks": [
+      "docs/V3.md:60",
+      "docs/REPOSITORY.md:13",
+      "docs/REPOSITORY.md:35",
+      "docs/V3.md:38",
+      "docs/V3.md:68"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1679
+    },
+    {
+     "arm": "records",
+     "q": "u036",
+     "order": [
+      "Prints a warning and exits 0",
+      "Retires each failing claim, then goes on",
+      "Refuses with CHECK and accepts nothing",
+      "Accepts what holds and reports the rest"
+     ],
+     "chunks": [
+      "0abf07d7944f7697",
+      "024e641392d30acb",
+      "dda3ad65a1ea8c47",
+      "78eb222323c3cfc6",
+      "2e646f8efbfef31b",
+      "672c42dbae2ebd04",
+      "7c922241aa2be321",
+      "e9311fd3c42a89aa"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2048
+    },
+    {
+     "arm": "log",
+     "q": "u047",
+     "order": [
+      "`IDENTITY`",
+      "`SIGNER`",
+      "No code: the reader rejects it later",
+      "`SEED`"
+     ],
+     "chunks": [
+      "d2f938f12d8ff848",
+      "3da5482655edb333",
+      "5ef3b87bc9eb784d",
+      "1d9a32a699af823d",
+      "f4275a585e1e8878",
+      "6d6bb7001d1659ce"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1807
+    },
+    {
+     "arm": "none",
+     "q": "u047",
+     "order": [
+      "`IDENTITY`",
+      "`SIGNER`",
+      "No code: the reader rejects it later",
+      "`SEED`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 144
+    },
+    {
+     "arm": "prose",
+     "q": "u047",
+     "order": [
+      "`IDENTITY`",
+      "`SIGNER`",
+      "No code: the reader rejects it later",
+      "`SEED`"
+     ],
+     "chunks": [
+      "docs/HOME.md:6",
+      "docs/AGENT.md:8",
+      "docs/V3.md:33",
+      "docs/AGENT.md:9",
+      "docs/REPOSITORY.md:13",
+      "docs/REPOSITORY.md:15",
+      "docs/V3.md:26",
+      "docs/V3.md:56",
+      "docs/HOME.md:11",
+      "docs/HOME.md:10",
+      "docs/REPOSITORY.md:33",
+      "docs/HOME.md:3"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1676
+    },
+    {
+     "arm": "records",
+     "q": "u047",
+     "order": [
+      "`IDENTITY`",
+      "`SIGNER`",
+      "No code: the reader rejects it later",
+      "`SEED`"
+     ],
+     "chunks": [
+      "64119e5aeec5041e",
+      "95d70dd0a924c6bd",
+      "9af9834f5f405a8a",
+      "a847cde751082a75",
+      "01f832c94058325b",
+      "a24d65937c151c1c",
+      "a7bc70c767417e16",
+      "98368902970d4707"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2121
+    },
+    {
+     "arm": "log",
+     "q": "u049",
+     "order": [
+      "`UNKNOWN_WORKSPACE`",
+      "`NOT_PERMITTED`",
+      "`NO_SIGNER`",
+      "`SIGNER_NOT_TRUSTED`"
+     ],
+     "chunks": [
+      "3da5482655edb333",
+      "1c5b4faef842538a",
+      "a7e35f14e432c187",
+      "d2f938f12d8ff848",
+      "f4275a585e1e8878"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1787
+    },
+    {
+     "arm": "none",
+     "q": "u049",
+     "order": [
+      "`UNKNOWN_WORKSPACE`",
+      "`NOT_PERMITTED`",
+      "`NO_SIGNER`",
+      "`SIGNER_NOT_TRUSTED`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 134
+    },
+    {
+     "arm": "prose",
+     "q": "u049",
+     "order": [
+      "`UNKNOWN_WORKSPACE`",
+      "`NOT_PERMITTED`",
+      "`NO_SIGNER`",
+      "`SIGNER_NOT_TRUSTED`"
+     ],
+     "chunks": [
+      "docs/V3.md:52",
+      "docs/AGENT.md:12",
+      "docs/AGENT.md:5",
+      "docs/V3.md:51",
+      "docs/HOME.md:6",
+      "docs/AGENT.md:11",
+      "docs/HOME.md:21",
+      "docs/HOME.md:23",
+      "docs/AGENT.md:9"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1742
+    },
+    {
+     "arm": "records",
+     "q": "u049",
+     "order": [
+      "`UNKNOWN_WORKSPACE`",
+      "`NOT_PERMITTED`",
+      "`NO_SIGNER`",
+      "`SIGNER_NOT_TRUSTED`"
+     ],
+     "chunks": [
+      "bf56382a19fb9db8",
+      "95d70dd0a924c6bd",
+      "057051fb9b4f92f1",
+      "80d2a700dc77e906",
+      "f75f966344ac0fde",
+      "85a3c0ab4e60b1bc",
+      "94e13ae28c105642",
+      "5c6c60cb2c52f864",
+      "8e13dd4a6d28f2d0",
+      "9451f5b342bf02d0"
+     ],
+     "answer": "Looking at the passages, I need to find which refusal code applies when `prepare` is called in a workspace with no signer.\n\nFrom the first passage (SPEC-10.7-1, retired), the list of refusal codes includes `NO_SIGNER` and `SIGNER_NOT_TRUSTED`.\n\nFrom V3-13-4: \"`commit` refuses a seed whose key the workspace's trust does not bind to the signer (`SIGNER_NOT_TRUSTED`).\" This is about `commit`, not `prepare`, and it's about trust binding, not absence of a signer.\n\nFrom V3-13-1: \"`commit` signs only a record whose actor is the configured signer (`NOT_PERMITTED`).\" This is about `commit` and about the actor not matching the configured signer.\n\nThe question asks specifically about `prepare` in a workspace with no signer. The passages list `NO_SIGNER` as a refusal code but don't explicitly state which operation (`prepare` or `commit`) gives `NO_SIGNER` when there's no signer. The passages don't directly settle which refusal `prepare` gives in a workspace with no signer.\n\nANSWER E",
+     "tokens": 2246
+    },
+    {
+     "arm": "log",
+     "q": "u051",
+     "order": [
+      "`actor`, an actor the trust binds a key to",
+      "`key`, a path to the signer's seed file",
+      "None: the signer is the operator's configuration",
+      "`signer`, a name from the workspace's list of signers"
+     ],
+     "chunks": [
+      "d2f938f12d8ff848",
+      "1c5b4faef842538a",
+      "f4275a585e1e8878",
+      "a7e35f14e432c187",
+      "3da5482655edb333"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1807
+    },
+    {
+     "arm": "none",
+     "q": "u051",
+     "order": [
+      "`actor`, an actor the trust binds a key to",
+      "`key`, a path to the signer's seed file",
+      "None: the signer is the operator's configuration",
+      "`signer`, a name from the workspace's list of signers"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 154
+    },
+    {
+     "arm": "prose",
+     "q": "u051",
+     "order": [
+      "`actor`, an actor the trust binds a key to",
+      "`key`, a path to the signer's seed file",
+      "None: the signer is the operator's configuration",
+      "`signer`, a name from the workspace's list of signers"
+     ],
+     "chunks": [
+      "docs/HOME.md:6",
+      "docs/AGENT.md:5",
+      "docs/AGENT.md:9",
+      "docs/AGENT.md:8",
+      "docs/AGENT.md:7",
+      "docs/AGENT.md:4",
+      "docs/AGENT.md:6",
+      "docs/HOME.md:11",
+      "docs/AGENT.md:11",
+      "docs/V3.md:51",
+      "docs/HOME.md:10",
+      "docs/AGENT.md:3",
+      "docs/HOME.md:21",
+      "docs/HOME.md:3"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1786
+    },
+    {
+     "arm": "records",
+     "q": "u051",
+     "order": [
+      "`actor`, an actor the trust binds a key to",
+      "`key`, a path to the signer's seed file",
+      "None: the signer is the operator's configuration",
+      "`signer`, a name from the workspace's list of signers"
+     ],
+     "chunks": [
+      "5c6c60cb2c52f864",
+      "95d70dd0a924c6bd",
+      "524a31d57f600ed6",
+      "3f75f99210741a0f",
+      "1c3f12bcf1a91ba1",
+      "9c037641ba93183d",
+      "f6a0d36a56ce486d",
+      "9451f5b342bf02d0",
+      "33840305c9ae5d45"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 2063
+    },
+    {
+     "arm": "log",
+     "q": "u052",
+     "order": [
+      "`prepare` with kind `retract` and a target",
+      "`commit` with an empty record",
+      "`handoff` with op `delete`",
+      "None: no operation removes a record"
+     ],
+     "chunks": [
+      "3da5482655edb333",
+      "f870e60785a2c692",
+      "d67b0c8c193ce799",
+      "1c5b4faef842538a",
+      "fdb771e8b977d188"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1751
+    },
+    {
+     "arm": "none",
+     "q": "u052",
+     "order": [
+      "`prepare` with kind `retract` and a target",
+      "`commit` with an empty record",
+      "`handoff` with op `delete`",
+      "None: no operation removes a record"
+     ],
+     "chunks": [],
+     "answer": "ANSWER A",
+     "tokens": 141
+    },
+    {
+     "arm": "prose",
+     "q": "u052",
+     "order": [
+      "`prepare` with kind `retract` and a target",
+      "`commit` with an empty record",
+      "`handoff` with op `delete`",
+      "None: no operation removes a record"
+     ],
+     "chunks": [
+      "docs/AGENT.md:11",
+      "docs/V3.md:52",
+      "docs/V3.md:51",
+      "docs/AGENT.md:12",
+      "docs/AGENT.md:5",
+      "docs/AGENT.md:1",
+      "docs/AGENT.md:20",
+      "docs/HOME.md:21",
+      "docs/V3.md:10"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1757
+    },
+    {
+     "arm": "records",
+     "q": "u052",
+     "order": [
+      "`prepare` with kind `retract` and a target",
+      "`commit` with an empty record",
+      "`handoff` with op `delete`",
+      "None: no operation removes a record"
+     ],
+     "chunks": [
+      "f75f966344ac0fde",
+      "1c3f12bcf1a91ba1",
+      "057051fb9b4f92f1",
+      "d126cd26e6a78ba8",
+      "a455e71f726c89d5",
+      "248a7d23c49cce96",
+      "4620983dbec2da7c",
+      "c218309f34009e31"
+     ],
+     "answer": "ANSWER D",
+     "tokens": 1937
+    },
+    {
+     "arm": "log",
+     "q": "u056",
+     "order": [
+      "`INIT_KEY_NOT_PINNED`",
+      "`INIT_SEED_SHAPE`",
+      "`INIT_TRUST_SHAPE`",
+      "`INIT_ACTOR_NOT_PINNED`"
+     ],
+     "chunks": [
+      "1c5b4faef842538a",
+      "3da5482655edb333",
+      "22ce646e8b2b2ef4",
+      "d2f938f12d8ff848",
+      "f4275a585e1e8878",
+      "1b045eeb7755d8d5"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1843
+    },
+    {
+     "arm": "none",
+     "q": "u056",
+     "order": [
+      "`INIT_KEY_NOT_PINNED`",
+      "`INIT_SEED_SHAPE`",
+      "`INIT_TRUST_SHAPE`",
+      "`INIT_ACTOR_NOT_PINNED`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 152
+    },
+    {
+     "arm": "prose",
+     "q": "u056",
+     "order": [
+      "`INIT_KEY_NOT_PINNED`",
+      "`INIT_SEED_SHAPE`",
+      "`INIT_TRUST_SHAPE`",
+      "`INIT_ACTOR_NOT_PINNED`"
+     ],
+     "chunks": [
+      "docs/HOME.md:6",
+      "docs/AGENT.md:8",
+      "docs/AGENT.md:5",
+      "docs/V3.md:26",
+      "docs/AGENT.md:9",
+      "docs/AGENT.md:6",
+      "docs/AGENT.md:7",
+      "docs/HOME.md:11",
+      "docs/V3.md:60",
+      "docs/REPOSITORY.md:15",
+      "README.md:0"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1728
+    },
+    {
+     "arm": "records",
+     "q": "u056",
+     "order": [
+      "`INIT_KEY_NOT_PINNED`",
+      "`INIT_SEED_SHAPE`",
+      "`INIT_TRUST_SHAPE`",
+      "`INIT_ACTOR_NOT_PINNED`"
+     ],
+     "chunks": [
+      "64119e5aeec5041e",
+      "a847cde751082a75",
+      "057051fb9b4f92f1",
+      "95d70dd0a924c6bd",
+      "4527bd693c9c6b27",
+      "9c037641ba93183d",
+      "2871702cdf9d7239",
+      "7325f6854489d153",
+      "20ca72f93268b2cd"
+     ],
+     "answer": "ANSWER A",
+     "tokens": 2075
+    },
+    {
+     "arm": "log",
+     "q": "u063",
+     "order": [
+      "Stashes the changes and restores them after installing",
+      "Commits the changes, then installs from that commit",
+      "Installs the working tree as it stands, with a warning",
+      "Refuses: it installs from HEAD, never the working tree"
+     ],
+     "chunks": [
+      "25c53fee74298a73",
+      "6f2aeaf9a9a9cada",
+      "43b96aba9de98217",
+      "f75c73d63833fef1",
+      "1a0d9a0a4917e778",
+      "d148a16de2e9d915",
+      "41a9820af8b14c73"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1811
+    },
+    {
+     "arm": "none",
+     "q": "u063",
+     "order": [
+      "Stashes the changes and restores them after installing",
+      "Commits the changes, then installs from that commit",
+      "Installs the working tree as it stands, with a warning",
+      "Refuses: it installs from HEAD, never the working tree"
+     ],
+     "chunks": [],
+     "answer": "ANSWER D",
+     "tokens": 155
+    },
+    {
+     "arm": "prose",
+     "q": "u063",
+     "order": [
+      "Stashes the changes and restores them after installing",
+      "Commits the changes, then installs from that commit",
+      "Installs the working tree as it stands, with a warning",
+      "Refuses: it installs from HEAD, never the working tree"
+     ],
+     "chunks": [
+      "docs/V3.md:57",
+      "docs/REPOSITORY.md:32",
+      "docs/V3.md:68",
+      "docs/HOME.md:18",
+      "docs/V3.md:38",
+      "docs/REPOSITORY.md:31",
+      "docs/REPOSITORY.md:6",
+      "README.md:17"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1653
+    },
+    {
+     "arm": "records",
+     "q": "u063",
+     "order": [
+      "Stashes the changes and restores them after installing",
+      "Commits the changes, then installs from that commit",
+      "Installs the working tree as it stands, with a warning",
+      "Refuses: it installs from HEAD, never the working tree"
+     ],
+     "chunks": [
+      "df55759d2d5831e7",
+      "dda3ad65a1ea8c47",
+      "fdafdadad8363c34",
+      "294095ce60001466",
+      "f8c440417db2b2c3",
+      "6faf7345863f15e2",
+      "fa0ca9b75891dd4c",
+      "17ee89e9af6745cc"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2021
+    },
+    {
+     "arm": "log",
+     "q": "u064",
+     "order": [
+      "A signed `accept` with the reason in a note",
+      "A pending note that is resolved at session end",
+      "A signed `reject` quoting the harness's reason",
+      "Nothing: it files only executed calls"
+     ],
+     "chunks": [
+      "e81f72e3b1b4d8d3",
+      "6c8fa0283d1b508f",
+      "78eea1d2ff104619",
+      "3a1e97156b590187",
+      "0fc553e29d76c75d",
+      "a8a7df50e396184b"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1740
+    },
+    {
+     "arm": "none",
+     "q": "u064",
+     "order": [
+      "A signed `accept` with the reason in a note",
+      "A pending note that is resolved at session end",
+      "A signed `reject` quoting the harness's reason",
+      "Nothing: it files only executed calls"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 146
+    },
+    {
+     "arm": "prose",
+     "q": "u064",
+     "order": [
+      "A signed `accept` with the reason in a note",
+      "A pending note that is resolved at session end",
+      "A signed `reject` quoting the harness's reason",
+      "Nothing: it files only executed calls"
+     ],
+     "chunks": [
+      "docs/V3.md:68",
+      "docs/V3.md:19",
+      "docs/V3.md:60",
+      "docs/V3.md:33",
+      "docs/V3.md:32",
+      "docs/AGENT.md:2",
+      "docs/V3.md:59",
+      "README.md:11",
+      "docs/HOME.md:21",
+      "docs/HOME.md:3"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1661
+    },
+    {
+     "arm": "records",
+     "q": "u064",
+     "order": [
+      "A signed `accept` with the reason in a note",
+      "A pending note that is resolved at session end",
+      "A signed `reject` quoting the harness's reason",
+      "Nothing: it files only executed calls"
+     ],
+     "chunks": [
+      "0abf07d7944f7697",
+      "fdafdadad8363c34",
+      "c589d17da0f3d235",
+      "f77da51dbe3b8af3",
+      "583d6f508840c6b8"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2041
+    },
+    {
+     "arm": "log",
+     "q": "u071",
+     "order": [
+      "256 nodes, then `complete` is false",
+      "No limit: a walk always completes",
+      "10000 nodes, then `complete` is false",
+      "2000 nodes, then `complete` is false"
+     ],
+     "chunks": [
+      "1edd28274df39320",
+      "848d103efda349bd",
+      "946b39a8751a0c40",
+      "3da5482655edb333",
+      "6f6269f58ba57c69"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1837
+    },
+    {
+     "arm": "none",
+     "q": "u071",
+     "order": [
+      "256 nodes, then `complete` is false",
+      "No limit: a walk always completes",
+      "10000 nodes, then `complete` is false",
+      "2000 nodes, then `complete` is false"
+     ],
+     "chunks": [],
+     "answer": "ANSWER C",
+     "tokens": 159
+    },
+    {
+     "arm": "prose",
+     "q": "u071",
+     "order": [
+      "256 nodes, then `complete` is false",
+      "No limit: a walk always completes",
+      "10000 nodes, then `complete` is false",
+      "2000 nodes, then `complete` is false"
+     ],
+     "chunks": [
+      "docs/HOME.md:18",
+      "docs/V3.md:52",
+      "docs/AGENT.md:5",
+      "docs/V3.md:44",
+      "docs/V3.md:65",
+      "docs/V3.md:49",
+      "docs/REPOSITORY.md:27"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1717
+    },
+    {
+     "arm": "records",
+     "q": "u071",
+     "order": [
+      "256 nodes, then `complete` is false",
+      "No limit: a walk always completes",
+      "10000 nodes, then `complete` is false",
+      "2000 nodes, then `complete` is false"
+     ],
+     "chunks": [
+      "66fe3905f8d53c67",
+      "da1681d50bd871e3",
+      "2e646f8efbfef31b",
+      "3667ea649ca19e80",
+      "a0d6f8880d30a31c",
+      "cfc847cad12870c1",
+      "038c5bf56139eb60",
+      "248a7d23c49cce96"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2008
+    },
+    {
+     "arm": "log",
+     "q": "u072",
+     "order": [
+      "Installs it with pip, then starts serving",
+      "Prints the requirement on stderr and exits 2",
+      "Serves a plain JSON socket in its place",
+      "Prints the requirement on stdout and exits 0"
+     ],
+     "chunks": [
+      "1a0d9a0a4917e778",
+      "97ec37e339ed2113",
+      "22ce646e8b2b2ef4",
+      "52d57bea51a528cc",
+      "e404cdc0fc3697a4",
+      "62d34b009e1eccff",
+      "80d65621e49e22b8",
+      "f1be7207a292da0a"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1937
+    },
+    {
+     "arm": "none",
+     "q": "u072",
+     "order": [
+      "Installs it with pip, then starts serving",
+      "Prints the requirement on stderr and exits 2",
+      "Serves a plain JSON socket in its place",
+      "Prints the requirement on stdout and exits 0"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 147
+    },
+    {
+     "arm": "prose",
+     "q": "u072",
+     "order": [
+      "Installs it with pip, then starts serving",
+      "Prints the requirement on stderr and exits 2",
+      "Serves a plain JSON socket in its place",
+      "Prints the requirement on stdout and exits 0"
+     ],
+     "chunks": [
+      "README.md:6",
+      "README.md:5",
+      "docs/HOME.md:6",
+      "docs/AGENT.md:9",
+      "docs/REPOSITORY.md:32",
+      "docs/REPOSITORY.md:36",
+      "docs/AGENT.md:19",
+      "docs/V3.md:26",
+      "docs/HOME.md:14",
+      "docs/HOME.md:9"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1772
+    },
+    {
+     "arm": "records",
+     "q": "u072",
+     "order": [
+      "Installs it with pip, then starts serving",
+      "Prints the requirement on stderr and exits 2",
+      "Serves a plain JSON socket in its place",
+      "Prints the requirement on stdout and exits 0"
+     ],
+     "chunks": [
+      "1a0356dce37debd3",
+      "057051fb9b4f92f1",
+      "4527bd693c9c6b27",
+      "14c6509a16adeb65",
+      "cfc847cad12870c1",
+      "57cc657ba6936e44",
+      "f1c35a39b4f29dda",
+      "41820c3aef3f2e58"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2114
+    },
+    {
+     "arm": "log",
+     "q": "u082",
+     "order": [
+      "`tools/engine.py`",
+      "`warrant_agent/engine.py`",
+      "`warrant/engine.py`",
+      "`warrant/core.py`"
+     ],
+     "chunks": [
+      "6386c8cb41447763",
+      "5c7d7896e14ec27e",
+      "5564173884c5a895",
+      "343962074c07ce07",
+      "a850e57a2322c36a",
+      "4ce6f92968c2688e",
+      "0be74d7b8e8551ee"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 1937
+    },
+    {
+     "arm": "none",
+     "q": "u082",
+     "order": [
+      "`tools/engine.py`",
+      "`warrant_agent/engine.py`",
+      "`warrant/engine.py`",
+      "`warrant/core.py`"
+     ],
+     "chunks": [],
+     "answer": "ANSWER B",
+     "tokens": 129
+    },
+    {
+     "arm": "prose",
+     "q": "u082",
+     "order": [
+      "`tools/engine.py`",
+      "`warrant_agent/engine.py`",
+      "`warrant/engine.py`",
+      "`warrant/core.py`"
+     ],
+     "chunks": [
+      "docs/REPOSITORY.md:3",
+      "docs/HISTORY.md:6",
+      "docs/REPOSITORY.md:9",
+      "docs/REPOSITORY.md:13",
+      "README.md:20",
+      "docs/REPOSITORY.md:22",
+      "docs/REPOSITORY.md:30",
+      "docs/HOME.md:21",
+      "README.md:0"
+     ],
+     "answer": "ANSWER C",
+     "tokens": 1710
+    },
+    {
+     "arm": "records",
+     "q": "u082",
+     "order": [
+      "`tools/engine.py`",
+      "`warrant_agent/engine.py`",
+      "`warrant/engine.py`",
+      "`warrant/core.py`"
+     ],
+     "chunks": [
+      "85a3c0ab4e60b1bc",
+      "f4729a41b788ea9e",
+      "ccc4e8145ed2f78c",
+      "ea6300ecf5d5f41a",
+      "024e641392d30acb",
+      "af395a08752d2513"
+     ],
+     "answer": "ANSWER E",
+     "tokens": 2088
+    }
+   ]
+  }
+ }
+}

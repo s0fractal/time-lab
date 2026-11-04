@@ -1,0 +1,14 @@
+{
+ "registration": "390497abfaa0b8d875c9afa48225df1bf02cb59e545876b5084fc5591c4187e5",
+ "runner": "73a4d1c1970487a396b0e9cbf061725a066b5f546379d3ceebdf4117c0a09903",
+ "runner_path": "q11-records/run.py",
+ "analysis": "a21c5e409d8c25aa77b139cffa37d279cc669dd831757b27d76e4d8eb3a311c4",
+ "analysis_path": "q11-records/analyze.py",
+ "predictions": {
+  "H1": "47b09e519d176f3901f4650da9f0381623bf874a8f3d99c099e87a4f8a7afb8d",
+  "H2": "02e5e59ed4d95e39ef22af39715d2c03a7717a231f0efd5dcb8da08543775056",
+  "H3": "37778d49d32726d25702c40346cdca2d9974c0098467ebdf04a3171f67b96bc8",
+  "H4": "868e432ebe2a515cb4fcd5f150fa7acd53e7a00eb39d1cb9a3e5df5dffbfed90",
+  "H5": "0e52c6f21820a41e2854e128f99ec8e7bf60b5ec608f7eaf357aa592bbd437d5"
+ }
+}

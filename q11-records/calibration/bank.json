@@ -1,0 +1,422 @@
+[
+ {
+  "id": "c012",
+  "class": "changed",
+  "question": "Which optional member can a schema body carry beyond name, fields, states, closed and successors?",
+  "options": [
+   "`defaults`, giving a value for each missing member",
+   "None: those five members are the whole schema body",
+   "`frozen`, listing members no successor may change",
+   "`pinned`, naming an object member of a lineage's root"
+  ],
+  "key": "`pinned`, naming an object member of a lineage's root",
+  "old": "None: those five members are the whole schema body",
+  "value": "\"`pinned`, naming an object member of a lineage's root\" if '\"pinned\" not in b' in read('warrant/engine.py') else 'None: those five members are the whole schema body'"
+ },
+ {
+  "id": "c013",
+  "class": "changed",
+  "question": "How does the engine treat a closing version whose guard's `match` covers less than its root's pinned object?",
+  "options": [
+   "It widens the guard to match that object",
+   "It drops the version as INVALID, under `problems`",
+   "Nothing: it compares no guard with its root",
+   "It keeps it in the lineage, with reliance CHALLENGED"
+  ],
+  "key": "It drops the version as INVALID, under `problems`",
+  "old": "Nothing: it compares no guard with its root",
+  "value": "'It drops the version as INVALID, under `problems`' if 'its guard matches less than' in read('warrant/engine.py') else 'Nothing: it compares no guard with its root'"
+ },
+ {
+  "id": "c014",
+  "class": "changed",
+  "question": "Which records skip the engine's body check by naming the reserved schema migration@1?",
+  "options": [
+   "No record: it is checked as any counted schema is",
+   "Only attests: any other kind naming it is INVALID",
+   "Every record naming it, whatever the record's kind",
+   "Only entities: attests naming it are checked as usual"
+  ],
+  "key": "Only attests: any other kind naming it is INVALID",
+  "old": "Every record naming it, whatever the record's kind",
+  "value": "'Only attests: any other kind naming it is INVALID' if 'r[\"schema\"] == R.MIGRATION and r[\"kind\"] == \"attest\"' in read('warrant/engine.py') else \"Every record naming it, whatever the record's kind\""
+ },
+ {
+  "id": "c015",
+  "class": "changed",
+  "question": "How does the engine resolve versions whose closing depends on other lineages through `requires`?",
+  "options": [
+   "A least fixpoint over all versions, with no recursion",
+   "A topological sort that refuses the store on any cycle",
+   "Whole assessments repeated until two passes agree",
+   "Depth first with recursion, marking versions in progress"
+  ],
+  "key": "A least fixpoint over all versions, with no recursion",
+  "old": "Depth first with recursion, marking versions in progress",
+  "value": "'A least fixpoint over all versions, with no recursion' if 'def _resolve(self)' in read('warrant/engine.py') else 'Depth first with recursion, marking versions in progress'"
+ },
+ {
+  "id": "c018",
+  "class": "changed",
+  "question": "What happens when a review loop tool opens a repository whose `.warrant` is a link out of it?",
+  "options": [
+   "Followed for reads, refused for writes",
+   "Replaced by a real directory before going on",
+   "Followed: the tool reads and writes what it leads to",
+   "Refused: the store must lie in the repository"
+  ],
+  "key": "Refused: the store must lie in the repository",
+  "old": "Followed: the tool reads and writes what it leads to",
+  "value": "'Refused: the store must lie in the repository' if 'self.dot = dot_of(self.root)' in (read('warrant/repo.py') or read('tools/repo.py')) else 'Followed: the tool reads and writes what it leads to'"
+ },
+ {
+  "id": "c022",
+  "class": "changed",
+  "question": "Which package holds the record-graph queries around, path, why and frontier?",
+  "options": [
+   "`warrant_graph`",
+   "`warrant_agent`",
+   "`tools`",
+   "`warrant`"
+  ],
+  "key": "`warrant`",
+  "old": "`warrant_agent`",
+  "value": "'`warrant`' if exists('warrant/graph.py') else '`warrant_agent`'"
+ },
+ {
+  "id": "c028",
+  "class": "changed",
+  "question": "Does the claims check fail on a store holding a valid schema that waits for backers?",
+  "options": [
+   "Yes: it reports that schema as REJECTED and exits 1",
+   "No: it backs the schema itself and then goes on",
+   "No: that is a proposal, not a problem of the store",
+   "Yes: it reports SCHEMA_PENDING and exits 1"
+  ],
+  "key": "No: that is a proposal, not a problem of the store",
+  "old": "Yes: it reports SCHEMA_PENDING and exits 1",
+  "value": "'No: that is a proposal, not a problem of the store' if 'SCHEMA_PENDING' not in (read('warrant/claims.py') or read('tools/claims.py')) else 'Yes: it reports SCHEMA_PENDING and exits 1'"
+ },
+ {
+  "id": "c037",
+  "class": "changed",
+  "question": "Which role does the roadmap tool demand before it signs an obligation's forgiveness?",
+  "options": [
+   "`roadmap/owner`, else it refuses with ROLE",
+   "None: it has no forgiveness command",
+   "`schema/author`, else it refuses with ROLE",
+   "`roadmap/acceptor`, else it refuses with ROLE"
+  ],
+  "key": "`roadmap/owner`, else it refuses with ROLE",
+  "old": "None: it has no forgiveness command",
+  "value": "'`roadmap/owner`, else it refuses with ROLE' if 'is no roadmap/owner' in (read('warrant/roadmap.py') or read('tools/roadmap.py')) else 'None: it has no forgiveness command'"
+ },
+ {
+  "id": "c057",
+  "class": "changed",
+  "question": "Which queries does a read over every store the operator registered take?",
+  "options": [
+   "stores, lineages, goals, claims, blobs",
+   "list, search, graph, export, import",
+   "stores, actor, open, challenges, rests",
+   "None: no read spans several stores"
+  ],
+  "key": "stores, actor, open, challenges, rests",
+  "old": "None: no read spans several stores",
+  "value": "'stores, actor, open, challenges, rests' if 'QUERIES = (\"stores\", \"actor\", \"open\", \"challenges\", \"rests\")' in read('warrant/across.py') else 'None: no read spans several stores'"
+ },
+ {
+  "id": "c060",
+  "class": "changed",
+  "question": "What does `warrant-agent-mcp` serve when started with no configuration option?",
+  "options": [
+   "The one store in `~/.warrant`",
+   "The Git checkout around the current directory",
+   "Nothing: `--config` is required, a usage error",
+   "Every repository the operator registered"
+  ],
+  "key": "Every repository the operator registered",
+  "old": "Nothing: `--config` is required, a usage error",
+  "value": "'Every repository the operator registered' if 'ap.add_argument(\"--config\", required=True)' not in read('warrant_agent/mcp_server.py') else 'Nothing: `--config` is required, a usage error'"
+ },
+ {
+  "id": "c062",
+  "class": "changed",
+  "question": "How does the agent interface's `prepare` decide whether a record would be refused?",
+  "options": [
+   "It assesses the store with the record added, under a throwaway key",
+   "It asks the workspace's reviewer to read the record",
+   "It files the record and rolls it back on a problem",
+   "It applies the engine's body and lineage rules to the record alone"
+  ],
+  "key": "It assesses the store with the record added, under a throwaway key",
+  "old": "It applies the engine's body and lineage rules to the record alone",
+  "value": "'It assesses the store with the record added, under a throwaway key' if 'def _refusals' in read('warrant_agent/api.py') else \"It applies the engine's body and lineage rules to the record alone\""
+ },
+ {
+  "id": "c081",
+  "class": "changed",
+  "question": "What does the review plugin's installer write when the waker's list of repositories is absent?",
+  "options": [
+   "One entry per repository the operator registered",
+   "This checkout's repository as the one entry",
+   "Nothing: it writes no such file",
+   "An empty list, to be filled in by hand"
+  ],
+  "key": "This checkout's repository as the one entry",
+  "old": "Nothing: it writes no such file",
+  "value": "\"This checkout's repository as the one entry\" if 'def default_entry' in (read('integrations/warrant-review/install.py') or read('integrations/codex-plugin/install.py')) else 'Nothing: it writes no such file'"
+ },
+ {
+  "id": "c082",
+  "class": "changed",
+  "question": "Which agent hosts does the warrant-review plugin ship a manifest for?",
+  "options": [
+   "Codex and Gemini CLI",
+   "Codex only",
+   "Codex and Claude Code",
+   "Claude Code only"
+  ],
+  "key": "Codex and Claude Code",
+  "old": "Codex only",
+  "value": "'Codex and Claude Code' if exists('integrations/warrant-review/.claude-plugin/plugin.json') else 'Codex only'"
+ },
+ {
+  "id": "c084",
+  "class": "changed",
+  "question": "Which version does the `warrant` package declare in `__version__`?",
+  "options": [
+   "3.0.0.dev0",
+   "3.0.0a5",
+   "3.0.0",
+   "2.0.0a1"
+  ],
+  "key": "3.0.0a5",
+  "old": "3.0.0.dev0",
+  "value": "re.search('__version__ = \"([^\"]+)\"', read('warrant/__init__.py')).group(1)"
+ },
+ {
+  "id": "c086",
+  "class": "changed",
+  "question": "How does the operator's repository registry treat an identity whose seed lies in a registered repository?",
+  "options": [
+   "Moves the seed to the operator's home directory",
+   "Refuses it: no seed may lie in a registered repository",
+   "Accepts it, and marks that repository read only",
+   "The project has no such registry"
+  ],
+  "key": "Refuses it: no seed may lie in a registered repository",
+  "old": "The project has no such registry",
+  "value": "'Refuses it: no seed may lie in a registered repository' if 'its seed lies inside the registered repository' in read('warrant/home.py') else 'The project has no such registry'"
+ },
+ {
+  "id": "u005",
+  "class": "unchanged",
+  "question": "What does `warrant assess --as-of T` do with records dated after T?",
+  "options": [
+   "Reads them and marks each of them as backdated",
+   "Lists each of them under `rejected`",
+   "Refuses the store with RESOURCE_LIMIT",
+   "Leaves them out and counts them under `later`"
+  ],
+  "key": "Leaves them out and counts them under `later`",
+  "old": null,
+  "value": "'Leaves them out and counts them under `later`' if '\"later\": self.later' in read('warrant/engine.py') else 'Reads them and marks each of them as backdated'"
+ },
+ {
+  "id": "u015",
+  "class": "unchanged",
+  "question": "How does the `warrant` command report a refused operation?",
+  "options": [
+   "`ERROR ...` on stdout, exit 0",
+   "`REFUSED ...` on stderr, exit 2",
+   "A traceback on stderr, exit 1",
+   "A JSON `error` on stdout, exit 1"
+  ],
+  "key": "`REFUSED ...` on stderr, exit 2",
+  "old": null,
+  "value": "'`REFUSED ...` on stderr, exit 2' if 'print(f\"REFUSED {e}\", file=sys.stderr)' in read('warrant/cli.py') else 'A JSON `error` on stdout, exit 1'"
+ },
+ {
+  "id": "u016",
+  "class": "unchanged",
+  "question": "Which subcommand of the `warrant` command removes a record from a store?",
+  "options": [
+   "`warrant put --kind retract --target ID`",
+   "`warrant fmt --drop ID`",
+   "`warrant rm ID`",
+   "None: no subcommand removes a record"
+  ],
+  "key": "None: no subcommand removes a record",
+  "old": null,
+  "value": "'None: no subcommand removes a record' if '\"rm\"' not in read('warrant/cli.py') and '\"delete\"' not in read('warrant/cli.py') else '`warrant rm ID`'"
+ },
+ {
+  "id": "u032",
+  "class": "unchanged",
+  "question": "Under which branch prefix must a pull request of verdicts only lie for the merge gate to admit it?",
+  "options": [
+   "No prefix is demanded",
+   "`warrant/verdicts/`",
+   "`verdicts/`",
+   "`codex/verdicts/`"
+  ],
+  "key": "`codex/verdicts/`",
+  "old": null,
+  "value": "'`codex/verdicts/`' if 'VERDICT_BRANCH = \"codex/verdicts/\"' in (read('warrant/gate.py') or read('tools/gate.py')) else '`verdicts/`'"
+ },
+ {
+  "id": "u036",
+  "class": "unchanged",
+  "question": "What does the claims tool's `replay` subcommand do when the claims check finds problems?",
+  "options": [
+   "Retires each failing claim, then goes on",
+   "Prints a warning and exits 0",
+   "Refuses with CHECK and accepts nothing",
+   "Accepts what holds and reports the rest"
+  ],
+  "key": "Refuses with CHECK and accepts nothing",
+  "old": null,
+  "value": "'Refuses with CHECK and accepts nothing' if 'raise Failed(\"CHECK\"' in (read('warrant/claims.py') or read('tools/claims.py')) else 'Accepts what holds and reports the rest'"
+ },
+ {
+  "id": "u047",
+  "class": "unchanged",
+  "question": "Which refusal code does a review loop tool give when asked to file a record with a key the repository's v3.json does not bind to the actor?",
+  "options": [
+   "`IDENTITY`",
+   "No code: the reader rejects it later",
+   "`SEED`",
+   "`SIGNER`"
+  ],
+  "key": "`SIGNER`",
+  "old": null,
+  "value": "'`SIGNER`' if 'raise Failed(\"SIGNER\"' in (read('warrant/repo.py') or read('tools/repo.py')) else '`IDENTITY`'"
+ },
+ {
+  "id": "u049",
+  "class": "unchanged",
+  "question": "Which refusal does the agent interface's `prepare` give in a workspace with no signer?",
+  "options": [
+   "`NO_SIGNER`",
+   "`SIGNER_NOT_TRUSTED`",
+   "`NOT_PERMITTED`",
+   "`UNKNOWN_WORKSPACE`"
+  ],
+  "key": "`NO_SIGNER`",
+  "old": null,
+  "value": "'`NO_SIGNER`' if 'need(ws.signer is not None, \"NO_SIGNER\"' in read('warrant_agent/api.py') else '`NOT_PERMITTED`'"
+ },
+ {
+  "id": "u051",
+  "class": "unchanged",
+  "question": "Which request member chooses the signer of a `commit` in the agent interface?",
+  "options": [
+   "`key`, a path to the signer's seed file",
+   "`signer`, a name from the workspace's list of signers",
+   "None: the signer is the operator's configuration",
+   "`actor`, an actor the trust binds a key to"
+  ],
+  "key": "None: the signer is the operator's configuration",
+  "old": null,
+  "value": "\"None: the signer is the operator's configuration\" if 'need(r[\"actor\"] == actor, \"NOT_PERMITTED\"' in read('warrant_agent/api.py') else '`actor`, an actor the trust binds a key to'"
+ },
+ {
+  "id": "u052",
+  "class": "unchanged",
+  "question": "Which operation of the agent interface deletes a record from a store?",
+  "options": [
+   "`prepare` with kind `retract` and a target",
+   "None: no operation removes a record",
+   "`handoff` with op `delete`",
+   "`commit` with an empty record"
+  ],
+  "key": "None: no operation removes a record",
+  "old": null,
+  "value": "'None: no operation removes a record' if 'HANDOFF_OPS = (\"export\", \"inspect\", \"import\")' in read('warrant_agent/api.py') and 'def delete' not in read('warrant_agent/api.py') else '`handoff` with op `delete`'"
+ },
+ {
+  "id": "u056",
+  "class": "unchanged",
+  "question": "Which refusal code does `warrant-agent-mcp init` give when the seed's key is not one the repository's trust binds to the actor?",
+  "options": [
+   "`INIT_ACTOR_NOT_PINNED`",
+   "`INIT_TRUST_SHAPE`",
+   "`INIT_KEY_NOT_PINNED`",
+   "`INIT_SEED_SHAPE`"
+  ],
+  "key": "`INIT_KEY_NOT_PINNED`",
+  "old": null,
+  "value": "'`INIT_KEY_NOT_PINNED`' if re.search('\"INIT_KEY_NOT_PINNED\",\\\\s*f\"the seed', read('warrant_agent/init.py')) else '`INIT_ACTOR_NOT_PINNED`'"
+ },
+ {
+  "id": "u063",
+  "class": "unchanged",
+  "question": "What does the review plugin's installer do when the plugin's paths differ from the HEAD commit?",
+  "options": [
+   "Stashes the changes and restores them after installing",
+   "Installs the working tree as it stands, with a warning",
+   "Refuses: it installs from HEAD, never the working tree",
+   "Commits the changes, then installs from that commit"
+  ],
+  "key": "Refuses: it installs from HEAD, never the working tree",
+  "old": null,
+  "value": "'Refuses: it installs from HEAD, never the working tree' if \"refused: the plugin's paths differ from HEAD\" in (read('integrations/warrant-review/install.py') or read('integrations/codex-plugin/install.py')) else 'Installs the working tree as it stands, with a warning'"
+ },
+ {
+  "id": "u064",
+  "class": "unchanged",
+  "question": "What does the Claude Code decision witness file when auto mode denies a tool call?",
+  "options": [
+   "Nothing: it files only executed calls",
+   "A pending note that is resolved at session end",
+   "A signed `accept` with the reason in a note",
+   "A signed `reject` quoting the harness's reason"
+  ],
+  "key": "A signed `reject` quoting the harness's reason",
+  "old": null,
+  "value": "\"A signed `reject` quoting the harness's reason\" if 'file_record(h, event, False,' in read('integrations/claude-code-plugin/scripts/witness.py') else 'A signed `accept` with the reason in a note'"
+ },
+ {
+  "id": "u071",
+  "class": "unchanged",
+  "question": "How many nodes does one graph walk (path, why) visit before its answer reads as incomplete?",
+  "options": [
+   "256 nodes, then `complete` is false",
+   "2000 nodes, then `complete` is false",
+   "10000 nodes, then `complete` is false",
+   "No limit: a walk always completes"
+  ],
+  "key": "2000 nodes, then `complete` is false",
+  "old": null,
+  "value": "re.search('MAX_NODES = (\\\\d+)', (read('warrant/graph.py') or read('warrant_agent/graph.py'))).group(1) + ' nodes, then `complete` is false'"
+ },
+ {
+  "id": "u072",
+  "class": "unchanged",
+  "question": "What does `warrant-agent-mcp` do when the MCP SDK is not installed?",
+  "options": [
+   "Prints the requirement on stdout and exits 0",
+   "Prints the requirement on stderr and exits 2",
+   "Installs it with pip, then starts serving",
+   "Serves a plain JSON socket in its place"
+  ],
+  "key": "Prints the requirement on stderr and exits 2",
+  "old": null,
+  "value": "'Prints the requirement on stderr and exits 2' if re.search('except ImportError:[\\\\s\\\\S]{0,300}?file=sys\\\\.stderr\\\\)\\\\s+return 2', read('warrant_agent/mcp_server.py')) else 'Installs it with pip, then starts serving'"
+ },
+ {
+  "id": "u082",
+  "class": "unchanged",
+  "question": "Which file holds the code of the project's assessment engine?",
+  "options": [
+   "`tools/engine.py`",
+   "`warrant_agent/engine.py`",
+   "`warrant/engine.py`",
+   "`warrant/core.py`"
+  ],
+  "key": "`warrant/engine.py`",
+  "old": null,
+  "value": "'`warrant/engine.py`' if exists('warrant/engine.py') else '`tools/engine.py`'"
+ }
+]
